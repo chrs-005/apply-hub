@@ -95,7 +95,10 @@ document.addEventListener("change", async (e) => {
       const j = JSON.parse(await t.files[0].text());
       state.profile = { ...state.profile, ...(j.profile || {}) };
       state.answers = j.answers || state.answers;
+      if (j.docs) { state.docs = { ...state.docs, ...j.docs }; await chrome.storage.local.set({ docs: state.docs }); renderDocs(); }
+      if (j.settings?.gistId && !$("#gistId").value) $("#gistId").value = j.settings.gistId;
       renderProfile(); renderAnswers(); await save();
+      $("#saved").textContent = `Imported ✓ ${Object.keys(j.profile || {}).length} fields, ${(j.answers || []).filter((a) => a.a).length} answers${j.docs ? ", " + Object.values(j.docs).map((d) => d.name).join(", ") : ""}`;
     } catch { alert("Not a valid Apply Hub profile file."); }
   }
 });
