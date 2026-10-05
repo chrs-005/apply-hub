@@ -484,6 +484,7 @@ function openSettings() {
     <div class="card">
       <div class="title">🔄 Sync tracker (phone ↔ laptop ↔ Chrome extension)</div>
       <p class="small muted">Your tracker lives in a <b>secret GitHub gist</b>. Create a GitHub token with only the <code>gist</code> scope, paste it here, then press “Create tracker” once. On your other devices, paste the same token + Gist ID.</p>
+      ${Push.isIOS() && !Sync.on() ? `<p class="small" style="background:var(--warn-soft);color:var(--warn);padding:8px 10px;border-radius:10px">📱 On iPhone, the Home Screen app has its <b>own storage, separate from Safari</b>. If you already created the tracker in Safari, paste the same token + Gist ID here and tap <b>Save &amp; sync</b>. Don't press Create again.</p>` : ""}
       <div class="field"><label>GitHub token (gist scope)</label><input id="s-token" type="password" autocomplete="off" value="${esc(Sync.token)}" placeholder="ghp_…"></div>
       <div class="field"><label>Gist ID</label><input id="s-gist" value="${esc(Sync.gist)}" placeholder="Leave empty, then press Create"></div>
       <div class="row"><button class="btn primary sm" id="s-save">Save & sync</button><button class="btn sm" id="s-create">Create tracker</button>
@@ -515,7 +516,9 @@ function openSettings() {
   if (off) off.onclick = async () => { await Push.disable(); toast("Notifications off"); bg.remove(); openSettings(); route(); };
   const reopen = () => { bg.remove(); openSettings(); };
   $("#s-save", bg).onclick = async () => {
-    Sync.token = $("#s-token", bg).value.trim(); Sync.gist = $("#s-gist", bg).value.trim();
+    Sync.token = $("#s-token", bg).value.trim();
+    const g = $("#s-gist", bg).value.trim();
+    Sync.gist = (g.match(/[0-9a-f]{20,}/i) || [g])[0];  // accepts a full gist link too
     LS.set("gh_token", Sync.token); LS.set("gist_id", Sync.gist);
     if (Sync.on()) { await Sync.pull(); await Sync.push(); toast(Sync.state === "synced" ? "Synced ✓" : "Sync failed"); route(); reopen(); }
   };

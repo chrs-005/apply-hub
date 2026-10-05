@@ -1,5 +1,5 @@
 // Offline support: app shell is cached; data/*.json is network-first (falls back to cache).
-const VERSION = "applyhub-v2";
+const VERSION = "applyhub-v3";
 
 // ---- push notifications (sent by the scanner on GitHub)
 self.addEventListener("push", (e) => {
