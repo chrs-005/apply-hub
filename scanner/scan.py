@@ -5,7 +5,8 @@ Runs every 3 hours on GitHub Actions (or locally):
   2. keeps the ones that are internships, relevant to you, and in Europe/Gulf
   3. watches pages in config/watch.yaml for changes
   4. turns data/*.yaml (grad + research programs) into JSON for the app
-  5. sends phone notifications (ntfy) for new openings, page changes and deadlines
+  5. sends push notifications to the Apply Hub app (iPhone home-screen app / laptop browser)
+     for new openings, page changes and deadlines
   6. writes everything to docs/data/*.json, which the app reads
 
 Usage:
@@ -26,6 +27,7 @@ import unicodedata
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import urlparse
 
 try:  # use the OS certificate store when available (fixes SSL errors on some Windows setups)
     import truststore
@@ -134,33 +136,75 @@ class Filter:
 
 
 # ===================================================================== notifications
+GIST_TRACKER, GIST_PUSH = "apply-hub-tracker.json", "apply-hub-push.json"
+_gist_cache = {}
+
+
+def read_gist_file(name):
+    """Files in your secret tracker gist (written by the app). Secret gists are readable by id."""
+    gid = os.environ.get("TRACKER_GIST_ID", "").strip()
+    if not gid:
+        return None
+    if gid not in _gist_cache:
+        try:
+            r = requests.get(f"https://api.github.com/gists/{gid}", timeout=20,
+                             headers={"Accept": "application/vnd.github+json"})
+            r.raise_for_status()
+            _gist_cache[gid] = r.json().get("files", {})
+        except Exception as e:
+            print(f"  gist not readable: {e}")
+            _gist_cache[gid] = {}
+    f = _gist_cache[gid].get(name)
+    if not f:
+        return None
+    content = f.get("content")
+    if f.get("truncated") and f.get("raw_url"):
+        content = requests.get(f["raw_url"], timeout=20).text
+    try:
+        return json.loads(content or "null")
+    except json.JSONDecodeError:
+        return None
+
+
 class Notifier:
+    """Native Web Push to the Apply Hub app (iPhone home-screen app, or Chrome/Edge on a laptop).
+
+    The app stores each device's push subscription in your tracker gist; the scanner signs
+    pushes with the VAPID private key (GitHub secret VAPID_PRIVATE_KEY)."""
+
     def __init__(self, s, enabled):
-        self.server = s["notify"]["server"].rstrip("/")
-        self.topic = os.environ.get("NTFY_TOPIC", "").strip()
-        self.enabled = enabled and bool(self.topic)
-        self.app_url = (os.environ.get("APP_URL") or s.get("app_url") or "").rstrip("/")
+        self.app_url = (os.environ.get("APP_URL") or s.get("app_url") or "").rstrip("/") + "/"
+        self.key = os.environ.get("VAPID_PRIVATE_KEY", "").strip()
+        # push services want a contact as "https://host" (no path) or mailto:
+        u = urlparse(self.app_url)
+        self.vapid_sub = f"https://{u.netloc}" if u.scheme == "https" and u.netloc else "https://github.com"
+        subs = (read_gist_file(GIST_PUSH) or {}).get("subs", {}) if self.key else {}
+        self.subs = [v["subscription"] for v in subs.values() if v.get("subscription")]
+        self.enabled = enabled and bool(self.key and self.subs)
         self.sent = 0
+        if enabled and not self.enabled:
+            why = "VAPID_PRIVATE_KEY not set" if not self.key else \
+                  "no devices subscribed (turn on notifications in the app)"
+            print(f"  [notify] disabled: {why}")
 
     def push(self, title, message, click=None, tags=None, priority=3, actions=None):
         print(f"  [notify] {title} | {message[:120].replace(chr(10), ' / ')}")
         if not self.enabled:
             return
-        body = {"topic": self.topic, "title": title[:250], "message": message[:3500],
-                "tags": tags or [], "priority": priority}
-        if click:
-            body["click"] = click
-        acts = list(actions or [])
-        if self.app_url and len(acts) < 3:
-            acts.append({"action": "view", "label": "Open Apply Hub", "url": self.app_url})
-        if acts:
-            body["actions"] = acts
-        try:
-            requests.post(self.server, json=body, timeout=20).raise_for_status()
-            self.sent += 1
-            time.sleep(0.4)
-        except Exception as e:
-            print(f"  [notify] FAILED: {e}")
+        from pywebpush import WebPushException, webpush
+        payload = json.dumps({"title": title[:120], "body": message[:900],
+                              "url": click or self.app_url, "tag": (tags or ["applyhub"])[0]})
+        for sub in self.subs:
+            try:
+                webpush(sub, payload, vapid_private_key=self.key,
+                        vapid_claims={"sub": self.vapid_sub},
+                        ttl=86400, headers={"Urgency": "high" if priority >= 4 else "normal"})
+                self.sent += 1
+            except WebPushException as e:
+                code = getattr(e.response, "status_code", None)
+                print(f"  [notify] device failed ({code}): "
+                      f"{'subscription expired: open the app once to renew' if code in (404, 410) else e}")
+            time.sleep(0.2)
 
 
 # ===================================================================== jobs
@@ -342,19 +386,10 @@ def build_research():
 
 # ===================================================================== reminders
 def tracker_items():
-    """Optional: read your tracker (secret gist) so its deadlines are reminded too."""
-    gid = os.environ.get("TRACKER_GIST_ID", "").strip()
-    if not gid:
-        return []
-    try:
-        g = requests.get(f"https://api.github.com/gists/{gid}", timeout=20).json()
-        content = g["files"]["apply-hub-tracker.json"]["content"]
-        items = json.loads(content).get("items", {})
-        return [i for i in items.values() if i.get("deadline") and i.get("status") not in
-                ("Applied", "Submitted", "Rejected", "Withdrawn", "Offer", "Admitted", "Interview")]
-    except Exception as e:
-        print(f"  tracker gist not readable: {e}")
-        return []
+    """Your tracker (secret gist), so its deadlines are reminded too."""
+    items = (read_gist_file(GIST_TRACKER) or {}).get("items", {})
+    return [i for i in items.values() if i.get("deadline") and i.get("status") not in
+            ("Applied", "Submitted", "Rejected", "Withdrawn", "Offer", "Admitted", "Interview")]
 
 
 def deadline_events(grad, research, tracked):
@@ -417,11 +452,14 @@ def main():
     settings = load_yaml(CONFIG / "settings.yaml")
     notifier = Notifier(settings, enabled=not (args.no_notify or args.check))
     if args.test_notify:
-        notifier.enabled = bool(notifier.topic)
+        notifier = Notifier(settings, enabled=True)
         if not notifier.enabled:
-            sys.exit("Set the NTFY_TOPIC environment variable first.")
-        notifier.push("✅ Apply Hub is connected", "Notifications work. You'll get new internships and deadline reminders here.",
-                      click=notifier.app_url or None, tags=["tada"])
+            sys.exit("Push not possible: needs VAPID_PRIVATE_KEY + TRACKER_GIST_ID and a device "
+                     "that turned on notifications in the app.")
+        notifier.push("✅ Apply Hub is connected",
+                      f"Notifications work on {len(notifier.subs)} device(s). New internships and deadline reminders will appear here.",
+                      tags=["test"])
+        print(f"Sent to {notifier.sent}/{len(notifier.subs)} device(s).")
         return
 
     t0 = time.time()

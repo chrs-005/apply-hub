@@ -36,14 +36,15 @@ jobs:
         if: ${{ inputs.test_notify }}
         run: python scanner/scan.py --test-notify
         env:
-          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
+          TRACKER_GIST_ID: ${{ secrets.TRACKER_GIST_ID }}
           APP_URL: ${{ vars.APP_URL }}
 
       - name: Scan
         if: ${{ !inputs.test_notify }}
         run: python scanner/scan.py
         env:
-          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
           TRACKER_GIST_ID: ${{ secrets.TRACKER_GIST_ID }}
           APP_URL: ${{ vars.APP_URL }}
 

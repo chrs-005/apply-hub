@@ -108,6 +108,71 @@ const Sync = {
   },
 };
 
+// ------------------------------------------------------------------ push notifications (Web Push)
+// The public half of the scanner's signing key. The private half is the GitHub secret VAPID_PRIVATE_KEY.
+const VAPID_PUBLIC = "BEu42YU8Tu6N_86FBQjDffeDlu0Ldv4kU1thYBPfUQk-gUvckgXH8ezQAMLT7qUX2XpM9Sa9iUWAJpMAKaLbub8";
+const PUSH_FILE = "apply-hub-push.json";
+const Push = {
+  supported: () => "serviceWorker" in navigator && "PushManager" in window && "Notification" in window,
+  isIOS: () => /iphone|ipad|ipod/i.test(navigator.userAgent),
+  standalone: () => window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true,
+  enabled: () => Push.supported() && Notification.permission === "granted" && LS.get("push_endpoint", ""),
+  // why notifications can't be turned on here yet (null = ready)
+  blocker() {
+    if (Push.isIOS() && !Push.standalone()) return "On iPhone, open Apply Hub from its Home Screen icon first (Safari → Share → Add to Home Screen).";
+    if (!Push.supported()) return "This browser doesn't support push notifications (iPhone needs iOS 16.4+).";
+    if (Notification.permission === "denied") return "Notifications are blocked. Allow them in Settings → Notifications → Apply Hub.";
+    if (!Sync.on()) return "First set up tracker sync above (token + Create tracker). Your device's notification address is stored there.";
+    return null;
+  },
+  deviceName() { return Push.isIOS() ? "iPhone" : /android/i.test(navigator.userAgent) ? "Android" : /mac/i.test(navigator.userAgent) ? "Mac" : "Laptop"; },
+  key() {
+    const b = atob(VAPID_PUBLIC.replace(/-/g, "+").replace(/_/g, "/") + "===".slice((VAPID_PUBLIC.length + 3) % 4));
+    return Uint8Array.from(b, (c) => c.charCodeAt(0));
+  },
+  async enable() {
+    const why = Push.blocker(); if (why) throw new Error(why);
+    const perm = await Notification.requestPermission();
+    if (perm !== "granted") throw new Error("Permission not granted.");
+    const reg = await navigator.serviceWorker.ready;
+    const sub = (await reg.pushManager.getSubscription()) || (await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: Push.key() }));
+    await Push.save(sub);
+    await reg.showNotification("🔔 Notifications are on", { body: "You'll get new internships and deadline reminders here.", icon: "icons/icon-192.png" });
+  },
+  async save(sub) {
+    // store this device's subscription in the tracker gist, where the scanner reads it
+    const r = await fetch(`https://api.github.com/gists/${Sync.gist}`, { headers: Sync.headers(), cache: "no-store" });
+    if (!r.ok) throw new Error(`Couldn't read your tracker gist (${r.status}).`);
+    const g = await r.json();
+    let data = {}; try { data = JSON.parse(g.files[PUSH_FILE]?.content || "{}"); } catch {}
+    const subs = data.subs || {};
+    const json = sub.toJSON();
+    const id = json.endpoint.slice(-24).replace(/[^\w]/g, "");
+    subs[id] = { subscription: json, device: Push.deviceName(), updated: new Date().toISOString() };
+    const w = await fetch(`https://api.github.com/gists/${Sync.gist}`, {
+      method: "PATCH", headers: Sync.headers(),
+      body: JSON.stringify({ files: { [PUSH_FILE]: { content: JSON.stringify({ subs }, null, 1) } } }),
+    });
+    if (!w.ok) throw new Error(`Couldn't save to your tracker gist (${w.status}).`);
+    LS.set("push_endpoint", json.endpoint);
+  },
+  async refresh() {
+    // iOS can rotate subscriptions; re-save if this device's endpoint changed
+    if (!Push.supported() || Notification.permission !== "granted" || !Sync.on()) return;
+    try {
+      const reg = await navigator.serviceWorker.ready;
+      const sub = (await reg.pushManager.getSubscription()) || (await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: Push.key() }));
+      if (sub && sub.endpoint !== LS.get("push_endpoint", "")) await Push.save(sub);
+    } catch (e) { console.warn("push refresh", e); }
+  },
+  async disable() {
+    const reg = await navigator.serviceWorker.ready;
+    const sub = await reg.pushManager.getSubscription();
+    if (sub) await sub.unsubscribe();
+    LS.set("push_endpoint", "");
+  },
+};
+
 function trackedFor(id) { return S.tracker.items[id]; }
 function upsertTrack(id, data) {
   const now = new Date().toISOString();
@@ -173,7 +238,11 @@ function renderToday() {
   const changed = S.watch.filter((w) => w.last_changed && (Date.now() - new Date(w.last_changed)) < 7 * 86400000);
   const failing = S.companies.filter((c) => c.ok === false);
   const freshTop = [...fresh].sort((a, b) => a.tier - b.tier).slice(0, 8);
-  return `
+  const pushBanner = Push.enabled() ? "" : `<div class="card" style="border-color:var(--accent)">
+      <div class="title">🔔 Get notified the moment an internship opens</div>
+      <p class="small muted" style="margin:4px 0 8px">${esc(Push.blocker() || "Turn on notifications for this device.")}</p>
+      <button class="btn sm primary" data-act="open-settings">Set up notifications</button></div>`;
+  return `${pushBanner}
     <div class="stats">
       <div class="stat"><b>${open.length}</b><span>open internships</span></div>
       <div class="stat"><b>${fresh.length}</b><span>new since last visit</span></div>
@@ -422,10 +491,10 @@ function openSettings() {
       <p class="sync" id="sync-state">${Sync.label()}</p>
     </div>
     <div class="card">
-      <div class="title">🔔 Notifications</div>
-      <p class="small muted">Install <b>ntfy</b> from the App Store, tap “+”, and subscribe to your secret topic (the same value as the <code>NTFY_TOPIC</code> GitHub secret).</p>
-      <div class="field"><label>Your ntfy topic (just for this button)</label><input id="s-topic" value="${esc(LS.get("ntfy_topic", ""))}" placeholder="applyhub-…"></div>
-      <a class="btn sm" id="s-ntfy" href="#" target="_blank" rel="noopener">Open topic in ntfy ↗</a>
+      <div class="title">🔔 Notifications on this device</div>
+      <p class="small muted" id="push-state">${Push.enabled() ? "✓ On. New internships, page changes and the 9am deadline brief arrive here." : esc(Push.blocker() || "Off. Tap the button to turn them on.")}</p>
+      <div class="row"><button class="btn sm primary" id="s-push" ${Push.blocker() && !Push.enabled() ? "disabled" : ""}>${Push.enabled() ? "Re-register this device" : "Turn on notifications"}</button>
+      ${Push.enabled() ? `<button class="btn sm ghost" id="s-push-off">Turn off</button>` : ""}</div>
     </div>
     <div class="card">
       <div class="title">📦 Your data</div>
@@ -437,18 +506,23 @@ function openSettings() {
       <table class="src">${S.companies.filter((c) => c.ats !== "manual").map((c) => `<tr><td>${esc(c.name)}</td><td class="muted">${esc(c.ats)}</td><td>${c.ok ? `${c.open_internships} open` : `<span class="badge bad">error</span>`}</td></tr>`).join("")}</table>
     </div>
     <button class="btn" data-close style="width:100%">Close</button>`);
-  const topicBtn = $("#s-ntfy", bg);
-  const setTopic = () => { const t = $("#s-topic", bg).value.trim(); LS.set("ntfy_topic", t); topicBtn.href = t ? `https://ntfy.sh/${encodeURIComponent(t)}` : "#"; };
-  $("#s-topic", bg).addEventListener("input", setTopic); setTopic();
+  $("#s-push", bg).onclick = async (e) => {
+    e.target.disabled = true; e.target.textContent = "Turning on…";
+    try { await Push.enable(); toast("Notifications on ✓"); bg.remove(); openSettings(); route(); }
+    catch (err) { $("#push-state", bg).textContent = err.message; e.target.disabled = false; e.target.textContent = "Turn on notifications"; }
+  };
+  const off = $("#s-push-off", bg);
+  if (off) off.onclick = async () => { await Push.disable(); toast("Notifications off"); bg.remove(); openSettings(); route(); };
+  const reopen = () => { bg.remove(); openSettings(); };
   $("#s-save", bg).onclick = async () => {
     Sync.token = $("#s-token", bg).value.trim(); Sync.gist = $("#s-gist", bg).value.trim();
     LS.set("gh_token", Sync.token); LS.set("gist_id", Sync.gist);
-    if (Sync.on()) { await Sync.pull(); await Sync.push(); toast(Sync.state === "synced" ? "Synced ✓" : "Sync failed"); route(); }
+    if (Sync.on()) { await Sync.pull(); await Sync.push(); toast(Sync.state === "synced" ? "Synced ✓" : "Sync failed"); route(); reopen(); }
   };
   $("#s-create", bg).onclick = async () => {
     Sync.token = $("#s-token", bg).value.trim(); LS.set("gh_token", Sync.token);
     if (!Sync.token) return toast("Paste a token first");
-    try { const id = await Sync.create(); $("#s-gist", bg).value = id; Sync.setState("synced"); toast("Tracker created ✓ Gist ID copied"); navigator.clipboard?.writeText(id).catch(() => {}); }
+    try { const id = await Sync.create(); $("#s-gist", bg).value = id; Sync.setState("synced"); toast("Tracker created ✓ Gist ID copied"); navigator.clipboard?.writeText(id).catch(() => {}); reopen(); }
     catch (e) { toast(e.message); }
   };
   $("#s-export", bg).onclick = () => {
@@ -505,6 +579,7 @@ document.addEventListener("click", (e) => {
   else if (act === "track-grad") { const p = S.grad.find((x) => x.id === id); if (trackedFor("grad:" + id)) location.hash = "#tracker"; else { trackGrad(p); toast("Added to tracker"); route(); } }
   else if (act === "track-research") { const p = S.research.find((x) => x.id === id); if (trackedFor("research:" + id)) location.hash = "#tracker"; else { trackResearch(p); toast("Added to tracker"); route(); } }
   else if (act === "add-custom") openAddCustom();
+  else if (act === "open-settings") openSettings();
   else if (act === "remove" && card && confirm("Remove from tracker?")) { removeTrack(card.dataset.id); route(); }
 });
 document.addEventListener("change", (e) => {
@@ -529,7 +604,7 @@ $("#btn-refresh").onclick = async () => { toast("Refreshing…"); await Promise.
   if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
   await loadData();
   route();
-  if (Sync.on()) { await Sync.pull(); route(); }
+  if (Sync.on()) { await Sync.pull(); route(); Push.refresh(); }
   document.addEventListener("visibilitychange", async () => {
     if (document.visibilityState === "visible") { await Promise.all([loadData(), Sync.pull()]); route(); }
   });

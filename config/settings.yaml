@@ -139,10 +139,9 @@ regions:
 # Locations to drop when they are the ONLY location (US etc.).
 # Just here for clarity: anything that does not match a region above is dropped anyway.
 
-# Push notifications (ntfy). The topic itself is a secret: set it as the
-# NTFY_TOPIC secret on GitHub (or env var locally), not here.
+# Push notifications go straight to the Apply Hub app (Web Push).
+# Needs GitHub secrets VAPID_PRIVATE_KEY + TRACKER_GIST_ID, and "Turn on notifications" in the app.
 notify:
-  server: https://ntfy.sh
   # If more than this many new internships are found in one run, send one summary instead.
   max_individual: 6
   # Daily digest hour (UTC). 6 = 9am Beirut.

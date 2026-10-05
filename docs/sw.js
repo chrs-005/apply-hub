@@ -1,5 +1,29 @@
 // Offline support: app shell is cached; data/*.json is network-first (falls back to cache).
-const VERSION = "applyhub-v1";
+const VERSION = "applyhub-v2";
+
+// ---- push notifications (sent by the scanner on GitHub)
+self.addEventListener("push", (e) => {
+  let d = {};
+  try { d = e.data ? e.data.json() : {}; } catch { d = { body: e.data && e.data.text() }; }
+  e.waitUntil(self.registration.showNotification(d.title || "Apply Hub", {
+    body: d.body || "",
+    icon: "icons/icon-192.png",
+    badge: "icons/icon-192.png",
+    tag: d.tag ? `${d.tag}-${Date.now()}` : undefined,
+    data: { url: d.url || "./#today" },
+  }));
+});
+
+self.addEventListener("notificationclick", (e) => {
+  e.notification.close();
+  const url = new URL(e.notification.data?.url || "./#today", self.registration.scope).href;
+  e.waitUntil((async () => {
+    const wins = await self.clients.matchAll({ type: "window", includeUncontrolled: true });
+    const app = wins.find((w) => w.url.startsWith(self.registration.scope));
+    if (url.startsWith(self.registration.scope) && app) { await app.focus(); return app.navigate(url); }
+    return self.clients.openWindow(url);
+  })());
+});
 const SHELL = ["./", "index.html", "style.css", "app.js", "manifest.webmanifest",
                "icons/icon-192.png", "icons/apple-touch-icon.png"];
 
