@@ -17,7 +17,7 @@
     "Your interviewer may ask you to explain your approach. These aren’t trick questions: we just want to learn more about your strategy and process. The interviewer will also ask about your technical interests, past internship experience, school projects and your reasons for exploring opportunities at Citadel.",
     "Your interviewer may ask you to explain your approach. These aren’t trick questions: we just want to learn more about your strategy and process. The interviewer will also ask about your technical interests, past internship experience, school projects and your reasons for exploring opportunities at Citadel."
    ],
-   "status": "ok"
+   "status": "blocked"
   },
   "https://www.gresearch.com/join-us/": {
    "hash": "d6e1338f101e85db7539804cad00f8c138a8cee5d4604a2fbec4138ebd48c863",
@@ -209,7 +209,7 @@
    "status": "ok"
   },
   "https://www.ox.ac.uk/admissions/graduate/courses/msc-mathematical-sciences": {
-   "status": "error"
+   "status": "blocked"
   },
   "https://inf.ethz.ch/studies/summer-research-fellowship.html": {
    "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
