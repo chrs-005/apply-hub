@@ -488,7 +488,7 @@ function openSettings() {
       <div class="field"><label>GitHub token (gist scope)</label><input id="s-token" type="password" autocomplete="off" value="${esc(Sync.token)}" placeholder="ghp_…"></div>
       <div class="field"><label>Gist ID</label><input id="s-gist" value="${esc(Sync.gist)}" placeholder="Leave empty, then press Create"></div>
       <div class="row"><button class="btn primary sm" id="s-save">Save & sync</button><button class="btn sm" id="s-create">Create tracker</button>
-      <a class="btn sm ghost" href="https://github.com/settings/tokens/new?scopes=gist&description=Apply%20Hub%20tracker" target="_blank" rel="noopener">Get a token ↗</a></div>
+      <a class="btn sm ghost" href="https://github.com/settings/tokens/new?scopes=gist&description=Apply%20Hub%20${encodeURIComponent(Push.deviceName() + " " + new Date().toLocaleString("en-GB"))}" target="_blank" rel="noopener">Get a token ↗</a></div>
       <p class="sync" id="sync-state">${Sync.label()}</p>
     </div>
     <div class="card">
