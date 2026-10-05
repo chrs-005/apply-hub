@@ -1,0 +1,542 @@
+# Master's programs for Fall 2027 entry.
+# Researched 2026-10-05. `source` says how solid each number is:
+#   official   = read on the university's own page
+#   aggregator = from a reliable 3rd-party listing, matches the usual pattern
+#   estimate   = last cycle's value or typical figure: VERIFY before relying on it
+# `verify` lists the fields you should double-check on the program page.
+#
+# Money: amount + currency. The app converts to USD (rates in config/settings.yaml)
+# so you can sort by cost. tuition_per: year | semester | total.
+#
+# Tip: you can edit this file from your phone directly on github.com.
+# The app updates on the next scan.
+
+programs:
+
+  # ======================= SWITZERLAND =======================
+  - id: eth-cs
+    university: ETH Zurich
+    program: MSc Computer Science
+    country: Switzerland
+    region: CH
+    fields: [cs, ml]
+    opens: 2026-11-01
+    deadlines:
+      - {label: "Only window for non-Swiss bachelor's (incl. ESOP)", date: 2026-11-30, time: "11:59 CET"}
+    app_fee: {amount: 150, currency: CHF}
+    tuition: {amount: 2190, currency: CHF, per: semester}
+    scholarships:
+      - {name: "ESOP (Excellence & Opportunity)", deadline: 2026-11-30, covers: "CHF 12,000/semester + full tuition waiver", how: "Tick ESOP in the same application. Needs 2 reference letters."}
+    language: "English C1 proof (e.g. IELTS 7.0 / TOEFL 100). Ask whether an English-taught bachelor's counts"
+    gre: "Not required (check the program page)"
+    docs: [CV, transcripts, "2 references (for ESOP)", "motivation letter", "course descriptions"]
+    url: https://ethz.ch/en/studies/registration-application/master/application/how-to-apply/application-schedule.html
+    source: official
+    verify: [language, gre]
+    notes: "Very short window (Nov 1–30). Prepare documents in October. Late or incomplete applications are not processed."
+
+  - id: eth-ds
+    university: ETH Zurich
+    program: MSc Data Science
+    country: Switzerland
+    region: CH
+    fields: [ml, math]
+    opens: 2026-11-01
+    deadlines:
+      - {label: "Only window for non-Swiss bachelor's (incl. ESOP)", date: 2026-11-30, time: "11:59 CET"}
+    app_fee: {amount: 150, currency: CHF}
+    tuition: {amount: 2190, currency: CHF, per: semester}
+    scholarships:
+      - {name: "ESOP", deadline: 2026-11-30, covers: "CHF 12,000/semester + tuition waiver", how: "Same application"}
+    language: "English C1 proof"
+    gre: "Check the program page (some ETH programs recommend GRE)"
+    url: https://ethz.ch/en/studies/registration-application/master/application/how-to-apply/application-schedule.html
+    source: official
+    verify: [language, gre]
+    notes: "A separate CHF 150 fee per program. You can apply to several ETH programs in the same window."
+
+  - id: eth-math
+    university: ETH Zurich
+    program: MSc Mathematics / Applied Mathematics
+    country: Switzerland
+    region: CH
+    fields: [math, research]
+    opens: 2026-11-01
+    deadlines:
+      - {label: "Only window for non-Swiss bachelor's", date: 2026-11-30, time: "11:59 CET"}
+    app_fee: {amount: 150, currency: CHF}
+    tuition: {amount: 2190, currency: CHF, per: semester}
+    scholarships:
+      - {name: "ESOP", deadline: 2026-11-30, covers: "CHF 12,000/semester + tuition waiver", how: "Same application"}
+    language: "English C1 proof"
+    gre: "Not required"
+    url: https://ethz.ch/en/studies/registration-application/master/application/how-to-apply/application-schedule.html
+    source: official
+    verify: [language]
+
+  - id: eth-qf
+    university: ETH Zurich + University of Zurich
+    program: MSc Quantitative Finance
+    country: Switzerland
+    region: CH
+    fields: [quant, math]
+    opens: 2026-11-15
+    deadlines:
+      - {label: "Scientific application (phase 1)", date: 2027-01-15}
+      - {label: "UZH admin portal (phase 2, if accepted)", date: 2027-04-30}
+    app_fee: {amount: 200, currency: CHF, note: "+ CHF 100 admin fee if you pass phase 1"}
+    tuition: {amount: 880, currency: CHF, per: semester, note: "CHF 780 + CHF 100 international supplement (UZH); 3 semesters"}
+    scholarships: []
+    language: "English proof required"
+    gre: "GRE/GMAT strongly recommended for quant-finance programs (check)"
+    url: https://www.msfinance.uzh.ch/en/admission/applicationinformation.html
+    source: aggregator
+    verify: [app_fee, tuition, gre]
+    notes: "Interviews in March–April. 18-month program, very quant/industry focused."
+
+  - id: epfl-cs
+    university: EPFL
+    program: MSc Computer Science
+    country: Switzerland
+    region: CH
+    fields: [cs, ml]
+    opens: 2026-10-15
+    deadlines:
+      - {label: "Round 1 (required for Excellence Fellowship)", date: 2026-12-15}
+      - {label: "Round 2", date: 2027-03-31}
+    app_fee: {amount: 150, currency: CHF}
+    tuition: {amount: 2190, currency: CHF, per: semester}
+    scholarships:
+      - {name: "EPFL Excellence Fellowship", deadline: 2026-12-15, covers: "CHF 10,000/semester for up to 4 semesters + housing", how: "Tick the fellowship box. The application must be paid and validated by Dec 15"}
+    language: "English B2/C1 (check program)"
+    gre: "Not required"
+    url: https://www.epfl.ch/education/master/how-to-apply/
+    source: official
+    verify: [app_fee, opens, language]
+
+  - id: epfl-ds
+    university: EPFL
+    program: MSc Data Science
+    country: Switzerland
+    region: CH
+    fields: [ml, math]
+    opens: 2026-10-15
+    deadlines:
+      - {label: "Round 1 (fellowship)", date: 2026-12-15}
+      - {label: "Round 2", date: 2027-03-31}
+    app_fee: {amount: 150, currency: CHF}
+    tuition: {amount: 2190, currency: CHF, per: semester}
+    scholarships:
+      - {name: "EPFL Excellence Fellowship", deadline: 2026-12-15, covers: "CHF 10,000/semester + housing", how: "Tick the box"}
+    language: "English"
+    gre: "Not required"
+    url: https://www.epfl.ch/education/master/how-to-apply/
+    source: official
+    verify: [app_fee, opens]
+
+  - id: epfl-fe
+    university: EPFL
+    program: MSc Financial Engineering
+    country: Switzerland
+    region: CH
+    fields: [quant, math]
+    opens: 2026-10-15
+    deadlines:
+      - {label: "Round 1 (fellowship)", date: 2026-12-15}
+      - {label: "Round 2", date: 2027-03-31}
+    app_fee: {amount: 150, currency: CHF}
+    tuition: {amount: 2190, currency: CHF, per: semester}
+    scholarships:
+      - {name: "EPFL Excellence Fellowship", deadline: 2026-12-15, covers: "CHF 10,000/semester", how: "Tick the box"}
+    language: "English"
+    gre: "GMAT/GRE may be requested (check)"
+    url: https://www.epfl.ch/education/master/how-to-apply/
+    source: official
+    verify: [app_fee, gre]
+
+  # ======================= UNITED KINGDOM =======================
+  - id: ox-mcf
+    university: University of Oxford
+    program: MSc Mathematical and Computational Finance
+    country: United Kingdom
+    region: UK
+    fields: [quant, math]
+    opens: 2026-09-01
+    deadlines:
+      - {label: "Early deadline", date: 2026-11-13, time: "12:00 UK"}
+      - {label: "Final deadline", date: 2027-01-27, time: "12:00 UK"}
+    app_fee: {amount: 75, currency: GBP}
+    tuition: {amount: 48640, currency: GBP, per: total, note: "2026-27 figure (10-month course)"}
+    scholarships:
+      - {name: "Clarendon Fund + dept scholarships", deadline: 2026-11-13, covers: "Full fees + living", how: "Automatic if you apply by the relevant deadline. Early is better"}
+    language: "Oxford 'standard' or 'higher' level (IELTS 7.0–7.5)"
+    gre: "Not required"
+    url: https://www.ox.ac.uk/admissions/graduate/courses/msc-mathematical-and-computational-finance
+    source: aggregator
+    verify: [app_fee, language]
+    notes: "Submit at least 2 weeks before the deadline (Oxford's advice)."
+
+  - id: ox-acs
+    university: University of Oxford
+    program: MSc Advanced Computer Science
+    country: United Kingdom
+    region: UK
+    fields: [cs, ml]
+    opens: 2026-09-01
+    deadlines:
+      - {label: "Deadline", date: 2027-01-06, time: "12:00 UK"}
+    app_fee: {amount: 75, currency: GBP}
+    tuition: {amount: 50000, currency: GBP, per: total, note: "approximate overseas fee: check the page"}
+    scholarships:
+      - {name: "Clarendon Fund", deadline: 2027-01-06, covers: "Full fees + living", how: "Automatic consideration"}
+    language: "Oxford standard level (IELTS 7.0)"
+    gre: "Not required"
+    url: https://www.ox.ac.uk/admissions/graduate/courses/msc-advanced-computer-science
+    source: aggregator
+    verify: [tuition, language]
+
+  - id: ox-omms
+    university: University of Oxford
+    program: MSc Mathematical Sciences (OMMS)
+    country: United Kingdom
+    region: UK
+    fields: [math, research]
+    opens: 2026-09-01
+    deadlines:
+      - {label: "Deadline (TBC: usually Dec/Jan)", date: 2027-01-06, estimate: true}
+    app_fee: {amount: 75, currency: GBP}
+    tuition: null
+    scholarships:
+      - {name: "Clarendon Fund", deadline: null, covers: "Full fees + living", how: "Automatic if you apply by the January deadline"}
+    language: "Oxford standard level"
+    gre: "Not required"
+    url: https://www.ox.ac.uk/admissions/graduate/courses/msc-mathematical-sciences
+    source: estimate
+    verify: [deadlines, tuition]
+
+  - id: cam-acs
+    university: University of Cambridge
+    program: MPhil Advanced Computer Science
+    country: United Kingdom
+    region: UK
+    fields: [cs, ml, research]
+    opens: 2026-09-09
+    deadlines:
+      - {label: "Funding deadline (Gates + Cambridge Trust)", date: 2026-12-02, time: "23:59 GMT"}
+      - {label: "Final deadline", date: 2027-02-25}
+    app_fee: {amount: 85, currency: GBP}
+    tuition: null
+    scholarships:
+      - {name: "Gates Cambridge / Cambridge Trust", deadline: 2026-12-02, covers: "Full cost", how: "Tick funding in the application. Gates needs an extra statement"}
+    language: "IELTS 7.5 / TOEFL 110 (Cambridge usual)"
+    gre: "Not required"
+    docs: ["1–2 project proposals (≤500 words each)", "5 module choices"]
+    url: https://www.cst.cam.ac.uk/admissions/acs
+    source: official
+    verify: [tuition, language]
+    notes: "Research-oriented 9-month course, great before a PhD. Also budget for a College fee."
+
+  - id: cam-part3
+    university: University of Cambridge
+    program: MASt Mathematics (Part III)
+    country: United Kingdom
+    region: UK
+    fields: [math, research]
+    opens: 2026-09-09
+    deadlines:
+      - {label: "Funding deadline (typical)", date: 2026-12-02, estimate: true}
+      - {label: "Final deadline", date: 2027-02-02}
+    app_fee: {amount: 85, currency: GBP}
+    tuition: null
+    scholarships:
+      - {name: "Gates Cambridge / Cambridge Trust", deadline: 2026-12-02, covers: "Full cost", how: "Apply by the funding deadline"}
+    language: "IELTS 7.5"
+    gre: "Not required"
+    url: https://www.postgraduate.study.cam.ac.uk/courses/directory/mapmaspmm
+    source: aggregator
+    verify: [deadlines, tuition]
+    notes: "The famous 'Part III'. Excellent for theory/research and for quant."
+
+  - id: imp-aiml
+    university: Imperial College London
+    program: MSc Computing (AI & Machine Learning)
+    country: United Kingdom
+    region: UK
+    fields: [cs, ml]
+    opens: 2026-09-15
+    deadlines:
+      - {label: "Next deadline", date: 2027-01-06}
+    app_fee: {amount: 90, currency: GBP, note: "One fee covers up to 2 taught-master's applications"}
+    tuition: {amount: 46000, currency: GBP, per: total, note: "approximate"}
+    scholarships: []
+    language: "IELTS 7.0 (Imperial 'higher')"
+    gre: "Not required"
+    url: https://www.imperial.ac.uk/computing/prospective-students/courses/pg/
+    source: aggregator
+    verify: [tuition, deadlines]
+    notes: "Rolling rounds. Apply in the earliest open round."
+
+  - id: imp-mf
+    university: Imperial College London
+    program: MSc Mathematics and Finance
+    country: United Kingdom
+    region: UK
+    fields: [quant, math]
+    opens: 2026-09-01
+    deadlines:
+      - {label: "Round 1 (passed)", date: 2026-09-28}
+      - {label: "Round 2", date: 2027-01-07}
+      - {label: "Round 3", date: 2027-03-11}
+      - {label: "Round 4", date: 2027-04-29}
+    app_fee: {amount: 90, currency: GBP, note: "One fee covers up to 2 taught-master's applications"}
+    tuition: null
+    scholarships: []
+    language: "IELTS 7.0"
+    gre: "Not required"
+    url: https://www.imperial.ac.uk/study/courses/postgraduate-taught/mathematics-finance/
+    source: aggregator
+    verify: [tuition, url]
+    notes: "Combine with imp-aiml under ONE £90 fee."
+
+  - id: ucl-ml
+    university: UCL
+    program: MSc Machine Learning
+    country: United Kingdom
+    region: UK
+    fields: [ml, cs]
+    opens: 2026-10-15
+    deadlines:
+      - {label: "Deadline (programmes can close early)", date: 2027-03-27}
+    app_fee: {amount: 90, currency: GBP}
+    tuition: {amount: 39800, currency: GBP, per: total, note: "approximate"}
+    scholarships: []
+    language: "UCL level 2"
+    gre: "Not required"
+    url: https://www.ucl.ac.uk/prospective-students/graduate/application-fees
+    source: aggregator
+    verify: [deadlines, tuition, url]
+
+  - id: ucl-csml
+    university: UCL
+    program: MSc Computational Statistics & Machine Learning
+    country: United Kingdom
+    region: UK
+    fields: [ml, math]
+    opens: 2026-10-15
+    deadlines:
+      - {label: "Deadline (TBC)", date: 2027-03-27, estimate: true}
+    app_fee: {amount: 90, currency: GBP}
+    tuition: null
+    scholarships:
+      - {name: "UCL scholarships (various)", deadline: 2026-11-18, covers: "Varies", how: "Separate scholarship application"}
+    language: "UCL level 2"
+    gre: "Not required"
+    url: https://www.ucl.ac.uk/prospective-students/graduate/application-fees
+    source: estimate
+    verify: [deadlines, tuition, url]
+
+  - id: lse-finmath
+    university: LSE
+    program: MSc Financial Mathematics
+    country: United Kingdom
+    region: UK
+    fields: [quant, math]
+    opens: 2026-10-01
+    deadlines:
+      - {label: "Rolling: apply early (funding deadline ~late April)", date: 2027-04-26, estimate: true}
+    app_fee: {amount: 80, currency: GBP}
+    tuition: {amount: 38000, currency: GBP, per: total, note: "approximate"}
+    scholarships:
+      - {name: "LSE Graduate Support Scheme", deadline: null, covers: "Partial", how: "Apply by the funding deadline"}
+    language: "LSE standard"
+    gre: "Recommended"
+    url: https://www.lse.ac.uk/study-at-lse/graduate
+    source: estimate
+    verify: [app_fee, deadlines, tuition]
+
+  - id: ed-ai
+    university: University of Edinburgh
+    program: MSc Artificial Intelligence
+    country: United Kingdom
+    region: UK
+    fields: [ml, cs]
+    opens: 2026-10-01
+    deadlines:
+      - {label: "Final deadline", date: 2027-03-31}
+    app_fee: null
+    tuition: {amount: 40500, currency: GBP, per: total}
+    scholarships: []
+    language: "IELTS 6.5–7.0"
+    gre: "Not required"
+    url: https://study.ed.ac.uk/programmes/postgraduate-taught/107-artificial-intelligence
+    source: aggregator
+    verify: [app_fee]
+
+  # ======================= FRANCE =======================
+  - id: x-msct
+    university: École Polytechnique (IP Paris)
+    program: "MSc&T: AI & Advanced Visual Computing / Data & AI / other tracks"
+    country: France
+    region: EU
+    fields: [ml, cs, math]
+    opens: 2026-09-16
+    deadlines:
+      - {label: "Round 1", date: 2026-10-12}
+      - {label: "Round 2 (last round with scholarships)", date: 2027-01-11}
+      - {label: "Round 3", date: 2027-03-08}
+      - {label: "Round 4", date: 2027-04-13}
+    app_fee: {amount: 95, currency: EUR}
+    tuition: {amount: 17500, currency: EUR, per: year, note: "approximate non-EU fee"}
+    scholarships:
+      - {name: "Polytechnique / Eiffel scholarships", deadline: 2027-01-11, covers: "Partial to full", how: "Only rounds 1–2 are considered"}
+    language: "English B2 (TOEFL/IELTS) or French"
+    gre: "Not required"
+    url: https://programmes.polytechnique.edu/en/master/admissions-msct/application-deadlines-procedure
+    source: official
+    verify: [tuition]
+    notes: "Lebanon is an 'Études en France' country, so you will also need the Campus France process for the visa."
+
+  - id: saclay-m1
+    university: Université Paris-Saclay
+    program: "Master (M1) Mathematics & AI / Computer Science"
+    country: France
+    region: EU
+    fields: [math, ml, cs, research]
+    opens: 2026-12-01
+    deadlines:
+      - {label: "Applications (Inception platform, typical)", date: 2027-03-01, estimate: true}
+    app_fee: {amount: 0, currency: EUR}
+    tuition: {amount: 3879, currency: EUR, per: year, note: "French state rate for non-EU (often waived by Paris-Saclay)"}
+    scholarships:
+      - {name: "Paris-Saclay International Master's Scholarship (IDEX)", deadline: null, covers: "€10,000/yr", how: "Ticked during the program application. Check the date"}
+    language: "French or English depending on the track"
+    gre: "Not required"
+    url: https://www.universite-paris-saclay.fr/admission/bourses-et-aides-financieres/bourses-internationales-de-master
+    source: estimate
+    verify: [deadlines, opens, tuition]
+    notes: "Leads into the elite M2s (MVA, Probabilités & Finance). Very cheap. Campus France procedure applies."
+
+  # ======================= GERMANY / NETHERLANDS =======================
+  - id: tum-inf
+    university: TU Munich
+    program: MSc Informatics / Mathematics in Data Science
+    country: Germany
+    region: EU
+    fields: [cs, ml, math]
+    opens: 2027-01-01
+    deadlines:
+      - {label: "Application period closes", date: 2027-05-31}
+    app_fee: {amount: 0, currency: EUR}
+    tuition: {amount: 6000, currency: EUR, per: semester, note: "non-EU (bands €4k–6k/semester) + ~€85 semester fee"}
+    scholarships:
+      - {name: "TUM tuition waiver (merit)", deadline: null, covers: "Tuition", how: "Check the TUM site"}
+    language: "English B2/C1"
+    gre: "Not required (GRE can help non-German applicants)"
+    url: https://cit.tum.de/en/cit/studies/degree-programs/master-informatics
+    source: aggregator
+    verify: [tuition]
+    notes: "German student visa needs a blocked account (~€12k/yr)."
+
+  - id: tud-cs
+    university: TU Delft
+    program: MSc Computer Science
+    country: Netherlands
+    region: EU
+    fields: [cs, ml]
+    opens: 2026-10-01
+    deadlines:
+      - {label: "Van Effen scholarship deadline", date: 2026-12-01, time: "23:59 CET"}
+      - {label: "Non-EU application deadline (typical)", date: 2027-01-15, estimate: true}
+    app_fee: {amount: 100, currency: EUR}
+    tuition: {amount: 25000, currency: EUR, per: year, note: "approximate non-EU institutional fee"}
+    scholarships:
+      - {name: "Justus & Louise van Effen Excellence", deadline: 2026-12-01, covers: "Full tuition + living allowance (24 months)", how: "Complete the MSc application + scholarship form + 1 reference letter by Dec 1"}
+    language: "IELTS 6.5 / TOEFL 90"
+    gre: "Not required"
+    url: https://tudelft.nl/en/education/practical-matters/scholarships
+    source: aggregator
+    verify: [app_fee, tuition, deadlines]
+
+  - id: uva-ai
+    university: University of Amsterdam
+    program: MSc Artificial Intelligence
+    country: Netherlands
+    region: EU
+    fields: [ml, cs]
+    opens: 2026-10-01
+    deadlines:
+      - {label: "Amsterdam Merit Scholarship", date: 2027-01-15}
+      - {label: "Non-EU application deadline (typical)", date: 2027-02-01, estimate: true}
+    app_fee: {amount: 100, currency: EUR}
+    tuition: {amount: 23000, currency: EUR, per: year, note: "approximate"}
+    scholarships:
+      - {name: "Amsterdam Merit Scholarship", deadline: 2027-01-15, covers: "€12.5k–25k", how: "Separate application"}
+    language: "IELTS 6.5 / TOEFL 92"
+    gre: "Not required"
+    url: https://www.uva.nl/en
+    source: estimate
+    verify: [deadlines, tuition, app_fee]
+
+  # ======================= GULF (fully funded) =======================
+  - id: mbzuai-msc
+    university: MBZUAI (Abu Dhabi)
+    program: MSc Machine Learning / Computer Vision / NLP
+    country: United Arab Emirates
+    region: GULF
+    fields: [ml, cs, research]
+    opens: 2026-09-07
+    deadlines:
+      - {label: "Final deadline", date: 2026-12-15}
+    app_fee: {amount: 200, currency: AED}
+    tuition: {amount: 0, currency: AED, per: year, note: "Fully funded for admitted students"}
+    scholarships:
+      - {name: "MBZUAI full scholarship", deadline: 2026-12-15, covers: "Tuition + AED 15,500/month + flights + insurance + UAE visa", how: "Automatic with admission"}
+    language: "IELTS / TOEFL (check minimum)"
+    gre: "Not required (check)"
+    url: https://mbzuai.ac.ae/study/admission-process
+    source: aggregator
+    verify: [language]
+    notes: "Decisions by 31 Mar 2027. Lebanese passport works for a UAE student visa."
+
+  - id: kaust-ms
+    university: KAUST (Saudi Arabia)
+    program: MS Computer Science / Applied Math & Computational Science
+    country: Saudi Arabia
+    region: GULF
+    fields: [cs, ml, math, research]
+    opens: 2026-08-01
+    deadlines:
+      - {label: "Round 1 / priority (check)", date: 2026-12-01, estimate: true}
+      - {label: "Round 2", date: 2027-01-03}
+    app_fee: {amount: 0, currency: USD}
+    tuition: {amount: 0, currency: USD, per: year, note: "Fully funded"}
+    scholarships:
+      - {name: "KAUST Fellowship", deadline: 2027-01-03, covers: "Tuition + $20–30k/yr stipend + housing + insurance + laptop", how: "Automatic with admission"}
+    language: "TOEFL/IELTS required"
+    gre: "Not required (recommended)"
+    docs: [transcripts, CV, "Statement of Purpose", "3 referees", "English test", passport]
+    url: https://admissions.kaust.edu.sa/how-to-apply/admission-timelines
+    source: aggregator
+    verify: [deadlines]
+    notes: "Free to apply. Pairs well with the KAUST VSRP summer research internship."
+
+  # ======================= OTHER =======================
+  - id: erasmus-mundus
+    university: Erasmus Mundus (EU)
+    program: "Joint Master's (e.g. Big Data, AI, Data Science, Applied Math)"
+    country: Europe (2–3 countries)
+    region: EU
+    fields: [ml, cs, math]
+    opens: 2026-10-01
+    deadlines:
+      - {label: "Most scholarship deadlines (vary by program)", date: 2027-01-15, estimate: true}
+    app_fee: {amount: 0, currency: EUR}
+    tuition: {amount: 0, currency: EUR, per: year, note: "Covered by the EM scholarship"}
+    scholarships:
+      - {name: "Erasmus Mundus scholarship", deadline: null, covers: "Tuition + €1,400/month + travel", how: "Through each program's application"}
+    language: "English B2/C1"
+    gre: "Not required"
+    url: https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en
+    source: estimate
+    verify: [deadlines]
+    notes: "Fully funded, open to Lebanese students. Browse the catalogue and add specific programs here."

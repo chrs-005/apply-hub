@@ -1,0 +1,157 @@
+# What counts as a relevant internship for you. Edit freely.
+
+# A job title must match one of these to count as an internship.
+internship_patterns:
+  - '\bintern(s|ship|ships)?\b'
+  - '\bsummer (analyst|associate|student|program|programme|researcher|engineer|trader)\b'
+  - '\bstagiaire\b'
+  - '\bstage\b'
+  - '\bpraktik(um|ant|antin)\b'
+  - '\bwerkstudent'
+  - '\bworking student\b'
+  - '\b(industrial )?placement\b'
+  - '\boff[- ]cycle\b'
+  - '\bstudent researcher\b'
+  - '\bco-?op\b'
+
+# Interest categories: a job is kept if its title matches at least one.
+# (For quant firms, generic titles like "Summer Internship 2027" are also kept.)
+categories:
+  swe:      '\b(software|developer|swe|sde|engineer(ing)?|backend|back-end|frontend|full[- ]?stack|systems?|infrastructure|platform|devops|sre|compiler|kernel|embedded|fpga|hardware|security|developpeur|entwickler)\b'
+  quant:    '\b(quant(itative)?|trad(er|ing)|market making|strategist|algorithmic|algo|portfolio|risk)\b'
+  ml:       '\b(machine learning|ml|ai|artificial intelligence|deep learning|llm|nlp|computer vision|data scien(ce|tist)|applied scien(ce|tist)|reinforcement|generative|modell?ing)\b'
+  research: '\b(research(er)?|scientist|phd|mathematic(s|ian)|theor(y|etical)|recherche)\b'
+  data:     '\b(data engineer(ing)?|analytics engineer|data platform|data infrastructure)\b'
+
+# Titles matching this are dropped even if they match a category.
+exclude: '\b(mba|legal|lawyer|marketing|sales|account (manager|executive)|recruit(ing|er)|talent|human resources|hr|people (team|partner)|communications|pr|content|social media|customer|support|warehouse|whs|logistics|fulfil+ment|operations associate|tax|audit|accounting|payroll|procurement|facilities|executive assistant|office|graphic|ux writer|copywriter|nurse|pharmac|apprentice(ship)?|technician|data cent(er|re)|maintenance|field|medical|seo|consult(ing|ant)|business develop(er|ment)|finance & strategy|data quality|operations engineering|physical|solutions? engineer|account tech)\b'
+
+# Titles mentioning these years are treated as old postings and dropped.
+stale_years: ['2024', '2025', '2026 summer', 'summer 2026']
+
+# Location -> region. A job is kept if ANY of its locations falls in a region below.
+# Matching is case-insensitive substring on the location text.
+regions:
+  UK:
+    - united kingdom
+    - ', uk'
+    - '(uk)'
+    - 'uk -'
+    - england
+    - scotland
+    - london
+    - ldn
+    - cambridge, uk
+    - cambridge, england
+    - cambridge, cambridgeshire
+    - united kingdom, cambridgeshire
+    - oxford, uk
+    - edinburgh
+    - manchester
+    - bristol
+    - ', gb'
+    - dublin
+    - ireland
+  CH:
+    - switzerland
+    - zurich
+    - zürich
+    - geneva
+    - genève
+    - lausanne
+    - basel
+    - zug
+    - ', ch'
+  EU:
+    - europe
+    - emea
+    - france
+    - paris
+    - lyon
+    - sophia antipolis
+    - germany
+    - berlin
+    - munich
+    - münchen
+    - frankfurt
+    - hamburg
+    - netherlands
+    - amsterdam
+    - rotterdam
+    - delft
+    - eindhoven
+    - belgium
+    - brussels
+    - luxembourg
+    - spain
+    - madrid
+    - barcelona
+    - portugal
+    - lisbon
+    - porto
+    - italy
+    - milan
+    - austria
+    - vienna
+    - sweden
+    - stockholm
+    - denmark
+    - copenhagen
+    - norway
+    - oslo
+    - finland
+    - helsinki
+    - poland
+    - warsaw
+    - krakow
+    - kraków
+    - czech
+    - prague
+    - estonia
+    - tallinn
+    - greece
+    - athens
+    - cyprus
+    - limassol
+    - romania
+    - bucharest
+    - ', fr'
+    - ', nl'
+  GULF:
+    - dubai
+    - abu dhabi
+    - united arab emirates
+    - uae
+    - ', ae'
+    - riyadh
+    - jeddah
+    - thuwal
+    - saudi
+    - ksa
+    - doha
+    - qatar
+    - bahrain
+    - manama
+    - kuwait
+    - muscat
+    - oman
+
+# Locations to drop when they are the ONLY location (US etc.).
+# Just here for clarity: anything that does not match a region above is dropped anyway.
+
+# Push notifications (ntfy). The topic itself is a secret: set it as the
+# NTFY_TOPIC secret on GitHub (or env var locally), not here.
+notify:
+  server: https://ntfy.sh
+  # If more than this many new internships are found in one run, send one summary instead.
+  max_individual: 6
+  # Daily digest hour (UTC). 6 = 9am Beirut.
+  digest_hour_utc: 6
+  # Remind about deadlines this many days ahead.
+  deadline_warn_days: [14, 7, 3, 1]
+
+# Public URL of your app (GitHub Pages). Used for "open in app" links in notifications.
+app_url: ""
+
+# Rough FX rates to compare costs in USD (update occasionally).
+fx_to_usd: {USD: 1.0, EUR: 1.16, GBP: 1.34, CHF: 1.25, AED: 0.272, SAR: 0.267, QAR: 0.275}

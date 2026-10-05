@@ -1,0 +1,33 @@
+# Web pages the scanner watches for changes (for sites without a job API, and
+# for grad/research programs, so you hear when "applications for 2027 are open").
+#
+#   keywords: only lines containing one of these words are compared, which
+#             ignores noise like dates, cookie banners and ads.
+#   kind:     company | grad | research   (just for grouping in the app)
+#
+# Some sites block robots (they return 403). The app shows that as "blocked",
+# so you know to check that one manually.
+
+pages:
+  # ---- Companies without an API ----
+  - {name: "Citadel – student internships", kind: company, url: "https://www.citadel.com/careers/open-opportunities/students/internships/", keywords: [intern, "2027", london, europe, dubai]}
+  - {name: "G-Research – students", kind: company, url: "https://www.gresearch.com/join-us/", keywords: [intern, "2027", student]}
+  - {name: "Qube RT – careers", kind: company, url: "https://www.qube-rt.com/careers/", keywords: [intern, "2027", graduate]}
+  - {name: "SIG – campus programs", kind: company, url: "https://careers.sig.com/campus-programs", keywords: [intern, "2027", dublin, london]}
+  - {name: "Apple – internships UK", kind: company, url: "https://jobs.apple.com/en-gb/search?team=internships-STDNT-INTRN&location=united-kingdom-GBR", keywords: [intern]}
+  - {name: "Maven Securities – careers", kind: company, url: "https://www.mavensecurities.com/careers/", keywords: [intern, "2027"]}
+
+  # ---- Grad programs (application open/deadline changes) ----
+  - {name: "ETH – application dates", kind: grad, url: "https://ethz.ch/en/studies/registration-application/master/application/how-to-apply/application-schedule.html", keywords: ["2027", deadline, november, april]}
+  - {name: "EPFL – master how to apply", kind: grad, url: "https://www.epfl.ch/education/master/how-to-apply/", keywords: [deadline, december, march, april, "2027"]}
+  - {name: "Polytechnique MSc&T – deadlines", kind: grad, url: "https://programmes.polytechnique.edu/en/master/admissions-msct/application-deadlines-procedure", keywords: [round, deadline, "2027"]}
+  - {name: "Cambridge – MPhil ACS", kind: grad, url: "https://www.cst.cam.ac.uk/admissions/acs", keywords: [deadline, "2027", funding]}
+  - {name: "KAUST – admission timeline", kind: grad, url: "https://admissions.kaust.edu.sa/how-to-apply/admission-timelines", keywords: [round, deadline, "2027", fall]}
+  - {name: "MBZUAI – admission process", kind: grad, url: "https://mbzuai.ac.ae/study/admission-process", keywords: [deadline, "2027", fall, portal]}
+  - {name: "UZH/ETH – MSc Quantitative Finance", kind: grad, url: "https://www.msfinance.uzh.ch/en/admission/applicationinformation.html", keywords: [deadline, january, november, "2027"]}
+  - {name: "Oxford – MSc Mathematical Sciences", kind: grad, url: "https://www.ox.ac.uk/admissions/graduate/courses/msc-mathematical-sciences", keywords: [deadline, "2027"]}
+
+  # ---- Research summer programs ----
+  - {name: "ETH CS – Summer Research Fellowship", kind: research, url: "https://inf.ethz.ch/studies/summer-research-fellowship.html", keywords: [deadline, "2027", application]}
+  - {name: "ISTA – ISTernship", kind: research, url: "https://ista.ac.at/en/education/isternship/", keywords: [deadline, "2027", application, paused]}
+  - {name: "CERN – Summer Student Programme", kind: research, url: "https://careers.cern/summer", keywords: ["2027", deadline, "non-member", application]}

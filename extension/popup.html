@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="ui.css">
+  <style>body { width: 340px; padding: 14px; }</style>
+</head>
+<body>
+  <div class="row between"><b style="font-size:16px">⚡ Apply Hub</b><a href="options.html" target="_blank" class="small">Profile & settings</a></div>
+  <button id="fill" class="btn primary block" style="margin-top:12px">Autofill this page</button>
+  <p class="tiny muted" style="margin:6px 0 0">Shortcut: Alt+Shift+F · fills, never submits</p>
+  <p id="result" class="small"></p>
+  <hr>
+  <b class="small">Log this application</b>
+  <input id="company" placeholder="Company / university">
+  <input id="role" placeholder="Role / program">
+  <div class="row">
+    <select id="status"><option>Applied</option><option>Saved</option><option>Preparing</option><option>Test / OA</option><option>Interview</option></select>
+    <button id="track" class="btn">Add to tracker</button>
+  </div>
+  <p id="track-result" class="tiny muted"></p>
+  <hr>
+  <b class="small">Quick copy</b>
+  <div id="copy" class="chips"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

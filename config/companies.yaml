@@ -1,0 +1,112 @@
+# Companies the scanner checks every run.
+#
+#   ats:   which job-board API the company uses (greenhouse, lever, ashby, workable,
+#          workday, janestreet, google, microsoft, amazon)
+#   token: the company's id on that board (the part of the URL, e.g. boards.greenhouse.io/<token>)
+#   type:  quant | bigtech | ai | tech   (used for filtering + "typical opening" hints)
+#   tier:  1 = dream, 2 = strong, 3 = nice to have   (used for sorting)
+#   opens: when Summer internships usually open (shown in the app while nothing is posted yet)
+#
+# To add a company: find its careers page, click a job, look at the URL:
+#   boards.greenhouse.io/XXX or job-boards.greenhouse.io/XXX -> ats: greenhouse, token: XXX
+#   jobs.lever.co/XXX                                        -> ats: lever,      token: XXX
+#   jobs.ashbyhq.com/XXX                                     -> ats: ashby,      token: XXX
+#   apply.workable.com/XXX                                   -> ats: workable,   token: XXX
+# then run `python scanner/scan.py --check` to confirm it works.
+
+defaults:
+  opens:
+    quant: "Jul – Oct (rolling: apply in the first 2–3 weeks)"
+    bigtech: "Aug – Nov"
+    ai: "Sep – Jan (many roles are PhD-only)"
+    tech: "Oct – Mar"
+
+companies:
+  # ---------------- Quant trading / research ----------------
+  - {name: Jane Street,            ats: janestreet, token: janestreet,              type: quant, tier: 1, careers: "https://www.janestreet.com/join-jane-street/open-roles/?type=students-and-new-grads"}
+  - {name: Hudson River Trading,   ats: greenhouse, token: wehrtyou,                type: quant, tier: 1}
+  - {name: Optiver,                ats: greenhouse, token: optiverus,               type: quant, tier: 1}
+  - {name: IMC Trading,            ats: greenhouse, token: imc,                     type: quant, tier: 1}
+  - {name: Jump Trading,           ats: greenhouse, token: jumptrading,             type: quant, tier: 1}
+  - {name: XTX Markets,            ats: greenhouse, token: xtxmarketstechnologies,  type: quant, tier: 1}
+  - {name: Five Rings,             ats: greenhouse, token: fiveringsllc,            type: quant, tier: 1}
+  - {name: DRW,                    ats: greenhouse, token: drweng,                  type: quant, tier: 1}
+  - {name: Squarepoint Capital,    ats: greenhouse, token: squarepointcapital,      type: quant, tier: 2}
+  - {name: Tower Research Capital, ats: greenhouse, token: towerresearchcapital,    type: quant, tier: 2}
+  - {name: Flow Traders,           ats: greenhouse, token: flowtraders,             type: quant, tier: 2}
+  - {name: Akuna Capital,          ats: greenhouse, token: akunacapital,            type: quant, tier: 2}
+  - {name: Old Mission,            ats: greenhouse, token: oldmissioncapital,       type: quant, tier: 3}
+  - {name: Point72 / Cubist,       ats: greenhouse, token: point72,                 type: quant, tier: 2}
+  - {name: WorldQuant,             ats: greenhouse, token: worldquant,              type: quant, tier: 2}
+  - {name: Capital Fund Management (CFM), ats: greenhouse, token: cfm,              type: quant, tier: 2}
+  - {name: Mako Trading,           ats: greenhouse, token: mako,                    type: quant, tier: 3}
+  - {name: ExodusPoint,            ats: greenhouse, token: exoduspoint,             type: quant, tier: 3}
+
+  # ---------------- Big tech ----------------
+  - {name: Google,     ats: google,    token: google,    type: bigtech, tier: 1, careers: "https://www.google.com/about/careers/applications/jobs/results?target_level=INTERN_AND_APPRENTICE"}
+  - {name: Microsoft,  ats: microsoft, token: microsoft, type: bigtech, tier: 1, careers: "https://apply.careers.microsoft.com/careers?query=intern"}
+  - {name: Amazon,     ats: amazon,    token: amazon,    type: bigtech, tier: 2, careers: "https://www.amazon.jobs/en/teams/internships-for-students"}
+  - {name: NVIDIA,     ats: workday,   token: "nvidia|wd5|NVIDIAExternalCareerSite", type: bigtech, tier: 1}
+  - {name: Palantir,   ats: lever,     token: palantir,  type: bigtech, tier: 1}
+  - {name: Stripe,     ats: greenhouse, token: stripe,   type: bigtech, tier: 1}
+  - {name: Databricks, ats: greenhouse, token: databricks, type: bigtech, tier: 1}
+  - {name: Cloudflare, ats: greenhouse, token: cloudflare, type: bigtech, tier: 2}
+  - {name: Datadog,    ats: greenhouse, token: datadog,  type: bigtech, tier: 2}
+  - {name: MongoDB,    ats: greenhouse, token: mongodb,  type: bigtech, tier: 2}
+  - {name: Elastic,    ats: greenhouse, token: elastic,  type: tech, tier: 3}
+  - {name: Figma,      ats: greenhouse, token: figma,    type: bigtech, tier: 2}
+  - {name: Airbnb,     ats: greenhouse, token: airbnb,   type: bigtech, tier: 2}
+  - {name: Spotify,    ats: lever,     token: spotify,   type: bigtech, tier: 2}
+  - {name: Coinbase,   ats: greenhouse, token: coinbase, type: tech, tier: 3}
+  - {name: Scale AI,   ats: greenhouse, token: scaleai,  type: ai, tier: 2}
+
+  # ---------------- AI labs ----------------
+  - {name: Anthropic,   ats: greenhouse, token: anthropic, type: ai, tier: 1}
+  - {name: OpenAI,      ats: ashby,     token: openai,     type: ai, tier: 1}
+  - {name: Cohere,      ats: ashby,     token: cohere,     type: ai, tier: 2}
+  - {name: Perplexity,  ats: ashby,     token: perplexity, type: ai, tier: 2}
+  - {name: Hugging Face, ats: workable, token: huggingface, type: ai, tier: 1}
+  - {name: Helsing,     ats: ashby,     token: helsing,    type: ai, tier: 2}
+  - {name: Wayve,       ats: ashby,     token: wayve,      type: ai, tier: 2}
+  - {name: ElevenLabs,  ats: ashby,     token: elevenlabs, type: ai, tier: 2}
+  - {name: Synthesia,   ats: ashby,     token: synthesia,  type: ai, tier: 3}
+  - {name: Photoroom,   ats: ashby,     token: photoroom,  type: ai, tier: 3}
+  - {name: Poolside,    ats: ashby,     token: poolside,   type: ai, tier: 2}
+
+  # ---------------- European tech / Gulf ----------------
+  - {name: Adyen,      ats: greenhouse, token: adyen,    type: tech, tier: 2}
+  - {name: Celonis,    ats: greenhouse, token: celonis,  type: tech, tier: 3}
+  - {name: Doctolib,   ats: greenhouse, token: doctolib, type: tech, tier: 3}
+  - {name: Mirakl,     ats: greenhouse, token: mirakl,   type: tech, tier: 3}
+  - {name: N26,        ats: greenhouse, token: n26,      type: tech, tier: 3}
+  - {name: Monzo,      ats: greenhouse, token: monzo,    type: tech, tier: 3}
+  - {name: Deliveroo,  ats: greenhouse, token: deliveroo, type: tech, tier: 3}
+  - {name: Bitpanda,   ats: greenhouse, token: bitpanda, type: tech, tier: 3}
+  - {name: Careem,     ats: greenhouse, token: careem,   type: tech, tier: 2}
+  - {name: Alan,       ats: ashby,     token: alan,      type: tech, tier: 3}
+  - {name: Qonto,      ats: lever,     token: qonto,     type: tech, tier: 3}
+  - {name: Pigment,    ats: lever,     token: pigment,   type: tech, tier: 3}
+  - {name: BlaBlaCar,  ats: lever,     token: blablacar, type: tech, tier: 3}
+  - {name: Veepee,     ats: lever,     token: veepee,    type: tech, tier: 3}
+
+# Firms with no scannable API. They show in the app under "Check manually"
+# with their typical opening window, and their pages are watched for changes
+# (see watch.yaml).
+manual:
+  - {name: Citadel / Citadel Securities, type: quant, tier: 1, careers: "https://www.citadel.com/careers/open-opportunities/students/internships/"}
+  - {name: G-Research,        type: quant, tier: 1, careers: "https://www.gresearch.com/join-us/"}
+  - {name: Qube Research & Technologies, type: quant, tier: 1, careers: "https://www.qube-rt.com/careers/"}
+  - {name: Susquehanna (SIG), type: quant, tier: 1, careers: "https://careers.sig.com/campus-programs"}
+  - {name: Two Sigma,         type: quant, tier: 1, careers: "https://careers.twosigma.com/careers/"}
+  - {name: Millennium,        type: quant, tier: 2, careers: "https://www.mlp.com/careers/"}
+  - {name: Maven Securities,  type: quant, tier: 2, careers: "https://www.mavensecurities.com/careers/"}
+  - {name: Da Vinci Trading,  type: quant, tier: 2, careers: "https://www.davincitrading.com/careers/"}
+  - {name: Man Group,         type: quant, tier: 2, careers: "https://www.man.com/careers"}
+  - {name: Meta,              type: bigtech, tier: 1, careers: "https://www.metacareers.com/jobs?roles[0]=Internship"}
+  - {name: Apple,             type: bigtech, tier: 1, careers: "https://jobs.apple.com/en-gb/search?team=internships-STDNT-INTRN"}
+  - {name: Bloomberg,         type: bigtech, tier: 1, careers: "https://www.bloomberg.com/company/early-career/"}
+  - {name: Google DeepMind,   type: ai, tier: 1, careers: "https://deepmind.google/about/careers/"}
+  - {name: Mistral AI,        type: ai, tier: 1, careers: "https://mistral.ai/careers"}
+  - {name: TII (Abu Dhabi),   type: ai, tier: 2, careers: "https://www.tii.ae/careers"}
+  - {name: G42 (Abu Dhabi),   type: ai, tier: 2, careers: "https://www.g42.ai/careers"}
+  - {name: ADIA (Abu Dhabi),  type: quant, tier: 2, careers: "https://www.adia.ae/en/careers"}

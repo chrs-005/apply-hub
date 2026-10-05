@@ -1,0 +1,179 @@
+[
+ {
+  "id": "summer-epfl",
+  "name": "Summer@EPFL (CS research internship)",
+  "org": "EPFL",
+  "country": "Switzerland",
+  "region": "CH",
+  "fields": [
+   "cs",
+   "ml",
+   "research"
+  ],
+  "opens": "2026-10-15",
+  "deadline": "2026-11-29",
+  "deadline_note": "23:59 Anywhere on Earth",
+  "pay": "~CHF 1,800/month + travel",
+  "duration": "~3 months (Jul–Sep)",
+  "level": "Bachelor's / Master's",
+  "url": "https://www.epfl.ch/schools/ic/education/summer-at-epfl/",
+  "source": "aggregator",
+  "verify": [
+   "url",
+   "opens"
+  ],
+  "notes": "Very competitive and prestigious. Strong letter + research interests matching labs.",
+  "status": "not_open_yet"
+ },
+ {
+  "id": "kaust-vsrp",
+  "name": "KAUST Visiting Student Research Program (VSRP)",
+  "org": "KAUST",
+  "country": "Saudi Arabia",
+  "region": "GULF",
+  "fields": [
+   "cs",
+   "ml",
+   "math",
+   "research"
+  ],
+  "opens": null,
+  "deadline": "2026-12-01",
+  "deadline_note": "Rolling: apply 6–9 months before your start date",
+  "pay": "Stipend + housing + flights",
+  "duration": "3–6 months",
+  "level": "3rd/4th-year bachelor's (GPA ≥ 3.5/4)",
+  "url": "https://vsrp.kaust.edu.sa/",
+  "source": "estimate",
+  "verify": [
+   "deadline",
+   "url"
+  ],
+  "notes": "Easiest strong option in the Gulf. Contact a professor whose lab you like first.",
+  "status": "open"
+ },
+ {
+  "id": "eth-ssrf",
+  "name": "ETH Student Summer Research Fellowship (CS Dept)",
+  "org": "ETH Zurich",
+  "country": "Switzerland",
+  "region": "CH",
+  "fields": [
+   "cs",
+   "ml",
+   "research"
+  ],
+  "opens": "2026-11-01",
+  "deadline": "2026-12-16",
+  "deadline_note": "13:00 CET",
+  "pay": "Monthly stipend + accommodation support",
+  "duration": "Jul 1 – Aug 31 2027",
+  "level": "Undergrad / Master's",
+  "url": "https://inf.ethz.ch/studies/summer-research-fellowship.html",
+  "source": "aggregator",
+  "verify": [
+   "url"
+  ],
+  "notes": "Open worldwide. Results by February.",
+  "status": "not_open_yet"
+ },
+ {
+  "id": "cern-summer",
+  "name": "CERN Summer Student Programme (non-member states)",
+  "org": "CERN",
+  "country": "Switzerland",
+  "region": "CH",
+  "fields": [
+   "cs",
+   "research",
+   "math"
+  ],
+  "opens": "2026-11-01",
+  "deadline": "2027-01-31",
+  "deadline_note": "Typical end-of-January deadline: verify",
+  "pay": "~CHF 93/day + travel",
+  "duration": "8–13 weeks",
+  "level": "Bachelor's (3+ years) / Master's",
+  "url": "https://careers.cern/summer",
+  "source": "estimate",
+  "verify": [
+   "deadline",
+   "opens"
+  ],
+  "notes": "There's a quota reserved for non-member-state students.",
+  "status": "not_open_yet"
+ },
+ {
+  "id": "cold-email",
+  "name": "Cold-email professors (ETH, EPFL, Oxford, ENS, MBZUAI, KAUST)",
+  "org": "Any lab",
+  "country": "Anywhere",
+  "region": "EU",
+  "fields": [
+   "research",
+   "math",
+   "ml",
+   "cs"
+  ],
+  "opens": null,
+  "deadline": "2027-01-31",
+  "deadline_note": "Self-imposed: email by end of January",
+  "pay": "Varies",
+  "duration": "Summer",
+  "level": "Any",
+  "url": "",
+  "source": "estimate",
+  "notes": "Use the tracker: add each professor as a custom item. A short email + CV + one specific paper you read.",
+  "status": "open"
+ },
+ {
+  "id": "ista-isternship",
+  "name": "ISTA ISTernship",
+  "org": "Institute of Science and Technology Austria",
+  "country": "Austria",
+  "region": "EU",
+  "fields": [
+   "cs",
+   "ml",
+   "math",
+   "research"
+  ],
+  "opens": null,
+  "deadline": null,
+  "deadline_note": "Paused for 2026. Info on 2027 expected late 2026 (watched)",
+  "pay": "Funded",
+  "duration": "2–3 months",
+  "level": "Bachelor's / Master's",
+  "url": "https://ista.ac.at/en/education/isternship/",
+  "source": "aggregator",
+  "verify": [
+   "deadline"
+  ],
+  "status": "open"
+ },
+ {
+  "id": "inria-internships",
+  "name": "Inria research internships (stages)",
+  "org": "Inria (France)",
+  "country": "France",
+  "region": "EU",
+  "fields": [
+   "cs",
+   "ml",
+   "math",
+   "research"
+  ],
+  "opens": "2026-11-01",
+  "deadline": null,
+  "deadline_note": "Postings appear Nov–Mar. Apply per posting, or email a researcher directly",
+  "pay": "French intern stipend (~€650/month+)",
+  "duration": "2–6 months",
+  "level": "Bachelor's / Master's",
+  "url": "https://jobs.inria.fr/public/classic/en/offres",
+  "source": "estimate",
+  "verify": [
+   "deadline"
+  ],
+  "status": "not_open_yet"
+ }
+]

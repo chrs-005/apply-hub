@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Apply Hub</title>
+  <meta name="description" content="Internships (Europe & Gulf) + grad school tracker">
+  <meta name="theme-color" content="#3b5bdb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Apply Hub">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="hdr">Apply Hub <span class="sub" id="hdr-sub">Loading…</span></h1>
+    <button class="icon-btn" id="btn-refresh" title="Refresh" aria-label="Refresh">↻</button>
+    <button class="icon-btn" id="btn-settings" title="Settings" aria-label="Settings">⚙︎</button>
+  </header>
+  <main id="view"></main>
+  <nav class="tabs">
+    <a href="#today" data-tab="today"><span class="ic">☀︎</span>Today</a>
+    <a href="#jobs" data-tab="jobs"><span class="ic">💼</span>Internships<span class="dot" id="dot-jobs" hidden></span></a>
+    <a href="#grad" data-tab="grad"><span class="ic">🎓</span>Grad</a>
+    <a href="#research" data-tab="research"><span class="ic">🔬</span>Research</a>
+    <a href="#tracker" data-tab="tracker"><span class="ic">✓</span>Tracker</a>
+  </nav>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
