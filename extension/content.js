@@ -206,6 +206,9 @@
     const report = { filled: 0, attention: 0, answers: 0, files: [], unknown: [] };
     const els = [...document.querySelectorAll(FILLABLE)].filter((el) => visible(el) && !el.disabled && !el.readOnly);
     const radiosDone = new Set();
+    // Education fields: when the same question repeats (a 2nd institution block, e.g. your exchange semester), only the first is filled.
+    const ONCE = new Set(["university", "degree", "major", "gpa", "gpa_scale", "grad_date", "edu_start"]);
+    const usedKeys = new Set();
 
     for (const el of els) {
       const isEmpty = el.tagName === "SELECT" ? (el.selectedIndex <= 0 || !el.value) : el.tagName === "BUTTON" ? /select|choose|^\s*$/i.test(el.innerText) : !el.value;
@@ -213,6 +216,7 @@
       if (el.type === "radio" || el.type === "file") continue;
       const { rule, ctx, label } = ruleFor(el);
       let value = null;
+      if (rule && ONCE.has(rule.key) && usedKeys.has(rule.key + "|" + label)) { report.unknown.push(label.slice(0, 80)); continue; }
       if (rule) value = rule.value ? rule.value(profile, ctx) : profile[rule.key];
       if ((value == null || value === "") && (el.tagName === "TEXTAREA" || (label && label.length > 25))) {
         const a = matchAnswer(label, answers);
@@ -222,6 +226,7 @@
         report.filled++;
         el.style.outline = "2px solid #2f9e44"; el.style.outlineOffset = "1px";
         el.dataset.applyHub = "filled";
+        if (rule) usedKeys.add(rule.key + "|" + label);
       } else if (label) report.unknown.push(label.slice(0, 80));
     }
 
