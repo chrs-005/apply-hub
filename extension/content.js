@@ -11,6 +11,17 @@
 
   const ATS_HOSTS = /greenhouse\.io|lever\.co|ashbyhq\.com|myworkdayjobs\.com|workday\.com|smartrecruiters\.com|workable\.com|icims\.com|taleo\.net|successfactors|oraclecloud\.com|jobvite\.com|teamtailor\.com|recruitee\.com|personio\.|bamboohr\.com|eightfold\.ai|careers\.microsoft\.com|amazon\.jobs|janestreet\.com|avature\.net|join\.com|applytojob\.com|breezy\.hr/;
   const FILLABLE = 'input:not([type=hidden]):not([type=submit]):not([type=button]):not([type=reset]):not([type=image]):not([type=password]):not([type=checkbox]), textarea, select, button[aria-haspopup="listbox"]';
+  // Grad-school portals (universities) vs job portals: decides which graduation date to use.
+  const GRAD_HOSTS = /\.ac\.(uk|ae|at|be|il)$|\.edu(\.[a-z]{2})?$|ethz\.ch|epfl\.ch|uzh\.ch|polytechnique|ip-paris|universit|uni-[a-z]+\.de|tum\.de|tudelft\.nl|uva\.nl|kaust\.edu|mbzuai|eacea|technolutions|campusfrance|ens\.(fr|psl)|sorbonne|imperial\.ac|lse\.ac|ucl\.ac|ox\.ac|cam\.ac|ed\.ac/;
+  let currentMode = "auto";
+  function isGradSchoolPage() {
+    if (currentMode === "grad") return true;
+    if (currentMode === "internship") return false;
+    if (ATS_HOSTS.test(location.hostname + location.pathname)) return false;
+    if (GRAD_HOSTS.test(location.hostname)) return true;
+    const text = (document.body?.innerText || "").slice(0, 6000);
+    return /graduate admission|application for admission|master'?s (programme|program|degree)|programme of study|statement of purpose|letters? of recommendation|referee/i.test(text);
+  }
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
   const norm = (s) => String(s || "").replace(/([a-z])([A-Z])/g, "$1 $2").replace(/[_\-\[\]\.]+/g, " ").replace(/\s+/g, " ").trim().toLowerCase();
   const visible = (el) => { const r = el.getBoundingClientRect(); const s = getComputedStyle(el); return r.width > 0 && r.height > 0 && s.visibility !== "hidden" && s.display !== "none"; };
@@ -53,7 +64,7 @@
     const ac = (el.getAttribute("autocomplete") || "").toLowerCase();
     const ctx = { text: label || attrs, placeholder: norm(el.placeholder), inputType: (el.type || "").toLowerCase(),
                   isSelect: el.tagName === "SELECT" || el.getAttribute("aria-haspopup") === "listbox" || el.getAttribute("role") === "combobox",
-                  wantsFullPhone: false, wantsScale: /scale|out of/.test(label) };
+                  wantsFullPhone: false, wantsScale: /scale|out of/.test(label), gradSchool: isGradSchoolPage() };
     if (AUTOCOMPLETE[ac]) return { rule: AH_RULES.find((r) => r.key === AUTOCOMPLETE[ac]) || { key: AUTOCOMPLETE[ac] }, ctx, label };
     for (const text of [label, attrs]) {
       if (!text) continue;
@@ -277,7 +288,7 @@
   document.addEventListener("focusin", (e) => { if (e.target.matches("input, textarea, [contenteditable]")) lastFocused = e.target; }, true);
 
   chrome.runtime.onMessage.addListener((msg, _sender, reply) => {
-    if (msg.type === "AH_FILL") { fill().then((r) => reply(r)); return true; }
+    if (msg.type === "AH_FILL") { currentMode = msg.mode || "auto"; fill().then((r) => reply({ ...r, mode: isGradSchoolPage() ? "grad" : "internship" })); return true; }
     if (msg.type === "AH_SAVE_ANSWER" && lastFocused) {
       const q = labelText(lastFocused) || attrText(lastFocused);
       const a = lastFocused.value || lastFocused.innerText || "";
@@ -289,7 +300,7 @@
         chrome.storage.local.set({ answers }).then(() => showToast(`Saved to your answer bank ✓ ("${q.slice(0, 50)}…")`));
       });
     }
-    if (msg.type === "AH_CONTEXT") reply(pageContext());
+    if (msg.type === "AH_CONTEXT") { currentMode = "auto"; reply({ ...pageContext(), detected: isGradSchoolPage() ? "grad" : "internship" }); }
   });
 
   setTimeout(maybeShowButton, 1200);

@@ -33,7 +33,8 @@ var AH_FIELDS = [
   { key: "gpa", label: "GPA", placeholder: "3.9" },
   { key: "gpa_scale", label: "GPA scale", placeholder: "4.0" },
   { key: "edu_start", label: "Studies start (YYYY-MM)", placeholder: "2023-09" },
-  { key: "grad_date", label: "Expected graduation (YYYY-MM)", placeholder: "2028-06" },
+  { key: "grad_date", label: "Graduation date for INTERNSHIP applications (YYYY-MM)", placeholder: "2028-06" },
+  { key: "grad_date_grad", label: "Graduation date for GRAD SCHOOL applications (YYYY-MM)", placeholder: "2027-06", hint: "Used on university portals" },
 
   { section: "Availability & eligibility" },
   { key: "earliest_start", label: "Earliest internship start", type: "date" },
@@ -82,7 +83,7 @@ var AH_RULES = [
   { key: "degree", re: /degree|diploma|qualification|dipl[ôo]me|abschluss|level of (study|education)/, not: /year|date|gpa|grade/, value: (p, c) => c.isSelect ? (p.degree_level || p.degree) : p.degree },
   { key: "major", re: /major|discipline|field of stud|area of stud|specializ|specialis|concentration|fili[èe]re|studiengang|programme of study|course of study/ },
   { key: "gpa", re: /\bgpa\b|grade point|\bcgpa\b|average grade|cumulative average|moyenne|notendurchschnitt/, value: (p, c) => c.wantsScale ? `${p.gpa}/${p.gpa_scale}` : p.gpa },
-  { key: "grad_date", re: /graduat|completion date|expected (end|finish|completion)|end date of (your )?(stud|degree)|date d'obtention|abschlussdatum/, value: (p, c) => dateFor(p.grad_date, c) },
+  { key: "grad_date", re: /graduat|completion date|expected (end|finish|completion)|end date of (your )?(stud|degree)|date d'obtention|abschlussdatum/, value: (p, c) => dateFor(c.gradSchool ? (p.grad_date_grad || p.grad_date) : p.grad_date, c) },
   { key: "edu_start", re: /start(ed)? (date )?of (your )?(stud|degree)|enrol(l)?ment date|date (you )?started/, value: (p, c) => dateFor(p.edu_start, c) },
   { key: "earliest_start", re: /start date|available (from|to start)|earliest start|availability|when (can|could) you start|date de d[ée]but|eintrittsdatum|starting date/, value: (p, c) => dateFor(p.earliest_start, c) },
   { key: "latest_end", re: /end date|available until|date de fin/, value: (p, c) => dateFor(p.latest_end, c) },

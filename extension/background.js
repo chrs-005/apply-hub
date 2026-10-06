@@ -26,7 +26,7 @@ async function addToTracker(entry) {
   const { settings = {}, applied = [] } = await chrome.storage.local.get(["settings", "applied"]);
   const now = new Date().toISOString();
   const id = "ext:" + (entry.url || now).replace(/[?#].*$/, "");
-  const item = { id, kind: "job", title: entry.role || "Application", org: entry.company || "", url: entry.url || "",
+  const item = { id, kind: entry.kind || "job", title: entry.role || "Application", org: entry.company || "", url: entry.url || "",
                  location: "", status: entry.status || "Applied", deadline: "", notes: entry.notes || "",
                  added: now, updated: now, history: [{ status: entry.status || "Applied", at: now }] };
   applied.unshift(item);
