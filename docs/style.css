@@ -137,3 +137,14 @@ details summary { cursor: pointer; color: var(--muted); font-size: 13px; margin-
 .sync { font-size: 11px; color: var(--muted); }
 table.src { width: 100%; border-collapse: collapse; font-size: 12.5px; }
 table.src td { padding: 4px 6px; border-bottom: 1px solid var(--line); }
+
+/* ---------- application checklists ---------- */
+details.cl { margin-top: 10px; border-top: 1px solid var(--line); padding-top: 8px; }
+details.cl summary { font-size: 13.5px; color: var(--ink); }
+.cl-item { display: flex; gap: 10px; align-items: flex-start; padding: 8px 0; border-bottom: 1px solid var(--line); cursor: pointer; }
+.cl-item:last-of-type { border-bottom: 0; }
+.cl-item input[type=checkbox] { margin-top: 3px; width: 18px; height: 18px; flex: 0 0 auto; accent-color: var(--good); }
+.cl-item b { font-size: 14px; }
+.cl-item input:checked + span b { text-decoration: line-through; color: var(--muted); }
+.cl-detail, .cl-tip { display: block; margin-top: 2px; }
+.cl-tip { color: var(--accent); }

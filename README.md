@@ -63,6 +63,7 @@ Your system for **Summer 2027 internships (Europe and Gulf)** and **Fall 2027 ma
 | Browse internships | App → **Internships**. Filter by region (UK, CH, EU, Gulf) and role (SWE, Quant, ML/AI, Research). PhD-only roles are hidden by default. |
 | Know when a company opens | App → Internships → **Not posted yet**: each company's usual opening window. You'll be pinged when it posts. |
 | Compare grad schools by cost | App → **Grad** → sort by *Application fee: high → low*. Each card shows fee, tuition, scholarships, English/GRE requirements, and deadlines. |
+| Application checklists | Grad tab → open a program's **📋 Application checklist** and tick items as you go (progress shows in the Tracker too). Polytechnique's official checklist is built in. For any other program, tap **Upload PDF** (or *Add checklist from PDF* on its card), pick the program (or “not in the list” to create it), review the detected requirements, and save. The PDF is read on your device and never uploaded. |
 | Plan your application budget | Tap **+ Track** on programs. The Grad tab shows the total of your fees. |
 | Fill an application | Open the form → click **⚡ Autofill** (bottom right) or press **Alt+Shift+F**. Green = filled, orange = needs you. **Review, then submit yourself.** |
 | Reuse essay answers | Write a good answer once → right-click in the box → **Save this answer to Apply Hub**. Next time a similar question gets it filled, with `{company}` swapped in. |

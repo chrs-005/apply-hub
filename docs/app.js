@@ -358,6 +358,7 @@ function gradCard(p) {
     </dl>
     ${p.notes ? `<p class="small" style="margin:8px 0 0">💡 ${esc(p.notes)}</p>` : ""}
     <div class="tiny muted" style="margin-top:6px"><span class="badge ${srcBadge}">${esc(p.source)}</span>${(p.verify || []).length ? ` Verify: ${esc(p.verify.join(", "))}` : ""}</div>
+    ${checklistHtml("grad:" + p.id)}
     <div class="row" style="margin-top:10px">
       <a class="btn primary sm" href="${esc(p.url)}" target="_blank" rel="noopener">Program page ↗</a>
       <button class="btn sm ${t ? "on" : ""}" data-act="track-grad" data-id="${esc(p.id)}">${t ? "✓ " + esc(t.status) : "+ Track"}</button>
@@ -397,9 +398,202 @@ function renderGrad() {
           ${[["deadline", "Next deadline"], ["fee_asc", "Application fee: low → high"], ["fee_desc", "Application fee: high → low"], ["tuition", "Tuition: low → high"], ["name", "University"]].map(([v, l]) => `<option value="${v}" ${f.gSort === v ? "selected" : ""}>${l}</option>`).join("")}
         </select></div>
     </div>
+    <div class="card row between">
+      <div><div class="title">📄 Got a requirements PDF?</div><div class="small muted">Upload a program's checklist and it becomes a tickable checklist.</div></div>
+      <button class="btn sm primary" data-act="pdf-picker">Upload PDF</button>
+    </div>
     <h2>Master's programs · Fall 2027 <span class="count">${list.length}</span></h2>
     ${list.map(gradCard).join("") || `<div class="card empty">No programs match.</div>`}
     <p class="tiny muted">USD amounts are approximate (rates in config/settings.yaml). To add a program, edit <code>data/grad_programs.yaml</code> on GitHub.</p>`;
+}
+
+// ------------------------------------------------------------------ application checklists
+// Priority: checklist you uploaded (tracker item .req) > program's official checklist (yaml) > generic.
+const openChecklists = new Set();
+document.addEventListener("toggle", (e) => {
+  const d = e.target;
+  if (d.matches && d.matches("details.cl")) d.open ? openChecklists.add(d.dataset.tid) : openChecklists.delete(d.dataset.tid);
+}, true);
+const programFor = (tid) => tid.startsWith("grad:") ? S.grad.find((p) => "grad:" + p.id === tid) : null;
+function checklistFor(tid) {
+  const t = trackedFor(tid), p = programFor(tid);
+  if (t?.req?.items?.length) return { items: t.req.items, facts: t.req.facts || [], source: t.req.source, uploaded: true };
+  if (p?.checklist?.length) return { items: p.checklist, facts: p.checklist_facts || [], source: p.checklist_source };
+  return { items: GRAD_CHECK.map((c) => ({ id: c, label: c })), facts: [], source: "Generic checklist. Upload the program's PDF for the real one", generic: true };
+}
+function checklistHtml(tid) {
+  const t = trackedFor(tid), cl = checklistFor(tid);
+  const done = cl.items.filter((i) => t?.checklist?.[i.id]).length;
+  const pct = Math.round((done / Math.max(cl.items.length, 1)) * 100);
+  return `<details class="cl" data-tid="${esc(tid)}" ${openChecklists.has(tid) ? "open" : ""}>
+    <summary>📋 Application checklist · <b class="cl-count">${done}/${cl.items.length}</b> done ${cl.generic ? "" : `<span class="badge ${pct === 100 ? "good" : ""}">${pct}%</span>`}</summary>
+    <div class="tiny muted" style="margin:6px 0">${esc(cl.source || "")}</div>
+    ${cl.items.map((i) => `<label class="cl-item"><input type="checkbox" data-act="cl-check" data-tid="${esc(tid)}" data-c="${esc(i.id)}" ${t?.checklist?.[i.id] ? "checked" : ""}>
+      <span><b>${esc(i.label)}</b>${i.detail ? `<span class="tiny muted cl-detail">${esc(i.detail)}</span>` : ""}${i.tip ? `<span class="tiny cl-tip">💡 ${esc(i.tip)}</span>` : ""}</span></label>`).join("")}
+    ${cl.facts.length ? `<div class="tiny" style="margin-top:8px"><b>Good to know</b><ul class="clean">${cl.facts.map((f) => `<li>${esc(f)}</li>`).join("")}</ul></div>` : ""}
+    <label class="btn sm ghost" style="margin-top:8px">📄 ${cl.uploaded ? "Replace with another PDF" : "Add checklist from PDF"}<input type="file" accept="application/pdf" data-act="cl-pdf" data-tid="${esc(tid)}" hidden></label>
+  </details>`;
+}
+function ensureTracked(tid) {
+  if (trackedFor(tid)) return;
+  const p = programFor(tid);
+  if (p) trackGrad(p);
+}
+
+// ---- PDF → checklist (runs in the browser; the PDF never leaves your device)
+const PDFJS = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";
+async function loadPdfJs() {
+  if (window.pdfjsLib) return window.pdfjsLib;
+  await new Promise((res, rej) => {
+    const s = document.createElement("script");
+    s.src = PDFJS; s.onload = res; s.onerror = () => rej(new Error("Couldn't load the PDF reader (are you offline?)"));
+    document.head.appendChild(s);
+  });
+  window.pdfjsLib.GlobalWorkerOptions.workerSrc = PDFJS.replace("pdf.min.js", "pdf.worker.min.js");
+  return window.pdfjsLib;
+}
+function unspace(line) {
+  // Designed PDFs often letter-space text: "T w o  l e t t e r s" -> "Two letters"
+  const toks = line.trim().split(" ");
+  if (toks.length > 4 && toks.filter((t) => t.length === 1).length / toks.length > 0.6)
+    return line.trim().split(/\s{2,}/).map((w) => w.replace(/ /g, "")).join(" ");
+  return line.trim();
+}
+async function pdfText(file) {
+  const lib = await loadPdfJs();
+  const doc = await lib.getDocument({ data: await file.arrayBuffer() }).promise;
+  const pages = [];
+  for (let n = 1; n <= doc.numPages; n++) {
+    const content = await (await doc.getPage(n)).getTextContent();
+    const lines = []; let line = "", lastY = null;
+    for (const it of content.items) {
+      const y = it.transform ? it.transform[5] : null;
+      if (lastY !== null && y !== null && Math.abs(y - lastY) > 2) { lines.push(line); line = ""; }
+      line += it.str; lastY = y;
+      if (it.hasEOL) { lines.push(line); line = ""; lastY = null; }
+    }
+    lines.push(line);
+    pages.push(lines.map(unspace).filter(Boolean).join("\n"));
+  }
+  return pages.join("\n\n");
+}
+const NUMW = { one: 1, two: 2, three: 3, four: 4, five: 5 };
+function detectRequirements(text) {
+  const flat = text.replace(/\s+/g, " ");
+  const sentences = flat.split(/(?<=[.!?:])\s+(?=[A-Z])/);
+  const around = (re) => sentences.filter((s) => re.test(s)).slice(0, 3).join(" ").slice(0, 420);
+  const items = [];
+  const add = (id, label, re, extra = {}) => { if (re.test(flat)) items.push({ id, label, detail: around(re), ...extra }); };
+  add("account", "Create an account on the application portal", /create an account|register (on|an account)|online application (form|portal)/i);
+  const ref = flat.match(/\b(one|two|three|four|five|[1-5])\s+(?:academic\s+|professional\s+)?(?:letters? of recommendation|recommendation letters?|references|referees|reference letters?)/i);
+  if (ref || /recommendation|referee/i.test(flat))
+    items.push({ id: "referees", label: `${ref ? (NUMW[ref[1].toLowerCase()] || ref[1]) + " " : ""}recommendation letters (ask early)`, detail: around(/recommend|referee/i) });
+  const pages = flat.match(/(?:maximum|max\.?|up to|no more than|not exceed)\s*(?:of\s*)?(\d+)\s*pages?/i);
+  add("cv", `CV / résumé${pages ? ` (max ${pages[1]} pages)` : ""}`, /\b(cv|curriculum vitae|r[ée]sum[ée])\b/i);
+  add("transcripts", "Transcripts (all post-secondary studies)", /transcript/i);
+  add("enrolment", "Degree certificate / certificate of enrolment", /certificate of enrol|degree certificate|diploma|proof of enrol|enrol?ment certificate/i);
+  const words = flat.match(/(\d[\d,]{2,})\s*words/i);
+  add("statement", `Statement of purpose / motivation letter${words ? ` (max ${words[1]} words)` : ""}`, /personal statement|statement of purpose|motivation letter|letter of motivation|cover letter|motivational statement/i);
+  add("proposal", "Research proposal", /research proposal|project proposal/i);
+  add("writing", "Writing sample", /writing sample/i);
+  const toefl = flat.match(/toefl[^\d]{0,40}?\b(\d{2,3})\b/i), ielts = flat.match(/ielts[^\d]{0,40}?\b([4-9](?:\.\d)?)\b/i);
+  const cae = flat.match(/(?:\bcae\b|cambridge advanced?)[^\n]{0,40}?\b(C1|C2)\b/i), duo = flat.match(/duolingo[^\d]{0,40}?\b(\d{2,3})\b/i);
+  const eng = [toefl && `TOEFL ${toefl[1]}`, ielts && `IELTS ${ielts[1]}`, cae && `CAE ${cae[1]}`, duo && `Duolingo ${duo[1]}`].filter(Boolean).join(" / ");
+  add("english", `English test${eng ? `: ${eng}` : " (TOEFL / IELTS)"}`, /toefl|ielts|english proficiency|english language (test|requirement)|cambridge (advanced|english)/i);
+  add("gre", "GRE / GMAT scores", /\bgre\b|\bgmat\b/i);
+  add("passport", "Passport / ID copy", /passport|identity card|\bid card\b/i);
+  add("photo", "ID photo", /\b(id )?(photo|picture)\b/i);
+  const fee = flat.match(/(?:application|processing)[^.]{0,60}?fee[^.]{0,60}?(?:(€|£|\$|chf|eur|gbp|usd|aed)\s?(\d+)|(\d+)\s?(€|£|\$|chf|eur|gbp|usd|aed))/i);
+  add("fee", `Pay the application fee${fee ? ` (${fee[1] ? fee[1] + fee[2] : fee[3] + " " + fee[4]})` : ""}`, /application (processing )?fee|processing fee/i);
+  add("portfolio", "Portfolio / GitHub link", /portfolio/i);
+  add("interview", "Prepare for the interview", /interview/i);
+  items.push({ id: "submit", label: "Submit before the deadline", detail: around(/cannot (access|edit|modify)|once (you )?submit|deadline/i) });
+  const facts = [];
+  const emails = [...new Set(flat.match(/[\w.+-]+@[\w-]+\.[\w.-]+\w/g) || [])];
+  if (emails.length) facts.push("Contact: " + emails.join(", "));
+  const dates = [...new Set(flat.match(/\b\d{1,2}(?:st|nd|rd|th)?\s+(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?,?\s+20\d\d\b|\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{1,2},?\s+20\d\d\b/gi) || [])];
+  if (dates.length) facts.push("Dates mentioned: " + dates.slice(0, 8).join(" · "));
+  if (/translat/i.test(flat)) facts.push(around(/translat/i));
+  if (/cannot (access|edit|modify)|once (you )?submit/i.test(flat)) facts.push(around(/cannot (access|edit|modify)|once (you )?submit/i));
+  if (/non-?refundable/i.test(flat)) facts.push("The application fee is non-refundable.");
+  const w = flat.search(/waive/i);
+  if (w >= 0) {
+    const cut = [...flat.slice(0, w).matchAll(/[.!?:]\s+(?=[A-Z])/g)].pop();
+    facts.push(flat.slice(cut ? cut.index + cut[0].length : Math.max(0, w - 60), w + 320).trim() + "…");
+  }
+  return { items, facts: facts.filter(Boolean) };
+}
+
+function openChecklistReview(tid, title, file, text) {
+  const { items, facts } = detectRequirements(text);
+  const bg = sheet(`
+    <h3>📄 Checklist from “${esc(file.name)}”</h3>
+    <p class="small muted">For <b>${esc(title)}</b>. Found ${items.length} requirements. Untick anything wrong, edit labels, add what's missing.</p>
+    <div id="r-items">${items.map((i, n) => `<div class="cl-item"><input type="checkbox" checked data-n="${n}">
+      <span style="flex:1"><input class="r-label" data-n="${n}" value="${esc(i.label)}" style="width:100%;font-weight:600;padding:4px 6px;border:1px solid var(--line);border-radius:8px;background:var(--bg)">
+      ${i.detail ? `<span class="tiny muted cl-detail">${esc(i.detail)}</span>` : ""}</span></div>`).join("")}</div>
+    <div class="row" style="margin:8px 0"><input id="r-new" placeholder="Add another requirement…" style="flex:1;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--bg)"><button class="btn sm" id="r-add">Add</button></div>
+    ${facts.length ? `<div class="small"><b>Good to know</b><ul class="clean">${facts.map((f) => `<li>${esc(f)}</li>`).join("")}</ul></div>` : ""}
+    <details><summary>Text read from the PDF</summary><pre style="white-space:pre-wrap;font-size:11px;max-height:240px;overflow:auto">${esc(text.slice(0, 15000))}</pre></details>
+    <div class="row" style="margin-top:12px"><button class="btn primary" id="r-save">Save checklist</button><button class="btn" data-close>Cancel</button></div>`);
+  const extra = [];
+  $("#r-add", bg).onclick = () => {
+    const v = $("#r-new", bg).value.trim(); if (!v) return;
+    extra.push({ id: "x" + Date.now(), label: v });
+    $("#r-items", bg).insertAdjacentHTML("beforeend", `<div class="cl-item"><input type="checkbox" checked disabled><span><b>${esc(v)}</b></span></div>`);
+    $("#r-new", bg).value = "";
+  };
+  $("#r-save", bg).onclick = () => {
+    const kept = items.filter((_, n) => bg.querySelector(`input[type=checkbox][data-n="${n}"]`).checked)
+      .map((i) => ({ ...i, label: bg.querySelector(`.r-label[data-n="${items.indexOf(i)}"]`).value.trim() || i.label }));
+    ensureTracked(tid);
+    upsertTrack(tid, { req: { items: [...kept, ...extra], facts, source: `${file.name} (uploaded ${todayStr()})`, text: text.slice(0, 12000) } });
+    openChecklists.add(tid);
+    bg.remove(); toast("Checklist saved ✓"); route();
+  };
+}
+async function handleChecklistPdf(tid, title, file) {
+  if (!file) return;
+  toast("Reading PDF…");
+  try {
+    const text = await pdfText(file);
+    if (text.replace(/\s/g, "").length < 40) throw new Error("This PDF has no readable text (it may be a scanned image).");
+    openChecklistReview(tid, title, file, text);
+  } catch (e) { toast(e.message || "Couldn't read that PDF"); console.warn(e); }
+}
+function openPdfPicker() {
+  const customs = Object.values(S.tracker.items).filter((t) => t.kind === "grad" && !t.id.startsWith("grad:"));
+  const bg = sheet(`
+    <h3>📄 Upload a requirements PDF</h3>
+    <div class="field"><label>Which program is it for?</label>
+      <select id="p-prog">
+        ${S.grad.map((p) => `<option value="grad:${esc(p.id)}">${esc(p.university)}: ${esc(p.program)}</option>`).join("")}
+        ${customs.map((t) => `<option value="${esc(t.id)}">${esc(t.org)}: ${esc(t.title)}</option>`).join("")}
+        <option value="__new">➕ A program that's not in the list…</option>
+      </select></div>
+    <div id="p-new" hidden>
+      <div class="field"><label>University</label><input id="p-uni" placeholder="e.g. KTH Royal Institute of Technology"></div>
+      <div class="field"><label>Program</label><input id="p-name" placeholder="e.g. MSc Machine Learning"></div>
+      <div class="field"><label>Deadline (optional)</label><input id="p-dl" type="date"></div>
+      <div class="field"><label>Program link (optional)</label><input id="p-url" type="url" placeholder="https://…"></div>
+    </div>
+    <label class="btn primary" style="width:100%">Choose PDF…<input type="file" id="p-file" accept="application/pdf" hidden></label>
+    <button class="btn" data-close style="width:100%;margin-top:8px">Cancel</button>`);
+  $("#p-prog", bg).onchange = (e) => { $("#p-new", bg).hidden = e.target.value !== "__new"; };
+  $("#p-file", bg).onchange = async (e) => {
+    let tid = $("#p-prog", bg).value, title;
+    if (tid === "__new") {
+      const uni = $("#p-uni", bg).value.trim(), name = $("#p-name", bg).value.trim();
+      if (!uni && !name) { toast("Name the university/program first"); e.target.value = ""; return; }
+      tid = "custom:" + Date.now();
+      upsertTrack(tid, { kind: "grad", org: uni, title: name || "Master's program", url: $("#p-url", bg).value.trim(),
+                         deadline: $("#p-dl", bg).value, status: "Preparing", checklist: {} });
+      title = `${uni}: ${name}`;
+    } else title = $("#p-prog", bg).selectedOptions[0].textContent;
+    const file = e.target.files[0];
+    bg.remove();
+    await handleChecklistPdf(tid, title, file);
+  };
 }
 
 function renderResearch() {
@@ -459,7 +653,7 @@ function trackCard(t) {
       <input type="date" data-act="deadline" value="${esc((t.deadline || "").slice(0, 10))}" style="width:auto">
       ${t.url ? `<a class="btn sm" href="${esc(t.url)}" target="_blank" rel="noopener">Open ↗</a>` : ""}
     </div>
-    ${t.kind === "grad" ? `<div class="checklist">${GRAD_CHECK.map((c) => `<label><input type="checkbox" data-act="check" data-c="${esc(c)}" ${t.checklist?.[c] ? "checked" : ""}>${esc(c)}</label>`).join("")}</div>` : ""}
+    ${t.kind === "grad" || t.req ? checklistHtml(t.id) : ""}
     <details ${t.notes ? "open" : ""}><summary>Notes${t.history?.length ? ` · ${t.history.length} updates` : ""}</summary>
       <textarea data-act="notes" placeholder="Referral, recruiter name, OA date, password hint…">${esc(t.notes || "")}</textarea>
       ${t.history?.length ? `<div class="tiny muted" style="margin-top:6px">${t.history.map((h) => `${esc(h.status)} · ${fmtShort(h.at)}`).join(" → ")}</div>` : ""}
@@ -583,11 +777,33 @@ document.addEventListener("click", (e) => {
   else if (act === "track-research") { const p = S.research.find((x) => x.id === id); if (trackedFor("research:" + id)) location.hash = "#tracker"; else { trackResearch(p); toast("Added to tracker"); route(); } }
   else if (act === "add-custom") openAddCustom();
   else if (act === "open-settings") openSettings();
+  else if (act === "pdf-picker") openPdfPicker();
   else if (act === "remove" && card && confirm("Remove from tracker?")) { removeTrack(card.dataset.id); route(); }
 });
 document.addEventListener("change", (e) => {
   const el = e.target, act = el.dataset.act, card = el.closest(".trk");
   if (act === "sort") { S.f[el.dataset.k] = el.value; saveFilters(); route(); return; }
+  if (act === "cl-check") {
+    const tid = el.dataset.tid, wasTracked = !!trackedFor(tid);
+    ensureTracked(tid);
+    const t = trackedFor(tid);
+    if (!t) return;
+    upsertTrack(tid, { checklist: { ...(t.checklist || {}), [el.dataset.c]: el.checked } });
+    openChecklists.add(tid);
+    if (!wasTracked) { toast("Added to tracker"); route(); return; }
+    const det = el.closest("details.cl"), cl = checklistFor(tid);
+    const done = cl.items.filter((i) => trackedFor(tid).checklist?.[i.id]).length;
+    det.querySelector(".cl-count").textContent = `${done}/${cl.items.length}`;
+    const badge = det.querySelector("summary .badge");
+    if (badge) { const pct = Math.round((done / cl.items.length) * 100); badge.textContent = pct + "%"; badge.classList.toggle("good", pct === 100); }
+    return;
+  }
+  if (act === "cl-pdf") {
+    const tid = el.dataset.tid, p = programFor(tid), t = trackedFor(tid);
+    handleChecklistPdf(tid, p ? `${p.university}: ${p.program}` : `${t?.org || ""}: ${t?.title || ""}`, el.files[0]);
+    el.value = "";
+    return;
+  }
   if (!card) return;
   const id = card.dataset.id;
   if (act === "status") { upsertTrack(id, { status: el.value }); toast(`→ ${el.value}`); route(); }

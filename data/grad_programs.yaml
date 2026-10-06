@@ -389,12 +389,59 @@ programs:
     tuition: {amount: 17500, currency: EUR, per: year, note: "approximate non-EU fee"}
     scholarships:
       - {name: "Polytechnique / Eiffel scholarships", deadline: 2027-01-11, covers: "Partial to full", how: "Only rounds 1–2 are considered"}
-    language: "English B2 (TOEFL/IELTS) or French"
+    language: "TOEFL iBT 95 / IELTS Academic 7.0 / Cambridge CAE C1 (test < 2 years old). Waived if your last degree was taught entirely in English (needs official proof)"
     gre: "Not required"
     url: https://programmes.polytechnique.edu/en/master/admissions-msct/application-deadlines-procedure
     source: official
     verify: [tuition]
     notes: "Lebanon is an 'Études en France' country, so you will also need the Campus France process for the visa."
+    # From the official "Online Application Checklist" PDF (MSc&T, 2027 intake)
+    checklist_source: "Online Application Checklist (official PDF)"
+    checklist:
+      - id: account
+        label: Create an account on the application portal
+        detail: "Use the same email for the application and for every message to admissions."
+      - id: referees
+        label: "2 recommendation letters (start first!)"
+        detail: "At least 1 from a professor, lecturer or academic supervisor at your current university. The 2nd can be academic or an internship/job manager. You enter each referee's name, role and email in the form, and they're emailed a recommendation form automatically. Letters must include first and last name, signature, role, contact details and professional website. Letters from yourself, colleagues, friends or family are rejected. You must tell your referees the deadline."
+        tip: "Ask now: e.g. your AUB math research supervisor + an AUB professor, or your Eurisko/TheFactory.Ai manager. Referees are slow."
+      - id: cv
+        label: "CV, max 2 pages (English or French)"
+        detail: "Education with dates, GPA, class rank (if available), professional experience, extracurriculars, academic and extracurricular awards/honors, community service."
+        tip: "Add your MERIT scholarship (award) and Scouts (community service). Your current CV is 1 page, so there's room."
+      - id: transcripts
+        label: Transcripts of ALL post-secondary studies
+        detail: "Scanned copies, including exchange programs and programs you didn't complete. If it's not on the transcript, add an official university document explaining the grading/ranking system."
+        tip: "Include your Boston University exchange transcript (Fall 2025), not just AUB."
+      - id: enrolment
+        label: Certificate of enrolment (degree in progress)
+        detail: "From your home university: title of the expected degree + expected completion date. It must prove you're at least in the final year of your undergraduate studies."
+        tip: "Ask the AUB Registrar. It must say you're in your final year, graduating June 2027."
+      - id: statement
+        label: "Personal statement (PDF, official template)"
+        detail: "Must follow the school's template (link in the checklist PDF / application site). Applying to two tracks means a separate, adapted statement for each."
+        tip: "The admissions team explicitly asks you to write it yourself, not with AI."
+      - id: english
+        label: "English proof: TOEFL iBT 95 / IELTS 7.0 / CAE C1"
+        detail: "Taken less than 2 years before the deadline (CAE has no expiry). WAIVER: if your last degree was taught entirely in English less than 10 years ago, and the degree certificate, transcript or an official university attestation states the language of instruction."
+        tip: "AUB teaches in English: request an official AUB 'medium of instruction' attestation and you may not need TOEFL/IELTS."
+      - id: photo
+        label: ID photo
+        detail: "An official ID-style photo of you."
+      - id: passport
+        label: Passport copy
+        detail: "Non-European students: passport valid until at least 2 months after the program starts (so at least ~Nov 2027)."
+        tip: "Check your Lebanese passport's expiry date now. Renewals can be slow."
+      - id: fee
+        label: "Pay the €95 application fee"
+        detail: "Non-refundable. Credit card recommended. A bank transfer takes several days and must be done well before the deadline. If someone else pays (family, company), email gdadmissions@polytechnique.fr."
+      - id: submit
+        label: Submit before the deadline (you can't edit after!)
+        detail: "Once submitted, you can't reopen the form. For corrections or extra documents, email gdadmissions@polytechnique.fr."
+    checklist_facts:
+      - "All documents must be in French or English; otherwise attach the original + a certified translation (personal translations are not accepted)."
+      - "Contact: gdadmissions@polytechnique.fr"
+      - "Only rounds 1–2 are considered for scholarships."
 
   - id: saclay-m1
     university: Université Paris-Saclay
