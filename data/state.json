@@ -20,7 +20,7 @@
    "status": "blocked"
   },
   "https://www.gresearch.com/join-us/": {
-   "hash": "d6e1338f101e85db7539804cad00f8c138a8cee5d4604a2fbec4138ebd48c863",
+   "hash": "60466508f7724110eeefd17e3978c8d7b2ed103ac480ec7bc56ff8a819ee06df",
    "lines": [
     "Students & graduates",
     "Engineering internships",
@@ -28,6 +28,7 @@
     "Machine Learning Research Internship",
     "Natural Language Processing Internship",
     "Quant Research Internship",
+    "Machine Learning Engineer Intern",
     "Software Engineering Internship",
     "Quantitative Research Intern",
     "Research Engineering Intern",
@@ -60,35 +61,11 @@
    "status": "ok"
   },
   "https://jobs.apple.com/en-gb/search?team=internships-STDNT-INTRN&location=united-kingdom-GBR": {
-   "hash": "898acabb9e0554ca4d7723ba1acb1e226dbe28398d6d17f12ede2915b936c0dc",
+   "hash": "1898cf8a1c2c64d681b11ada8a85330f8960ef55ffdd86f8bf62244885238897",
    "lines": [
     "Search Jobs - United Kingdom, Students: Internships - Jobs at Apple (UK)",
     "View all teams Students : Internships",
-    "Students : Internships",
-    "PMU Design Verification Intern",
-    "Share PMU Design Verification Intern 200683293-5490",
-    "GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture",
-    "Share GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture 200682357-1251",
-    "GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture",
-    "Share GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture 200682357-2114",
-    "GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture",
-    "Share GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture 200682357-3521",
-    "Formal Verification Intern",
-    "Share Formal Verification Intern 200681934-3521",
-    "GPU Internships - Design Verification and Emulation & Driver Live",
-    "Share GPU Internships - Design Verification and Emulation & Driver Live 200679652-1251",
-    "GPU Internships - Design Verification and Emulation & Driver Live",
-    "Share GPU Internships - Design Verification and Emulation & Driver Live 200679652-2114",
-    "GPU Internships - Design Verification and Emulation & Driver Live",
-    "Share GPU Internships - Design Verification and Emulation & Driver Live 200679652-3521",
-    "GPU Internships - RTL Design, RTL Power Optimisation & Physical Design",
-    "Share GPU Internships - RTL Design, RTL Power Optimisation & Physical Design 200679650-1251",
-    "GPU Internships - RTL Design, RTL Power Optimisation & Physical Design",
-    "Share GPU Internships - RTL Design, RTL Power Optimisation & Physical Design 200679650-2114",
-    "GPU Internships - RTL Design, RTL Power Optimisation & Physical Design",
-    "Share GPU Internships - RTL Design, RTL Power Optimisation & Physical Design 200679650-3521",
-    "SoC Performance Modeling Internship - Platform Architecture",
-    "Share SoC Performance Modeling Internship - Platform Architecture 200629965-2114"
+    "Students : Internships"
    ],
    "status": "ok"
   },
