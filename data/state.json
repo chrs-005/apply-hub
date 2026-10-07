@@ -20,14 +20,14 @@
    "status": "blocked"
   },
   "https://www.gresearch.com/join-us/": {
-   "hash": "9d0ce9e7a3029d7eb98ee6105e6cbb706b8db6f333229006cc63be521d166e34",
+   "hash": "60466508f7724110eeefd17e3978c8d7b2ed103ac480ec7bc56ff8a819ee06df",
    "lines": [
     "Students & graduates",
     "Engineering internships",
-    "Natural Language Processing Internship",
-    "Quant Research Internship",
     "Data Science Internship",
     "Machine Learning Research Internship",
+    "Natural Language Processing Internship",
+    "Quant Research Internship",
     "Machine Learning Engineer Intern",
     "Software Engineering Internship",
     "Quantitative Research Intern",
@@ -231,5 +231,5 @@
    "status": "ok"
   }
  },
- "last_digest": "2026-10-06"
+ "last_digest": "2026-10-07"
 }
