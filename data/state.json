@@ -20,16 +20,16 @@
    "status": "blocked"
   },
   "https://www.gresearch.com/join-us/": {
-   "hash": "60466508f7724110eeefd17e3978c8d7b2ed103ac480ec7bc56ff8a819ee06df",
+   "hash": "e6f3cf71fffbccd7f8f08c0cc758271da80396f923dd4385b03baccf2ab10aac",
    "lines": [
     "Students & graduates",
     "Engineering internships",
-    "Data Science Internship",
     "Machine Learning Research Internship",
     "Natural Language Processing Internship",
     "Quant Research Internship",
-    "Machine Learning Engineer Intern",
+    "Data Science Internship",
     "Software Engineering Internship",
+    "Machine Learning Engineer Internship",
     "Quantitative Research Intern",
     "Research Engineering Intern",
     "FPGA Engineering Intern",
