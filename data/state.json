@@ -20,14 +20,14 @@
    "status": "blocked"
   },
   "https://www.gresearch.com/join-us/": {
-   "hash": "bea48ed43196900ba519f535174a57898f4230b41ebdd190358f505332d4c219",
+   "hash": "e6f3cf71fffbccd7f8f08c0cc758271da80396f923dd4385b03baccf2ab10aac",
    "lines": [
     "Students & graduates",
     "Engineering internships",
-    "Data Science Internship",
     "Machine Learning Research Internship",
     "Natural Language Processing Internship",
     "Quant Research Internship",
+    "Data Science Internship",
     "Software Engineering Internship",
     "Machine Learning Engineer Internship",
     "Quantitative Research Intern",
@@ -49,10 +49,8 @@
    "status": "ok"
   },
   "https://www.qube-rt.com/careers/": {
-   "hash": "09010f5c2b736678e9f9f6fb74bd28613a4819841847ff19086763732b8e3cf1",
-   "lines": [
-    "Any specific enquiries related to campus, internships and graduate programmes, please contact campus@qube-rt.com ."
-   ],
+   "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": [],
    "status": "ok"
   },
   "https://careers.sig.com/campus-programs": {
@@ -61,7 +59,7 @@
    "status": "ok"
   },
   "https://jobs.apple.com/en-gb/search?team=internships-STDNT-INTRN&location=united-kingdom-GBR": {
-   "hash": "898acabb9e0554ca4d7723ba1acb1e226dbe28398d6d17f12ede2915b936c0dc",
+   "hash": "768c8199958b2d8cd18e3c9c9abcd978a6c5557c8869297721a24f6e15f43c02",
    "lines": [
     "Search Jobs - United Kingdom, Students: Internships - Jobs at Apple (UK)",
     "View all teams Students : Internships",
@@ -74,8 +72,6 @@
     "Share GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture 200682357-2114",
     "GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture",
     "Share GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture 200682357-3521",
-    "Formal Verification Intern",
-    "Share Formal Verification Intern 200681934-3521",
     "GPU Internships - Design Verification and Emulation & Driver Live",
     "Share GPU Internships - Design Verification and Emulation & Driver Live 200679652-1251",
     "GPU Internships - Design Verification and Emulation & Driver Live",
