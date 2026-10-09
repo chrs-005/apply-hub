@@ -1,13 +1,11 @@
 {
- "last_scan": "2026-10-09T01:12+00:00",
- "duration_s": 116,
- "open_internships": 117,
- "new_this_scan": 0,
- "companies_ok": 58,
- "companies_failed": [
-  "Microsoft"
- ],
- "notifications_sent": 4,
+ "last_scan": "2026-10-09T10:30+00:00",
+ "duration_s": 72,
+ "open_internships": 119,
+ "new_this_scan": 3,
+ "companies_ok": 59,
+ "companies_failed": [],
+ "notifications_sent": 10,
  "fx_to_usd": {
   "USD": 1.0,
   "EUR": 1.16,
