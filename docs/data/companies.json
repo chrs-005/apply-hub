@@ -222,7 +222,7 @@
   "ats": "google",
   "ok": true,
   "error": null,
-  "raw_count": 28,
+  "raw_count": 27,
   "open_internships": 13,
   "opens": "Aug – Nov",
   "careers": "https://www.google.com/about/careers/applications/jobs/results?target_level=INTERN_AND_APPRENTICE"
@@ -234,7 +234,7 @@
   "ats": "microsoft",
   "ok": true,
   "error": null,
-  "raw_count": 32,
+  "raw_count": 31,
   "open_internships": 4,
   "opens": "Aug – Nov",
   "careers": "https://apply.careers.microsoft.com/careers?query=intern"
@@ -282,7 +282,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 729,
+  "raw_count": 728,
   "open_internships": 3,
   "opens": "Aug – Nov",
   "careers": ""
@@ -402,7 +402,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 183,
+  "raw_count": 182,
   "open_internships": 2,
   "opens": "Sep – Jan (many roles are PhD-only)",
   "careers": ""
@@ -474,7 +474,7 @@
   "ats": "ashby",
   "ok": true,
   "error": null,
-  "raw_count": 158,
+  "raw_count": 159,
   "open_internships": 1,
   "opens": "Sep – Jan (many roles are PhD-only)",
   "careers": ""
@@ -546,7 +546,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 238,
+  "raw_count": 239,
   "open_internships": 0,
   "opens": "Oct – Mar",
   "careers": ""
