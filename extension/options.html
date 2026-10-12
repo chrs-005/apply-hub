@@ -35,22 +35,6 @@
   </div>
 
   <div class="card">
-    <h2>✨ Claude (optional: answers what the profile doesn't cover)</h2>
-    <p class="tiny muted">With an API key, fields Apply Hub doesn't recognise are sent to Claude together with your profile, saved answers, CV and the page text. Claude answers what it can from your data (purple outline) and lists everything else in a “needs you” panel. Long essay boxes get a <b>✍️ Draft with Claude</b> button instead of being auto-written.<br>
-      Uses <b>your own</b> Anthropic API key (from <a href="https://console.anthropic.com/settings/keys" target="_blank">console.anthropic.com</a>, separate from a Claude.ai subscription, billed per use). The key stays in this browser.</p>
-    <label class="f">Anthropic API key</label><input id="anthropicKey" type="password" autocomplete="off" placeholder="sk-ant-…">
-    <label class="f">Model</label>
-    <select id="claudeModel">
-      <option value="claude-opus-5-5">Claude Opus 5.5: best answers (default) · roughly 3–8¢ per application</option>
-      <option value="claude-sonnet-5-5">Claude Sonnet 5.5: faster · roughly 1–4¢</option>
-      <option value="claude-haiku-5-5">Claude Haiku 5.5: fastest, cheapest · under 1¢</option>
-    </select>
-    <label class="f"><input type="checkbox" id="useClaude" style="width:auto" checked> Ask Claude automatically during ⚡ Autofill</label>
-    <label class="f"><input type="checkbox" id="sendCv" style="width:auto" checked> Send my CV PDF to Claude (better answers)</label>
-    <div class="row" style="max-width:420px"><button class="btn" id="testClaude">Test connection</button><span id="claudeStatus" class="small muted"></span></div>
-  </div>
-
-  <div class="card">
     <h2>🔄 Tracker sync (optional)</h2>
     <p class="tiny muted">Paste the same GitHub token + Gist ID you use in the Apply Hub app. “Add to tracker” in the popup then shows up on your phone.</p>
     <label class="f">GitHub token (gist scope)</label><input id="ghToken" type="password" autocomplete="off">

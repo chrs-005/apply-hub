@@ -1,11 +1,9 @@
 /* Apply Hub Autofill: content script.
  * 1. Fills fields it recognises from your profile (rules in fields.js)
  * 2. Reuses answers you gave before (answer bank, which learns from what you type)
- * 3. Optional: asks Claude for the rest (needs your Anthropic API key in Settings)
- * 4. Anything still unknown is asked to YOU in a side panel, and remembered
+ * 3. Anything still unknown is asked to YOU in a side panel, and remembered
  *
  *   green  = filled from your profile / saved answers
- *   purple = filled by Claude (review it)
  *   orange = required and still empty
  * It never submits anything and never ticks consent boxes.
  */
@@ -18,7 +16,7 @@
   const FILLABLE = 'input:not([type=hidden]):not([type=submit]):not([type=button]):not([type=reset]):not([type=image]):not([type=password]):not([type=checkbox]), textarea, select, button[aria-haspopup="listbox"], [role="combobox"]:not(input)';
   const GRAD_HOSTS = /\.ac\.(uk|ae|at|be|il)$|\.edu(\.[a-z]{2})?$|ethz\.ch|epfl\.ch|uzh\.ch|polytechnique|ip-paris|universit|uni-[a-z]+\.de|tum\.de|tudelft\.nl|uva\.nl|kaust\.edu|mbzuai|eacea|technolutions|campusfrance|ens\.(fr|psl)|sorbonne|imperial\.ac|lse\.ac|ucl\.ac|ox\.ac|cam\.ac|ed\.ac/;
   const SENSITIVE = /password|passport (no|number)|card number|credit card|cvv|cvc|iban|account number|routing|\bssn\b|social security|national (id|insurance)|id number|tax (id|number)|security code/i;
-  const GREEN = "2px solid #2f9e44", PURPLE = "2px solid #7048e8", ORANGE = "2px solid #f08c00";
+  const GREEN = "2px solid #2f9e44", ORANGE = "2px solid #f08c00";
 
   let currentMode = "auto";
   function isGradSchoolPage() {
@@ -331,11 +329,11 @@
 
   async function fill(opts = {}) {
     const store = await chrome.storage.local.get(["profile", "answers", "docs", "settings"]);
-    const { profile = {}, answers = [], docs = {}, settings = {} } = store;
+    const { profile = {}, answers = [], docs = {} } = store;
     if (!profile.first_name && !profile.email) { showToast("Set up your profile first: click the Apply Hub icon → Profile"); return { filled: 0, attention: 0 }; }
     const ctxPage = pageContext();
-    const report = { filled: 0, attention: 0, answers: 0, files: [], unknown: [], claude: null };
-    const pending = []; // fields nobody knew yet -> Claude / you
+    const report = { filled: 0, attention: 0, answers: 0, files: [], unknown: [] };
+    const pending = []; // fields nobody knew yet -> you
     let qid = 0;
     const tag = (el) => (el.dataset.ahQid = el.dataset.ahQid || "q" + (++qid) + "_" + Date.now().toString(36));
 
@@ -387,36 +385,8 @@
 
     await attachFiles(docs, report);
 
-    // ---- unknown fields: Claude first (if set up), then you
-    const askable = pending.filter((p) => !p.essay && p.label && !SENSITIVE.test(p.label));
-    let forUser = askable;
-    if (settings.anthropicKey && settings.useClaude !== false && askable.length && opts.claude !== false) {
-      showToast(`✨ Asking Claude about ${askable.length} question(s)…`, 30000);
-      try {
-        const res = await chrome.runtime.sendMessage({ type: "AH_CLAUDE_FIELDS", page: { url: location.href, title: document.title, ...ctxPage, mode: isGradSchoolPage() ? "grad school application" : "internship application", text: pageText() },
-          fields: askable.map(({ id, label, type, options, required, maxLength }) => ({ id, label, type, options, required, maxLength })) });
-        if (!res || res.error) throw new Error(res?.error || "No answer");
-        const byId = Object.fromEntries(askable.map((p) => [p.id, p]));
-        forUser = [];
-        let answered = 0;
-        for (const a of res.answers) {
-          const p = byId[a.id]; if (!p) continue;
-          delete byId[a.id];
-          if (a.needs_user || !a.answer || a.confidence === "low") { forUser.push({ ...p, hint: a.ask_user || "", suggestion: a.answer || "" }); continue; }
-          const ok = p.type === "radio" ? await fillRadioGroup(p.group, a.answer) : await fillOne(p.el, a.answer);
-          if (ok) { answered++; mark(p.el, PURPLE); p.el.dataset.applyHub = "claude"; p.el.title = "Filled by Claude: please review"; }
-          else forUser.push({ ...p, suggestion: a.answer });
-        }
-        forUser.push(...Object.values(byId));
-        report.claude = { answered, asked: forUser.length, cost: res.cost };
-      } catch (e) {
-        report.claude = { error: String(e.message || e) };
-        showToast(`Claude couldn't help this time: ${report.claude.error}`);
-      }
-    }
-
-    // essays: offer a Claude draft button instead of auto-writing
-    if (settings.anthropicKey) for (const p of pending.filter((p) => p.essay)) addDraftButton(p.el);
+    // ---- unknown fields: ask you (answers are remembered)
+    const forUser = pending.filter((p) => !p.essay && p.label && !SENSITIVE.test(p.label));
 
     // highlight what still needs a human
     for (const el of document.querySelectorAll(FILLABLE + ', input[type="checkbox"], input[type="radio"]')) {
@@ -426,19 +396,11 @@
     }
     const required = forUser.filter((p) => p.required), optional = forUser.filter((p) => !p.required);
     if (forUser.length && opts.panel !== false) openAskPanel([...required, ...optional]);
-    const c = report.claude;
     showToast(`Apply Hub filled ${report.filled} field(s)${report.files.length ? ` + attached ${report.files.join(", ")}` : ""}` +
       `${report.answers ? ` · ${report.answers} from your saved answers` : ""}` +
-      `${c && !c.error ? ` · ✨ Claude answered ${c.answered}${c.cost != null ? ` (~$${c.cost.toFixed(3)})` : ""}` : ""}` +
       `${forUser.length ? ` · ${forUser.length} question(s) for you →` : ""}. Review, then submit yourself.`);
     return report;
   }
-  function pageText() {
-    // job description / program text, without our own UI
-    const main = document.querySelector("main, [role=main], #content, .content, article") || document.body;
-    return (main.innerText || "").replace(/\n{3,}/g, "\n\n").slice(0, 7000);
-  }
-
   // ---------------------------------------------------------------- "needs you" side panel
   function openAskPanel(items) {
     document.getElementById("__applyhub_panel")?.remove();
@@ -499,29 +461,6 @@
   }
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
-  // ---------------------------------------------------------------- essay drafts (on request only)
-  function addDraftButton(el) {
-    if (el.dataset.ahDraft) return;
-    el.dataset.ahDraft = "1";
-    const b = document.createElement("button");
-    b.type = "button"; b.textContent = "✍️ Draft with Claude";
-    b.style.cssText = "display:inline-block;margin:6px 0;background:#7048e8;color:#fff;border:0;border-radius:8px;padding:6px 10px;font:600 12.5px system-ui,sans-serif;cursor:pointer";
-    b.onclick = async () => {
-      if (el.value.trim() && !confirm("Replace what's in this box with a Claude draft?")) return;
-      b.disabled = true; b.textContent = "Writing…";
-      const label = rawLabel(el);
-      const limit = (label.match(/(\d{2,4})\s*(words|characters|chars)/i) || []).slice(1).join(" ") || (el.maxLength > 0 ? `${el.maxLength} characters` : "");
-      const res = await chrome.runtime.sendMessage({ type: "AH_CLAUDE_DRAFT", question: label, limit,
-        page: { url: location.href, title: document.title, ...pageContext(), mode: isGradSchoolPage() ? "grad school application" : "internship application", text: pageText() } });
-      b.disabled = false; b.textContent = "✍️ Redraft";
-      if (!res || res.error) return showToast(`Draft failed: ${res?.error || "no answer"}`);
-      setNative(el, res.text);
-      mark(el, PURPLE); el.dataset.applyHub = "claude";
-      showToast(`Draft inserted (~$${(res.cost || 0).toFixed(3)}). Make it yours: check every fact, add your voice.${isGradSchoolPage() ? " Some schools (e.g. Polytechnique) ask that statements be written without AI, so use this as notes." : ""}`, 12000);
-    };
-    el.insertAdjacentElement("afterend", b);
-  }
-
   // ---------------------------------------------------------------- learn from what you type
   const PROFILE_LEARN = new Set(["address", "postal_code", "languages", "pronouns", "website", "scholar", "salary", "duration", "nationality", "city"]);
   let learnTimer = null, learnedCount = 0;
@@ -578,7 +517,7 @@
   document.addEventListener("focusin", (e) => { if (e.target.matches("input, textarea, [contenteditable]")) lastFocused = e.target; }, true);
 
   chrome.runtime.onMessage.addListener((msg, _sender, reply) => {
-    if (msg.type === "AH_FILL") { currentMode = msg.mode || "auto"; fill({ claude: msg.claude }).then((r) => reply({ ...r, mode: isGradSchoolPage() ? "grad" : "internship" })); return true; }
+    if (msg.type === "AH_FILL") { currentMode = msg.mode || "auto"; fill().then((r) => reply({ ...r, mode: isGradSchoolPage() ? "grad" : "internship" })); return true; }
     if (msg.type === "AH_SAVE_ANSWER" && lastFocused) {
       const q = rawLabel(lastFocused) || attrText(lastFocused);
       const a = lastFocused.value || lastFocused.innerText || "";
