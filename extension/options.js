@@ -41,7 +41,7 @@ function renderAnswers() {
     <div class="ans" data-i="${i}">
       <input data-a="q" value="${esc(a.q)}" placeholder="Question (keywords matter)">
       <textarea data-a="a" placeholder="Your answer (use {company} / {role})">${esc(a.a)}</textarea>
-      <div class="row between"><span class="tiny muted">${a.from ? "saved from " + esc(a.from) : ""}${a.a ? "" : " · empty answers are skipped"}</span><button class="btn danger" data-del="${i}">Delete</button></div>
+      <div class="row between"><span class="tiny muted">${a.learned ? "📚 learned " : ""}${a.from ? "from " + esc(a.from) : ""}${a.a ? "" : " · empty answers are skipped"}</span><button class="btn danger" data-del="${i}">Delete</button></div>
     </div>`).join("");
 }
 
@@ -57,7 +57,8 @@ function collect() {
     const i = +row.dataset.i;
     state.answers[i] = { ...state.answers[i], q: row.querySelector('[data-a="q"]').value, a: row.querySelector('[data-a="a"]').value };
   });
-  state.settings = { ghToken: $("#ghToken").value.trim(), gistId: $("#gistId").value.trim(), showEverywhere: $("#showEverywhere").checked };
+  state.settings = { ...state.settings, ghToken: $("#ghToken").value.trim(), gistId: $("#gistId").value.trim(), showEverywhere: $("#showEverywhere").checked,
+                     anthropicKey: $("#anthropicKey").value.trim(), claudeModel: $("#claudeModel").value, useClaude: $("#useClaude").checked, sendCv: $("#sendCv").checked };
 }
 
 async function save() {
@@ -69,6 +70,12 @@ async function save() {
 document.addEventListener("click", async (e) => {
   const t = e.target;
   if (t.id === "save") save();
+  if (t.id === "testClaude") {
+    await save();
+    $("#claudeStatus").textContent = "Testing…";
+    const r = await chrome.runtime.sendMessage({ type: "AH_CLAUDE_TEST" });
+    $("#claudeStatus").textContent = r?.ok ? `✓ Connected (${r.model})` : `✗ ${r?.error || "no response"}`;
+  }
   if (t.id === "add-answer") { collect(); state.answers.unshift({ q: "", a: "" }); renderAnswers(); }
   if (t.dataset.del) { collect(); state.answers.splice(+t.dataset.del, 1); renderAnswers(); await save(); }
   if (t.dataset.deldoc) { delete state.docs[t.dataset.deldoc]; await chrome.storage.local.set({ docs: state.docs }); renderDocs(); }
@@ -110,5 +117,9 @@ document.addEventListener("change", async (e) => {
   $("#ghToken").value = state.settings.ghToken || "";
   $("#gistId").value = state.settings.gistId || "";
   $("#showEverywhere").checked = !!state.settings.showEverywhere;
+  $("#anthropicKey").value = state.settings.anthropicKey || "";
+  $("#claudeModel").value = state.settings.claudeModel || "claude-opus-5-5";
+  $("#useClaude").checked = state.settings.useClaude !== false;
+  $("#sendCv").checked = state.settings.sendCv !== false;
   document.addEventListener("keydown", (e) => { if ((e.ctrlKey || e.metaKey) && e.key === "s") { e.preventDefault(); save(); } });
 })();

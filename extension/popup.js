@@ -17,7 +17,7 @@ const $ = (s) => document.querySelector(s);
     $("#result").textContent = "Filling…";
     try {
       const r = await chrome.tabs.sendMessage(tab.id, { type: "AH_FILL", mode: $("#mode").value });
-      $("#result").textContent = r ? `✓ ${r.mode === "grad" ? "Grad-school" : "Internship"} mode: filled ${r.filled} field(s)${r.files?.length ? ", attached " + r.files.join(", ") : ""}${r.attention ? `. ${r.attention} still need you (orange)` : ""}.` : "Done.";
+      $("#result").textContent = r ? `✓ ${r.mode === "grad" ? "Grad-school" : "Internship"} mode: filled ${r.filled} field(s)${r.files?.length ? ", attached " + r.files.join(", ") : ""}${r.claude && !r.claude.error ? `. ✨ Claude answered ${r.claude.answered}${r.claude.cost != null ? ` (~$${r.claude.cost.toFixed(3)})` : ""}` : ""}${r.claude?.error ? `. Claude: ${r.claude.error}` : ""}${r.attention ? `. ${r.attention} still need you (orange)` : ""}.` : "Done.";
     } catch { $("#result").textContent = "Can't fill this page (reload the page once after installing the extension)."; }
   };
 
