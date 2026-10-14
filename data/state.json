@@ -20,14 +20,14 @@
    "status": "blocked"
   },
   "https://www.gresearch.com/join-us/": {
-   "hash": "f9c6d0d69ab3c4bc813c045744bd37eecb5528baa03ac2aee7da37bd05174760",
+   "hash": "30041b5e3c27da9801954785d6ce8038323d10b4b3b5b304e7f3979d8ab42543",
    "lines": [
     "Students & graduates",
     "Engineering internships",
-    "Quant Research Internship",
     "Data Science Internship",
     "Machine Learning Research Internship",
     "Natural Language Processing Internship",
+    "Quant Research Internship",
     "Machine Learning Engineer Internship",
     "Software Engineering Internship",
     "Quantitative Research Intern",
@@ -127,23 +127,8 @@
    "status": "ok"
   },
   "https://programmes.polytechnique.edu/en/master/admissions-msct/application-deadlines-procedure": {
-   "hash": "1bc1ccbbe3f3af36a1ec17b45e0bc383f18a01d05530aec962649e641f3bd299",
-   "lines": [
-    "Admissions MSc&T Application Deadlines & Procedure",
-    "Application Deadlines & Procedure",
-    "Application Deadlines & Procedure",
-    "APPLICATIONS for the 2027 intake will open on September 16th, 2026",
-    "Application Deadlines",
-    "As seen below, this year we have four application rounds:",
-    "Application Deadline Admissibility Jury Interview Period Admission decision sent on",
-    "ROUND 1 September 16th to October 12, 2026 at 11.59 AM (CEST) Early November, 2026 Mid-to-late November, 2026 Early December, 2026",
-    "ROUND 2 October 12, 2026 to January 11, 2027 11.59 AM (CET) Early February, 2026 Mid-to-late February, 2027 Early March, 2027",
-    "ROUND 3 January 11 to March 8, 2027 11.59 AM (CET) Late March, 2027 Mid-April 2027 Early May, 2027",
-    "ROUND 4 March 8 to April 13, 2027 11.59 AM (CET) Early May, 2027 Late May 2027 Early June, 2027",
-    "For the MSc&T Data Science and AI for Business and MSc&T Double Degree Data & Finance (in partnership with HEC Paris), applications are handled exclusively by HEC Paris. Please submit your application via the HEC Paris website, where you will also find the application timeline and deadlines.",
-    "When the applications website is open, you can initiate your application at any time. However, you will only be able to finalize it within the above deadlines. Please note that only students who apply in the first and second rounds of admissions can apply for a scholarship.",
-    "If you wish to pay the application fee via a bank transfer, it has to be processed by the bank several days before the admission deadline . If the bank transfer is made by a third party (family member, company, etc.) please make sure to inform the Admissions team by sending an email to the Admissions officer."
-   ],
+   "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": [],
    "status": "ok"
   },
   "https://www.cst.cam.ac.uk/admissions/acs": {
