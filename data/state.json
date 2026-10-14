@@ -59,11 +59,31 @@
    "status": "ok"
   },
   "https://jobs.apple.com/en-gb/search?team=internships-STDNT-INTRN&location=united-kingdom-GBR": {
-   "hash": "1898cf8a1c2c64d681b11ada8a85330f8960ef55ffdd86f8bf62244885238897",
+   "hash": "c082b7f293e3d6da17dff5128d3c93f4920893b2e1f5356888ff35ab9521e362",
    "lines": [
     "Search Jobs - United Kingdom, Students: Internships - Jobs at Apple (UK)",
     "View all teams Students : Internships",
-    "Students : Internships"
+    "Students : Internships",
+    "PMU Design Verification Intern",
+    "Share PMU Design Verification Intern 200683293-5490",
+    "GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture",
+    "Share GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture 200682357-1251",
+    "GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture",
+    "Share GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture 200682357-2114",
+    "GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture",
+    "Share GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture 200682357-3521",
+    "GPU Internships - Design Verification and Emulation & Driver Live",
+    "Share GPU Internships - Design Verification and Emulation & Driver Live 200679652-1251",
+    "GPU Internships - Design Verification and Emulation & Driver Live",
+    "Share GPU Internships - Design Verification and Emulation & Driver Live 200679652-2114",
+    "GPU Internships - Design Verification and Emulation & Driver Live",
+    "Share GPU Internships - Design Verification and Emulation & Driver Live 200679652-3521",
+    "GPU Internships - RTL Design, RTL Power Optimisation & Physical Design",
+    "Share GPU Internships - RTL Design, RTL Power Optimisation & Physical Design 200679650-1251",
+    "GPU Internships - RTL Design, RTL Power Optimisation & Physical Design",
+    "Share GPU Internships - RTL Design, RTL Power Optimisation & Physical Design 200679650-2114",
+    "GPU Internships - RTL Design, RTL Power Optimisation & Physical Design",
+    "Share GPU Internships - RTL Design, RTL Power Optimisation & Physical Design 200679650-3521"
    ],
    "status": "ok"
   },
@@ -205,5 +225,5 @@
    "status": "ok"
   }
  },
- "last_digest": "2026-10-13"
+ "last_digest": "2026-10-14"
 }
