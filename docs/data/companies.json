@@ -174,7 +174,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 94,
+  "raw_count": 95,
   "open_internships": 0,
   "opens": "Jul – Oct (rolling: apply in the first 2–3 weeks)",
   "careers": ""
@@ -282,7 +282,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 724,
+  "raw_count": 723,
   "open_internships": 3,
   "opens": "Aug – Nov",
   "careers": ""
@@ -294,7 +294,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 895,
+  "raw_count": 894,
   "open_internships": 4,
   "opens": "Aug – Nov",
   "careers": ""
@@ -342,7 +342,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 382,
+  "raw_count": 373,
   "open_internships": 0,
   "opens": "Oct – Mar",
   "careers": ""
@@ -354,7 +354,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 143,
+  "raw_count": 144,
   "open_internships": 1,
   "opens": "Aug – Nov",
   "careers": ""
@@ -366,7 +366,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 164,
+  "raw_count": 165,
   "open_internships": 0,
   "opens": "Aug – Nov",
   "careers": ""
@@ -378,7 +378,7 @@
   "ats": "lever",
   "ok": true,
   "error": null,
-  "raw_count": 83,
+  "raw_count": 84,
   "open_internships": 0,
   "opens": "Aug – Nov",
   "careers": ""
@@ -390,7 +390,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 227,
+  "raw_count": 226,
   "open_internships": 0,
   "opens": "Oct – Mar",
   "careers": ""
@@ -414,7 +414,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 644,
+  "raw_count": 647,
   "open_internships": 0,
   "opens": "Sep – Jan (many roles are PhD-only)",
   "careers": ""
@@ -426,7 +426,7 @@
   "ats": "ashby",
   "ok": true,
   "error": null,
-  "raw_count": 805,
+  "raw_count": 810,
   "open_internships": 0,
   "opens": "Sep – Jan (many roles are PhD-only)",
   "careers": ""
@@ -498,7 +498,7 @@
   "ats": "ashby",
   "ok": true,
   "error": null,
-  "raw_count": 144,
+  "raw_count": 145,
   "open_internships": 0,
   "opens": "Sep – Jan (many roles are PhD-only)",
   "careers": ""
@@ -510,7 +510,7 @@
   "ats": "ashby",
   "ok": true,
   "error": null,
-  "raw_count": 47,
+  "raw_count": 48,
   "open_internships": 0,
   "opens": "Sep – Jan (many roles are PhD-only)",
   "careers": ""

@@ -1,11 +1,11 @@
 {
- "last_scan": "2026-10-14T00:16+00:00",
- "duration_s": 48,
+ "last_scan": "2026-10-14T04:58+00:00",
+ "duration_s": 165,
  "open_internships": 128,
- "new_this_scan": 1,
+ "new_this_scan": 0,
  "companies_ok": 59,
  "companies_failed": [],
- "notifications_sent": 4,
+ "notifications_sent": 6,
  "fx_to_usd": {
   "USD": 1.0,
   "EUR": 1.16,
