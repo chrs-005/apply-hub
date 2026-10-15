@@ -20,7 +20,7 @@
    "status": "blocked"
   },
   "https://www.gresearch.com/join-us/": {
-   "hash": "bea48ed43196900ba519f535174a57898f4230b41ebdd190358f505332d4c219",
+   "hash": "30041b5e3c27da9801954785d6ce8038323d10b4b3b5b304e7f3979d8ab42543",
    "lines": [
     "Students & graduates",
     "Engineering internships",
@@ -28,8 +28,8 @@
     "Machine Learning Research Internship",
     "Natural Language Processing Internship",
     "Quant Research Internship",
-    "Software Engineering Internship",
     "Machine Learning Engineer Internship",
+    "Software Engineering Internship",
     "Quantitative Research Intern",
     "Research Engineering Intern",
     "FPGA Engineering Intern",
@@ -49,10 +49,8 @@
    "status": "ok"
   },
   "https://www.qube-rt.com/careers/": {
-   "hash": "09010f5c2b736678e9f9f6fb74bd28613a4819841847ff19086763732b8e3cf1",
-   "lines": [
-    "Any specific enquiries related to campus, internships and graduate programmes, please contact campus@qube-rt.com ."
-   ],
+   "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": [],
    "status": "ok"
   },
   "https://careers.sig.com/campus-programs": {
@@ -158,20 +156,20 @@
    "status": "ok"
   },
   "https://admissions.kaust.edu.sa/how-to-apply/admission-timelines": {
-   "hash": "6309b0dd1adaec1499421cc57b551095e43642f339479ac56a80289dd722f226",
+   "hash": "cba16405e28405d62a002d9320e7d7524de1f3019282eb1692a3c1fed7002dec",
    "lines": [
     "Key Dates for KAUST Admissions Timeline (2026-2027)",
     "Applications for Spring 2027 entry are now open.",
     "Spring 2027 Admission",
     "Spring 2027 admission is only open to PhD applicants.",
     "Round 1 application deadline 27 September 2026",
-    "Round 1 decisions released 8 November 2026",
+    "Round 1 decisions released 19 November 2026",
     "Spring semester starts 17 January 2027",
     "Fall 2027 Admission",
     "Fall 2027 admission is open to MS, MS/PhD, and PhD applicants.",
     "Round 2 application open 28 September 2026",
     "Round 2 application deadline 3 January 2027",
-    "Round 2 decisions released 14 February 2027",
+    "Round 2 decisions released 25 February 2027",
     "Fall semester starts 29 August 2027"
    ],
    "status": "ok"
@@ -212,5 +210,5 @@
    "status": "ok"
   }
  },
- "last_digest": "2026-10-14"
+ "last_digest": "2026-10-15"
 }
