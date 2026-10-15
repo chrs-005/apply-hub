@@ -477,7 +477,7 @@
   "app_fee_usd": 188,
   "tuition_year_usd": 5476,
   "next_deadline": "2026-12-15",
-  "status": "not_open_yet"
+  "status": "open"
  },
  {
   "id": "epfl-ds",
@@ -528,7 +528,7 @@
   "app_fee_usd": 188,
   "tuition_year_usd": 5476,
   "next_deadline": "2026-12-15",
-  "status": "not_open_yet"
+  "status": "open"
  },
  {
   "id": "epfl-fe",
@@ -579,7 +579,7 @@
   "app_fee_usd": 188,
   "tuition_year_usd": 5476,
   "next_deadline": "2026-12-15",
-  "status": "not_open_yet"
+  "status": "open"
  },
  {
   "id": "mbzuai-msc",
@@ -1192,7 +1192,7 @@
   "app_fee_usd": 121,
   "tuition_year_usd": 53332,
   "next_deadline": "2027-03-27",
-  "status": "not_open_yet"
+  "status": "open"
  },
  {
   "id": "ucl-csml",
@@ -1237,7 +1237,7 @@
   "app_fee_usd": 121,
   "tuition_year_usd": null,
   "next_deadline": "2027-03-27",
-  "status": "not_open_yet"
+  "status": "open"
  },
  {
   "id": "ed-ai",
