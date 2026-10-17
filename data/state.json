@@ -61,16 +61,36 @@
    "status": "ok"
   },
   "https://jobs.apple.com/en-gb/search?team=internships-STDNT-INTRN&location=united-kingdom-GBR": {
-   "hash": "1898cf8a1c2c64d681b11ada8a85330f8960ef55ffdd86f8bf62244885238897",
+   "hash": "b2e0862f20b72715b643bb59df6212f8f6ce8f3083679b8b3e81c1a00c91fdff",
    "lines": [
     "Search Jobs - United Kingdom, Students: Internships - Jobs at Apple (UK)",
     "View all teams Students : Internships",
-    "Students : Internships"
+    "Students : Internships",
+    "PMU Design Verification Intern",
+    "Share PMU Design Verification Intern 200683293-5490",
+    "GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture",
+    "Share GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture 200682357-1251",
+    "GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture",
+    "Share GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture 200682357-2114",
+    "GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture",
+    "Share GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture 200682357-3521",
+    "GPU Design Verification Internship",
+    "Share GPU Design Verification Internship 200679652-1251",
+    "GPU Design Verification Internship",
+    "Share GPU Design Verification Internship 200679652-2114",
+    "GPU Design Verification Internship",
+    "Share GPU Design Verification Internship 200679652-3521",
+    "GPU Internships - RTL Design, RTL Power Optimisation & Physical Design",
+    "Share GPU Internships - RTL Design, RTL Power Optimisation & Physical Design 200679650-1251",
+    "GPU Internships - RTL Design, RTL Power Optimisation & Physical Design",
+    "Share GPU Internships - RTL Design, RTL Power Optimisation & Physical Design 200679650-2114",
+    "GPU Internships - RTL Design, RTL Power Optimisation & Physical Design",
+    "Share GPU Internships - RTL Design, RTL Power Optimisation & Physical Design 200679650-3521"
    ],
    "status": "ok"
   },
   "https://www.mavensecurities.com/careers/": {
-   "status": "blocked",
+   "status": "ok",
    "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
    "lines": []
   },
@@ -209,5 +229,5 @@
    "status": "ok"
   }
  },
- "last_digest": "2026-10-16"
+ "last_digest": "2026-10-17"
 }
