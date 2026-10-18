@@ -1,13 +1,13 @@
 {
- "last_scan": "2026-10-17T23:07+00:00",
- "duration_s": 47,
+ "last_scan": "2026-10-18T04:28+00:00",
+ "duration_s": 45,
  "open_internships": 126,
  "new_this_scan": 0,
  "companies_ok": 58,
  "companies_failed": [
   "Helsing"
  ],
- "notifications_sent": 2,
+ "notifications_sent": 0,
  "fx_to_usd": {
   "USD": 1.0,
   "EUR": 1.16,
