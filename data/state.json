@@ -20,14 +20,14 @@
    "status": "blocked"
   },
   "https://www.gresearch.com/join-us/": {
-   "hash": "6c3df392972e459f07fd5b230a598f8f47f4b42e43eef7e9934f43eebceb85d6",
+   "hash": "30041b5e3c27da9801954785d6ce8038323d10b4b3b5b304e7f3979d8ab42543",
    "lines": [
     "Students & graduates",
     "Engineering internships",
+    "Data Science Internship",
     "Machine Learning Research Internship",
     "Natural Language Processing Internship",
     "Quant Research Internship",
-    "Data Science Internship",
     "Machine Learning Engineer Internship",
     "Software Engineering Internship",
     "Quantitative Research Intern",
@@ -49,10 +49,8 @@
    "status": "ok"
   },
   "https://www.qube-rt.com/careers/": {
-   "hash": "09010f5c2b736678e9f9f6fb74bd28613a4819841847ff19086763732b8e3cf1",
-   "lines": [
-    "Any specific enquiries related to campus, internships and graduate programmes, please contact campus@qube-rt.com ."
-   ],
+   "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": [],
    "status": "ok"
   },
   "https://careers.sig.com/campus-programs": {
@@ -207,8 +205,13 @@
    "status": "error"
   },
   "https://careers.cern/summer": {
-   "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-   "lines": [],
+   "hash": "11234b7f96d68d29ed9a6b6b8a05eb56599ce182cef06bcaa5c3b6f5aa98bd93",
+   "lines": [
+    "Submit application",
+    "Apply with your CV (in English or French) and complete the online application before the deadline.",
+    "Application review and interview",
+    "Your application will be reviewed and you may be invited to take part in an online interview with the hiring manager(s) to discuss your application, CERN and the position, and for you both to determine if it could be a good fit."
+   ],
    "status": "ok"
   }
  },
