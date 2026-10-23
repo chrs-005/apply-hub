@@ -20,14 +20,14 @@
    "status": "blocked"
   },
   "https://www.gresearch.com/join-us/": {
-   "hash": "6c3df392972e459f07fd5b230a598f8f47f4b42e43eef7e9934f43eebceb85d6",
+   "hash": "30041b5e3c27da9801954785d6ce8038323d10b4b3b5b304e7f3979d8ab42543",
    "lines": [
     "Students & graduates",
     "Engineering internships",
+    "Data Science Internship",
     "Machine Learning Research Internship",
     "Natural Language Processing Internship",
     "Quant Research Internship",
-    "Data Science Internship",
     "Machine Learning Engineer Internship",
     "Software Engineering Internship",
     "Quantitative Research Intern",
@@ -49,8 +49,10 @@
    "status": "ok"
   },
   "https://www.qube-rt.com/careers/": {
-   "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-   "lines": [],
+   "hash": "09010f5c2b736678e9f9f6fb74bd28613a4819841847ff19086763732b8e3cf1",
+   "lines": [
+    "Any specific enquiries related to campus, internships and graduate programmes, please contact campus@qube-rt.com ."
+   ],
    "status": "ok"
   },
   "https://careers.sig.com/campus-programs": {
@@ -59,31 +61,11 @@
    "status": "ok"
   },
   "https://jobs.apple.com/en-gb/search?team=internships-STDNT-INTRN&location=united-kingdom-GBR": {
-   "hash": "b2e0862f20b72715b643bb59df6212f8f6ce8f3083679b8b3e81c1a00c91fdff",
+   "hash": "1898cf8a1c2c64d681b11ada8a85330f8960ef55ffdd86f8bf62244885238897",
    "lines": [
     "Search Jobs - United Kingdom, Students: Internships - Jobs at Apple (UK)",
     "View all teams Students : Internships",
-    "Students : Internships",
-    "PMU Design Verification Intern",
-    "Share PMU Design Verification Intern 200683293-5490",
-    "GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture",
-    "Share GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture 200682357-1251",
-    "GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture",
-    "Share GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture 200682357-2114",
-    "GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture",
-    "Share GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture 200682357-3521",
-    "GPU Design Verification Internship",
-    "Share GPU Design Verification Internship 200679652-1251",
-    "GPU Design Verification Internship",
-    "Share GPU Design Verification Internship 200679652-2114",
-    "GPU Design Verification Internship",
-    "Share GPU Design Verification Internship 200679652-3521",
-    "GPU Internships - RTL Design, RTL Power Optimisation & Physical Design",
-    "Share GPU Internships - RTL Design, RTL Power Optimisation & Physical Design 200679650-1251",
-    "GPU Internships - RTL Design, RTL Power Optimisation & Physical Design",
-    "Share GPU Internships - RTL Design, RTL Power Optimisation & Physical Design 200679650-2114",
-    "GPU Internships - RTL Design, RTL Power Optimisation & Physical Design",
-    "Share GPU Internships - RTL Design, RTL Power Optimisation & Physical Design 200679650-3521"
+    "Students : Internships"
    ],
    "status": "ok"
   },
@@ -227,5 +209,5 @@
    "status": "ok"
   }
  },
- "last_digest": "2026-10-22"
+ "last_digest": "2026-10-23"
 }
