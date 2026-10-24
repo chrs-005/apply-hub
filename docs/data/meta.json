@@ -1,6 +1,6 @@
 {
- "last_scan": "2026-10-23T21:22+00:00",
- "duration_s": 122,
+ "last_scan": "2026-10-24T04:33+00:00",
+ "duration_s": 105,
  "open_internships": 131,
  "new_this_scan": 0,
  "companies_ok": 56,
@@ -9,7 +9,7 @@
   "Microsoft",
   "Helsing"
  ],
- "notifications_sent": 0,
+ "notifications_sent": 1,
  "fx_to_usd": {
   "USD": 1.0,
   "EUR": 1.16,
