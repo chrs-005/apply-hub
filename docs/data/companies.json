@@ -234,7 +234,7 @@
   "ats": "microsoft",
   "ok": true,
   "error": null,
-  "raw_count": 31,
+  "raw_count": 30,
   "open_internships": 3,
   "opens": "Aug – Nov",
   "careers": "https://apply.careers.microsoft.com/careers?query=intern"
@@ -426,7 +426,7 @@
   "ats": "ashby",
   "ok": true,
   "error": null,
-  "raw_count": 796,
+  "raw_count": 795,
   "open_internships": 0,
   "opens": "Sep – Jan (many roles are PhD-only)",
   "careers": ""
@@ -558,7 +558,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 218,
+  "raw_count": 217,
   "open_internships": 1,
   "opens": "Oct – Mar",
   "careers": ""
