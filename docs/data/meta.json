@@ -1,15 +1,14 @@
 {
- "last_scan": "2026-10-24T04:33+00:00",
- "duration_s": 105,
+ "last_scan": "2026-10-24T10:55+00:00",
+ "duration_s": 66,
  "open_internships": 131,
  "new_this_scan": 0,
- "companies_ok": 56,
+ "companies_ok": 57,
  "companies_failed": [
   "Old Mission",
-  "Microsoft",
   "Helsing"
  ],
- "notifications_sent": 1,
+ "notifications_sent": 2,
  "fx_to_usd": {
   "USD": 1.0,
   "EUR": 1.16,
