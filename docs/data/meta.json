@@ -1,12 +1,11 @@
 {
- "last_scan": "2026-10-25T20:48+00:00",
- "duration_s": 125,
+ "last_scan": "2026-10-25T23:15+00:00",
+ "duration_s": 83,
  "open_internships": 131,
  "new_this_scan": 0,
- "companies_ok": 56,
+ "companies_ok": 57,
  "companies_failed": [
   "Old Mission",
-  "Microsoft",
   "Helsing"
  ],
  "notifications_sent": 2,
