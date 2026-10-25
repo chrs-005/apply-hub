@@ -49,8 +49,10 @@
    "status": "ok"
   },
   "https://www.qube-rt.com/careers/": {
-   "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-   "lines": [],
+   "hash": "09010f5c2b736678e9f9f6fb74bd28613a4819841847ff19086763732b8e3cf1",
+   "lines": [
+    "Any specific enquiries related to campus, internships and graduate programmes, please contact campus@qube-rt.com ."
+   ],
    "status": "ok"
   },
   "https://careers.sig.com/campus-programs": {
@@ -227,5 +229,5 @@
    "status": "ok"
   }
  },
- "last_digest": "2026-10-24"
+ "last_digest": "2026-10-25"
 }
