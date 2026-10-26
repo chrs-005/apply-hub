@@ -5,10 +5,23 @@
  */
 const GIST_FILE = "apply-hub-tracker.json";
 
+// Job portals + university portals: the only places auto-learned answers are allowed to come from.
+const APPLICATION_HOSTS = /greenhouse\.io|lever\.co|ashbyhq\.com|myworkdayjobs\.com|workday\.com|smartrecruiters\.com|workable\.com|icims\.com|taleo\.net|successfactors|oraclecloud\.com|jobvite\.com|teamtailor\.com|recruitee\.com|personio\.|bamboohr\.com|eightfold\.ai|careers\.microsoft\.com|amazon\.jobs|janestreet\.com|avature\.net|join\.com|applytojob\.com|breezy\.hr|\.ac\.(uk|ae|at|be|il)$|\.edu(\.[a-z]{2})?$|ethz\.ch|epfl\.ch|uzh\.ch|polytechnique|ip-paris|universit|uni-[a-z]+\.de|tum\.de|tudelft\.nl|uva\.nl|kaust\.edu|mbzuai|eacea|technolutions|campusfrance|ens\.(fr|psl)|sorbonne|imperial\.ac|lse\.ac|ucl\.ac|ox\.ac|cam\.ac|ed\.ac/;
+
+async function removeJunkLearned() {
+  // Older versions learned from every site (search boxes, chats...). Keep only answers learned on
+  // application sites, plus anything you saved yourself (right-click "Save this answer").
+  const { answers = [] } = await chrome.storage.local.get("answers");
+  const kept = answers.filter((a) => !a.learned || APPLICATION_HOSTS.test(a.from || ""));
+  if (kept.length !== answers.length) await chrome.storage.local.set({ answers: kept });
+  return answers.length - kept.length;
+}
+
 chrome.runtime.onInstalled.addListener((d) => {
   chrome.contextMenus.create({ id: "ah-save-answer", title: "Save this answer to Apply Hub", contexts: ["editable"] });
   chrome.contextMenus.create({ id: "ah-fill", title: "Autofill this application", contexts: ["page", "editable"] });
   if (d.reason === "install") chrome.runtime.openOptionsPage();
+  if (d.reason === "update") removeJunkLearned();
 });
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {

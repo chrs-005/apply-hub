@@ -289,7 +289,13 @@
     return { company: company.replace(/careers?|jobs?/ig, "").trim(), role };
   }
   const fillTemplate = (s, ctx) => String(s).replace(/\{company\}/gi, ctx.company || "your company").replace(/\{role\}/gi, ctx.role || "this role");
-  async function saveAnswer(q, a, extra = {}) {
+  // Saves run one after another: several fields changing at once must not overwrite each other.
+  let saveQueue = Promise.resolve();
+  function saveAnswer(q, a, extra = {}) {
+    saveQueue = saveQueue.then(() => saveAnswerNow(q, a, extra)).catch((e) => console.warn("Apply Hub: save failed", e));
+    return saveQueue;
+  }
+  async function saveAnswerNow(q, a, extra) {
     if (!q || !String(a).trim() || SENSITIVE.test(q)) return;
     const { answers = [] } = await chrome.storage.local.get("answers");
     const ctx = pageContext();
@@ -327,7 +333,9 @@
     : /^(\s*|select.*|choose.*|please select.*|--.*)$/i.test((el.innerText || "").trim());
   const isEssay = (el) => el.tagName === "TEXTAREA" && (el.rows >= 3 || el.maxLength > 400 || el.getBoundingClientRect().height > 70 || /why|describe|tell us|explain|motivation|statement|essay|cover letter/i.test(labelText(el)));
 
+  let autofillRan = false; // learning only happens on pages where you used Autofill
   async function fill(opts = {}) {
+    autofillRan = true;
     const store = await chrome.storage.local.get(["profile", "answers", "docs", "settings"]);
     const { profile = {}, answers = [], docs = {} } = store;
     if (!profile.first_name && !profile.email) { showToast("Set up your profile first: click the Apply Hub icon → Profile"); return { filled: 0, attention: 0 }; }
@@ -359,7 +367,7 @@
       }
       if (value != null && value !== "" && await fillOne(el, value)) {
         report.filled++; if (fromBank) report.answers++;
-        mark(el, GREEN); el.dataset.applyHub = "filled"; el.dataset.ahValue = String(value);
+        mark(el, GREEN); el.dataset.applyHub = "filled"; el.dataset.ahValue = String(value); el.dataset.ahSource = fromBank ? "bank" : "profile";
         if (rule) usedKeys.add(rule.key + "|" + label);
       } else {
         report.unknown.push(label.slice(0, 80));
@@ -462,27 +470,33 @@
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
   // ---------------------------------------------------------------- learn from what you type
+  // Only on pages where you clicked Autofill, and only for fields Autofill touched:
+  //   - a field it filled from your saved answers that you then CORRECTED
+  //   - a field it could NOT fill that you completed yourself
+  // Search boxes, chat boxes and everything else on the web are ignored.
   const PROFILE_LEARN = new Set(["address", "postal_code", "languages", "pronouns", "website", "scholar", "salary", "duration", "nationality", "city"]);
+  const leftUnfilled = (el) => !!el.dataset.ahQid ||
+    (el.type === "radio" && el.name && !!document.querySelector(`input[type="radio"][name="${CSS.escape(el.name)}"][data-ah-qid]`));
   let learnTimer = null, learnedCount = 0;
   document.addEventListener("change", async (e) => {
     const el = e.target;
-    if (!el || !el.matches || !el.matches("input, select, textarea") || el.closest("#__applyhub_panel")) return;
-    if (["password", "file", "hidden", "submit", "button"].includes(el.type) || /^cc-/.test(el.autocomplete || "")) return;
-    if (el.type === "checkbox") return; // consents etc.
-    if (el.dataset.applyHub === "filled" && el.value === el.dataset.ahValue) return; // our own fill
+    if (!autofillRan || !el || !el.matches || !el.matches("input, select, textarea") || el.closest("#__applyhub_panel")) return;
+    if (["password", "file", "hidden", "submit", "button", "search", "checkbox"].includes(el.type) || el.getAttribute("role") === "searchbox" || /^cc-/.test(el.autocomplete || "")) return;
+    const corrected = el.dataset.applyHub === "filled" && el.dataset.ahSource === "bank" && el.value !== el.dataset.ahValue;
+    const completed = leftUnfilled(el);
+    if (!corrected && !completed) return;
     const label = rawLabel(el);
     if (!label || label.length < 3 || SENSITIVE.test(label)) return;
     let value = el.tagName === "SELECT" ? el.options[el.selectedIndex]?.text?.trim() : el.type === "radio" ? (radioOptions([el])[0]?.text) : el.value.trim();
-    if (!value || (el.tagName === "SELECT" && /^(select|choose|--)/i.test(value))) return;
+    if (!value || value.length > 3000 || (el.tagName === "SELECT" && /^(select|choose|--)/i.test(value))) return;
     const { rule } = ruleFor(el);
     const { profile = {} } = await chrome.storage.local.get("profile");
-    if (rule && profile[rule.key]) return; // already known
     clearTimeout(learnTimer);
-    if (rule && PROFILE_LEARN.has(rule.key)) { profile[rule.key] = value; await chrome.storage.local.set({ profile }); }
-    else if (!rule) await saveAnswer(label, value, { learned: true, type: el.type || el.tagName.toLowerCase() });
+    if (rule && PROFILE_LEARN.has(rule.key) && !profile[rule.key]) { profile[rule.key] = value; await chrome.storage.local.set({ profile }); }
+    else if (!rule || corrected) await saveAnswer(label, value, { learned: true, type: el.type || el.tagName.toLowerCase() });
     else return;
     learnedCount++;
-    learnTimer = setTimeout(() => { showToast(`📚 Learned ${learnedCount} new answer(s) for next time`); learnedCount = 0; }, 1500);
+    learnTimer = setTimeout(() => { showToast(`📚 Learned ${learnedCount} answer(s) from this application`); learnedCount = 0; }, 1500);
   }, true);
 
   // ---------------------------------------------------------------- UI bits

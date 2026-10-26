@@ -69,6 +69,14 @@ async function save() {
 document.addEventListener("click", async (e) => {
   const t = e.target;
   if (t.id === "save") save();
+  if (t.id === "clear-learned") {
+    collect();
+    const n = state.answers.filter((a) => a.learned).length;
+    if (!n) return alert("No learned answers to clear.");
+    if (!confirm(`Delete ${n} learned answer(s)? Answers you saved or wrote yourself are kept.`)) return;
+    state.answers = state.answers.filter((a) => !a.learned);
+    renderAnswers(); await save();
+  }
   if (t.id === "add-answer") { collect(); state.answers.unshift({ q: "", a: "" }); renderAnswers(); }
   if (t.dataset.del) { collect(); state.answers.splice(+t.dataset.del, 1); renderAnswers(); await save(); }
   if (t.dataset.deldoc) { delete state.docs[t.dataset.deldoc]; await chrome.storage.local.set({ docs: state.docs }); renderDocs(); }
