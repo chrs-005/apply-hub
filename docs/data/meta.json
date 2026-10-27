@@ -1,15 +1,16 @@
 {
- "last_scan": "2026-10-26T20:28+00:00",
- "duration_s": 117,
+ "last_scan": "2026-10-27T00:24+00:00",
+ "duration_s": 140,
  "open_internships": 132,
- "new_this_scan": 3,
- "companies_ok": 56,
+ "new_this_scan": 0,
+ "companies_ok": 55,
  "companies_failed": [
   "Old Mission",
   "Microsoft",
+  "Hugging Face",
   "Helsing"
  ],
- "notifications_sent": 8,
+ "notifications_sent": 2,
  "fx_to_usd": {
   "USD": 1.0,
   "EUR": 1.16,
