@@ -49,10 +49,8 @@
    "status": "ok"
   },
   "https://www.qube-rt.com/careers/": {
-   "hash": "09010f5c2b736678e9f9f6fb74bd28613a4819841847ff19086763732b8e3cf1",
-   "lines": [
-    "Any specific enquiries related to campus, internships and graduate programmes, please contact campus@qube-rt.com ."
-   ],
+   "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": [],
    "status": "ok"
   },
   "https://careers.sig.com/campus-programs": {
@@ -61,14 +59,11 @@
    "status": "ok"
   },
   "https://jobs.apple.com/en-gb/search?team=internships-STDNT-INTRN&location=united-kingdom-GBR": {
-   "hash": "b99ddd55bf5b52705ff3f8f361ac2b98aeb849ad155663563d4a61bb3997f1c3",
+   "hash": "b2e0862f20b72715b643bb59df6212f8f6ce8f3083679b8b3e81c1a00c91fdff",
    "lines": [
     "Search Jobs - United Kingdom, Students: Internships - Jobs at Apple (UK)",
     "View all teams Students : Internships",
     "Students : Internships",
-    "Internship - Machine Learning Research - Speech-to-Speech Translation",
-    "Share Internship - Machine Learning Research - Speech-to-Speech Translation 200690125-1251",
-    "The Machine Translation and Multilingual AI team is looking for research interns to explore open problems in speech-to-speech translation: how to build models that let people talk naturally with anyone, in any language, in real time.",
     "PMU Design Verification Intern",
     "Share PMU Design Verification Intern 200683293-5490",
     "GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture",
