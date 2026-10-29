@@ -20,14 +20,14 @@
    "status": "blocked"
   },
   "https://www.gresearch.com/join-us/": {
-   "hash": "30041b5e3c27da9801954785d6ce8038323d10b4b3b5b304e7f3979d8ab42543",
+   "hash": "f9c6d0d69ab3c4bc813c045744bd37eecb5528baa03ac2aee7da37bd05174760",
    "lines": [
     "Students & graduates",
     "Engineering internships",
+    "Quant Research Internship",
     "Data Science Internship",
     "Machine Learning Research Internship",
     "Natural Language Processing Internship",
-    "Quant Research Internship",
     "Machine Learning Engineer Internship",
     "Software Engineering Internship",
     "Quantitative Research Intern",
@@ -61,11 +61,15 @@
    "status": "ok"
   },
   "https://jobs.apple.com/en-gb/search?team=internships-STDNT-INTRN&location=united-kingdom-GBR": {
-   "hash": "b2e0862f20b72715b643bb59df6212f8f6ce8f3083679b8b3e81c1a00c91fdff",
+   "hash": "0c6fb8183f513896c4cac0f0b1e61d87800d979042a4badd4991052817384beb",
    "lines": [
     "Search Jobs - United Kingdom, Students: Internships - Jobs at Apple (UK)",
     "View all teams Students : Internships",
     "Students : Internships",
+    "Internship - Machine Learning Research - Speech-to-Speech Translation",
+    "Share Internship - Machine Learning Research - Speech-to-Speech Translation 200690125-1251",
+    "This internship can be based in either Cambridge, UK or Aachen, Germany",
+    "The Machine Translation and Multilingual AI team is looking for research interns to explore open problems in speech-to-speech translation: how to build models that let people talk naturally with anyone, in any language, in real time.",
     "PMU Design Verification Intern",
     "Share PMU Design Verification Intern 200683293-5490",
     "GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture",
