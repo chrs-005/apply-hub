@@ -20,14 +20,14 @@
    "status": "blocked"
   },
   "https://www.gresearch.com/join-us/": {
-   "hash": "f9c6d0d69ab3c4bc813c045744bd37eecb5528baa03ac2aee7da37bd05174760",
+   "hash": "4db494e10e120bfdf4aa89b973dd77f8f94baa6e73e9f12facab4e1eca923c92",
    "lines": [
     "Students & graduates",
     "Engineering internships",
+    "Natural Language Processing Internship",
     "Quant Research Internship",
     "Data Science Internship",
     "Machine Learning Research Internship",
-    "Natural Language Processing Internship",
     "Machine Learning Engineer Internship",
     "Software Engineering Internship",
     "Quantitative Research Intern",
@@ -49,10 +49,8 @@
    "status": "ok"
   },
   "https://www.qube-rt.com/careers/": {
-   "hash": "09010f5c2b736678e9f9f6fb74bd28613a4819841847ff19086763732b8e3cf1",
-   "lines": [
-    "Any specific enquiries related to campus, internships and graduate programmes, please contact campus@qube-rt.com ."
-   ],
+   "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": [],
    "status": "ok"
   },
   "https://careers.sig.com/campus-programs": {
