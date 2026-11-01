@@ -108,7 +108,7 @@
   "app_fee_usd": 188,
   "tuition_year_usd": 5476,
   "next_deadline": "2026-11-30",
-  "status": "not_open_yet"
+  "status": "open"
  },
  {
   "id": "eth-ds",
@@ -157,7 +157,7 @@
   "app_fee_usd": 188,
   "tuition_year_usd": 5476,
   "next_deadline": "2026-11-30",
-  "status": "not_open_yet"
+  "status": "open"
  },
  {
   "id": "eth-math",
@@ -204,7 +204,7 @@
   "app_fee_usd": 188,
   "tuition_year_usd": 5476,
   "next_deadline": "2026-11-30",
-  "status": "not_open_yet"
+  "status": "open"
  },
  {
   "id": "tud-cs",
