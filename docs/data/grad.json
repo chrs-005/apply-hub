@@ -1,6 +1,23 @@
 [
  {
   "id": "ox-mcf",
+  "target": "suggested",
+  "short": "Oxford MCF",
+  "why": "Oxford's quant program, if you want that route. Early deadline 13 Nov, final 27 Jan.",
+  "requires": {
+   "letters": 3,
+   "letters_note": "Not re-checked: confirm on the program page",
+   "gre": {
+    "status": "no",
+    "note": "Not re-checked: confirm."
+   },
+   "english": {
+    "status": "test",
+    "note": "Not re-checked: confirm."
+   },
+   "statement": "Check the program page",
+   "extras": []
+  },
   "university": "University of Oxford",
   "program": "MSc Mathematical and Computational Finance",
   "country": "United Kingdom",
@@ -49,14 +66,157 @@
    "language"
   ],
   "notes": "Submit at least 2 weeks before the deadline (Oxford's advice).",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "3 recommendation letters",
+    "detail": "Not re-checked: confirm on the program page"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "Check the program page",
+    "detail": ""
+   },
+   {
+    "id": "english",
+    "label": "English test (TOEFL / IELTS)",
+    "detail": "Not re-checked: confirm."
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee (GBP 75)",
+    "detail": "Amount not confirmed: check the application."
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from third-party listings: confirm on the program page",
   "app_fee_usd": 100,
   "tuition_year_usd": 65178,
   "next_deadline": "2026-11-13",
   "status": "open"
  },
  {
+  "id": "cmu-mscs",
+  "target": "suggested",
+  "why": "Top US program, but the deadline is close (9 Dec) and it's the one that needs a test-center GRE and an English test. Decide this week.",
+  "university": "Carnegie Mellon",
+  "short": "CMU",
+  "program": "MS Computer Science",
+  "country": "United States",
+  "region": "US",
+  "fields": [
+   "cs",
+   "ml"
+  ],
+  "opens": "2026-09-09",
+  "deadlines": [
+   {
+    "label": "Early (fee $80)",
+    "date": "2026-11-18",
+    "time": "3pm EST"
+   },
+   {
+    "label": "Final (fee $100)",
+    "date": "2026-12-09",
+    "time": "3pm EST"
+   }
+  ],
+  "app_fee": {
+   "amount": 100,
+   "currency": "USD",
+   "note": "$80 before 18 Nov. Hardship waiver inside the application."
+  },
+  "tuition": null,
+  "scholarships": [],
+  "language": "TOEFL/IELTS/Duolingo required: an English-medium degree does NOT exempt you",
+  "gre": "Strongly recommended. At-home scores are not accepted for current test dates.",
+  "requires": {
+   "letters": 3,
+   "letters_note": "At least 2 from faculty or recent employers",
+   "gre": {
+    "status": "recommended",
+    "note": "Strongly recommended. CMU advises testing by Nov 25. At-home GRE is accepted only from old date ranges, so you'd need a test center."
+   },
+   "english": {
+    "status": "test",
+    "note": "No waivers, no medium-of-instruction letters. Most admits: TOEFL 105-114, IELTS 7-8, Duolingo 130-155."
+   },
+   "statement": "1-2 page statement: research interests, experience, goals",
+   "extras": []
+  },
+  "url": "https://www.csd.cs.cmu.edu/academics/masters/admissions",
+  "source": "official",
+  "verify": [
+   "tuition"
+  ],
+  "notes": "The program offers no scholarships or financial help.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "3 recommendation letters",
+    "detail": "At least 2 from faculty or recent employers"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "1-2 page statement: research interests, experience, goals",
+    "detail": ""
+   },
+   {
+    "id": "english",
+    "label": "English test (TOEFL / IELTS)",
+    "detail": "No waivers, no medium-of-instruction letters. Most admits: TOEFL 105-114, IELTS 7-8, Duolingo 130-155."
+   },
+   {
+    "id": "gre",
+    "label": "GRE (strongly recommended)",
+    "detail": "Strongly recommended. CMU advises testing by Nov 25. At-home GRE is accepted only from old date ranges, so you'd need a test center."
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee (USD 100)",
+    "detail": "$80 before 18 Nov. Hardship waiver inside the application."
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": 100,
+  "tuition_year_usd": null,
+  "next_deadline": "2026-11-18",
+  "status": "open"
+ },
+ {
   "id": "eth-cs",
+  "target": "core",
   "university": "ETH Zurich",
+  "short": "ETH",
   "program": "MSc Computer Science",
   "country": "Switzerland",
   "region": "CH",
@@ -67,14 +227,15 @@
   "opens": "2026-11-01",
   "deadlines": [
    {
-    "label": "Only window for non-Swiss bachelor's (incl. ESOP)",
+    "label": "Only window for non-Swiss bachelor's (includes ESOP)",
     "date": "2026-11-30",
-    "time": "11:59 CET"
+    "time": "11:59 in the MORNING, CET"
    }
   ],
   "app_fee": {
    "amount": 150,
-   "currency": "CHF"
+   "currency": "CHF",
+   "note": "No fee waivers"
   },
   "tuition": {
    "amount": 2190,
@@ -85,26 +246,83 @@
    {
     "name": "ESOP (Excellence & Opportunity)",
     "deadline": "2026-11-30",
-    "covers": "CHF 12,000/semester + full tuition waiver",
-    "how": "Tick ESOP in the same application. Needs 2 reference letters."
+    "covers": "CHF 13,500/semester + tuition waiver (about 60 awards)",
+    "how": "Same window. Needs a master's thesis pre-proposal on top of the normal documents, and you should be top 10% of your cohort. Possible interview in February; decisions by end of March."
    }
   ],
-  "language": "English C1 proof (e.g. IELTS 7.0 / TOEFL 100). Ask whether an English-taught bachelor's counts",
-  "gre": "Not required (check the program page)",
-  "docs": [
-   "CV",
-   "transcripts",
-   "2 references (for ESOP)",
-   "motivation letter",
-   "course descriptions"
-  ],
-  "url": "https://ethz.ch/en/studies/registration-application/master/application/how-to-apply/application-schedule.html",
+  "language": "C1 proof by the deadline: TOEFL/IELTS/C1 Advanced, or a stamped Registrar letter that your bachelor's was COMPLETELY taught in English",
+  "gre": "Not asked for in anything I could read (ETH says only 'like GRE, if required')",
+  "requires": {
+   "letters": 2,
+   "letters_note": "In English, strongly prefer academics",
+   "gre": {
+    "status": "no",
+    "note": "Not stated as required; third-party sources say it isn't considered. Confirm in eApply."
+   },
+   "english": {
+    "status": "by-deadline",
+    "note": "Must be in by the deadline or the application is rejected and can't be fixed. A Registrar letter works only if ALL your bachelor's teaching was in English; a wrong one means direct rejection."
+   },
+   "statement": "Motivation letter, about 1 A4 page",
+   "extras": [
+    "ESOP only: master's thesis pre-proposal",
+    "Check the Computer Science subject prerequisites PDF and minimum-grade page"
+   ]
+  },
+  "url": "https://ethz.ch/en/studies/master/application/master-informatik.html",
   "source": "official",
   "verify": [
-   "language",
-   "gre"
+   "app_fee"
   ],
-  "notes": "Very short window (Nov 1–30). Prepare documents in October. Late or incomplete applications are not processed.",
+  "notes": "Late or incomplete applications are not processed. Applying to a second ETH program costs another CHF 150.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "2 recommendation letters",
+    "detail": "In English, strongly prefer academics"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "Motivation letter, about 1 A4 page",
+    "detail": ""
+   },
+   {
+    "id": "english",
+    "label": "English proof, in by the deadline",
+    "detail": "Must be in by the deadline or the application is rejected and can't be fixed. A Registrar letter works only if ALL your bachelor's teaching was in English; a wrong one means direct rejection."
+   },
+   {
+    "id": "extra0",
+    "label": "ESOP only: master's thesis pre-proposal",
+    "detail": ""
+   },
+   {
+    "id": "extra1",
+    "label": "Check the Computer Science subject prerequisites PDF and minimum-grade page",
+    "detail": ""
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee (CHF 150)",
+    "detail": "No fee waivers"
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
   "app_fee_usd": 188,
   "tuition_year_usd": 5476,
   "next_deadline": "2026-11-30",
@@ -263,6 +481,23 @@
  },
  {
   "id": "kaust-ms",
+  "target": "suggested",
+  "short": "KAUST",
+  "why": "Fully funded and free to apply. Round 2 closes 3 Jan. A strong financial backstop.",
+  "requires": {
+   "letters": 3,
+   "letters_note": "Not re-checked: confirm on the program page",
+   "gre": {
+    "status": "no",
+    "note": "Not re-checked: confirm."
+   },
+   "english": {
+    "status": "test",
+    "note": "Not re-checked: confirm."
+   },
+   "statement": "Check the program page",
+   "extras": []
+  },
   "university": "KAUST (Saudi Arabia)",
   "program": "MS Computer Science / Applied Math & Computational Science",
   "country": "Saudi Arabia",
@@ -319,6 +554,39 @@
    "deadlines"
   ],
   "notes": "Free to apply. Pairs well with the KAUST VSRP summer research internship.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "3 recommendation letters",
+    "detail": "Not re-checked: confirm on the program page"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "Check the program page",
+    "detail": ""
+   },
+   {
+    "id": "english",
+    "label": "English test (TOEFL / IELTS)",
+    "detail": "Not re-checked: confirm."
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from third-party listings: confirm on the program page",
   "app_fee_usd": 0,
   "tuition_year_usd": 0,
   "next_deadline": "2026-12-01",
@@ -326,7 +594,9 @@
  },
  {
   "id": "cam-acs",
+  "target": "core",
   "university": "University of Cambridge",
+  "short": "Cambridge",
   "program": "MPhil Advanced Computer Science",
   "country": "United Kingdom",
   "region": "UK",
@@ -338,7 +608,7 @@
   "opens": "2026-09-09",
   "deadlines": [
    {
-    "label": "Funding deadline (Gates + Cambridge Trust)",
+    "label": "Funding deadline (one page says 2 Dec, another 8 Dec: use 2 Dec)",
     "date": "2026-12-02",
     "time": "23:59 GMT"
    },
@@ -349,30 +619,104 @@
   ],
   "app_fee": {
    "amount": 85,
-   "currency": "GBP"
+   "currency": "GBP",
+   "note": "Fee waiver page exists; refundable within 14 days"
   },
   "tuition": null,
   "scholarships": [
    {
-    "name": "Gates Cambridge / Cambridge Trust",
+    "name": "Gates Cambridge (non-US) / Cambridge Trust",
     "deadline": "2026-12-02",
     "covers": "Full cost",
-    "how": "Tick funding in the application. Gates needs an extra statement"
+    "how": "Apply by the funding deadline. Gates needs a THIRD referee."
    }
   ],
-  "language": "IELTS 7.5 / TOEFL 110 (Cambridge usual)",
-  "gre": "Not required",
-  "docs": [
-   "1–2 project proposals (≤500 words each)",
-   "5 module choices"
-  ],
+  "language": "IELTS/TOEFL evidence usually only after an offer. Lebanon isn't exempt.",
+  "gre": "Not mentioned on any Cambridge page",
+  "requires": {
+   "letters": 2,
+   "letters_note": "2 ACADEMIC referees with institutional emails (3 if applying for Gates). Must arrive by the deadline.",
+   "gre": {
+    "status": "no",
+    "note": "Not mentioned on the course or how-to-apply pages."
+   },
+   "english": {
+    "status": "after-offer",
+    "note": "Test usually needed only after an offer, dated within 2 years of the start. Check the required score on the course's Requirements tab."
+   },
+   "statement": "No general statement listed: 1-2 project proposals of max 500 words each",
+   "extras": [
+    "Two research themes in order of preference",
+    "Choose 5 modules (max 4 Michaelmas, max 2 Lent)",
+    "Transcripts uploaded before submitting",
+    "Possible interview 2-20 January"
+   ]
+  },
   "url": "https://www.cst.cam.ac.uk/admissions/acs",
   "source": "official",
   "verify": [
    "tuition",
-   "language"
+   "english"
   ],
-  "notes": "Research-oriented 9-month course, great before a PhD. Also budget for a College fee.",
+  "notes": "Research-oriented 9-month course, not a conversion course; wants the equivalent of a first-class CS degree. Also budget for a College fee.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "2 recommendation letters",
+    "detail": "2 ACADEMIC referees with institutional emails (3 if applying for Gates). Must arrive by the deadline."
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "No general statement listed: 1-2 project proposals of max 500 words each",
+    "detail": ""
+   },
+   {
+    "id": "english",
+    "label": "English test (usually after an offer)",
+    "detail": "Test usually needed only after an offer, dated within 2 years of the start. Check the required score on the course's Requirements tab."
+   },
+   {
+    "id": "extra0",
+    "label": "Two research themes in order of preference",
+    "detail": ""
+   },
+   {
+    "id": "extra1",
+    "label": "Choose 5 modules (max 4 Michaelmas, max 2 Lent)",
+    "detail": ""
+   },
+   {
+    "id": "extra2",
+    "label": "Transcripts uploaded before submitting",
+    "detail": ""
+   },
+   {
+    "id": "extra3",
+    "label": "Possible interview 2-20 January",
+    "detail": ""
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee (GBP 85)",
+    "detail": "Fee waiver page exists; refundable within 14 days"
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
   "app_fee_usd": 114,
   "tuition_year_usd": null,
   "next_deadline": "2026-12-02",
@@ -380,6 +724,23 @@
  },
  {
   "id": "cam-part3",
+  "target": "suggested",
+  "short": "Part III",
+  "why": "The famous math/theory year, if you lean toward theory. Deadline 2 Feb.",
+  "requires": {
+   "letters": 2,
+   "letters_note": "Not re-checked: confirm on the program page",
+   "gre": {
+    "status": "no",
+    "note": "Not re-checked: confirm."
+   },
+   "english": {
+    "status": "test",
+    "note": "Not re-checked: confirm."
+   },
+   "statement": "Check the program page",
+   "extras": []
+  },
   "university": "University of Cambridge",
   "program": "MASt Mathematics (Part III)",
   "country": "United Kingdom",
@@ -422,14 +783,154 @@
    "tuition"
   ],
   "notes": "The famous 'Part III'. Excellent for theory/research and for quant.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "2 recommendation letters",
+    "detail": "Not re-checked: confirm on the program page"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "Check the program page",
+    "detail": ""
+   },
+   {
+    "id": "english",
+    "label": "English test (TOEFL / IELTS)",
+    "detail": "Not re-checked: confirm."
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee (GBP 85)",
+    "detail": "Amount not confirmed: check the application."
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from third-party listings: confirm on the program page",
   "app_fee_usd": 114,
   "tuition_year_usd": null,
   "next_deadline": "2026-12-02",
   "status": "open"
  },
  {
+  "id": "stanford-ms",
+  "target": "suggested",
+  "why": "No GRE at all and your AUB letter may cover English, but it's three letters by 8 Dec and costs $125.",
+  "university": "Stanford",
+  "short": "Stanford",
+  "program": "MS Computer Science",
+  "country": "United States",
+  "region": "US",
+  "fields": [
+   "cs",
+   "ml"
+  ],
+  "opens": "2026-09-15",
+  "deadlines": [
+   {
+    "label": "Only deadline",
+    "date": "2026-12-08"
+   }
+  ],
+  "app_fee": {
+   "amount": 125,
+   "currency": "USD",
+   "note": "Waivers via Graduate Admissions"
+  },
+  "tuition": null,
+  "scholarships": [],
+  "language": "Exempt if all your degree teaching was in English; otherwise TOEFL/IELTS",
+  "gre": "Not required and not considered",
+  "requires": {
+   "letters": 3,
+   "letters_note": "Exactly 3, at least 2 academic recommended",
+   "gre": {
+    "status": "no",
+    "note": "Not required and not considered."
+   },
+   "english": {
+    "status": "letter-or-test",
+    "note": "Exempt if all instruction was in English; the pages don't say how to prove it. Stanford's suggested TOEFL/IELTS date (October) has passed."
+   },
+   "statement": "Statement of purpose, max 2 pages",
+   "extras": [
+    "Publications listed on the CV and supplemental form"
+   ]
+  },
+  "url": "https://www.cs.stanford.edu/admissions/masters-admissions",
+  "source": "official",
+  "verify": [
+   "english",
+   "tuition"
+  ],
+  "notes": "CS doesn't fund MS students. Typical GPA at least 3.7.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "3 recommendation letters",
+    "detail": "Exactly 3, at least 2 academic recommended"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "Statement of purpose, max 2 pages",
+    "detail": ""
+   },
+   {
+    "id": "english",
+    "label": "English: AUB letter or test",
+    "detail": "Exempt if all instruction was in English; the pages don't say how to prove it. Stanford's suggested TOEFL/IELTS date (October) has passed."
+   },
+   {
+    "id": "extra0",
+    "label": "Publications listed on the CV and supplemental form",
+    "detail": ""
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee (USD 125)",
+    "detail": "Waivers via Graduate Admissions"
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": 125,
+  "tuition_year_usd": null,
+  "next_deadline": "2026-12-08",
+  "status": "open"
+ },
+ {
   "id": "epfl-cs",
+  "target": "core",
   "university": "EPFL",
+  "short": "EPFL",
   "program": "MSc Computer Science",
   "country": "Switzerland",
   "region": "CH",
@@ -437,10 +938,10 @@
    "cs",
    "ml"
   ],
-  "opens": "2026-10-15",
+  "opens": "2026-11-15",
   "deadlines": [
    {
-    "label": "Round 1 (required for Excellence Fellowship)",
+    "label": "Round 1 (required for the Excellence Fellowship)",
     "date": "2026-12-15"
    },
    {
@@ -450,7 +951,8 @@
   ],
   "app_fee": {
    "amount": 150,
-   "currency": "CHF"
+   "currency": "CHF",
+   "note": "Non-refundable"
   },
   "tuition": {
    "amount": 2190,
@@ -461,23 +963,87 @@
    {
     "name": "EPFL Excellence Fellowship",
     "deadline": "2026-12-15",
-    "covers": "CHF 10,000/semester for up to 4 semesters + housing",
-    "how": "Tick the fellowship box. The application must be paid and validated by Dec 15"
+    "covers": "CHF 10,000/semester, up to 4 semesters, + a reserved room",
+    "how": "Tick the box in the form. Must be paid and validated by Dec 15. Notified late March."
    }
   ],
-  "language": "English B2/C1 (check program)",
-  "gre": "Not required",
-  "url": "https://www.epfl.ch/education/master/how-to-apply/",
+  "language": "English certificates welcome but not required",
+  "gre": "Optional: 'welcome but not compulsory'",
+  "requires": {
+   "letters": 3,
+   "letters_note": "3 ACADEMIC referees named; at least 2 letters must arrive, within 1 week after the deadline",
+   "gre": {
+    "status": "optional",
+    "note": "Welcome but not compulsory."
+   },
+   "english": {
+    "status": "none",
+    "note": "Certificates welcome, not required."
+   },
+   "statement": "Statement of purpose, max 1000 words (academic background + career strategy)",
+   "extras": [
+    "Passport or ID copy",
+    "Transcripts from EVERY university attended"
+   ]
+  },
+  "url": "https://www.epfl.ch/education/admission/admission-2/master-admission-criteria-application/online-application/",
   "source": "official",
   "verify": [
-   "app_fee",
-   "opens",
-   "language"
+   "opens"
   ],
+  "notes": "Only ONE EPFL master's application per year, so choose between CS, Data Science and Financial Engineering. The form opens mid-November.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "3 recommendation letters",
+    "detail": "3 ACADEMIC referees named; at least 2 letters must arrive, within 1 week after the deadline"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "Statement of purpose, max 1000 words (academic background + career strategy)",
+    "detail": ""
+   },
+   {
+    "id": "gre",
+    "label": "GRE (optional: send it if it helps)",
+    "detail": "Welcome but not compulsory."
+   },
+   {
+    "id": "extra0",
+    "label": "Passport or ID copy",
+    "detail": ""
+   },
+   {
+    "id": "extra1",
+    "label": "Transcripts from EVERY university attended",
+    "detail": ""
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee (CHF 150)",
+    "detail": "Non-refundable"
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
   "app_fee_usd": 188,
   "tuition_year_usd": 5476,
   "next_deadline": "2026-12-15",
-  "status": "open"
+  "status": "not_open_yet"
  },
  {
   "id": "epfl-ds",
@@ -583,6 +1149,23 @@
  },
  {
   "id": "mbzuai-msc",
+  "target": "suggested",
+  "short": "MBZUAI",
+  "why": "Fully funded in Abu Dhabi, deadline 15 Dec. A strong financial backstop.",
+  "requires": {
+   "letters": 2,
+   "letters_note": "Not re-checked: confirm on the program page",
+   "gre": {
+    "status": "no",
+    "note": "Not re-checked: confirm."
+   },
+   "english": {
+    "status": "test",
+    "note": "Not re-checked: confirm."
+   },
+   "statement": "Check the program page",
+   "extras": []
+  },
   "university": "MBZUAI (Abu Dhabi)",
   "program": "MSc Machine Learning / Computer Vision / NLP",
   "country": "United Arab Emirates",
@@ -625,6 +1208,44 @@
    "language"
   ],
   "notes": "Decisions by 31 Mar 2027. Lebanese passport works for a UAE student visa.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "2 recommendation letters",
+    "detail": "Not re-checked: confirm on the program page"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "Check the program page",
+    "detail": ""
+   },
+   {
+    "id": "english",
+    "label": "English test (TOEFL / IELTS)",
+    "detail": "Not re-checked: confirm."
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee (AED 200)",
+    "detail": "Amount not confirmed: check the application."
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from third-party listings: confirm on the program page",
   "app_fee_usd": 54,
   "tuition_year_usd": 0,
   "next_deadline": "2026-12-15",
@@ -632,7 +1253,9 @@
  },
  {
   "id": "ox-acs",
+  "target": "core",
   "university": "University of Oxford",
+  "short": "Oxford",
   "program": "MSc Advanced Computer Science",
   "country": "United Kingdom",
   "region": "UK",
@@ -663,19 +1286,189 @@
     "name": "Clarendon Fund",
     "deadline": "2027-01-06",
     "covers": "Full fees + living",
-    "how": "Automatic consideration"
+    "how": "Automatic if you apply by the deadline"
    }
   ],
-  "language": "Oxford standard level (IELTS 7.0)",
-  "gre": "Not required",
+  "language": "Listed elsewhere as IELTS 7.5 / TOEFL 110: confirm on the course page",
+  "gre": "Not sought (2024-25 course text)",
+  "requires": {
+   "letters": 3,
+   "letters_note": "Oxford's usual is 3; I couldn't open the course page, so confirm. Academic preferred.",
+   "gre": {
+    "status": "no",
+    "note": "Not sought, per the 2024-25 course text."
+   },
+   "english": {
+    "status": "test",
+    "note": "Lebanon isn't normally exempt. Listed as IELTS 7.5 / TOEFL 110 by third parties; confirm."
+   },
+   "statement": "Statement of purpose (check the length on the course page)",
+   "extras": []
+  },
   "url": "https://www.ox.ac.uk/admissions/graduate/courses/msc-advanced-computer-science",
   "source": "aggregator",
   "verify": [
-   "tuition",
-   "language"
+   "letters",
+   "english",
+   "statement",
+   "app_fee",
+   "tuition"
   ],
+  "notes": "Oxford advises submitting at least two weeks early. Its site blocks my checks, so open the course page yourself once.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "3 recommendation letters",
+    "detail": "Oxford's usual is 3; I couldn't open the course page, so confirm. Academic preferred."
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "Statement of purpose (check the length on the course page)",
+    "detail": ""
+   },
+   {
+    "id": "english",
+    "label": "English test (TOEFL / IELTS)",
+    "detail": "Lebanon isn't normally exempt. Listed as IELTS 7.5 / TOEFL 110 by third parties; confirm."
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee (GBP 75)",
+    "detail": "Amount not confirmed: check the application."
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from third-party listings: confirm on the program page",
   "app_fee_usd": 100,
   "tuition_year_usd": 67000,
+  "next_deadline": "2027-01-06",
+  "status": "open"
+ },
+ {
+  "id": "imp-aiml",
+  "target": "core",
+  "university": "Imperial College London",
+  "short": "Imperial",
+  "program": "MSc Computing (AI & Machine Learning)",
+  "country": "United Kingdom",
+  "region": "UK",
+  "fields": [
+   "cs",
+   "ml"
+  ],
+  "opens": "2026-09-30",
+  "deadlines": [
+   {
+    "label": "Round 2 (decision by 3 Mar)",
+    "date": "2027-01-06",
+    "time": "23:59 UK"
+   },
+   {
+    "label": "Round 3 (decision by 5 May)",
+    "date": "2027-03-10"
+   },
+   {
+    "label": "Round 4 (decision by 1 Jul)",
+    "date": "2027-04-28"
+   }
+  ],
+  "app_fee": {
+   "amount": 90,
+   "currency": "GBP",
+   "note": "Waiver for financial difficulty; refundable within 14 days"
+  },
+  "tuition": {
+   "amount": 46000,
+   "currency": "GBP",
+   "per": "total",
+   "note": "approximate"
+  },
+  "scholarships": [],
+  "language": "Check Imperial's English page (third parties list IELTS 7 / TOEFL 100)",
+  "gre": "Not mentioned on the pages I could read",
+  "requires": {
+   "letters": 2,
+   "letters_note": "'Both references' must be in before they start assessing, so chase them",
+   "gre": {
+    "status": "no",
+    "note": "Not mentioned on the pages I could read. Confirm under entry requirements."
+   },
+   "english": {
+    "status": "test",
+    "note": "Check Imperial's English page, including its exemption rules."
+   },
+   "statement": "Personal statement",
+   "extras": [
+    "Must have computing courses equal to 2 years of a CS undergraduate program"
+   ]
+  },
+  "url": "https://www.imperial.ac.uk/computing/prospective-students/courses/pg/",
+  "source": "official",
+  "verify": [
+   "english",
+   "gre",
+   "tuition"
+  ],
+  "notes": "Only complete applications get assessed. Apply in the earliest round you can: later rounds may be full.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "2 recommendation letters",
+    "detail": "'Both references' must be in before they start assessing, so chase them"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "Personal statement",
+    "detail": ""
+   },
+   {
+    "id": "english",
+    "label": "English test (TOEFL / IELTS)",
+    "detail": "Check Imperial's English page, including its exemption rules."
+   },
+   {
+    "id": "extra0",
+    "label": "Must have computing courses equal to 2 years of a CS undergraduate program",
+    "detail": ""
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee (GBP 90)",
+    "detail": "Waiver for financial difficulty; refundable within 14 days"
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": 121,
+  "tuition_year_usd": 61640,
   "next_deadline": "2027-01-06",
   "status": "open"
  },
@@ -724,49 +1517,6 @@
   "status": "open"
  },
  {
-  "id": "imp-aiml",
-  "university": "Imperial College London",
-  "program": "MSc Computing (AI & Machine Learning)",
-  "country": "United Kingdom",
-  "region": "UK",
-  "fields": [
-   "cs",
-   "ml"
-  ],
-  "opens": "2026-09-15",
-  "deadlines": [
-   {
-    "label": "Next deadline",
-    "date": "2027-01-06"
-   }
-  ],
-  "app_fee": {
-   "amount": 90,
-   "currency": "GBP",
-   "note": "One fee covers up to 2 taught-master's applications"
-  },
-  "tuition": {
-   "amount": 46000,
-   "currency": "GBP",
-   "per": "total",
-   "note": "approximate"
-  },
-  "scholarships": [],
-  "language": "IELTS 7.0 (Imperial 'higher')",
-  "gre": "Not required",
-  "url": "https://www.imperial.ac.uk/computing/prospective-students/courses/pg/",
-  "source": "aggregator",
-  "verify": [
-   "tuition",
-   "deadlines"
-  ],
-  "notes": "Rolling rounds. Apply in the earliest open round.",
-  "app_fee_usd": 121,
-  "tuition_year_usd": 61640,
-  "next_deadline": "2027-01-06",
-  "status": "open"
- },
- {
   "id": "imp-mf",
   "university": "Imperial College London",
   "program": "MSc Mathematics and Finance",
@@ -798,7 +1548,7 @@
   "app_fee": {
    "amount": 90,
    "currency": "GBP",
-   "note": "One fee covers up to 2 taught-master's applications"
+   "note": "Charged per application; waiver for financial difficulty"
   },
   "tuition": null,
   "scholarships": [],
@@ -810,7 +1560,6 @@
    "tuition",
    "url"
   ],
-  "notes": "Combine with imp-aiml under ONE £90 fee.",
   "app_fee_usd": 121,
   "tuition_year_usd": null,
   "next_deadline": "2027-01-07",
@@ -818,6 +1567,27 @@
  },
  {
   "id": "x-msct",
+  "target": "suggested",
+  "short": "Polytechnique",
+  "why": "You uploaded its checklist. Round 1 has passed; Round 2 (11 Jan) is the last with scholarships.",
+  "requires": {
+   "letters": 2,
+   "letters_note": "At least 1 academic; the 2nd may be an internship/job manager",
+   "gre": {
+    "status": "no",
+    "note": "Not requested."
+   },
+   "english": {
+    "status": "letter-or-test",
+    "note": "TOEFL 95 / IELTS 7.0 / C1, or waived with official proof that your last degree was taught entirely in English."
+   },
+   "statement": "Personal statement on the school's template (they ask that you write it yourself, without AI)",
+   "extras": [
+    "ID photo",
+    "Passport valid until ~Nov 2027",
+    "Certificate of enrolment"
+   ]
+  },
   "university": "École Polytechnique (IP Paris)",
   "program": "MSc&T: AI & Advanced Visual Computing / Data & AI / other tracks",
   "country": "France",
@@ -945,6 +1715,107 @@
   "app_fee_usd": 110,
   "tuition_year_usd": 20300,
   "next_deadline": "2027-01-11",
+  "status": "open"
+ },
+ {
+  "id": "columbia-ms",
+  "target": "core",
+  "university": "Columbia University",
+  "short": "Columbia",
+  "program": "MS Computer Science",
+  "country": "United States",
+  "region": "US",
+  "fields": [
+   "cs",
+   "ml"
+  ],
+  "opens": null,
+  "deadlines": [
+   {
+    "label": "Priority: whole application including letters complete",
+    "date": "2027-01-15"
+   },
+   {
+    "label": "Final",
+    "date": "2027-02-15"
+   }
+  ],
+  "app_fee": null,
+  "tuition": null,
+  "scholarships": [],
+  "language": "TOEFL/IELTS required unless an exception applies: recommended TOEFL 101 / IELTS 7",
+  "gre": "Requirement page blocked: assume needed until you check (most admits have 750+ quant on the older scale)",
+  "requires": {
+   "letters": 3,
+   "letters_note": "Count not on the pages I could read; plan for 3. Submitted electronically.",
+   "gre": {
+    "status": "check",
+    "note": "Columbia's requirements page blocks me. CHECK THIS WEEK: it decides how much the GRE matters."
+   },
+   "english": {
+    "status": "test",
+    "note": "Recommended TOEFL 101 / IELTS 7. Exceptions per the SEAS policy; ask."
+   },
+   "statement": "Personal statement, 250-1000 words recommended",
+   "extras": []
+  },
+  "url": "https://www.cs.columbia.edu/education/admissions/",
+  "source": "official",
+  "verify": [
+   "app_fee",
+   "gre",
+   "letters",
+   "english",
+   "tuition",
+   "deadlines"
+  ],
+  "notes": "Dates are from a page last updated 2024: confirm. Columbia tells international students to look for outside funding.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "3 recommendation letters",
+    "detail": "Count not on the pages I could read; plan for 3. Submitted electronically."
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "Personal statement, 250-1000 words recommended",
+    "detail": ""
+   },
+   {
+    "id": "english",
+    "label": "English test (TOEFL / IELTS)",
+    "detail": "Recommended TOEFL 101 / IELTS 7. Exceptions per the SEAS policy; ask."
+   },
+   {
+    "id": "gre",
+    "label": "Check whether the GRE is required",
+    "detail": "Columbia's requirements page blocks me. CHECK THIS WEEK: it decides how much the GRE matters."
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee",
+    "detail": "Amount not confirmed: check the application."
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": null,
+  "tuition_year_usd": null,
+  "next_deadline": "2027-01-15",
   "status": "open"
  },
  {
@@ -1097,6 +1968,99 @@
   "app_fee_usd": 0,
   "tuition_year_usd": 0,
   "next_deadline": "2027-01-15",
+  "status": "open"
+ },
+ {
+  "id": "gt-mscs",
+  "target": "core",
+  "university": "Georgia Tech",
+  "short": "Georgia Tech",
+  "program": "MS Computer Science (on campus)",
+  "country": "United States",
+  "region": "US",
+  "fields": [
+   "cs",
+   "ml"
+  ],
+  "opens": null,
+  "deadlines": [
+   {
+    "label": "Fall admission deadline (every Feb 1)",
+    "date": "2027-02-01"
+   }
+  ],
+  "app_fee": null,
+  "tuition": null,
+  "scholarships": [],
+  "language": "AUB letter/transcript note accepted by the Institute, or TOEFL 100 (5.0 on the new scale) / IELTS 7.5 for the department",
+  "gre": "Not required; considered if you send it",
+  "requires": {
+   "letters": 3,
+   "letters_note": "Requested inside the online application",
+   "gre": {
+    "status": "optional",
+    "note": "Not required. If provided, it is considered."
+   },
+   "english": {
+    "status": "letter-or-test",
+    "note": "Institute route: official transcript note, institutional letter or Medium of Instruction certificate. Unclear whether the department's higher scores (TOEFL 5.0 / IELTS 7.5) still apply on that route, so ask."
+   },
+   "statement": "Statement of purpose ('reviewed carefully')",
+   "extras": []
+  },
+  "url": "https://www.cc.gatech.edu/degree-programs/master-science-computer-science",
+  "source": "official",
+  "verify": [
+   "app_fee",
+   "tuition"
+  ],
+  "notes": "Fall-only intake. Fee amount isn't on the pages I could read; fee waivers exist.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "3 recommendation letters",
+    "detail": "Requested inside the online application"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "Statement of purpose ('reviewed carefully')",
+    "detail": ""
+   },
+   {
+    "id": "english",
+    "label": "English: AUB letter or test",
+    "detail": "Institute route: official transcript note, institutional letter or Medium of Instruction certificate. Unclear whether the department's higher scores (TOEFL 5.0 / IELTS 7.5) still apply on that route, so ask."
+   },
+   {
+    "id": "gre",
+    "label": "GRE (optional: send it if it helps)",
+    "detail": "Not required. If provided, it is considered."
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee",
+    "detail": "Amount not confirmed: check the application."
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": null,
+  "tuition_year_usd": null,
+  "next_deadline": "2027-02-01",
   "status": "open"
  },
  {

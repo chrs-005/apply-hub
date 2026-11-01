@@ -63,7 +63,14 @@ const Sync = {
       if (!items[id] || (it.updated || "") > (items[id].updated || "")) items[id] = it;
     }
     for (const [id, ts] of Object.entries(deleted)) if (items[id] && (items[id].updated || "") <= ts) delete items[id];
-    S.tracker = { version: 1, items, deleted };
+    const ma = a.masters || {}, mb = b.masters || {}, masters = {};
+    for (const k of ["tasks", "customTasks", "recs", "tests", "hidden"]) {
+      masters[k] = {};
+      for (const src of [mb[k] || {}, ma[k] || {}]) for (const [id, v] of Object.entries(src)) {
+        if (!masters[k][id] || (v.updated || "") > (masters[k][id].updated || "")) masters[k][id] = v;
+      }
+    }
+    S.tracker = { version: 1, items, deleted, masters };
     LS.set("tracker", S.tracker);
   },
   async pull() {
@@ -204,8 +211,9 @@ function trackResearch(p) {
 // ------------------------------------------------------------------ data
 async function loadData() {
   const get = (f) => fetch(`data/${f}?t=${Date.now()}`).then((r) => r.ok ? r.json() : null).catch(() => null);
-  const [jobs, companies, watch, grad, research, meta] = await Promise.all(
-    ["jobs.json", "companies.json", "watch.json", "grad.json", "research.json", "meta.json"].map(get));
+  const [jobs, companies, watch, grad, research, meta, plan] = await Promise.all(
+    ["jobs.json", "companies.json", "watch.json", "grad.json", "research.json", "meta.json", "plan.json"].map(get));
+  S.plan = plan || {};
   S.jobs = jobs?.jobs || []; S.companies = companies || []; S.watch = watch || [];
   S.grad = grad || []; S.research = research || []; S.meta = meta || {};
   const sub = S.meta.last_scan ? `Updated ${ago(S.meta.last_scan)} · ${S.meta.open_internships} open internships` : "No data yet: run the scanner";
@@ -218,12 +226,12 @@ const isNew = (j) => S.lastVisit ? j.first_seen > S.lastVisit : (Date.now() - ne
 // ------------------------------------------------------------------ deadlines
 function deadlineEvents() {
   const ev = [];
-  for (const p of S.grad) {
+  for (const p of boardPrograms().filter((x) => M_ACTIVE.has(mStatus(x)))) {
     for (const d of p.deadlines || []) if (d.date) ev.push({ date: d.date, title: `${p.university}: ${p.program}`, sub: d.label + (d.estimate ? " (estimated)" : ""), url: p.url, id: "grad:" + p.id, kind: "grad" });
     for (const s of p.scholarships || []) if (s.deadline) ev.push({ date: s.deadline, title: `💰 ${s.name}`, sub: `${p.university}: ${s.covers || ""}`, url: p.url, id: "grad:" + p.id, kind: "scholarship" });
   }
   for (const r of S.research) if (r.deadline) ev.push({ date: r.deadline, title: `🔬 ${r.name}`, sub: r.deadline_note || "", url: r.url, id: "research:" + r.id, kind: "research" });
-  for (const t of Object.values(S.tracker.items)) if (t.deadline && t.kind !== "grad" && t.kind !== "research" && !["Rejected", "Withdrawn", "Offer"].includes(t.status))
+  for (const t of Object.values(S.tracker.items)) if (t.deadline && !String(t.id).startsWith("grad:") && t.kind !== "research" && !["Rejected", "Withdrawn", "Offer"].includes(t.status))
     ev.push({ date: t.deadline, title: `${t.org}: ${t.title}`, sub: `Tracker · ${t.status}`, url: t.url, id: t.id, kind: "tracked" });
   return ev.map((e) => ({ ...e, days: daysUntil(e.date) })).filter((e) => e.days >= 0).sort((a, b) => a.days - b.days);
 }
@@ -235,6 +243,7 @@ function renderToday() {
   const open = S.jobs.filter((j) => j.open);
   const fresh = open.filter(isNew);
   const ev = deadlineEvents().filter((e) => e.days <= 60);
+  const todayTasks = planTasks().filter((t) => !t.done && t.due && daysUntil(t.due) <= 7).sort((a, b) => String(a.due).localeCompare(String(b.due)));
   const changed = S.watch.filter((w) => w.last_changed && (Date.now() - new Date(w.last_changed)) < 7 * 86400000);
   const failing = S.companies.filter((c) => c.ok === false);
   const freshTop = [...fresh].sort((a, b) => a.tier - b.tier).slice(0, 8);
@@ -249,6 +258,8 @@ function renderToday() {
       <div class="stat"><b>${items.length}</b><span>in your tracker</span></div>
       <div class="stat"><b>${applied}</b><span>applications sent</span></div>
     </div>
+    ${todayTasks.length ? `<h2>📝 Master's plan this week <span class="count">${todayTasks.length}</span></h2><div class="card">${todayTasks.slice(0, 6).map(taskRow).join("")}
+      ${todayTasks.length > 6 ? `<a class="small" href="#grad">See all ${todayTasks.length} →</a>` : ""}</div>` : ""}
     <h2>⏰ Next 60 days <span class="count">${ev.length} deadlines</span></h2>
     <div class="card">${ev.length ? ev.slice(0, 25).map((e) => `
       <div class="dl">${daysBadge(e.days)}
@@ -330,81 +341,6 @@ function renderJobs() {
     <div class="card small">${manual.map((c) => `<div class="row between" style="padding:5px 0;border-bottom:1px solid var(--line)">
       <span>${c.tier === 1 ? "★ " : ""}<b>${esc(c.name)}</b> <span class="muted tiny">· ${esc(c.opens)}</span></span>
       <a class="btn sm ghost" href="${esc(c.careers)}" target="_blank" rel="noopener">Open ↗</a></div>`).join("")}</div>`;
-}
-
-function gradCard(p) {
-  const t = trackedFor("grad:" + p.id);
-  const flag = FLAGS[p.country] || "🌍";
-  const nd = daysUntil(p.next_deadline);
-  const statusBadge = p.status === "closed" ? `<span class="badge bad">Closed</span>`
-    : p.status === "not_open_yet" ? `<span class="badge">Opens ${fmtShort(p.opens)}</span>` : `<span class="badge good">Open</span>`;
-  const tuition = p.tuition ? `${money(p.tuition)}/${p.tuition.per}${p.tuition_year_usd != null ? ` <span class="muted">(~${usd(p.tuition_year_usd)}/yr)</span>` : ""}${p.tuition.note ? `<div class="tiny muted">${esc(p.tuition.note)}</div>` : ""}` : `<span class="muted">Check the page</span>`;
-  const srcBadge = { official: "good", aggregator: "", estimate: "warn" }[p.source] ?? "";
-  return `<div class="card">
-    <div class="row between"><span class="org">${flag} ${esc(p.university)}</span>${statusBadge}</div>
-    <div class="title" style="margin:3px 0">${esc(p.program)}</div>
-    <div class="row" style="margin-top:4px">
-      <span class="badge ${p.app_fee_usd === 0 ? "good" : ""}">Fee: ${money(p.app_fee)}${p.app_fee_usd ? ` ≈ ${usd(p.app_fee_usd)}` : ""}</span>
-      ${nd != null ? `<span class="badge ${nd <= 7 ? "bad" : nd <= 21 ? "warn" : ""}">Next: ${fmtShort(p.next_deadline)} (${nd}d)</span>` : ""}
-      ${(p.scholarships || []).some((s) => /full|tuition|\+/i.test(s.covers || "")) || p.tuition?.amount === 0 ? `<span class="badge good">Funding available</span>` : ""}
-    </div>
-    <dl class="kv">
-      <dt>Deadlines</dt><dd>${(p.deadlines || []).map((d) => `<div>${d.date && daysUntil(d.date) < 0 ? "<s>" : ""}${fmtDate(d.date)}${d.date && daysUntil(d.date) < 0 ? "</s>" : ""} · <span class="muted">${esc(d.label)}${d.estimate ? " (est.)" : ""}${d.time ? " · " + esc(d.time) : ""}</span></div>`).join("")}</dd>
-      <dt>App fee</dt><dd><span class="money">${money(p.app_fee)}</span>${p.app_fee?.note ? `<div class="tiny muted">${esc(p.app_fee.note)}</div>` : ""}</dd>
-      <dt>Tuition</dt><dd>${tuition}</dd>
-      <dt>Scholarships</dt><dd>${(p.scholarships || []).length ? (p.scholarships.map((s) => `<div><b>${esc(s.name)}</b>${s.deadline ? ` · by ${fmtDate(s.deadline)}` : ""}<div class="tiny muted">${esc(s.covers || "")}${s.how ? " · " + esc(s.how) : ""}</div></div>`).join("")) : `<span class="muted">None listed</span>`}</dd>
-      <dt>English</dt><dd>${esc(p.language || "—")}</dd>
-      <dt>GRE</dt><dd>${esc(p.gre || "—")}</dd>
-    </dl>
-    ${p.notes ? `<p class="small" style="margin:8px 0 0">💡 ${esc(p.notes)}</p>` : ""}
-    <div class="tiny muted" style="margin-top:6px"><span class="badge ${srcBadge}">${esc(p.source)}</span>${(p.verify || []).length ? ` Verify: ${esc(p.verify.join(", "))}` : ""}</div>
-    ${checklistHtml("grad:" + p.id)}
-    <div class="row" style="margin-top:10px">
-      <a class="btn primary sm" href="${esc(p.url)}" target="_blank" rel="noopener">Program page ↗</a>
-      <button class="btn sm ${t ? "on" : ""}" data-act="track-grad" data-id="${esc(p.id)}">${t ? "✓ " + esc(t.status) : "+ Track"}</button>
-    </div></div>`;
-}
-
-function renderGrad() {
-  const f = S.f;
-  let list = S.grad.filter((p) => f.gRegion === "ALL" || p.region === f.gRegion)
-    .filter((p) => f.gField === "ALL" || (p.fields || []).includes(f.gField))
-    .filter((p) => f.gField !== "funded" || true);
-  if (f.gField === "funded") list = S.grad.filter((p) => (f.gRegion === "ALL" || p.region === f.gRegion) && (p.tuition?.amount === 0 || (p.scholarships || []).some((s) => /full|tuition/i.test(s.covers || ""))));
-  const nullLast = (v, asc = true) => v == null ? Infinity * (asc ? 1 : -1) : v;
-  const sorts = {
-    deadline: (a, b) => (a.next_deadline || "9999").localeCompare(b.next_deadline || "9999"),
-    fee_asc: (a, b) => nullLast(a.app_fee_usd) - nullLast(b.app_fee_usd),
-    fee_desc: (a, b) => nullLast(b.app_fee_usd, false) - nullLast(a.app_fee_usd, false),
-    tuition: (a, b) => nullLast(a.tuition_year_usd) - nullLast(b.tuition_year_usd),
-    name: (a, b) => a.university.localeCompare(b.university),
-  };
-  list.sort(sorts[f.gSort] || sorts.deadline);
-  const tracked = S.grad.filter((p) => trackedFor("grad:" + p.id));
-  const totalFees = tracked.reduce((s, p) => s + (p.app_fee_usd || 0), 0);
-  const chip = (key, val, label) => `<button class="chip ${f[key] === val ? "on" : ""}" data-act="filter" data-k="${key}" data-v="${val}">${label}</button>`;
-  return `
-    <div class="card">
-      <div class="row between"><div><div class="title">💸 Your application budget</div>
-      <div class="small muted">${tracked.length} programs tracked · fees only (tuition not included)</div></div>
-      <div style="font-size:24px;font-weight:750">${usd(totalFees)}</div></div>
-      ${tracked.length ? `<div class="small" style="margin-top:6px">${tracked.map((p) => `${esc(p.university.split(" (")[0])}: ${money(p.app_fee)}`).join(" · ")}</div>` : `<div class="small muted" style="margin-top:6px">Tap “+ Track” on programs to build your list.</div>`}
-    </div>
-    <div class="toolbar">
-      <div class="chips">${chip("gRegion", "ALL", "All")}${chip("gRegion", "CH", "🇨🇭 Switzerland")}${chip("gRegion", "UK", "🇬🇧 UK")}${chip("gRegion", "EU", "🇪🇺 EU")}${chip("gRegion", "GULF", "🇦🇪🇸🇦 Gulf")}</div>
-      <div class="chips">${chip("gField", "ALL", "All fields")}${chip("gField", "funded", "💰 Funded")}${chip("gField", "cs", "CS")}${chip("gField", "ml", "ML/AI")}${chip("gField", "math", "Math")}${chip("gField", "quant", "Quant finance")}${chip("gField", "research", "Research")}</div>
-      <div class="row"><span class="small muted">Sort</span>
-        <select class="sel" data-act="sort" data-k="gSort">
-          ${[["deadline", "Next deadline"], ["fee_asc", "Application fee: low → high"], ["fee_desc", "Application fee: high → low"], ["tuition", "Tuition: low → high"], ["name", "University"]].map(([v, l]) => `<option value="${v}" ${f.gSort === v ? "selected" : ""}>${l}</option>`).join("")}
-        </select></div>
-    </div>
-    <div class="card row between">
-      <div><div class="title">📄 Got a requirements PDF?</div><div class="small muted">Upload a program's checklist and it becomes a tickable checklist.</div></div>
-      <button class="btn sm primary" data-act="pdf-picker">Upload PDF</button>
-    </div>
-    <h2>Master's programs · Fall 2027 <span class="count">${list.length}</span></h2>
-    ${list.map(gradCard).join("") || `<div class="card empty">No programs match.</div>`}
-    <p class="tiny muted">USD amounts are approximate (rates in config/settings.yaml). To add a program, edit <code>data/grad_programs.yaml</code> on GitHub.</p>`;
 }
 
 // ------------------------------------------------------------------ application checklists
@@ -753,7 +689,7 @@ function openAddCustom() {
 }
 
 // ------------------------------------------------------------------ routing + events
-const VIEWS = { today: renderToday, jobs: renderJobs, grad: renderGrad, research: renderResearch, tracker: renderTracker };
+const VIEWS = { today: renderToday, jobs: renderJobs, grad: renderMasters, research: renderResearch, tracker: renderTracker };
 function route() {
   const tab = (location.hash || "#today").slice(1).split("?")[0];
   const v = VIEWS[tab] ? tab : "today";

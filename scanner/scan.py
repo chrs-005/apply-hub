@@ -348,6 +348,47 @@ def d(x):
     return x if isinstance(x, date) else date.fromisoformat(str(x))
 
 
+GRE_LABEL = {"optional": "GRE (optional: send it if it helps)", "recommended": "GRE (strongly recommended)",
+             "check": "Check whether the GRE is required"}
+ENGLISH_LABEL = {"by-deadline": "English proof, in by the deadline", "test": "English test (TOEFL / IELTS)",
+                 "after-offer": "English test (usually after an offer)", "letter-or-test": "English: AUB letter or test"}
+
+
+def derive_checklist(p):
+    """Per-program checklist built from `requires`, unless the program has an official one."""
+    r = p.get("requires")
+    if not r:
+        return None
+    items = [{"id": "referees", "label": f"{r['letters']} recommendation letters", "detail": r.get("letters_note", "")},
+             {"id": "cv", "label": "CV (grad-school version)", "detail": ""},
+             {"id": "transcripts", "label": "Transcripts", "detail": "AUB, plus your Boston University exchange if the school wants every university attended."}]
+    if r.get("statement"):
+        items.append({"id": "statement", "label": r["statement"], "detail": ""})
+    eng = r.get("english") or {}
+    if eng.get("status") in ENGLISH_LABEL:
+        items.append({"id": "english", "label": ENGLISH_LABEL[eng["status"]], "detail": eng.get("note", "")})
+    gre = r.get("gre") or {}
+    if gre.get("status") in GRE_LABEL:
+        items.append({"id": "gre", "label": GRE_LABEL[gre["status"]], "detail": gre.get("note", "")})
+    for i, x in enumerate(r.get("extras") or []):
+        items.append({"id": f"extra{i}", "label": x, "detail": ""})
+    fee = p.get("app_fee")
+    fee_txt = f" ({fee['currency']} {fee['amount']})" if fee and fee.get("amount") else ""
+    if not fee or fee.get("amount"):
+        items.append({"id": "fee", "label": f"Pay the application fee{fee_txt}", "detail": (fee or {}).get("note", "Amount not confirmed: check the application.")})
+    items.append({"id": "submit", "label": "Submit", "detail": ""})
+    return items
+
+
+def build_plan():
+    plan = load_yaml(DATA / "masters_plan.yaml")
+    for t in plan.get("tasks", []):
+        t["due"] = d(t.get("due"))
+    for a in (plan.get("gre") or {}).get("attempts", []):
+        a["by"] = d(a.get("by"))
+    return plan
+
+
 def build_grad(fx):
     out = []
     for p in load_yaml(DATA / "grad_programs.yaml")["programs"]:
@@ -361,6 +402,10 @@ def build_grad(fx):
             mult = {"semester": 2, "year": 1, "total": 1}.get(t.get("per", "year"), 1)
             tuition_year_usd = round(to_usd(t, fx) * mult)
         opens = d(p.get("opens"))
+        if not p.get("checklist") and p.get("requires"):
+            p["checklist"] = derive_checklist(p)
+            p["checklist_source"] = ("Built from the requirements on the official pages" if p.get("source") == "official"
+                                     else "Built from third-party listings: confirm on the program page")
         out.append({
             **p, "deadlines": dl, "opens": opens,
             "app_fee_usd": to_usd(p.get("app_fee"), fx),
@@ -392,9 +437,56 @@ def tracker_items():
             ("Applied", "Submitted", "Rejected", "Withdrawn", "Offer", "Admitted", "Interview")]
 
 
+DONE_STATUSES = {"Applied", "Test / OA", "Interview", "Offer", "Rejected", "Withdrawn"}
+
+
+def on_board(grad):
+    """Programs you're actually applying to: core schools you haven't removed, plus anything you added."""
+    tracker = read_gist_file(GIST_TRACKER) or {}
+    items, hidden = tracker.get("items", {}), (tracker.get("masters") or {}).get("hidden", {})
+    board = []
+    for p in grad:
+        t = items.get("grad:" + p["id"])
+        if t and t.get("status") in DONE_STATUSES:
+            continue
+        if t or (p.get("target") == "core" and not (hidden.get(p["id"]) or {}).get("on")):
+            board.append(p)
+    return board
+
+
+def plan_lines(grad):
+    """Morning-brief lines for your plan: overdue count, tasks due soon, booked tests."""
+    tracker = read_gist_file(GIST_TRACKER) or {}
+    m = tracker.get("masters") or {}
+    done = m.get("tasks", {})
+    board_ids = {p["id"] for p in on_board(grad)} | {k[5:] for k in tracker.get("items", {}) if k.startswith("grad:")}
+    tasks = [t for t in build_plan().get("tasks", [])
+             if not (done.get(t["id"]) or {}).get("done") and t.get("due") and (not t.get("only") or set(t["only"]) & board_ids)]
+    for c in (m.get("customTasks") or {}).values():
+        if c.get("due") and not c.get("done") and not c.get("deleted"):
+            tasks.append({"title": c.get("title", ""), "due": d(c["due"][:10])})
+    lines = []
+    overdue = [t for t in tasks if t["due"] < TODAY]
+    if overdue:
+        lines.append(f"⚠️ {len(overdue)} plan task(s) overdue, e.g. {overdue[0]['title'][:70]}")
+    for t in sorted(tasks, key=lambda t: t["due"]):
+        n = (t["due"] - TODAY).days
+        if n == 0:
+            lines.append(f"📝 Today: {t['title'][:90]}")
+        elif n == 2:
+            lines.append(f"📝 In 2 days: {t['title'][:90]}")
+    for x in (m.get("tests") or {}).values():
+        if x.get("deleted") or x.get("status") == "Taken" or not x.get("date"):
+            continue
+        n = (d(x["date"][:10]) - TODAY).days
+        if n in (7, 3, 1, 0):
+            lines.append(f"🧪 {x.get('type', 'Test')} {'TODAY' if n == 0 else f'in {n} day(s)'}")
+    return lines
+
+
 def deadline_events(grad, research, tracked):
     ev = []
-    for p in grad:
+    for p in on_board(grad):
         name = f"{p['university']}: {p['program']}"
         for x in p["deadlines"]:
             if x["date"]:
@@ -410,6 +502,8 @@ def deadline_events(grad, research, tracked):
         if r.get("opens"):
             ev.append((r["opens"], f"OPENS: {r['name']}", r.get("url")))
     for t in tracked:
+        if t.get("kind") == "grad" and str(t.get("id", "")).startswith("grad:"):
+            continue  # already covered above
         try:
             ev.append((date.fromisoformat(t["deadline"][:10]), f"{t.get('org', '')}: {t.get('title', '')} (tracker)", t.get("url")))
         except Exception:
@@ -431,6 +525,7 @@ def daily_digest(settings, grad, research, jobs, state, notifier):
         elif days in warn or days == 0:
             when = "TODAY" if days == 0 else f"in {days} day{'s' if days > 1 else ''}"
             lines.append(f"{'🔴' if days <= 3 else '🟠'} {when}: {label} ({dt:%d %b})")
+    lines = plan_lines(grad) + lines
     since = (NOW - timedelta(days=1)).isoformat()
     fresh = [j for j in jobs if j["open"] and j["first_seen"] > since]
     if fresh:
@@ -519,6 +614,7 @@ def main():
     write_json(OUT / "watch.json", watch)
     write_json(OUT / "grad.json", grad)
     write_json(OUT / "research.json", research)
+    write_json(OUT / "plan.json", build_plan())
     write_json(OUT / "meta.json", meta)
     write_json(STATE_FILE, state)
     print(f"\n== Done in {meta['duration_s']}s: {len(open_jobs)} open internships, "

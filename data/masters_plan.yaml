@@ -1,0 +1,397 @@
+# Your master's plan, starting the week of 2 Nov 2026. Edit freely: the app updates on the next scan.
+#   due:   target date (the app counts down and the morning brief reminds you)
+#   only:  show this task only if one of these programs is on your board
+#   how:   what to actually do
+#   ask:   the questions to ask
+
+gre:
+  summary: "Of your 7 main schools, only Columbia may need the GRE (check this week). Georgia Tech considers it if you send it, EPFL welcomes it, and ETH, Oxford, Cambridge and Imperial don't ask for it. CMU strongly recommends it. So take it early, but don't let it eat ETH time."
+  rules:
+    - "You can retake it every 21 days, up to 5 times in 12 months (checked via third-party guides; ETS's own page wouldn't open for me)."
+    - "Official scores take about 8-10 days, so test at least 2 weeks before a deadline. CMU's own advice is by Nov 25."
+    - "Fee reported as $249 since Aug 2026 (third-party): confirm when you register."
+    - "CMU does not accept at-home scores from current test dates, so prefer a test center if there's one you can reach. I couldn't confirm a GRE center in Lebanon: check the ETS/Prometric locator."
+    - "My suggested target (not a requirement): Quant 168+, since you're a math major. Columbia says most admits have 750+ quant on the older scale."
+  attempts:
+    - {label: "Attempt 1", by: 2026-11-25, why: "Keeps CMU possible and gets a real score early. Book this week."}
+    - {label: "Attempt 2", by: 2026-12-19, why: "At least 21 days after attempt 1. Scores arrive around 29 Dec, in time for Columbia's priority date."}
+    - {label: "Attempt 3 (only if needed)", by: 2027-01-09, why: "Scores around 19 Jan: too late for Columbia priority, fine for Georgia Tech (1 Feb) and Columbia final (15 Feb)."}
+
+recommenders:
+  summary: "You need 3 academic referees: EPFL insists on 3 academics, Cambridge wants 2, and ETH and Stanford prefer academics. Line up a 4th as backup."
+  who:
+    - "Your AUB Math research supervisor (the PINN project, Jun 2024-Mar 2025). Probably your strongest letter: they've seen you do research."
+    - "The AUB professor you were TA for in Design & Analysis of Algorithms. They know how you think and teach."
+    - "Your Boston University professor from the reinforcement learning or statistics course (exchange, Fall 2025). A letter from outside AUB adds weight."
+    - "Backup: your Eurisko or TheFactory.Ai manager. Only where non-academics are allowed: Polytechnique, CMU, and possibly Imperial and Georgia Tech."
+  packet:
+    - "A list of every program, each with its deadline, and how the letter is submitted"
+    - "Your CV and transcript"
+    - "One page of reminders: what you did with them, the grade you got, 2-3 concrete stories they could mention"
+    - "Your draft statement, once it exists"
+    - "Heads-up: most schools email them a link once you enter their details, so they should watch for it"
+
+professor_questions:
+  - title: "For the letter"
+    items:
+      - "Do you feel you know my work well enough to write me a strong letter? (Ask it this way: it gives them a polite way out.)"
+      - "The first deadline is ETH on 30 Nov. Is that enough time? When should I send reminders?"
+      - "Would it help if I sent notes on the work I did with you?"
+      - "Will you use your AUB email? Cambridge needs an institutional address, and Polytechnique wants your professional website on the letter."
+  - title: "For your school list"
+    items:
+      - "Given my interests, which of these programs would you pick, and which would you drop?"
+      - "Where have strong AUB students gone recently? Could I talk to one of them?"
+      - "Do you know anyone at ETH, EPFL, Oxford or Cambridge whose lab I should mention, or could introduce me?"
+      - "Am I better off in a research master's or a course-based one, given what I want to do after?"
+  - title: "For research experience"
+    items:
+      - "Could our PINN work become a short report or arXiv preprint before January? What would be missing?"
+      - "Is there a project I could join this semester, even a small one, so I can list it as ongoing?"
+      - "Could my final-year project be turned into research with you? What would a good topic be?"
+      - "Could you look at my ETH thesis pre-proposal and tell me if the topic makes sense?"
+  - title: "For your statement"
+    items:
+      - "What do you think makes me stand out from other strong students?"
+      - "Would you read my statement once? What do committees in your field actually look for?"
+
+cv_changes:
+  - "Lead with Education: AUB, GPA 4.0/4.0, MERIT scholarship, then BU exchange. Add class rank if the Registrar can state it (Polytechnique asks for it)."
+  - "Put Research Experience right after Education, above industry. For a master's reader, that's the section that counts."
+  - "Rewrite the research bullets around question, method and result. Name what you found, not only the numbers."
+  - "Add a Publications / Reports section as soon as the PINN write-up exists, even as 'in preparation' (only if it's truly being written)."
+  - "Add Relevant Coursework (math, algorithms, ML, theory), with BU courses marked."
+  - "Add Awards & Honors and Community Service: MERIT, your RL class tournament win, and Scouts. Polytechnique asks for these explicitly."
+  - "You can go to 2 pages for grad schools (Polytechnique's limit is 2). Keep your 1-page version for internships."
+  - "Fix these in the current CV: 'Led the organization 13 nationwide events' (→ 'Led the organization of 13 nationwide events'), 'statistical inferences' (→ 'statistical inference'), and check whether '10e-6' should be '1e-6'."
+
+tasks:
+  # ---------------- WEEK 1 ----------------
+  - id: w1-graduation
+    phase: "Week 1 · 2-8 Nov"
+    cat: Documents
+    due: 2026-11-03
+    title: "Ask your AUB advisor and the Registrar: can a letter say you finish in June 2027?"
+    how: "This comes first because everything leans on it. Your grad applications say June 2027 (dropping the Math major if you get in), but AUB's records may show your dual-degree plan ending in 2028. ETH, EPFL, Polytechnique and others need your university to confirm the degree and completion date. Find out whether you can complete the B.E. alone by June 2027, and whether the Registrar will state that while you're still registered for both."
+    ask:
+      - "Can I complete the B.E. alone by June 2027 if I drop the B.S. in Math?"
+      - "Will a certificate of enrolment say June 2027 while I'm still on the dual plan? If not, what do I need to file, and by when?"
+      - "Can you state my class rank? (Polytechnique's CV list asks for it.)"
+      - "Is there an official explanation of AUB's grading system I can attach?"
+  - id: w1-registrar-docs
+    phase: "Week 1 · 2-8 Nov"
+    cat: Documents
+    due: 2026-11-05
+    title: "Order from the Registrar: English-instruction letter, enrolment certificate, official transcript"
+    how: "ETH needs the English letter from central administration with an official stamp and signature (a professor's confirmation doesn't count). Georgia Tech accepts this kind of letter too. Ask how long it takes and order enough copies."
+  - id: w1-english-decide
+    phase: "Week 1 · 2-8 Nov"
+    cat: English
+    due: 2026-11-06
+    title: "Book IELTS Academic: you'll almost certainly need one anyway"
+    how: "Oxford, Imperial, Columbia and CMU (no waivers at all) expect a test, and Cambridge wants one after an offer. It also protects you at ETH: ETH exempts you only if your bachelor's was COMPLETELY taught in English, and a confirmation that doesn't qualify means direct rejection with no fixing it later. AUB teaches in English except certain language courses, so if you took any Arabic or French courses, don't rely on the letter alone. Aim for 7.5 overall (Georgia Tech's and likely Oxford's bar). Test by about 20 Nov and confirm results arrive before 29 Nov. IELTS has a center in Beirut (Hamra). Check the current fee."
+  - id: w1-pick-referees
+    phase: "Week 1 · 2-8 Nov"
+    cat: Letters
+    due: 2026-11-03
+    title: "Choose 3 academic referees + 1 backup and add them in Prep"
+    how: "See the suggestions in Prep. Ask in person where you can, and do it this week: ETH's letters are due in under 4 weeks and that's short notice for them."
+  - id: w1-talk-supervisor
+    phase: "Week 1 · 2-8 Nov"
+    cat: Professors
+    due: 2026-11-05
+    title: "Meet your research supervisor: letter, school list, turning the PINN work into a write-up"
+    how: "Book 20 minutes. Bring your list of schools and the question list from Prep. This meeting covers the most ground: their letter, their read on your list, and whether the research can become something you can show."
+  - id: w1-talk-algorithms
+    phase: "Week 1 · 2-8 Nov"
+    cat: Professors
+    due: 2026-11-06
+    title: "Meet your Algorithms professor: letter + advice on your school list"
+    how: "You've TA'd for them, so they can speak to how you think and explain. Ask if they know anyone at your target schools, and whether they have a small project you could join."
+  - id: w1-email-bu
+    phase: "Week 1 · 2-8 Nov"
+    cat: Professors
+    due: 2026-11-05
+    title: "Email your Boston University professor for a letter"
+    how: "Keep it short: remind them which course and term, one concrete thing they'd remember (e.g. your RL agent ranked first in the class tournament), your deadlines, and attach your CV. Their memory fades fast, so give them details."
+  - id: w1-send-packets
+    phase: "Week 1 · 2-8 Nov"
+    cat: Letters
+    due: 2026-11-08
+    title: "Send each referee their packet"
+    how: "Deadlines list, CV, transcript, and a page of reminders about your work together. See the packet list in Prep."
+  - id: w1-bu-transcript
+    phase: "Week 1 · 2-8 Nov"
+    cat: Documents
+    due: 2026-11-06
+    title: "Request your Boston University transcript"
+    how: "EPFL, CMU and Polytechnique ask for transcripts from every university you attended, exchanges included. Check first whether your AUB transcript already lists BU courses; you'll likely still need BU's own."
+  - id: w1-eth-account
+    phase: "Week 1 · 2-8 Nov"
+    cat: Applications
+    due: 2026-11-04
+    title: "Open ETH eApply and read its exact requirements"
+    only: [eth-cs]
+    how: "The window opened 1 Nov. Check three things: the Computer Science prerequisites PDF (do your courses fit?), the minimum-grade table (is Lebanon listed?), and the ESOP pre-proposal guidelines. Tell me if anything surprises you."
+  - id: w1-decide-list
+    phase: "Week 1 · 2-8 Nov"
+    cat: Applications
+    due: 2026-11-07
+    title: "Decide your final list, after your professors' input"
+    how: "Decide especially on Stanford (8 Dec) and CMU (9 Dec): those deadlines are close and would stack on ETH, Cambridge and EPFL. Think about money too: I found no funding from the CS department at Stanford or CMU, and Columbia points international students to outside funding. ETH, EPFL, Oxford, Cambridge, MBZUAI and KAUST all have serious funding routes. On US visas: Lebanon wasn't on the Proclamation 10998 student-visa lists as of NAFSA's Feb 2026 page, but check again before you pay US fees."
+  - id: w1-gre-check
+    phase: "Week 1 · 2-8 Nov"
+    cat: GRE
+    due: 2026-11-04
+    title: "Check two GRE facts: does Columbia require it, and is there a test center you can reach?"
+    how: "Columbia's requirements page blocks me: check gradengineering.columbia.edu → application requirements. Then look on ETS/Prometric for a GRE center in Lebanon, plus at-home availability and the fee. If Columbia doesn't need it and you drop CMU, you can skip the GRE entirely and save the fee."
+  - id: w1-gre-book
+    phase: "Week 1 · 2-8 Nov"
+    cat: GRE
+    due: 2026-11-06
+    title: "Book GRE attempt 1 (by 25 Nov), then take one free practice test"
+    how: "Skip this if the check above shows you don't need it. Use ETS's free practice test to see where you stand: math should be quick for you, and most of your prep will likely be verbal and the writing section. Add the date under Prep."
+  - id: w1-fee-waivers
+    phase: "Week 1 · 2-8 Nov"
+    cat: Money
+    due: 2026-11-08
+    title: "Add up the costs and check fee waivers"
+    how: "Fees add up quickly (see the fee total under Schools). Waiver routes I found: CMU (hardship, in the application), Imperial (financial difficulty), Cambridge (waiver page), Georgia Tech (waiver page), Stanford, Columbia (ask seasgradmit@columbia.edu). ETH says none. Check conditions: they may ask for proof, and Lebanon's economic situation may be relevant."
+  - id: w1-cv
+    phase: "Week 1 · 2-8 Nov"
+    cat: CV
+    due: 2026-11-08
+    title: "Write the grad-school version of your CV"
+    how: "Follow the checklist under the CV section in Prep. Keep a separate file from your internship CV."
+
+  # ---------------- WEEK 2 ----------------
+  - id: w2-eth-letter
+    phase: "Week 2 · 9-15 Nov"
+    cat: Statement
+    due: 2026-11-12
+    title: "Draft ETH motivation letter (about 1 page)"
+    only: [eth-cs]
+    how: "Why this master's at ETH specifically: name courses or labs you checked, connect them to your research and to what you want next. Write this one yourself: it becomes the base for every other statement."
+  - id: w2-esop
+    phase: "Week 2 · 9-15 Nov"
+    cat: Statement
+    due: 2026-11-14
+    title: "Draft ESOP master's thesis pre-proposal"
+    only: [eth-cs]
+    how: "Needed only for the scholarship, but it's what makes ETH affordable. Follow ETH's guidelines PDF. Ask your supervisor to read it. ESOP asks for top 10% of your cohort; a 4.0 should qualify."
+  - id: w2-research
+    phase: "Week 2 · 9-15 Nov"
+    cat: Research
+    due: 2026-11-15
+    title: "Start the PINN write-up, or join a project"
+    how: "Depending on what your supervisor said. Even a clean 4-6 page technical report lets you cite real research on your CV and in statements, and lets referees point at it. Don't list anything as submitted unless it is."
+  - id: w2-oxford-page
+    phase: "Week 2 · 9-15 Nov"
+    cat: Applications
+    due: 2026-11-13
+    title: "Open the Oxford course page and fix what I couldn't verify"
+    only: [ox-acs]
+    how: "Oxford blocks my checks. Confirm the number of references (usually 3), statement length, English level and fee, then tell me or correct them in the program data."
+  - id: w2-mcf
+    phase: "Week 2 · 9-15 Nov"
+    cat: Applications
+    due: 2026-11-13
+    title: "Oxford MCF early deadline today (noon UK), if you added it"
+    only: [ox-mcf]
+    how: "If you're not ready, use the final deadline, 27 Jan."
+  - id: w2-remind
+    phase: "Week 2 · 9-15 Nov"
+    cat: Letters
+    due: 2026-11-15
+    title: "Check in with referees: enter their details in ETH's system"
+    only: [eth-cs]
+    how: "Enter them in eApply as soon as you can so they get the link early. Confirm they've received it and know about 30 Nov, 11:59 in the morning, Zurich time."
+
+  # ---------------- WEEK 3 ----------------
+  - id: w3-cmu-early
+    phase: "Week 3 · 16-22 Nov"
+    cat: Applications
+    due: 2026-11-18
+    title: "CMU early deadline (saves $20)"
+    only: [cmu-mscs]
+    how: "Letters can still arrive until 9 Dec if you submit early. Don't rush a weak statement for $20: the final deadline is fine."
+  - id: w3-ielts
+    phase: "Week 3 · 16-22 Nov"
+    cat: English
+    due: 2026-11-20
+    title: "Take IELTS Academic by now"
+    how: "So the result is in before ETH closes. Record the score in Prep."
+  - id: w3-epfl-form
+    phase: "Week 3 · 16-22 Nov"
+    cat: Applications
+    due: 2026-11-20
+    title: "Start EPFL's online form (opens mid-November)"
+    only: [epfl-cs]
+    how: "Choose your ONE program: CS, Data Science or Financial Engineering. Referees get their link when you validate, so don't leave validating to the last day. Tick the Excellence Fellowship box."
+  - id: w3-eth-review
+    phase: "Week 3 · 16-22 Nov"
+    cat: Statement
+    due: 2026-11-22
+    title: "Get your ETH letter and ESOP pre-proposal read by a professor"
+    only: [eth-cs]
+    how: "Allow a week for changes. Ask them for what's weak, not whether it's good."
+  - id: w3-cam-proposals
+    phase: "Week 3 · 16-22 Nov"
+    cat: Statement
+    due: 2026-11-22
+    title: "Cambridge: write 1-2 project proposals (max 500 words), pick research themes and 5 modules"
+    only: [cam-acs]
+    how: "Look at the department's current project areas and supervisors. The proposals are indicative, but they show you can think like a researcher. If you want Gates, you need its extra statement and a third referee."
+
+  # ---------------- WEEK 4 ----------------
+  - id: w4-gre1
+    phase: "Week 4 · 23-30 Nov"
+    cat: GRE
+    due: 2026-11-25
+    title: "GRE attempt 1 done by today"
+    how: "Skip if you've decided you don't need it. Choose which schools get your scores carefully, since extra score reports may cost money."
+  - id: w4-eth-submit
+    phase: "Week 4 · 23-30 Nov"
+    cat: Applications
+    due: 2026-11-28
+    title: "SUBMIT ETH (target: 2 days early)"
+    only: [eth-cs]
+    how: "The deadline is Mon 30 Nov at 11:59 in the MORNING Zurich time, so plan as if it were Sunday night. Late or incomplete applications are not processed, and there's no second window for you. Check your English proof, both letters and the CHF 150 payment."
+  - id: w4-thanks-eth
+    phase: "Week 4 · 23-30 Nov"
+    cat: Letters
+    due: 2026-11-30
+    title: "Thank your referees, and remind them what's next"
+    how: "Next up: Cambridge 2 Dec, EPFL 15 Dec (letters one week after), Oxford and Imperial 6 Jan. Most can reuse one letter, so make sure each knows the upcoming list."
+
+  # ---------------- DECEMBER ----------------
+  - id: d-cam-submit
+    phase: "December"
+    cat: Applications
+    due: 2026-12-01
+    title: "SUBMIT Cambridge by the funding deadline"
+    only: [cam-acs]
+    how: "Their pages say both 2 Dec and 8 Dec. Treat 2 Dec as real. References must arrive by the deadline, too. Interviews, if any, are 2-20 Jan."
+  - id: d-stanford
+    phase: "December"
+    cat: Applications
+    due: 2026-12-08
+    title: "Submit Stanford, if you added it"
+    only: [stanford-ms]
+    how: "Final, no late applications. Three letters, no GRE."
+  - id: d-cmu
+    phase: "December"
+    cat: Applications
+    due: 2026-12-09
+    title: "Submit CMU final, if you added it"
+    only: [cmu-mscs]
+    how: "3pm EST. Don't wait for letters: they can follow if you submit, but check their rules."
+  - id: d-epfl-submit
+    phase: "December"
+    cat: Applications
+    due: 2026-12-12
+    title: "SUBMIT EPFL (target: 3 days early)"
+    only: [epfl-cs]
+    how: "Must be paid and validated by 15 Dec for the Excellence Fellowship. Statement max 1000 words. At least 2 of your 3 referees must submit within a week after the deadline."
+  - id: d-mbzuai
+    phase: "December"
+    cat: Applications
+    due: 2026-12-15
+    title: "Submit MBZUAI, if you added it"
+    only: [mbzuai-msc]
+    how: "Fully funded, AED 200 fee. Decisions by 31 Mar."
+  - id: d-gre2
+    phase: "December"
+    cat: GRE
+    due: 2026-12-19
+    title: "GRE attempt 2, only if attempt 1 wasn't enough"
+    how: "At least 21 days after attempt 1. Scores arrive about 8-10 days later, which is in time for Columbia's priority date."
+  - id: d-prep-jan
+    phase: "December"
+    cat: Statement
+    due: 2026-12-22
+    title: "Adapt statements for Oxford, Imperial and your other January schools"
+    how: "Don't send a generic letter: change what's specific to each program. Oxford advises submitting two weeks before its deadline, which means around 23 Dec."
+
+  # ---------------- JANUARY-FEBRUARY ----------------
+  - id: j-kaust
+    phase: "January-February"
+    cat: Applications
+    due: 2027-01-03
+    title: "Submit KAUST, if you added it"
+    only: [kaust-ms]
+    how: "Free to apply; needs 3 referees and an English test. Check which round applies on KAUST's timeline."
+  - id: j-oxford
+    phase: "January-February"
+    cat: Applications
+    due: 2027-01-04
+    title: "SUBMIT Oxford (deadline 6 Jan at noon UK)"
+    only: [ox-acs]
+    how: "Applying by this date also puts you in the running for Clarendon funding."
+  - id: j-imperial
+    phase: "January-February"
+    cat: Applications
+    due: 2027-01-04
+    title: "SUBMIT Imperial Round 2 (closes 6 Jan)"
+    only: [imp-aiml]
+    how: "They only assess complete applications, so chase both references. Decision by 3 Mar."
+  - id: j-poly
+    phase: "January-February"
+    cat: Applications
+    due: 2027-01-09
+    title: "Submit Polytechnique Round 2 (closes 11 Jan)"
+    only: [x-msct]
+    how: "Last round eligible for scholarships. If you do apply and get in, start Campus France early."
+  - id: j-gre3
+    phase: "January-February"
+    cat: GRE
+    due: 2027-01-09
+    title: "GRE attempt 3, only if truly needed"
+    how: "Scores around 19 Jan: too late for Columbia priority, fine for Georgia Tech and Columbia final."
+  - id: j-columbia
+    phase: "January-February"
+    cat: Applications
+    due: 2027-01-13
+    title: "SUBMIT Columbia, complete with letters, by priority (15 Jan)"
+    only: [columbia-ms]
+    how: "Their FAQ says your entire application including letters should be complete by priority. Final is 15 Feb, but applying late is riskier. Confirm the dates: the page I read was last updated in 2024."
+  - id: j-gt
+    phase: "January-February"
+    cat: Applications
+    due: 2027-01-29
+    title: "SUBMIT Georgia Tech (closes 1 Feb)"
+    only: [gt-mscs]
+    how: "Three letters, requested inside the application. Ask whether your AUB English letter is enough for the department's higher bar. Send GRE only if it helps you."
+  - id: j-part3
+    phase: "January-February"
+    cat: Applications
+    due: 2027-01-31
+    title: "Submit Cambridge Part III (closes 2 Feb), if you added it"
+    only: [cam-part3]
+    how: "Check the funding deadline on its course page: it may be earlier."
+  - id: j-thanks
+    phase: "January-February"
+    cat: Letters
+    due: 2027-02-05
+    title: "Thank all your referees, and promise to tell them the outcome"
+    how: "A short note goes a long way, and tell them where you land."
+
+  # ---------------- SPRING ----------------
+  - id: s-interviews
+    phase: "Spring 2027"
+    cat: Applications
+    due: 2027-02-15
+    title: "Prepare for interviews"
+    how: "Cambridge interviews by 20 Jan or between 22 Mar and 30 Apr, and ESOP may interview in February. Review your statement, your research, and core CS and math."
+  - id: s-decide
+    phase: "Spring 2027"
+    cat: Applications
+    due: 2027-04-15
+    title: "Compare offers, funding and visa timelines"
+    how: "Most decisions arrive by end of March. ESOP and Excellence Fellowship are also late March. Check each offer's reply deadline. Start visa paperwork immediately on accepting."
+  - id: s-drop-major
+    phase: "Spring 2027"
+    cat: Documents
+    due: 2027-04-30
+    title: "If you get in: finalize dropping the Math major so you graduate in June 2027"
+    how: "Based on what your advisor said in week 1. Don't drop it before you have an offer you'd accept."

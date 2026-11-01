@@ -12,29 +12,358 @@
 # The app updates on the next scan.
 
 programs:
+# ======================= YOUR APPLICATIONS =======================
+# target: core      = on your board by default
+# target: suggested = offered under "Worth adding" in the app
+# requires: what each one needs (the app builds the checklist and comparison table from it).
+# Checked on official pages 2026-11-01 unless `verify` lists the field. Oxford and Columbia's
+# requirement pages block automated reading, so those fields are marked verify.
 
-  # ======================= SWITZERLAND =======================
   - id: eth-cs
+    target: core
     university: ETH Zurich
+    short: ETH
     program: MSc Computer Science
     country: Switzerland
     region: CH
     fields: [cs, ml]
     opens: 2026-11-01
     deadlines:
-      - {label: "Only window for non-Swiss bachelor's (incl. ESOP)", date: 2026-11-30, time: "11:59 CET"}
-    app_fee: {amount: 150, currency: CHF}
+      - {label: "Only window for non-Swiss bachelor's (includes ESOP)", date: 2026-11-30, time: "11:59 in the MORNING, CET"}
+    app_fee: {amount: 150, currency: CHF, note: "No fee waivers"}
     tuition: {amount: 2190, currency: CHF, per: semester}
     scholarships:
-      - {name: "ESOP (Excellence & Opportunity)", deadline: 2026-11-30, covers: "CHF 12,000/semester + full tuition waiver", how: "Tick ESOP in the same application. Needs 2 reference letters."}
-    language: "English C1 proof (e.g. IELTS 7.0 / TOEFL 100). Ask whether an English-taught bachelor's counts"
-    gre: "Not required (check the program page)"
-    docs: [CV, transcripts, "2 references (for ESOP)", "motivation letter", "course descriptions"]
-    url: https://ethz.ch/en/studies/registration-application/master/application/how-to-apply/application-schedule.html
+      - {name: "ESOP (Excellence & Opportunity)", deadline: 2026-11-30, covers: "CHF 13,500/semester + tuition waiver (about 60 awards)", how: "Same window. Needs a master's thesis pre-proposal on top of the normal documents, and you should be top 10% of your cohort. Possible interview in February; decisions by end of March."}
+    language: "C1 proof by the deadline: TOEFL/IELTS/C1 Advanced, or a stamped Registrar letter that your bachelor's was COMPLETELY taught in English"
+    gre: "Not asked for in anything I could read (ETH says only 'like GRE, if required')"
+    requires:
+      letters: 2
+      letters_note: "In English, strongly prefer academics"
+      gre: {status: "no", note: "Not stated as required; third-party sources say it isn't considered. Confirm in eApply."}
+      english: {status: "by-deadline", note: "Must be in by the deadline or the application is rejected and can't be fixed. A Registrar letter works only if ALL your bachelor's teaching was in English; a wrong one means direct rejection."}
+      statement: "Motivation letter, about 1 A4 page"
+      extras: ["ESOP only: master's thesis pre-proposal", "Check the Computer Science subject prerequisites PDF and minimum-grade page"]
+    url: https://ethz.ch/en/studies/master/application/master-informatik.html
     source: official
-    verify: [language, gre]
-    notes: "Very short window (Nov 1–30). Prepare documents in October. Late or incomplete applications are not processed."
+    verify: [app_fee]
+    notes: "Late or incomplete applications are not processed. Applying to a second ETH program costs another CHF 150."
 
+  - id: epfl-cs
+    target: core
+    university: EPFL
+    short: EPFL
+    program: MSc Computer Science
+    country: Switzerland
+    region: CH
+    fields: [cs, ml]
+    opens: 2026-11-15
+    deadlines:
+      - {label: "Round 1 (required for the Excellence Fellowship)", date: 2026-12-15}
+      - {label: "Round 2", date: 2027-03-31}
+    app_fee: {amount: 150, currency: CHF, note: "Non-refundable"}
+    tuition: {amount: 2190, currency: CHF, per: semester}
+    scholarships:
+      - {name: "EPFL Excellence Fellowship", deadline: 2026-12-15, covers: "CHF 10,000/semester, up to 4 semesters, + a reserved room", how: "Tick the box in the form. Must be paid and validated by Dec 15. Notified late March."}
+    language: "English certificates welcome but not required"
+    gre: "Optional: 'welcome but not compulsory'"
+    requires:
+      letters: 3
+      letters_note: "3 ACADEMIC referees named; at least 2 letters must arrive, within 1 week after the deadline"
+      gre: {status: "optional", note: "Welcome but not compulsory."}
+      english: {status: "none", note: "Certificates welcome, not required."}
+      statement: "Statement of purpose, max 1000 words (academic background + career strategy)"
+      extras: ["Passport or ID copy", "Transcripts from EVERY university attended"]
+    url: https://www.epfl.ch/education/admission/admission-2/master-admission-criteria-application/online-application/
+    source: official
+    verify: [opens]
+    notes: "Only ONE EPFL master's application per year, so choose between CS, Data Science and Financial Engineering. The form opens mid-November."
+
+  - id: ox-acs
+    target: core
+    university: University of Oxford
+    short: Oxford
+    program: MSc Advanced Computer Science
+    country: United Kingdom
+    region: UK
+    fields: [cs, ml]
+    opens: 2026-09-01
+    deadlines:
+      - {label: "Deadline", date: 2027-01-06, time: "12:00 UK"}
+    app_fee: {amount: 75, currency: GBP}
+    tuition: {amount: 50000, currency: GBP, per: total, note: "approximate overseas fee: check the page"}
+    scholarships:
+      - {name: "Clarendon Fund", deadline: 2027-01-06, covers: "Full fees + living", how: "Automatic if you apply by the deadline"}
+    language: "Listed elsewhere as IELTS 7.5 / TOEFL 110: confirm on the course page"
+    gre: "Not sought (2024-25 course text)"
+    requires:
+      letters: 3
+      letters_note: "Oxford's usual is 3; I couldn't open the course page, so confirm. Academic preferred."
+      gre: {status: "no", note: "Not sought, per the 2024-25 course text."}
+      english: {status: "test", note: "Lebanon isn't normally exempt. Listed as IELTS 7.5 / TOEFL 110 by third parties; confirm."}
+      statement: "Statement of purpose (check the length on the course page)"
+      extras: []
+    url: https://www.ox.ac.uk/admissions/graduate/courses/msc-advanced-computer-science
+    source: aggregator
+    verify: [letters, english, statement, app_fee, tuition]
+    notes: "Oxford advises submitting at least two weeks early. Its site blocks my checks, so open the course page yourself once."
+
+  - id: cam-acs
+    target: core
+    university: University of Cambridge
+    short: Cambridge
+    program: MPhil Advanced Computer Science
+    country: United Kingdom
+    region: UK
+    fields: [cs, ml, research]
+    opens: 2026-09-09
+    deadlines:
+      - {label: "Funding deadline (one page says 2 Dec, another 8 Dec: use 2 Dec)", date: 2026-12-02, time: "23:59 GMT"}
+      - {label: "Final deadline", date: 2027-02-25}
+    app_fee: {amount: 85, currency: GBP, note: "Fee waiver page exists; refundable within 14 days"}
+    tuition: null
+    scholarships:
+      - {name: "Gates Cambridge (non-US) / Cambridge Trust", deadline: 2026-12-02, covers: "Full cost", how: "Apply by the funding deadline. Gates needs a THIRD referee."}
+    language: "IELTS/TOEFL evidence usually only after an offer. Lebanon isn't exempt."
+    gre: "Not mentioned on any Cambridge page"
+    requires:
+      letters: 2
+      letters_note: "2 ACADEMIC referees with institutional emails (3 if applying for Gates). Must arrive by the deadline."
+      gre: {status: "no", note: "Not mentioned on the course or how-to-apply pages."}
+      english: {status: "after-offer", note: "Test usually needed only after an offer, dated within 2 years of the start. Check the required score on the course's Requirements tab."}
+      statement: "No general statement listed: 1-2 project proposals of max 500 words each"
+      extras: ["Two research themes in order of preference", "Choose 5 modules (max 4 Michaelmas, max 2 Lent)", "Transcripts uploaded before submitting", "Possible interview 2-20 January"]
+    url: https://www.cst.cam.ac.uk/admissions/acs
+    source: official
+    verify: [tuition, english]
+    notes: "Research-oriented 9-month course, not a conversion course; wants the equivalent of a first-class CS degree. Also budget for a College fee."
+
+  - id: imp-aiml
+    target: core
+    university: Imperial College London
+    short: Imperial
+    program: MSc Computing (AI & Machine Learning)
+    country: United Kingdom
+    region: UK
+    fields: [cs, ml]
+    opens: 2026-09-30
+    deadlines:
+      - {label: "Round 2 (decision by 3 Mar)", date: 2027-01-06, time: "23:59 UK"}
+      - {label: "Round 3 (decision by 5 May)", date: 2027-03-10}
+      - {label: "Round 4 (decision by 1 Jul)", date: 2027-04-28}
+    app_fee: {amount: 90, currency: GBP, note: "Waiver for financial difficulty; refundable within 14 days"}
+    tuition: {amount: 46000, currency: GBP, per: total, note: "approximate"}
+    scholarships: []
+    language: "Check Imperial's English page (third parties list IELTS 7 / TOEFL 100)"
+    gre: "Not mentioned on the pages I could read"
+    requires:
+      letters: 2
+      letters_note: "'Both references' must be in before they start assessing, so chase them"
+      gre: {status: "no", note: "Not mentioned on the pages I could read. Confirm under entry requirements."}
+      english: {status: "test", note: "Check Imperial's English page, including its exemption rules."}
+      statement: "Personal statement"
+      extras: ["Must have computing courses equal to 2 years of a CS undergraduate program"]
+    url: https://www.imperial.ac.uk/computing/prospective-students/courses/pg/
+    source: official
+    verify: [english, gre, tuition]
+    notes: "Only complete applications get assessed. Apply in the earliest round you can: later rounds may be full."
+
+  - id: gt-mscs
+    target: core
+    university: Georgia Tech
+    short: Georgia Tech
+    program: MS Computer Science (on campus)
+    country: United States
+    region: US
+    fields: [cs, ml]
+    opens: null
+    deadlines:
+      - {label: "Fall admission deadline (every Feb 1)", date: 2027-02-01}
+    app_fee: null
+    tuition: null
+    scholarships: []
+    language: "AUB letter/transcript note accepted by the Institute, or TOEFL 100 (5.0 on the new scale) / IELTS 7.5 for the department"
+    gre: "Not required; considered if you send it"
+    requires:
+      letters: 3
+      letters_note: "Requested inside the online application"
+      gre: {status: "optional", note: "Not required. If provided, it is considered."}
+      english: {status: "letter-or-test", note: "Institute route: official transcript note, institutional letter or Medium of Instruction certificate. Unclear whether the department's higher scores (TOEFL 5.0 / IELTS 7.5) still apply on that route, so ask."}
+      statement: "Statement of purpose ('reviewed carefully')"
+      extras: []
+    url: https://www.cc.gatech.edu/degree-programs/master-science-computer-science
+    source: official
+    verify: [app_fee, tuition]
+    notes: "Fall-only intake. Fee amount isn't on the pages I could read; fee waivers exist."
+
+  - id: columbia-ms
+    target: core
+    university: Columbia University
+    short: Columbia
+    program: MS Computer Science
+    country: United States
+    region: US
+    fields: [cs, ml]
+    opens: null
+    deadlines:
+      - {label: "Priority: whole application including letters complete", date: 2027-01-15}
+      - {label: "Final", date: 2027-02-15}
+    app_fee: null
+    tuition: null
+    scholarships: []
+    language: "TOEFL/IELTS required unless an exception applies: recommended TOEFL 101 / IELTS 7"
+    gre: "Requirement page blocked: assume needed until you check (most admits have 750+ quant on the older scale)"
+    requires:
+      letters: 3
+      letters_note: "Count not on the pages I could read; plan for 3. Submitted electronically."
+      gre: {status: "check", note: "Columbia's requirements page blocks me. CHECK THIS WEEK: it decides how much the GRE matters."}
+      english: {status: "test", note: "Recommended TOEFL 101 / IELTS 7. Exceptions per the SEAS policy; ask."}
+      statement: "Personal statement, 250-1000 words recommended"
+      extras: []
+    url: https://www.cs.columbia.edu/education/admissions/
+    source: official
+    verify: [app_fee, gre, letters, english, tuition, deadlines]
+    notes: "Dates are from a page last updated 2024: confirm. Columbia tells international students to look for outside funding."
+
+  - id: cmu-mscs
+    target: suggested
+    why: "Top US program, but the deadline is close (9 Dec) and it's the one that needs a test-center GRE and an English test. Decide this week."
+    university: Carnegie Mellon
+    short: CMU
+    program: MS Computer Science
+    country: United States
+    region: US
+    fields: [cs, ml]
+    opens: 2026-09-09
+    deadlines:
+      - {label: "Early (fee $80)", date: 2026-11-18, time: "3pm EST"}
+      - {label: "Final (fee $100)", date: 2026-12-09, time: "3pm EST"}
+    app_fee: {amount: 100, currency: USD, note: "$80 before 18 Nov. Hardship waiver inside the application."}
+    tuition: null
+    scholarships: []
+    language: "TOEFL/IELTS/Duolingo required: an English-medium degree does NOT exempt you"
+    gre: "Strongly recommended. At-home scores are not accepted for current test dates."
+    requires:
+      letters: 3
+      letters_note: "At least 2 from faculty or recent employers"
+      gre: {status: "recommended", note: "Strongly recommended. CMU advises testing by Nov 25. At-home GRE is accepted only from old date ranges, so you'd need a test center."}
+      english: {status: "test", note: "No waivers, no medium-of-instruction letters. Most admits: TOEFL 105-114, IELTS 7-8, Duolingo 130-155."}
+      statement: "1-2 page statement: research interests, experience, goals"
+      extras: []
+    url: https://www.csd.cs.cmu.edu/academics/masters/admissions
+    source: official
+    verify: [tuition]
+    notes: "The program offers no scholarships or financial help."
+
+  - id: stanford-ms
+    target: suggested
+    why: "No GRE at all and your AUB letter may cover English, but it's three letters by 8 Dec and costs $125."
+    university: Stanford
+    short: Stanford
+    program: MS Computer Science
+    country: United States
+    region: US
+    fields: [cs, ml]
+    opens: 2026-09-15
+    deadlines:
+      - {label: "Only deadline", date: 2026-12-08}
+    app_fee: {amount: 125, currency: USD, note: "Waivers via Graduate Admissions"}
+    tuition: null
+    scholarships: []
+    language: "Exempt if all your degree teaching was in English; otherwise TOEFL/IELTS"
+    gre: "Not required and not considered"
+    requires:
+      letters: 3
+      letters_note: "Exactly 3, at least 2 academic recommended"
+      gre: {status: "no", note: "Not required and not considered."}
+      english: {status: "letter-or-test", note: "Exempt if all instruction was in English; the pages don't say how to prove it. Stanford's suggested TOEFL/IELTS date (October) has passed."}
+      statement: "Statement of purpose, max 2 pages"
+      extras: ["Publications listed on the CV and supplemental form"]
+    url: https://www.cs.stanford.edu/admissions/masters-admissions
+    source: official
+    verify: [english, tuition]
+    notes: "CS doesn't fund MS students. Typical GPA at least 3.7."
+
+  - id: x-msct
+    target: suggested
+    short: Polytechnique
+    why: "You uploaded its checklist. Round 1 has passed; Round 2 (11 Jan) is the last with scholarships."
+    requires:
+      letters: 2
+      letters_note: "At least 1 academic; the 2nd may be an internship/job manager"
+      gre: {status: "no", note: "Not requested."}
+      english: {status: "letter-or-test", note: "TOEFL 95 / IELTS 7.0 / C1, or waived with official proof that your last degree was taught entirely in English."}
+      statement: "Personal statement on the school's template (they ask that you write it yourself, without AI)"
+      extras: ["ID photo", "Passport valid until ~Nov 2027", "Certificate of enrolment"]
+    university: École Polytechnique (IP Paris)
+    program: "MSc&T: AI & Advanced Visual Computing / Data & AI / other tracks"
+    country: France
+    region: EU
+    fields: [ml, cs, math]
+    opens: 2026-09-16
+    deadlines:
+      - {label: "Round 1", date: 2026-10-12}
+      - {label: "Round 2 (last round with scholarships)", date: 2027-01-11}
+      - {label: "Round 3", date: 2027-03-08}
+      - {label: "Round 4", date: 2027-04-13}
+    app_fee: {amount: 95, currency: EUR}
+    tuition: {amount: 17500, currency: EUR, per: year, note: "approximate non-EU fee"}
+    scholarships:
+      - {name: "Polytechnique / Eiffel scholarships", deadline: 2027-01-11, covers: "Partial to full", how: "Only rounds 1–2 are considered"}
+    language: "TOEFL iBT 95 / IELTS Academic 7.0 / Cambridge CAE C1 (test < 2 years old). Waived if your last degree was taught entirely in English (needs official proof)"
+    gre: "Not required"
+    url: https://programmes.polytechnique.edu/en/master/admissions-msct/application-deadlines-procedure
+    source: official
+    verify: [tuition]
+    notes: "Lebanon is an 'Études en France' country, so you will also need the Campus France process for the visa."
+    # From the official "Online Application Checklist" PDF (MSc&T, 2027 intake)
+    checklist_source: "Online Application Checklist (official PDF)"
+    checklist:
+      - id: account
+        label: Create an account on the application portal
+        detail: "Use the same email for the application and for every message to admissions."
+      - id: referees
+        label: "2 recommendation letters (start first!)"
+        detail: "At least 1 from a professor, lecturer or academic supervisor at your current university. The 2nd can be academic or an internship/job manager. You enter each referee's name, role and email in the form, and they're emailed a recommendation form automatically. Letters must include first and last name, signature, role, contact details and professional website. Letters from yourself, colleagues, friends or family are rejected. You must tell your referees the deadline."
+        tip: "Ask now: e.g. your AUB math research supervisor + an AUB professor, or your Eurisko/TheFactory.Ai manager. Referees are slow."
+      - id: cv
+        label: "CV, max 2 pages (English or French)"
+        detail: "Education with dates, GPA, class rank (if available), professional experience, extracurriculars, academic and extracurricular awards/honors, community service."
+        tip: "Add your MERIT scholarship (award) and Scouts (community service). Your current CV is 1 page, so there's room."
+      - id: transcripts
+        label: Transcripts of ALL post-secondary studies
+        detail: "Scanned copies, including exchange programs and programs you didn't complete. If it's not on the transcript, add an official university document explaining the grading/ranking system."
+        tip: "Include your Boston University exchange transcript (Fall 2025), not just AUB."
+      - id: enrolment
+        label: Certificate of enrolment (degree in progress)
+        detail: "From your home university: title of the expected degree + expected completion date. It must prove you're at least in the final year of your undergraduate studies."
+        tip: "Ask the AUB Registrar. It must say you're in your final year, graduating June 2027."
+      - id: statement
+        label: "Personal statement (PDF, official template)"
+        detail: "Must follow the school's template (link in the checklist PDF / application site). Applying to two tracks means a separate, adapted statement for each."
+        tip: "The admissions team explicitly asks you to write it yourself, not with AI."
+      - id: english
+        label: "English proof: TOEFL iBT 95 / IELTS 7.0 / CAE C1"
+        detail: "Taken less than 2 years before the deadline (CAE has no expiry). WAIVER: if your last degree was taught entirely in English less than 10 years ago, and the degree certificate, transcript or an official university attestation states the language of instruction."
+        tip: "AUB teaches in English: request an official AUB 'medium of instruction' attestation and you may not need TOEFL/IELTS."
+      - id: photo
+        label: ID photo
+        detail: "An official ID-style photo of you."
+      - id: passport
+        label: Passport copy
+        detail: "Non-European students: passport valid until at least 2 months after the program starts (so at least ~Nov 2027)."
+        tip: "Check your Lebanese passport's expiry date now. Renewals can be slow."
+      - id: fee
+        label: "Pay the €95 application fee"
+        detail: "Non-refundable. Credit card recommended. A bank transfer takes several days and must be done well before the deadline. If someone else pays (family, company), email gdadmissions@polytechnique.fr."
+      - id: submit
+        label: Submit before the deadline (you can't edit after!)
+        detail: "Once submitted, you can't reopen the form. For corrections or extra documents, email gdadmissions@polytechnique.fr."
+    checklist_facts:
+      - "All documents must be in French or English; otherwise attach the original + a certified translation (personal translations are not accepted)."
+      - "Contact: gdadmissions@polytechnique.fr"
+      - "Only rounds 1–2 are considered for scholarships."
+
+# ======================= OTHER PROGRAMS (catalog: add from the app if you want them) =======================
   - id: eth-ds
     university: ETH Zurich
     program: MSc Data Science
@@ -94,26 +423,6 @@ programs:
     verify: [app_fee, tuition, gre]
     notes: "Interviews in March–April. 18-month program, very quant/industry focused."
 
-  - id: epfl-cs
-    university: EPFL
-    program: MSc Computer Science
-    country: Switzerland
-    region: CH
-    fields: [cs, ml]
-    opens: 2026-10-15
-    deadlines:
-      - {label: "Round 1 (required for Excellence Fellowship)", date: 2026-12-15}
-      - {label: "Round 2", date: 2027-03-31}
-    app_fee: {amount: 150, currency: CHF}
-    tuition: {amount: 2190, currency: CHF, per: semester}
-    scholarships:
-      - {name: "EPFL Excellence Fellowship", deadline: 2026-12-15, covers: "CHF 10,000/semester for up to 4 semesters + housing", how: "Tick the fellowship box. The application must be paid and validated by Dec 15"}
-    language: "English B2/C1 (check program)"
-    gre: "Not required"
-    url: https://www.epfl.ch/education/master/how-to-apply/
-    source: official
-    verify: [app_fee, opens, language]
-
   - id: epfl-ds
     university: EPFL
     program: MSc Data Science
@@ -154,8 +463,17 @@ programs:
     source: official
     verify: [app_fee, gre]
 
-  # ======================= UNITED KINGDOM =======================
   - id: ox-mcf
+    target: suggested
+    short: Oxford MCF
+    why: "Oxford's quant program, if you want that route. Early deadline 13 Nov, final 27 Jan."
+    requires:
+      letters: 3
+      letters_note: "Not re-checked: confirm on the program page"
+      gre: {status: "no", note: "Not re-checked: confirm."}
+      english: {status: "test", note: "Not re-checked: confirm."}
+      statement: "Check the program page"
+      extras: []
     university: University of Oxford
     program: MSc Mathematical and Computational Finance
     country: United Kingdom
@@ -176,25 +494,6 @@ programs:
     verify: [app_fee, language]
     notes: "Submit at least 2 weeks before the deadline (Oxford's advice)."
 
-  - id: ox-acs
-    university: University of Oxford
-    program: MSc Advanced Computer Science
-    country: United Kingdom
-    region: UK
-    fields: [cs, ml]
-    opens: 2026-09-01
-    deadlines:
-      - {label: "Deadline", date: 2027-01-06, time: "12:00 UK"}
-    app_fee: {amount: 75, currency: GBP}
-    tuition: {amount: 50000, currency: GBP, per: total, note: "approximate overseas fee: check the page"}
-    scholarships:
-      - {name: "Clarendon Fund", deadline: 2027-01-06, covers: "Full fees + living", how: "Automatic consideration"}
-    language: "Oxford standard level (IELTS 7.0)"
-    gre: "Not required"
-    url: https://www.ox.ac.uk/admissions/graduate/courses/msc-advanced-computer-science
-    source: aggregator
-    verify: [tuition, language]
-
   - id: ox-omms
     university: University of Oxford
     program: MSc Mathematical Sciences (OMMS)
@@ -214,29 +513,17 @@ programs:
     source: estimate
     verify: [deadlines, tuition]
 
-  - id: cam-acs
-    university: University of Cambridge
-    program: MPhil Advanced Computer Science
-    country: United Kingdom
-    region: UK
-    fields: [cs, ml, research]
-    opens: 2026-09-09
-    deadlines:
-      - {label: "Funding deadline (Gates + Cambridge Trust)", date: 2026-12-02, time: "23:59 GMT"}
-      - {label: "Final deadline", date: 2027-02-25}
-    app_fee: {amount: 85, currency: GBP}
-    tuition: null
-    scholarships:
-      - {name: "Gates Cambridge / Cambridge Trust", deadline: 2026-12-02, covers: "Full cost", how: "Tick funding in the application. Gates needs an extra statement"}
-    language: "IELTS 7.5 / TOEFL 110 (Cambridge usual)"
-    gre: "Not required"
-    docs: ["1–2 project proposals (≤500 words each)", "5 module choices"]
-    url: https://www.cst.cam.ac.uk/admissions/acs
-    source: official
-    verify: [tuition, language]
-    notes: "Research-oriented 9-month course, great before a PhD. Also budget for a College fee."
-
   - id: cam-part3
+    target: suggested
+    short: Part III
+    why: "The famous math/theory year, if you lean toward theory. Deadline 2 Feb."
+    requires:
+      letters: 2
+      letters_note: "Not re-checked: confirm on the program page"
+      gre: {status: "no", note: "Not re-checked: confirm."}
+      english: {status: "test", note: "Not re-checked: confirm."}
+      statement: "Check the program page"
+      extras: []
     university: University of Cambridge
     program: MASt Mathematics (Part III)
     country: United Kingdom
@@ -257,25 +544,6 @@ programs:
     verify: [deadlines, tuition]
     notes: "The famous 'Part III'. Excellent for theory/research and for quant."
 
-  - id: imp-aiml
-    university: Imperial College London
-    program: MSc Computing (AI & Machine Learning)
-    country: United Kingdom
-    region: UK
-    fields: [cs, ml]
-    opens: 2026-09-15
-    deadlines:
-      - {label: "Next deadline", date: 2027-01-06}
-    app_fee: {amount: 90, currency: GBP, note: "One fee covers up to 2 taught-master's applications"}
-    tuition: {amount: 46000, currency: GBP, per: total, note: "approximate"}
-    scholarships: []
-    language: "IELTS 7.0 (Imperial 'higher')"
-    gre: "Not required"
-    url: https://www.imperial.ac.uk/computing/prospective-students/courses/pg/
-    source: aggregator
-    verify: [tuition, deadlines]
-    notes: "Rolling rounds. Apply in the earliest open round."
-
   - id: imp-mf
     university: Imperial College London
     program: MSc Mathematics and Finance
@@ -288,7 +556,7 @@ programs:
       - {label: "Round 2", date: 2027-01-07}
       - {label: "Round 3", date: 2027-03-11}
       - {label: "Round 4", date: 2027-04-29}
-    app_fee: {amount: 90, currency: GBP, note: "One fee covers up to 2 taught-master's applications"}
+    app_fee: {amount: 90, currency: GBP, note: "Charged per application; waiver for financial difficulty"}
     tuition: null
     scholarships: []
     language: "IELTS 7.0"
@@ -296,8 +564,7 @@ programs:
     url: https://www.imperial.ac.uk/study/courses/postgraduate-taught/mathematics-finance/
     source: aggregator
     verify: [tuition, url]
-    notes: "Combine with imp-aiml under ONE £90 fee."
-
+    
   - id: ucl-ml
     university: UCL
     program: MSc Machine Learning
@@ -372,77 +639,6 @@ programs:
     source: aggregator
     verify: [app_fee]
 
-  # ======================= FRANCE =======================
-  - id: x-msct
-    university: École Polytechnique (IP Paris)
-    program: "MSc&T: AI & Advanced Visual Computing / Data & AI / other tracks"
-    country: France
-    region: EU
-    fields: [ml, cs, math]
-    opens: 2026-09-16
-    deadlines:
-      - {label: "Round 1", date: 2026-10-12}
-      - {label: "Round 2 (last round with scholarships)", date: 2027-01-11}
-      - {label: "Round 3", date: 2027-03-08}
-      - {label: "Round 4", date: 2027-04-13}
-    app_fee: {amount: 95, currency: EUR}
-    tuition: {amount: 17500, currency: EUR, per: year, note: "approximate non-EU fee"}
-    scholarships:
-      - {name: "Polytechnique / Eiffel scholarships", deadline: 2027-01-11, covers: "Partial to full", how: "Only rounds 1–2 are considered"}
-    language: "TOEFL iBT 95 / IELTS Academic 7.0 / Cambridge CAE C1 (test < 2 years old). Waived if your last degree was taught entirely in English (needs official proof)"
-    gre: "Not required"
-    url: https://programmes.polytechnique.edu/en/master/admissions-msct/application-deadlines-procedure
-    source: official
-    verify: [tuition]
-    notes: "Lebanon is an 'Études en France' country, so you will also need the Campus France process for the visa."
-    # From the official "Online Application Checklist" PDF (MSc&T, 2027 intake)
-    checklist_source: "Online Application Checklist (official PDF)"
-    checklist:
-      - id: account
-        label: Create an account on the application portal
-        detail: "Use the same email for the application and for every message to admissions."
-      - id: referees
-        label: "2 recommendation letters (start first!)"
-        detail: "At least 1 from a professor, lecturer or academic supervisor at your current university. The 2nd can be academic or an internship/job manager. You enter each referee's name, role and email in the form, and they're emailed a recommendation form automatically. Letters must include first and last name, signature, role, contact details and professional website. Letters from yourself, colleagues, friends or family are rejected. You must tell your referees the deadline."
-        tip: "Ask now: e.g. your AUB math research supervisor + an AUB professor, or your Eurisko/TheFactory.Ai manager. Referees are slow."
-      - id: cv
-        label: "CV, max 2 pages (English or French)"
-        detail: "Education with dates, GPA, class rank (if available), professional experience, extracurriculars, academic and extracurricular awards/honors, community service."
-        tip: "Add your MERIT scholarship (award) and Scouts (community service). Your current CV is 1 page, so there's room."
-      - id: transcripts
-        label: Transcripts of ALL post-secondary studies
-        detail: "Scanned copies, including exchange programs and programs you didn't complete. If it's not on the transcript, add an official university document explaining the grading/ranking system."
-        tip: "Include your Boston University exchange transcript (Fall 2025), not just AUB."
-      - id: enrolment
-        label: Certificate of enrolment (degree in progress)
-        detail: "From your home university: title of the expected degree + expected completion date. It must prove you're at least in the final year of your undergraduate studies."
-        tip: "Ask the AUB Registrar. It must say you're in your final year, graduating June 2027."
-      - id: statement
-        label: "Personal statement (PDF, official template)"
-        detail: "Must follow the school's template (link in the checklist PDF / application site). Applying to two tracks means a separate, adapted statement for each."
-        tip: "The admissions team explicitly asks you to write it yourself, not with AI."
-      - id: english
-        label: "English proof: TOEFL iBT 95 / IELTS 7.0 / CAE C1"
-        detail: "Taken less than 2 years before the deadline (CAE has no expiry). WAIVER: if your last degree was taught entirely in English less than 10 years ago, and the degree certificate, transcript or an official university attestation states the language of instruction."
-        tip: "AUB teaches in English: request an official AUB 'medium of instruction' attestation and you may not need TOEFL/IELTS."
-      - id: photo
-        label: ID photo
-        detail: "An official ID-style photo of you."
-      - id: passport
-        label: Passport copy
-        detail: "Non-European students: passport valid until at least 2 months after the program starts (so at least ~Nov 2027)."
-        tip: "Check your Lebanese passport's expiry date now. Renewals can be slow."
-      - id: fee
-        label: "Pay the €95 application fee"
-        detail: "Non-refundable. Credit card recommended. A bank transfer takes several days and must be done well before the deadline. If someone else pays (family, company), email gdadmissions@polytechnique.fr."
-      - id: submit
-        label: Submit before the deadline (you can't edit after!)
-        detail: "Once submitted, you can't reopen the form. For corrections or extra documents, email gdadmissions@polytechnique.fr."
-    checklist_facts:
-      - "All documents must be in French or English; otherwise attach the original + a certified translation (personal translations are not accepted)."
-      - "Contact: gdadmissions@polytechnique.fr"
-      - "Only rounds 1–2 are considered for scholarships."
-
   - id: saclay-m1
     university: Université Paris-Saclay
     program: "Master (M1) Mathematics & AI / Computer Science"
@@ -463,7 +659,6 @@ programs:
     verify: [deadlines, opens, tuition]
     notes: "Leads into the elite M2s (MVA, Probabilités & Finance). Very cheap. Campus France procedure applies."
 
-  # ======================= GERMANY / NETHERLANDS =======================
   - id: tum-inf
     university: TU Munich
     program: MSc Informatics / Mathematics in Data Science
@@ -524,8 +719,17 @@ programs:
     source: estimate
     verify: [deadlines, tuition, app_fee]
 
-  # ======================= GULF (fully funded) =======================
   - id: mbzuai-msc
+    target: suggested
+    short: MBZUAI
+    why: "Fully funded in Abu Dhabi, deadline 15 Dec. A strong financial backstop."
+    requires:
+      letters: 2
+      letters_note: "Not re-checked: confirm on the program page"
+      gre: {status: "no", note: "Not re-checked: confirm."}
+      english: {status: "test", note: "Not re-checked: confirm."}
+      statement: "Check the program page"
+      extras: []
     university: MBZUAI (Abu Dhabi)
     program: MSc Machine Learning / Computer Vision / NLP
     country: United Arab Emirates
@@ -546,6 +750,16 @@ programs:
     notes: "Decisions by 31 Mar 2027. Lebanese passport works for a UAE student visa."
 
   - id: kaust-ms
+    target: suggested
+    short: KAUST
+    why: "Fully funded and free to apply. Round 2 closes 3 Jan. A strong financial backstop."
+    requires:
+      letters: 3
+      letters_note: "Not re-checked: confirm on the program page"
+      gre: {status: "no", note: "Not re-checked: confirm."}
+      english: {status: "test", note: "Not re-checked: confirm."}
+      statement: "Check the program page"
+      extras: []
     university: KAUST (Saudi Arabia)
     program: MS Computer Science / Applied Math & Computational Science
     country: Saudi Arabia
@@ -567,7 +781,6 @@ programs:
     verify: [deadlines]
     notes: "Free to apply. Pairs well with the KAUST VSRP summer research internship."
 
-  # ======================= OTHER =======================
   - id: erasmus-mundus
     university: Erasmus Mundus (EU)
     program: "Joint Master's (e.g. Big Data, AI, Data Science, Applied Math)"
