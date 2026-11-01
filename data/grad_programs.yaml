@@ -182,17 +182,17 @@ programs:
     tuition: null
     scholarships: []
     language: "AUB letter/transcript note accepted by the Institute, or TOEFL 100 (5.0 on the new scale) / IELTS 7.5 for the department"
-    gre: "Not required; considered if you send it"
+    gre: "Current admissions page: not required, considered if sent. The 2025 handbook said required, so get written confirmation."
     requires:
       letters: 3
       letters_note: "Requested inside the online application"
-      gre: {status: "optional", note: "Not required. If provided, it is considered."}
+      gre: {status: "optional", note: "Current requirements page and 2026 draft handbook: not required, considered if sent. The 2025 handbook said REQUIRED with no waivers, so this changed recently: confirm by email."}
       english: {status: "letter-or-test", note: "Institute route: official transcript note, institutional letter or Medium of Instruction certificate. Unclear whether the department's higher scores (TOEFL 5.0 / IELTS 7.5) still apply on that route, so ask."}
       statement: "Statement of purpose ('reviewed carefully')"
       extras: []
     url: https://www.cc.gatech.edu/degree-programs/master-science-computer-science
     source: official
-    verify: [app_fee, tuition]
+    verify: [gre, app_fee, tuition]
     notes: "Fall-only intake. Fee amount isn't on the pages I could read; fee waivers exist."
 
   - id: columbia-ms
