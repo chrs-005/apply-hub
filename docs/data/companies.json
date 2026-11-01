@@ -282,7 +282,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 745,
+  "raw_count": 746,
   "open_internships": 3,
   "opens": "Aug – Nov",
   "careers": ""
@@ -294,7 +294,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 904,
+  "raw_count": 909,
   "open_internships": 4,
   "opens": "Aug – Nov",
   "careers": ""
@@ -306,7 +306,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 464,
+  "raw_count": 463,
   "open_internships": 0,
   "opens": "Aug – Nov",
   "careers": ""
@@ -438,7 +438,7 @@
   "ats": "ashby",
   "ok": true,
   "error": null,
-  "raw_count": 122,
+  "raw_count": 120,
   "open_internships": 3,
   "opens": "Sep – Jan (many roles are PhD-only)",
   "careers": ""
@@ -498,7 +498,7 @@
   "ats": "ashby",
   "ok": true,
   "error": null,
-  "raw_count": 138,
+  "raw_count": 139,
   "open_internships": 0,
   "opens": "Sep – Jan (many roles are PhD-only)",
   "careers": ""
