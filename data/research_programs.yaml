@@ -12,14 +12,14 @@ programs:
     fields: [cs, ml, research]
     opens: 2026-10-15
     deadline: 2026-11-29
-    deadline_note: "23:59 Anywhere on Earth"
-    pay: "~CHF 1,800/month + travel"
-    duration: "~3 months (Jul–Sep)"
-    level: "Bachelor's / Master's"
-    url: https://www.epfl.ch/schools/ic/education/summer-at-epfl/
-    source: aggregator
-    verify: [url, opens]
-    notes: "Very competitive and prestigious. Strong letter + research interests matching labs."
+    deadline_note: "23:39 Anywhere on Earth. Decisions by 25 January."
+    pay: "CHF 1,800/month + travel refund"
+    duration: "2-3 months between May and September, agreed with the lab"
+    level: "2nd-year bachelor or above; must still be enrolled during the fellowship"
+    url: https://summer.epfl.ch/apply.html
+    source: official
+    verify: []
+    notes: "CV, transcripts and a motivation letter (ideally 1 page, max 2). NO recommendation letters: uploading them can hurt you. Choose up to 3 domains and up to 3 professors; naming one outside your domain can hurt. Housing is on you, and Lausanne is hard."
 
   - id: eth-ssrf
     name: ETH Student Summer Research Fellowship (CS Dept)
