@@ -235,44 +235,52 @@
    "how": "You must still be enrolled in a bachelor's or master's during the fellowship; finishing your degree before it starts makes you ineligible. Staying on the dual degree (June 2028) is fine. If you might graduate in June 2027 instead, email summer@epfl.ch before applying and explain exactly that."
   },
   {
-   "id": "se-read",
-   "phase": "Summer@EPFL · by 29 Nov",
-   "cat": "Summer@EPFL",
-   "due": "2026-11-06",
-   "title": "Read 'Induction Heads Interpolate N-Grams' (Flammarion lab, ICML 2026) properly",
-   "how": "arxiv.org/abs/2607.02800. Work through it until you can explain the two smoothing mechanisms without looking, and write down what you'd test next. Then read the lab's 'Incremental Learning of Sparse Attention Patterns in Transformers' (openreview.net/forum?id=vSRh1qU5sH). Your letter gets built from your notes."
-  },
-  {
    "id": "se-profs",
    "phase": "Summer@EPFL · by 29 Nov",
    "cat": "Summer@EPFL",
    "due": "2026-11-07",
-   "title": "Choose your 3 professors and 3 domains",
-   "how": "Suggested: Flammarion (first), Jaggi, and Zdeborova or Svensson. Domains: AI & Machine Learning, and Algorithms & Theoretical CS. Don't name anyone outside IC, such as Cevher, Kamgarpour or Fink. Their RL and physics-informed work is close to yours, but the programme is IC-only."
+   "title": "Choose your field, 3 professors and domains",
+   "how": "Weigh fit against competition: one accepted applicant on Reddit says ML, AI, NLP and theory labs are the most crowded. Only name IC faculty active in your chosen domains. Don't email Jaggi's lab: it says not to before admissions. The new conversation's handoff has the details."
+  },
+  {
+   "id": "se-read",
+   "phase": "Summer@EPFL · by 29 Nov",
+   "cat": "Summer@EPFL",
+   "due": "2026-11-09",
+   "title": "Read your chosen professor's recent papers properly",
+   "how": "Go beyond the lab page. Work through one or two recent papers until you can explain them without looking, and write down what you'd test next. Your letter gets built from these notes."
   },
   {
    "id": "se-repro",
    "phase": "Summer@EPFL · by 29 Nov",
    "cat": "Summer@EPFL",
-   "due": "2026-11-14",
-   "title": "Reproduce one result from the paper and put it on GitHub",
-   "how": "Train a small transformer on order-k Markov chains, compare it with count-based smoothing baselines, and inspect the attention patterns. Then try one small question of your own. This is what makes your interest believable. A short README with a plot is enough."
+   "due": "2026-11-16",
+   "title": "Build a small project aimed at that research and put it on GitHub",
+   "how": "This is what replaces the Pokémon project on your CV, so it only goes on once it exists and the results are yours. A short README with a plot is enough."
+  },
+  {
+   "id": "se-cv",
+   "phase": "Summer@EPFL · by 29 Nov",
+   "cat": "Summer@EPFL",
+   "due": "2026-11-18",
+   "title": "Make the research version of your CV",
+   "how": "Research first, then the new project, TA roles and awards. Keep your first-place tournament result under Awards so it isn't lost with the Pokémon project."
   },
   {
    "id": "se-letter",
    "phase": "Summer@EPFL · by 29 Nov",
    "cat": "Summer@EPFL",
-   "due": "2026-11-18",
-   "title": "Write the motivation letter (1 page, PDF)",
-   "how": "It carries the application, since there are no reference letters. Lead with the specific research question, then your experiment, then your PINN and transformer work as proof you can do the job. Only claim what you actually did. Ask a professor to read it by 22 Nov."
+   "due": "2026-11-20",
+   "title": "Write the motivation letter (1 page, PDF), and get it reviewed by 22 Nov",
+   "how": "It carries the application, since there are no reference letters. Cover which professor and why, your project, past research, why EPFL, and your grad-school goal. Nothing vague, and only claim what you actually did. Ask a professor or grad student to review it."
   },
   {
    "id": "se-docs",
    "phase": "Summer@EPFL · by 29 Nov",
    "cat": "Summer@EPFL",
    "due": "2026-11-22",
-   "title": "Get CV and transcripts ready as PDFs",
-   "how": "Transcripts must cover your whole academic career, so include your BU exchange if it isn't on the AUB one. They warn unofficial transcripts 'may jeopardize' you, so use official ones if they'll arrive in time. Enter your GPA exactly as on the transcript. Do NOT upload recommendation letters."
+   "title": "Get transcripts ready as PDFs",
+   "how": "They must cover your whole academic career, so include your BU exchange if it isn't on the AUB one. They warn unofficial transcripts 'may jeopardize' you, so use official ones if they'll arrive in time. Enter your GPA exactly as on the transcript. Do NOT upload recommendation letters."
   },
   {
    "id": "se-submit",
@@ -281,14 +289,6 @@
    "due": "2026-11-26",
    "title": "SUBMIT Summer@EPFL (3 days early)",
    "how": "Real deadline: Sunday 29 Nov, 23:39 Anywhere on Earth, and ETH closes the very next morning, so finish this one early. Registering first emails you the upload link, so don't leave that to the last hour."
-  },
-  {
-   "id": "se-email",
-   "phase": "Summer@EPFL · by 29 Nov",
-   "cat": "Summer@EPFL",
-   "due": "2026-11-28",
-   "title": "Optional: send one short technical note about your reproduction",
-   "how": "Only if you have a real result and a real question. Flammarion's lab says internship applicants should apply via Summer@EPFL, so don't ask for a place by email. Write to the first author, Francesco D'Angelo, about the science, and mention you've applied. NEVER email Jaggi's lab: it says not to before admissions. Don't ask about your application status."
   },
   {
    "id": "w2-eth-letter",
