@@ -5,7 +5,7 @@
 #   ask:   the questions to ask
 
 gre:
-  summary: "Of your 7 main schools, Columbia may need the GRE (check this week). Georgia Tech's current page says it isn't required but will be considered, though its 2025 handbook said required, so confirm in writing. EPFL welcomes it, and ETH, Oxford, Cambridge and Imperial don't ask for it. CMU strongly recommends it. So take it early, but don't let it eat ETH time."
+  summary: "Of your 7 main schools, Columbia may need the GRE (check this week). Georgia Tech doesn't require it but considers it if you send it. EPFL welcomes it, and ETH, Oxford, Cambridge and Imperial don't ask for it. CMU strongly recommends it. So take it early, but don't let it eat ETH time."
   rules:
     - "You can retake it every 21 days, up to 5 times in 12 months (checked via third-party guides; ETS's own page wouldn't open for me)."
     - "Official scores take about 8-10 days, so test at least 2 weeks before a deadline. CMU's own advice is by Nov 25."
@@ -94,8 +94,8 @@ tasks:
     phase: "Week 1 · 2-8 Nov"
     cat: Applications
     due: 2026-11-08
-    title: "Confirm each school's requirements yourself, and email Georgia Tech and Columbia about the GRE"
-    how: "Treat this app as your working list, and the school's own page or a written reply from admissions as the final word. Open each program page and check letters, GRE, English and deadlines against Compare, starting with every ⚠. Georgia Tech: the current page says the GRE isn't required, but the 2025 handbook said it was, so ask them in writing. Keep the replies."
+    title: "Confirm the ⚠ items on each school's own page"
+    how: "Treat this app as your working list, and the school's own page or a written reply from admissions as the final word. Open each program page and check the items marked ⚠ in Compare."
   - id: w1-pick-referees
     phase: "Week 1 · 2-8 Nov"
     cat: Letters
@@ -367,7 +367,7 @@ tasks:
     due: 2027-01-29
     title: "SUBMIT Georgia Tech (closes 1 Feb)"
     only: [gt-mscs]
-    how: "Three letters, requested inside the application. Ask whether your AUB English letter is enough for the department's higher bar. GRE: follow the written answer you got from them; if you have a good score, send it (institution code 5248)."
+    how: "Three letters, requested inside the application. Ask whether your AUB English letter is enough for the department's higher bar. Send a GRE score only if it helps you (institution code 5248)."
   - id: j-part3
     phase: "January-February"
     cat: Applications
