@@ -274,7 +274,7 @@
   "verify": [
    "app_fee"
   ],
-  "notes": "Late or incomplete applications are not processed. Applying to a second ETH program costs another CHF 150.",
+  "notes": "120 ECTS, 2 years. Majors: Machine Intelligence, Theoretical Computer Science, Data Management Systems, Secure and Reliable Systems, Visual and Interactive Computing. You can apply to two ETH programs (CHF 150 each, one motivation letter per program). Your likely gap: Formal Methods & Functional Programming. Late or incomplete applications are not processed.",
   "checklist": [
    {
     "id": "referees",
@@ -329,7 +329,123 @@
   "status": "open"
  },
  {
+  "id": "eth-stats",
+  "university": "ETH Zurich",
+  "short": "ETH Statistics",
+  "program": "MSc Statistics",
+  "country": "Switzerland",
+  "region": "CH",
+  "fields": [
+   "math",
+   "quant",
+   "ml"
+  ],
+  "opens": "2026-11-01",
+  "deadlines": [
+   {
+    "label": "Only window for non-Swiss bachelor's",
+    "date": "2026-11-30",
+    "time": "11:59 in the MORNING, CET"
+   }
+  ],
+  "app_fee": {
+   "amount": 150,
+   "currency": "CHF",
+   "note": "No fee waivers"
+  },
+  "tuition": {
+   "amount": 2190,
+   "currency": "CHF",
+   "per": "semester"
+  },
+  "scholarships": [
+   {
+    "name": "ESOP",
+    "deadline": "2026-11-30",
+    "covers": "CHF 13,500/semester + tuition waiver",
+    "how": "Same window"
+   }
+  ],
+  "language": "C1 proof by the deadline",
+  "gre": "REQUIRED for non-EU/EFTA bachelor's: expected Quant 165, Verbal 158, Analytical 4.0",
+  "requires": {
+   "letters": 2,
+   "letters_note": "In German or English",
+   "gre": {
+    "status": "recommended",
+    "note": "Required for your degree. Expected: Q165 (90%), V158 (80%), AW4.0 (80%). Very tight for this window."
+   },
+   "english": {
+    "status": "by-deadline",
+    "note": "Same rule as ETH CS."
+   },
+   "statement": "Motivation letter, about 1 A4 page",
+   "extras": [
+    "Course-content form proving the math and CS requirements"
+   ]
+  },
+  "url": "https://ethz.ch/en/studies/master/application/master-statistik.html",
+  "source": "official",
+  "verify": [],
+  "notes": "Light prerequisites (21 credits), but only feasible if you can get these GRE scores before 30 Nov.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "2 recommendation letters",
+    "detail": "In German or English"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "Motivation letter, about 1 A4 page",
+    "detail": ""
+   },
+   {
+    "id": "english",
+    "label": "English proof, in by the deadline",
+    "detail": "Same rule as ETH CS."
+   },
+   {
+    "id": "gre",
+    "label": "GRE (strongly recommended)",
+    "detail": "Required for your degree. Expected: Q165 (90%), V158 (80%), AW4.0 (80%). Very tight for this window."
+   },
+   {
+    "id": "extra0",
+    "label": "Course-content form proving the math and CS requirements",
+    "detail": ""
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee (CHF 150)",
+    "detail": "No fee waivers"
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": 188,
+  "tuition_year_usd": 5476,
+  "next_deadline": "2026-11-30",
+  "status": "open"
+ },
+ {
   "id": "eth-ds",
+  "target": "suggested",
+  "short": "ETH Data Science",
+  "why": "Best second ETH application if you want ML and statistics: same window, another CHF 150. Your likely gap: Numerical Methods.",
   "university": "ETH Zurich",
   "program": "MSc Data Science",
   "country": "Switzerland",
@@ -341,14 +457,15 @@
   "opens": "2026-11-01",
   "deadlines": [
    {
-    "label": "Only window for non-Swiss bachelor's (incl. ESOP)",
+    "label": "Only window for non-Swiss bachelor's (includes ESOP)",
     "date": "2026-11-30",
-    "time": "11:59 CET"
+    "time": "11:59 in the MORNING, CET"
    }
   ],
   "app_fee": {
    "amount": 150,
-   "currency": "CHF"
+   "currency": "CHF",
+   "note": "No fee waivers"
   },
   "tuition": {
    "amount": 2190,
@@ -357,21 +474,77 @@
   },
   "scholarships": [
    {
-    "name": "ESOP",
+    "name": "ESOP (Excellence & Opportunity)",
     "deadline": "2026-11-30",
-    "covers": "CHF 12,000/semester + tuition waiver",
-    "how": "Same application"
+    "covers": "CHF 13,500/semester + tuition waiver (about 60 awards)",
+    "how": "Same window; needs a thesis pre-proposal, max 500 words"
    }
   ],
-  "language": "English C1 proof",
-  "gre": "Check the program page (some ETH programs recommend GRE)",
-  "url": "https://ethz.ch/en/studies/registration-application/master/application/how-to-apply/application-schedule.html",
+  "language": "C1 proof by the deadline: same rules as ETH CS",
+  "gre": "Not stated on the application page",
+  "requires": {
+   "letters": 2,
+   "letters_note": "In English, strongly prefer academics",
+   "gre": {
+    "status": "no",
+    "note": "Not stated on the application page. Confirm in eApply."
+   },
+   "english": {
+    "status": "by-deadline",
+    "note": "Same rule as ETH CS."
+   },
+   "statement": "Motivation letter for this specific program, about 1 A4 page",
+   "extras": [
+    "ESOP only: master's thesis pre-proposal, max 500 words"
+   ]
+  },
+  "url": "https://ethz.ch/en/studies/master/application/master-datascience.html",
   "source": "official",
-  "verify": [
-   "language",
-   "gre"
+  "verify": [],
+  "notes": "2 years. Expects 76 credits: Analysis, Linear Algebra, Numerical Methods, Probability & Statistics, Data Structures & Algorithms, Databases, Complexity Theory, Programming, plus data analysis and management. Admission impossible if more than 30 credits are missing.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "2 recommendation letters",
+    "detail": "In English, strongly prefer academics"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "Motivation letter for this specific program, about 1 A4 page",
+    "detail": ""
+   },
+   {
+    "id": "english",
+    "label": "English proof, in by the deadline",
+    "detail": "Same rule as ETH CS."
+   },
+   {
+    "id": "extra0",
+    "label": "ESOP only: master's thesis pre-proposal, max 500 words",
+    "detail": ""
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee (CHF 150)",
+    "detail": "No fee waivers"
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
   ],
-  "notes": "A separate CHF 150 fee per program. You can apply to several ETH programs in the same window.",
+  "checklist_source": "Built from the requirements on the official pages",
   "app_fee_usd": 188,
   "tuition_year_usd": 5476,
   "next_deadline": "2026-11-30",
@@ -380,6 +553,7 @@
  {
   "id": "eth-math",
   "university": "ETH Zurich",
+  "short": "ETH Math",
   "program": "MSc Mathematics / Applied Mathematics",
   "country": "Switzerland",
   "region": "CH",
@@ -392,12 +566,13 @@
    {
     "label": "Only window for non-Swiss bachelor's",
     "date": "2026-11-30",
-    "time": "11:59 CET"
+    "time": "11:59 in the MORNING, CET"
    }
   ],
   "app_fee": {
    "amount": 150,
-   "currency": "CHF"
+   "currency": "CHF",
+   "note": "No fee waivers"
   },
   "tuition": {
    "amount": 2190,
@@ -408,17 +583,75 @@
    {
     "name": "ESOP",
     "deadline": "2026-11-30",
-    "covers": "CHF 12,000/semester + tuition waiver",
-    "how": "Same application"
+    "covers": "CHF 13,500/semester + tuition waiver",
+    "how": "Same window"
    }
   ],
-  "language": "English C1 proof",
-  "gre": "Not required",
-  "url": "https://ethz.ch/en/studies/registration-application/master/application/how-to-apply/application-schedule.html",
+  "language": "C1 proof by the deadline",
+  "gre": "Not stated",
+  "requires": {
+   "letters": 2,
+   "letters_note": "Two letters",
+   "gre": {
+    "status": "no",
+    "note": "Not stated on the application page."
+   },
+   "english": {
+    "status": "by-deadline",
+    "note": "Same rule as ETH CS."
+   },
+   "statement": "Motivation letter naming likely courses, specialisation areas and project supervisors",
+   "extras": [
+    "Course-content form: topics across your whole degree"
+   ]
+  },
+  "url": "https://ethz.ch/en/studies/master/application/master-mathematik.html",
   "source": "official",
-  "verify": [
-   "language"
+  "verify": [],
+  "notes": "Poor fit on your current transcript: expects 143 credits of math, including Topology, Measure & Integration and Numerical Analysis, and admission is impossible if more than 30 are missing.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "2 recommendation letters",
+    "detail": "Two letters"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "Motivation letter naming likely courses, specialisation areas and project supervisors",
+    "detail": ""
+   },
+   {
+    "id": "english",
+    "label": "English proof, in by the deadline",
+    "detail": "Same rule as ETH CS."
+   },
+   {
+    "id": "extra0",
+    "label": "Course-content form: topics across your whole degree",
+    "detail": ""
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee (CHF 150)",
+    "detail": "No fee waivers"
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
   ],
+  "checklist_source": "Built from the requirements on the official pages",
   "app_fee_usd": 188,
   "tuition_year_usd": 5476,
   "next_deadline": "2026-11-30",
@@ -1044,6 +1277,109 @@
   "tuition_year_usd": 5476,
   "next_deadline": "2026-12-15",
   "status": "not_open_yet"
+ },
+ {
+  "id": "ucla-ms",
+  "target": "core",
+  "university": "UCLA",
+  "short": "UCLA",
+  "program": "MS Computer Science",
+  "country": "United States",
+  "region": "US",
+  "fields": [
+   "cs",
+   "ml"
+  ],
+  "opens": null,
+  "deadlines": [
+   {
+    "label": "Fall admission deadline (page prints no year)",
+    "date": "2026-12-15",
+    "time": "23:59 Pacific"
+   }
+  ],
+  "app_fee": null,
+  "tuition": null,
+  "scholarships": [],
+  "language": "TOEFL 87 or IELTS 7.0, unless your degree is from a country where English is the main daily language: Lebanon probably isn't",
+  "gre": "Listed as optional, but the note only covers the 2025-26 cycle",
+  "requires": {
+   "letters": 3,
+   "letters_note": "At least 3, through the application link",
+   "gre": {
+    "status": "optional",
+    "note": "Page says optional and not required, for the 2025-26 cycle only. Confirm for Fall 2027."
+   },
+   "english": {
+    "status": "test",
+    "note": "TOEFL 87 or IELTS 7.0. Exempt only if English is both the country's main daily language and the medium of instruction."
+   },
+   "statement": "Statement of purpose (500 words) + personal statement (500 words)",
+   "extras": [
+    "Show $65,000 of funding for the first year (international students)"
+   ]
+  },
+  "url": "https://www.cs.ucla.edu/graduate-admissions/",
+  "source": "official",
+  "verify": [
+   "deadlines",
+   "app_fee",
+   "gre",
+   "tuition"
+  ],
+  "notes": "Fall-only intake. MS students aren't eligible for department funding. Decisions by late April.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "3 recommendation letters",
+    "detail": "At least 3, through the application link"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "Statement of purpose (500 words) + personal statement (500 words)",
+    "detail": ""
+   },
+   {
+    "id": "english",
+    "label": "English test (TOEFL / IELTS)",
+    "detail": "TOEFL 87 or IELTS 7.0. Exempt only if English is both the country's main daily language and the medium of instruction."
+   },
+   {
+    "id": "gre",
+    "label": "GRE (optional: send it if it helps)",
+    "detail": "Page says optional and not required, for the 2025-26 cycle only. Confirm for Fall 2027."
+   },
+   {
+    "id": "extra0",
+    "label": "Show $65,000 of funding for the first year (international students)",
+    "detail": ""
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee",
+    "detail": "Amount not confirmed: check the application."
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": null,
+  "tuition_year_usd": null,
+  "next_deadline": "2026-12-15",
+  "status": "open"
  },
  {
   "id": "epfl-ds",
@@ -1819,7 +2155,133 @@
   "status": "open"
  },
  {
+  "id": "kth-ms",
+  "target": "core",
+  "university": "KTH Royal Institute of Technology",
+  "short": "KTH",
+  "program": "MSc Machine Learning / Computer Science / Applied & Computational Mathematics",
+  "country": "Sweden",
+  "region": "EU",
+  "fields": [
+   "cs",
+   "ml",
+   "math"
+  ],
+  "opens": "2026-10-16",
+  "deadlines": [
+   {
+    "label": "Apply through University Admissions",
+    "date": "2027-01-15"
+   },
+   {
+    "label": "Documents and fee due",
+    "date": "2027-02-01"
+   }
+  ],
+  "app_fee": {
+   "amount": 900,
+   "currency": "SEK",
+   "note": "No waivers"
+  },
+  "tuition": {
+   "amount": 385000,
+   "currency": "SEK",
+   "per": "total",
+   "note": "Most two-year programs; varies by program"
+  },
+  "scholarships": [
+   {
+    "name": "KTH Scholarship",
+    "deadline": null,
+    "covers": "Tuition fee",
+    "how": "Check its own deadline page"
+   }
+  ],
+  "language": "IELTS 6.5 or TOEFL (KTH prints 4.5)",
+  "gre": "Not mentioned on the general pages",
+  "requires": {
+   "letters": null,
+   "letters_note": "Varies by program; the per-program pages aren't checked yet",
+   "gre": {
+    "status": "no",
+    "note": "Not mentioned on KTH's general pages. Confirm per program."
+   },
+   "english": {
+    "status": "test",
+    "note": "IELTS 6.5 or TOEFL as KTH prints it. Check any exemption in University Admissions' country rules."
+   },
+   "statement": "Motivation: check each program's page",
+   "extras": [
+    "Rank up to 4 programs on universityadmissions.se",
+    "Check University Admissions' document rules for Lebanon"
+   ]
+  },
+  "url": "https://www.kth.se/en/studies/master/admissions",
+  "source": "official",
+  "verify": [
+   "letters",
+   "statement",
+   "gre"
+  ],
+  "notes": "Final-year students can apply. Results on 1 April. KTH lists a 31% acceptance rate for 2026.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "Recommendation letters: check the program page",
+    "detail": "Varies by program; the per-program pages aren't checked yet"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "Motivation: check each program's page",
+    "detail": ""
+   },
+   {
+    "id": "english",
+    "label": "English test (TOEFL / IELTS)",
+    "detail": "IELTS 6.5 or TOEFL as KTH prints it. Check any exemption in University Admissions' country rules."
+   },
+   {
+    "id": "extra0",
+    "label": "Rank up to 4 programs on universityadmissions.se",
+    "detail": ""
+   },
+   {
+    "id": "extra1",
+    "label": "Check University Admissions' document rules for Lebanon",
+    "detail": ""
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee (SEK 900)",
+    "detail": "No waivers"
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": 86,
+  "tuition_year_usd": 36575,
+  "next_deadline": "2027-01-15",
+  "status": "open"
+ },
+ {
   "id": "eth-qf",
+  "target": "suggested",
+  "short": "ETH/UZH Quant Finance",
+  "why": "Closest to your quant goal, with its own later deadline (15 Jan). No ESOP, and it expects finance knowledge you'd need to cover.",
   "university": "ETH Zurich + University of Zurich",
   "program": "MSc Quantitative Finance",
   "country": "Switzerland",
@@ -1831,36 +2293,107 @@
   "opens": "2026-11-15",
   "deadlines": [
    {
-    "label": "Scientific application (phase 1)",
-    "date": "2027-01-15"
+    "label": "Phase 1 application, through the program website",
+    "date": "2027-01-15",
+    "time": "23:59 CET"
    },
    {
-    "label": "UZH admin portal (phase 2, if accepted)",
+    "label": "Phase 2, only if provisionally admitted",
     "date": "2027-04-30"
    }
   ],
   "app_fee": {
    "amount": 200,
    "currency": "CHF",
-   "note": "+ CHF 100 admin fee if you pass phase 1"
+   "note": "Plus CHF 150 admin fee for foreign applicants if accepted to phase 2"
   },
   "tuition": {
    "amount": 880,
    "currency": "CHF",
    "per": "semester",
-   "note": "CHF 780 + CHF 100 international supplement (UZH); 3 semesters"
+   "note": "CHF 780 + CHF 100 international supplement (UZH); 3 semesters. Older figure: confirm."
   },
   "scholarships": [],
-  "language": "English proof required",
-  "gre": "GRE/GMAT strongly recommended for quant-finance programs (check)",
+  "language": "English program: check the UZH proof requirement",
+  "gre": "Not compulsory",
+  "requires": {
+   "letters": null,
+   "letters_note": "Not stated on the pages I read",
+   "gre": {
+    "status": "optional",
+    "note": "UZH says GMAT/GRE are not compulsory."
+   },
+   "english": {
+    "status": "test",
+    "note": "Check UZH's English requirement."
+   },
+   "statement": "Check the application form",
+   "extras": [
+    "Expects real analysis, measure theory, probability, microeconomics, corporate finance, investments, and a language like Python",
+    "Possible 20-minute interview"
+   ]
+  },
   "url": "https://www.msfinance.uzh.ch/en/admission/applicationinformation.html",
-  "source": "aggregator",
+  "source": "official",
   "verify": [
-   "app_fee",
-   "tuition",
-   "gre"
+   "letters",
+   "english",
+   "tuition"
   ],
-  "notes": "Interviews in March–April. 18-month program, very quant/industry focused.",
+  "notes": "Handled entirely by UZH. Very competitive; 3 semesters. Not eligible for ESOP. UZH says bachelor students who won't graduate before 30 September should not apply. ETH doesn't say whether it counts toward your two-program limit: ask.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "Recommendation letters: check the program page",
+    "detail": "Not stated on the pages I read"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "Check the application form",
+    "detail": ""
+   },
+   {
+    "id": "english",
+    "label": "English test (TOEFL / IELTS)",
+    "detail": "Check UZH's English requirement."
+   },
+   {
+    "id": "gre",
+    "label": "GRE (optional: send it if it helps)",
+    "detail": "UZH says GMAT/GRE are not compulsory."
+   },
+   {
+    "id": "extra0",
+    "label": "Expects real analysis, measure theory, probability, microeconomics, corporate finance, investments, and a language like Python",
+    "detail": ""
+   },
+   {
+    "id": "extra1",
+    "label": "Possible 20-minute interview",
+    "detail": ""
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee (CHF 200)",
+    "detail": "Plus CHF 150 admin fee for foreign applicants if accepted to phase 2"
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
   "app_fee_usd": 250,
   "tuition_year_usd": 2200,
   "next_deadline": "2027-01-15",

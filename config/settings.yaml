@@ -153,4 +153,4 @@ notify:
 app_url: ""
 
 # Rough FX rates to compare costs in USD (update occasionally).
-fx_to_usd: {USD: 1.0, EUR: 1.16, GBP: 1.34, CHF: 1.25, AED: 0.272, SAR: 0.267, QAR: 0.275}
+fx_to_usd: {USD: 1.0, EUR: 1.16, GBP: 1.34, CHF: 1.25, AED: 0.272, SAR: 0.267, QAR: 0.275, SEK: 0.095}

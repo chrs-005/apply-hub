@@ -147,7 +147,7 @@ function appCard(p) {
       </div>
     </details></div>`;
 }
-const FLAGS_M = { "United Kingdom": "🇬🇧", Switzerland: "🇨🇭", France: "🇫🇷", Germany: "🇩🇪", Netherlands: "🇳🇱", "United Arab Emirates": "🇦🇪", "Saudi Arabia": "🇸🇦", "United States": "🇺🇸" };
+const FLAGS_M = { "United Kingdom": "🇬🇧", Switzerland: "🇨🇭", France: "🇫🇷", Germany: "🇩🇪", Netherlands: "🇳🇱", "United Arab Emirates": "🇦🇪", "Saudi Arabia": "🇸🇦", "United States": "🇺🇸", Sweden: "🇸🇪" };
 
 function customCard(t) {
   return `<div class="card trk" data-id="${esc(t.id)}">

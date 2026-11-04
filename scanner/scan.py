@@ -359,7 +359,7 @@ def derive_checklist(p):
     r = p.get("requires")
     if not r:
         return None
-    items = [{"id": "referees", "label": f"{r['letters']} recommendation letters", "detail": r.get("letters_note", "")},
+    items = [{"id": "referees", "label": f"{r['letters']} recommendation letters" if r.get("letters") else "Recommendation letters: check the program page", "detail": r.get("letters_note", "")},
              {"id": "cv", "label": "CV (grad-school version)", "detail": ""},
              {"id": "transcripts", "label": "Transcripts", "detail": "AUB, plus your Boston University exchange if the school wants every university attended."}]
     if r.get("statement"):

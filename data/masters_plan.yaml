@@ -56,7 +56,7 @@ professor_questions:
       - "Would you read my statement once? What do committees in your field actually look for?"
 
 cv_changes:
-  - "Lead with Education: AUB, GPA 4.0/4.0, MERIT scholarship, then BU exchange. Add class rank if the Registrar can state it (Polytechnique asks for it)."
+  - "Lead with Education: AUB, GPA as on your transcript (4.25 on AUB's 4.3 scale), MERIT scholarship, then BU exchange. Add class rank if the Registrar can state it (Polytechnique asks for it)."
   - "Put Research Experience right after Education, above industry. For a master's reader, that's the section that counts."
   - "Rewrite the research bullets around question, method and result. Name what you found, not only the numbers."
   - "Add a Publications / Reports section as soon as the PINN write-up exists, even as 'in preparation' (only if it's truly being written)."
@@ -96,6 +96,19 @@ tasks:
     due: 2026-11-08
     title: "Confirm the ⚠ items on each school's own page"
     how: "Treat this app as your working list, and the school's own page or a written reply from admissions as the final word. Open each program page and check the items marked ⚠ in Compare."
+  - id: w1-eth-program
+    phase: "Week 1 · 2-8 Nov"
+    cat: Applications
+    due: 2026-11-07
+    title: "Choose your ETH program(s): CS, and maybe Data Science"
+    only: [eth-cs]
+    how: "You can apply to two programs at CHF 150 each, with a separate motivation letter for each. Compare them in Schools. Check in eApply how your degree title and any missing courses, such as Formal Methods, are treated."
+  - id: w1-fix-gpa
+    phase: "Week 1 · 2-8 Nov"
+    cat: CV
+    due: 2026-11-05
+    title: "Fix your GPA and degree title everywhere to match your transcript"
+    how: "Your transcript shows a cumulative GPA of 4.25 on AUB's scale (A+ = 4.3), not 4.0/4.0, and lists your program as Computer & Communications Engineering. Ask the Registrar for the official degree title, then update your CV and the Autofill profile. ETH says mismatches between your uploads and final documents can lead to rejection."
   - id: w1-pick-referees
     phase: "Week 1 · 2-8 Nov"
     cat: Letters
@@ -342,6 +355,13 @@ tasks:
     title: "Submit CMU final, if you added it"
     only: [cmu-mscs]
     how: "3pm EST. Don't wait for letters: they can follow if you submit, but check their rules."
+  - id: d-ucla
+    phase: "December"
+    cat: Applications
+    due: 2026-12-12
+    title: "SUBMIT UCLA (closes 15 Dec, 23:59 Pacific)"
+    only: [ucla-ms]
+    how: "Three letters, two 500-word statements, and IELTS 7.0 or TOEFL 87. Confirm the deadline and GRE policy for Fall 2027 first: the page prints no year."
   - id: d-epfl-submit
     phase: "December"
     cat: Applications
@@ -411,6 +431,20 @@ tasks:
     title: "SUBMIT Columbia, complete with letters, by priority (15 Jan)"
     only: [columbia-ms]
     how: "Their FAQ says your entire application including letters should be complete by priority. Final is 15 Feb, but applying late is riskier. Confirm the dates: the page I read was last updated in 2024."
+  - id: j-kth
+    phase: "January-February"
+    cat: Applications
+    due: 2027-01-13
+    title: "SUBMIT KTH on University Admissions (closes 15 Jan)"
+    only: [kth-ms]
+    how: "Rank up to 4 programs. Documents and the SEK 900 fee are due 1 Feb, and the KTH Scholarship has its own deadline: check it early."
+  - id: j-ethqf
+    phase: "January-February"
+    cat: Applications
+    due: 2027-01-13
+    title: "Submit ETH/UZH Quantitative Finance (closes 15 Jan), if you added it"
+    only: [eth-qf]
+    how: "Applied for through the UZH program website, not eApply. Cover corporate finance and investments if you plan to apply."
   - id: j-gt
     phase: "January-February"
     cat: Applications
