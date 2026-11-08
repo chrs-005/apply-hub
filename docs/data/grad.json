@@ -163,7 +163,7 @@
   "verify": [
    "tuition"
   ],
-  "notes": "No scholarships from the program. You can apply to several CMU master's: MS Machine Learning has the same deadlines, GRE optional, and no funding either. Its average admit had GPA 3.9/4.0, Quant 169.",
+  "notes": "ON THE FORM: 'Master of Science in Computer Science'. No track to choose. CMU also has 'Master of Science in Machine Learning'. Each master's costs $100, or $80 by 18 Nov. No scholarships from the program. You can apply to several CMU master's: MS Machine Learning has the same deadlines, GRE optional, and no funding either. Its average admit had GPA 3.9/4.0, Quant 169.",
   "checklist": [
    {
     "id": "referees",
@@ -271,7 +271,7 @@
    "opens",
    "tuition"
   ],
-  "notes": "Two years with two summers of research, built as PhD preparation. Check if it can be combined with your MSCS application.",
+  "notes": "ON THE FORM: 'Master of Language Technologies (MLT)'. Two years with two summers of research, built as PhD preparation. Check if it can be combined with your MSCS application.",
   "checklist": [
    {
     "id": "referees",
@@ -377,7 +377,7 @@
   "verify": [
    "app_fee"
   ],
-  "notes": "120 ECTS, 2 years. Majors: Machine Intelligence, Theoretical Computer Science, Data Management Systems, Secure and Reliable Systems, Visual and Interactive Computing. You can apply to two ETH programs (CHF 150 each, one motivation letter per program). Your likely gap: Formal Methods & Functional Programming. Late or incomplete applications are not processed.",
+  "notes": "ON THE FORM: choose 'Computer Science'. Second program, if you add one: 'Data Science MSc'. If it asks for a major: Machine Intelligence. 120 ECTS, 2 years. Majors: Machine Intelligence, Theoretical Computer Science, Data Management Systems, Secure and Reliable Systems, Visual and Interactive Computing. You can apply to two ETH programs (CHF 150 each, one motivation letter per program). Your likely gap: Formal Methods & Functional Programming. Late or incomplete applications are not processed.",
   "checklist": [
    {
     "id": "referees",
@@ -604,7 +604,7 @@
   "url": "https://ethz.ch/en/studies/master/application/master-datascience.html",
   "source": "official",
   "verify": [],
-  "notes": "2 years. Expects 76 credits: Analysis, Linear Algebra, Numerical Methods, Probability & Statistics, Data Structures & Algorithms, Databases, Complexity Theory, Programming, plus data analysis and management. Admission impossible if more than 30 credits are missing.",
+  "notes": "ON THE FORM: 'Data Science MSc'. 2 years. Expects 76 credits: Analysis, Linear Algebra, Numerical Methods, Probability & Statistics, Data Structures & Algorithms, Databases, Complexity Theory, Programming, plus data analysis and management. Admission impossible if more than 30 credits are missing.",
   "checklist": [
    {
     "id": "referees",
@@ -1663,7 +1663,7 @@
    "tuition",
    "english"
   ],
-  "notes": "Research-oriented 9-month course, not a conversion course; wants the equivalent of a first-class CS degree. Also budget for a College fee.",
+  "notes": "ON THE FORM: 'MPhil in Advanced Computer Science'. The course closes 25 Feb 2027, but funding needs the earlier date. It needs its own separate application from MLMI. Research-oriented 9-month course, not a conversion course; wants the equivalent of a first-class CS degree. Also budget for a College fee.",
   "checklist": [
    {
     "id": "referees",
@@ -1974,6 +1974,114 @@
   "status": "open"
  },
  {
+  "id": "cam-mlmi",
+  "target": "suggested",
+  "short": "Cambridge MLMI",
+  "why": "Cambridge's ML master's, closer to your interests than Advanced Computer Science. Due 8 Dec.",
+  "university": "University of Cambridge",
+  "program": "MPhil in Machine Learning and Machine Intelligence",
+  "country": "United Kingdom",
+  "region": "UK",
+  "fields": [
+   "ml",
+   "math",
+   "research"
+  ],
+  "opens": "2026-09-09",
+  "deadlines": [
+   {
+    "label": "Application deadline",
+    "date": "2026-12-08"
+   }
+  ],
+  "scholarships": [
+   {
+    "name": "Cambridge funding competition",
+    "deadline": "2026-12-02",
+    "covers": "Varies",
+    "how": "Your application must meet the earlier of the course and funding deadlines. Confirm the date on the course page."
+   }
+  ],
+  "language": "Check the course page",
+  "gre": "Check the course page",
+  "requires": {
+   "letters_note": "Check the course page",
+   "gre": {
+    "status": "check",
+    "note": "Not stated on the pages I read."
+   },
+   "english": {
+    "status": "check",
+    "note": "Not stated on the pages I read."
+   },
+   "extras": [
+    "Choose your track on the application: Machine Learning, or Speech and Language Processing for LLM work",
+    "Separate application from the MPhil in Advanced Computer Science"
+   ]
+  },
+  "url": "https://www.postgraduate.study.cam.ac.uk/courses/directory/egegmpmsl",
+  "source": "official",
+  "verify": [
+   "app_fee",
+   "tuition",
+   "gre",
+   "language"
+  ],
+  "notes": "ON THE FORM: 'MPhil in Machine Learning and Machine Intelligence', then a track. Tracks listed for 2026 entry: Speech and Language Processing, Computer Vision and Robotics, Human-Computer Interaction, Machine Learning, Biological Learning. 11 months from 1 Oct 2027. Admission is extremely selective.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "Recommendation letters: check the program page",
+    "detail": "Check the course page"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "english",
+    "label": "Check the English requirement",
+    "detail": "Not stated on the pages I read."
+   },
+   {
+    "id": "gre",
+    "label": "Check whether the GRE is required",
+    "detail": "Not stated on the pages I read."
+   },
+   {
+    "id": "extra0",
+    "label": "Choose your track on the application: Machine Learning, or Speech and Language Processing for LLM work",
+    "detail": ""
+   },
+   {
+    "id": "extra1",
+    "label": "Separate application from the MPhil in Advanced Computer Science",
+    "detail": ""
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee",
+    "detail": "Amount not confirmed: check the application."
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": null,
+  "tuition_year_usd": null,
+  "next_deadline": "2026-12-08",
+  "status": "open"
+ },
+ {
   "id": "epfl-cs",
   "target": "core",
   "university": "EPFL",
@@ -2044,7 +2152,7 @@
   "verify": [
    "opens"
   ],
-  "notes": "Only ONE EPFL master's application per year, so choose between CS, Data Science and Financial Engineering. The form opens mid-November. EPFL IC says you can't start an MSc if you're already scheduled to receive a five-year degree in a closely related field: check this for the AUB B.E.",
+  "notes": "ON THE FORM: one program only. Recommended: 'Data Science'. Choose 'Computer Science' if you want a broader degree with more systems and software. Only ONE EPFL master's application per year, so choose between CS, Data Science and Financial Engineering. The form opens mid-November. EPFL IC says you can't start an MSc if you're already scheduled to receive a five-year degree in a closely related field: check this for the AUB B.E.",
   "checklist": [
    {
     "id": "referees",
@@ -2147,7 +2255,7 @@
    "gre",
    "tuition"
   ],
-  "notes": "Fall-only intake. MS students aren't eligible for department funding. Decisions by late April.",
+  "notes": "ON THE FORM: 'Computer Science MS'. Pick your ML or AI field of interest: it only assigns an advisor. You can't apply to both the MS and PhD. Fall-only intake. MS students aren't eligible for department funding. Decisions by late April.",
   "checklist": [
    {
     "id": "referees",
@@ -2263,7 +2371,7 @@
   "url": "https://www.media.mit.edu/graduate-program/apply/",
   "source": "official",
   "verify": [],
-  "notes": "Group accepting new students. Decisions late February. Bachelor's must be finished by enrollment. A MAS PhD is only possible by applying from within the SM.",
+  "notes": "ON THE FORM: 'Media Arts and Sciences', SM. List Signal Kinetics and Prof. Adib at the top of your statement. Group accepting new students. Decisions late February. Bachelor's must be finished by enrollment. A MAS PhD is only possible by applying from within the SM.",
   "checklist": [
    {
     "id": "referees",
@@ -2932,7 +3040,7 @@
    "app_fee",
    "tuition"
   ],
-  "notes": "Oxford advises submitting at least two weeks early. Its site blocks my checks, so open the course page yourself once.",
+  "notes": "ON THE FORM: 'MSc in Advanced Computer Science'. Oxford blocks my checks, so confirm the name on its page. Oxford advises submitting at least two weeks early. Its site blocks my checks, so open the course page yourself once.",
   "checklist": [
    {
     "id": "referees",
@@ -2981,7 +3089,7 @@
   "target": "core",
   "university": "Imperial College London",
   "short": "Imperial",
-  "program": "MSc Computing (AI & Machine Learning)",
+  "program": "MSc in Computing (Artificial Intelligence and Machine Learning)",
   "country": "United Kingdom",
   "region": "UK",
   "fields": [
@@ -3041,7 +3149,7 @@
    "gre",
    "tuition"
   ],
-  "notes": "Only complete applications get assessed. Apply in the earliest round you can: later rounds may be full.",
+  "notes": "ON THE FORM: 'MSc in Computing (Artificial Intelligence and Machine Learning)'. Don't choose plain 'MSc Computing' or 'MSc Artificial Intelligence': Imperial doesn't admit full CS graduates to MSc AI, and plain Computing is for non-computing graduates. Backup: 'MSc Advanced Computing'. Only complete applications get assessed. Apply in the earliest round you can: later rounds may be full.",
   "checklist": [
    {
     "id": "referees",
@@ -3726,7 +3834,7 @@
    "tuition",
    "deadlines"
   ],
-  "notes": "Dates are from a page last updated 2024: confirm. Columbia tells international students to look for outside funding.",
+  "notes": "ON THE FORM: 'Computer Science MS'. The Machine Learning or Natural Language Processing pathway appears to be chosen after admission. Dates are from a page last updated 2024: confirm. Columbia tells international students to look for outside funding.",
   "checklist": [
    {
     "id": "referees",
@@ -3844,7 +3952,7 @@
    "statement",
    "gre"
   ],
-  "notes": "Final-year students can apply. Results on 1 April. KTH lists a 31% acceptance rate for 2026.",
+  "notes": "ON THE FORM (universityadmissions.se): rank 1 'Machine Learning', 2 'Computer Science', 3 Applied and Computational Mathematics. You get one offer, the highest you qualify for, and the ranking is binding. Final-year students can apply. Results on 1 April. KTH lists a 31% acceptance rate for 2026.",
   "checklist": [
    {
     "id": "referees",
@@ -4248,7 +4356,7 @@
    "app_fee",
    "tuition"
   ],
-  "notes": "Fall-only intake. Fee amount isn't on the pages I could read; fee waivers exist.",
+  "notes": "ON THE FORM: 'Master of Science in Computer Science', on campus. Specialization: Machine Learning. The page doesn't say when you pick it. Fall-only intake. Fee amount isn't on the pages I could read; fee waivers exist.",
   "checklist": [
    {
     "id": "referees",
@@ -4446,7 +4554,7 @@
    "english",
    "tuition"
   ],
-  "notes": "Apply early for scholarship money, not at the deadline. Other BU options: MS Data Science (priority 1 Feb, about $74,000 total, scholarships around $10,000) and Engineering master's (priority 15 Jan).",
+  "notes": "ON THE FORM: recommended 'MS in Artificial Intelligence'. Ask BU if its merit awards cover AI as well as 'MS in Computer Science'. Apply early for scholarship money, not at the deadline. Other BU options: MS Data Science (priority 1 Feb, about $74,000 total, scholarships around $10,000) and Engineering master's (priority 15 Jan).",
   "checklist": [
    {
     "id": "referees",

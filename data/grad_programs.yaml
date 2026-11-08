@@ -46,7 +46,7 @@ programs:
     url: https://ethz.ch/en/studies/master/application/master-informatik.html
     source: official
     verify: [app_fee]
-    notes: "120 ECTS, 2 years. Majors: Machine Intelligence, Theoretical Computer Science, Data Management Systems, Secure and Reliable Systems, Visual and Interactive Computing. You can apply to two ETH programs (CHF 150 each, one motivation letter per program). Your likely gap: Formal Methods & Functional Programming. Late or incomplete applications are not processed."
+    notes: "ON THE FORM: choose 'Computer Science'. Second program, if you add one: 'Data Science MSc'. If it asks for a major: Machine Intelligence. 120 ECTS, 2 years. Majors: Machine Intelligence, Theoretical Computer Science, Data Management Systems, Secure and Reliable Systems, Visual and Interactive Computing. You can apply to two ETH programs (CHF 150 each, one motivation letter per program). Your likely gap: Formal Methods & Functional Programming. Late or incomplete applications are not processed."
 
   - id: epfl-cs
     target: core
@@ -77,7 +77,7 @@ programs:
     url: https://www.epfl.ch/education/admission/admission-2/master-admission-criteria-application/online-application/
     source: official
     verify: [opens]
-    notes: "Only ONE EPFL master's application per year, so choose between CS, Data Science and Financial Engineering. The form opens mid-November. EPFL IC says you can't start an MSc if you're already scheduled to receive a five-year degree in a closely related field: check this for the AUB B.E."
+    notes: "ON THE FORM: one program only. Recommended: 'Data Science'. Choose 'Computer Science' if you want a broader degree with more systems and software. Only ONE EPFL master's application per year, so choose between CS, Data Science and Financial Engineering. The form opens mid-November. EPFL IC says you can't start an MSc if you're already scheduled to receive a five-year degree in a closely related field: check this for the AUB B.E."
 
   - id: ox-acs
     target: core
@@ -106,7 +106,7 @@ programs:
     url: https://www.ox.ac.uk/admissions/graduate/courses/msc-advanced-computer-science
     source: aggregator
     verify: [letters, english, statement, app_fee, tuition]
-    notes: "Oxford advises submitting at least two weeks early. Its site blocks my checks, so open the course page yourself once."
+    notes: "ON THE FORM: 'MSc in Advanced Computer Science'. Oxford blocks my checks, so confirm the name on its page. Oxford advises submitting at least two weeks early. Its site blocks my checks, so open the course page yourself once."
 
   - id: cam-acs
     target: core
@@ -136,13 +136,13 @@ programs:
     url: https://www.cst.cam.ac.uk/admissions/acs
     source: official
     verify: [tuition, english]
-    notes: "Research-oriented 9-month course, not a conversion course; wants the equivalent of a first-class CS degree. Also budget for a College fee."
+    notes: "ON THE FORM: 'MPhil in Advanced Computer Science'. The course closes 25 Feb 2027, but funding needs the earlier date. It needs its own separate application from MLMI. Research-oriented 9-month course, not a conversion course; wants the equivalent of a first-class CS degree. Also budget for a College fee."
 
   - id: imp-aiml
     target: core
     university: Imperial College London
     short: Imperial
-    program: MSc Computing (AI & Machine Learning)
+    program: MSc in Computing (Artificial Intelligence and Machine Learning)
     country: United Kingdom
     region: UK
     fields: [cs, ml]
@@ -166,7 +166,7 @@ programs:
     url: https://www.imperial.ac.uk/computing/prospective-students/courses/pg/
     source: official
     verify: [english, gre, tuition]
-    notes: "Only complete applications get assessed. Apply in the earliest round you can: later rounds may be full."
+    notes: "ON THE FORM: 'MSc in Computing (Artificial Intelligence and Machine Learning)'. Don't choose plain 'MSc Computing' or 'MSc Artificial Intelligence': Imperial doesn't admit full CS graduates to MSc AI, and plain Computing is for non-computing graduates. Backup: 'MSc Advanced Computing'. Only complete applications get assessed. Apply in the earliest round you can: later rounds may be full."
 
   - id: gt-mscs
     target: core
@@ -194,7 +194,7 @@ programs:
     url: https://www.cc.gatech.edu/degree-programs/master-science-computer-science
     source: official
     verify: [app_fee, tuition]
-    notes: "Fall-only intake. Fee amount isn't on the pages I could read; fee waivers exist."
+    notes: "ON THE FORM: 'Master of Science in Computer Science', on campus. Specialization: Machine Learning. The page doesn't say when you pick it. Fall-only intake. Fee amount isn't on the pages I could read; fee waivers exist."
 
   - id: columbia-ms
     target: core
@@ -223,7 +223,7 @@ programs:
     url: https://www.cs.columbia.edu/education/admissions/
     source: official
     verify: [app_fee, gre, letters, english, tuition, deadlines]
-    notes: "Dates are from a page last updated 2024: confirm. Columbia tells international students to look for outside funding."
+    notes: "ON THE FORM: 'Computer Science MS'. The Machine Learning or Natural Language Processing pathway appears to be chosen after admission. Dates are from a page last updated 2024: confirm. Columbia tells international students to look for outside funding."
 
   - id: cmu-mscs
     target: core
@@ -253,7 +253,7 @@ programs:
     url: https://www.csd.cs.cmu.edu/academics/masters/admissions
     source: official
     verify: [tuition]
-    notes: "No scholarships from the program. You can apply to several CMU master's: MS Machine Learning has the same deadlines, GRE optional, and no funding either. Its average admit had GPA 3.9/4.0, Quant 169."
+    notes: "ON THE FORM: 'Master of Science in Computer Science'. No track to choose. CMU also has 'Master of Science in Machine Learning'. Each master's costs $100, or $80 by 18 Nov. No scholarships from the program. You can apply to several CMU master's: MS Machine Learning has the same deadlines, GRE optional, and no funding either. Its average admit had GPA 3.9/4.0, Quant 169."
 
   - id: stanford-ms
     target: suggested
@@ -418,7 +418,7 @@ programs:
     url: https://www.cs.ucla.edu/graduate-admissions/
     source: official
     verify: [deadlines, app_fee, gre, tuition]
-    notes: "Fall-only intake. MS students aren't eligible for department funding. Decisions by late April."
+    notes: "ON THE FORM: 'Computer Science MS'. Pick your ML or AI field of interest: it only assigns an advisor. You can't apply to both the MS and PhD. Fall-only intake. MS students aren't eligible for department funding. Decisions by late April."
 
   - id: kth-ms
     target: core
@@ -448,7 +448,7 @@ programs:
     url: https://www.kth.se/en/studies/master/admissions
     source: official
     verify: [letters, statement, gre]
-    notes: "Final-year students can apply. Results on 1 April. KTH lists a 31% acceptance rate for 2026."
+    notes: "ON THE FORM (universityadmissions.se): rank 1 'Machine Learning', 2 'Computer Science', 3 Applied and Computational Mathematics. You get one offer, the highest you qualify for, and the ranking is binding. Final-year students can apply. Results on 1 April. KTH lists a 31% acceptance rate for 2026."
 
   - id: bu-ms
     target: core
@@ -477,7 +477,7 @@ programs:
     url: https://www.bu.edu/cs/masters/ms-admissions/on-campus-admissions/
     source: official
     verify: [deadlines, english, tuition]
-    notes: "Apply early for scholarship money, not at the deadline. Other BU options: MS Data Science (priority 1 Feb, about $74,000 total, scholarships around $10,000) and Engineering master's (priority 15 Jan)."
+    notes: "ON THE FORM: recommended 'MS in Artificial Intelligence'. Ask BU if its merit awards cover AI as well as 'MS in Computer Science'. Apply early for scholarship money, not at the deadline. Other BU options: MS Data Science (priority 1 Feb, about $74,000 total, scholarships around $10,000) and Engineering master's (priority 15 Jan)."
 
   - id: cmu-mscf
     target: suggested
@@ -567,7 +567,7 @@ programs:
     url: https://www.media.mit.edu/graduate-program/apply/
     source: official
     verify: []
-    notes: "Group accepting new students. Decisions late February. Bachelor's must be finished by enrollment. A MAS PhD is only possible by applying from within the SM."
+    notes: "ON THE FORM: 'Media Arts and Sciences', SM. List Signal Kinetics and Prof. Adib at the top of your statement. Group accepting new students. Decisions late February. Bachelor's must be finished by enrollment. A MAS PhD is only possible by applying from within the SM."
 
   - id: mit-mfin
     target: suggested
@@ -766,7 +766,7 @@ programs:
     url: https://lti.cmu.edu/academics/masters-programs/mlt.html
     source: official
     verify: [opens, tuition]
-    notes: "Two years with two summers of research, built as PhD preparation. Check if it can be combined with your MSCS application."
+    notes: "ON THE FORM: 'Master of Language Technologies (MLT)'. Two years with two summers of research, built as PhD preparation. Check if it can be combined with your MSCS application."
 
   - id: ista-phd
     target: suggested
@@ -853,6 +853,32 @@ programs:
     source: official
     verify: [tuition]
     notes: "10 months, career-focused rather than PhD preparation. Limited teaching jobs. The $34,000 GOP fellowship is for US citizens and residents only."
+
+  - id: cam-mlmi
+    target: suggested
+    short: Cambridge MLMI
+    why: "Cambridge's ML master's, closer to your interests than Advanced Computer Science. Due 8 Dec."
+    university: University of Cambridge
+    program: MPhil in Machine Learning and Machine Intelligence
+    country: United Kingdom
+    region: UK
+    fields: [ml, math, research]
+    opens: 2026-09-09
+    deadlines:
+      - {label: "Application deadline", date: 2026-12-08}
+    scholarships:
+      - {name: "Cambridge funding competition", deadline: 2026-12-02, covers: "Varies", how: "Your application must meet the earlier of the course and funding deadlines. Confirm the date on the course page."}
+    language: "Check the course page"
+    gre: "Check the course page"
+    requires:
+      letters_note: "Check the course page"
+      gre: {status: "check", note: "Not stated on the pages I read."}
+      english: {status: "check", note: "Not stated on the pages I read."}
+      extras: ["Choose your track on the application: Machine Learning, or Speech and Language Processing for LLM work", "Separate application from the MPhil in Advanced Computer Science"]
+    url: https://www.postgraduate.study.cam.ac.uk/courses/directory/egegmpmsl
+    source: official
+    verify: [app_fee, tuition, gre, language]
+    notes: "ON THE FORM: 'MPhil in Machine Learning and Machine Intelligence', then a track. Tracks listed for 2026 entry: Speech and Language Processing, Computer Vision and Robotics, Human-Computer Interaction, Machine Learning, Biological Learning. 11 months from 1 Oct 2027. Admission is extremely selective."
 
 # ======================= OTHER PROGRAMS (catalog: add from the app if you want them) =======================
   - id: ip-paris-phd-track
@@ -1049,7 +1075,7 @@ programs:
     url: https://ethz.ch/en/studies/master/application/master-datascience.html
     source: official
     verify: []
-    notes: "2 years. Expects 76 credits: Analysis, Linear Algebra, Numerical Methods, Probability & Statistics, Data Structures & Algorithms, Databases, Complexity Theory, Programming, plus data analysis and management. Admission impossible if more than 30 credits are missing."
+    notes: "ON THE FORM: 'Data Science MSc'. 2 years. Expects 76 credits: Analysis, Linear Algebra, Numerical Methods, Probability & Statistics, Data Structures & Algorithms, Databases, Complexity Theory, Programming, plus data analysis and management. Admission impossible if more than 30 credits are missing."
 
   - id: eth-math
     university: ETH Zurich

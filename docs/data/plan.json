@@ -865,6 +865,17 @@
    "how": "$90, three letters, GRE optional, English test required. The page doesn't state funding, so ask ORC before relying on it, and confirm the date: it prints no year."
   },
   {
+   "id": "d-mlmi",
+   "phase": "December",
+   "cat": "Applications",
+   "due": "2026-12-01",
+   "title": "SUBMIT Cambridge MLMI (closes 8 Dec, funding earlier)",
+   "only": [
+    "cam-mlmi"
+   ],
+   "how": "Separate application and documents from Advanced Computer Science. Choose your track on the form. Submit by the funding deadline if you want Cambridge funding."
+  },
+  {
    "id": "d-ubc",
    "phase": "December",
    "cat": "Applications",
