@@ -122,6 +122,14 @@
    "url": "https://mbzuai.ac.ae/study/admission-process"
   },
   {
+   "name": "MIT Media Lab master's (MAS)",
+   "status": "Open",
+   "when": "By 15 Dec",
+   "covers": "Tuition, insurance and stipend",
+   "note": "Every MAS student is funded, renewed yearly.",
+   "url": "https://www.media.mit.edu/graduate-program/apply/"
+  },
+  {
    "name": "Clarendon (Oxford)",
    "status": "Open",
    "when": "By 6 Jan",
@@ -278,6 +286,17 @@
    "due": "2026-11-12",
    "title": "Ask about Lebanese funding: Imperial, Oxford, Columbia, AUB",
    "how": "Ask each scholarship office if the CMA CGM award runs for 2027-28, and if a finished exchange abroad affects eligibility. Imperial: scholarships@imperial.ac.uk. Open Columbia Engineering's Graduate Funding page for its Lebanon fellowship. Ask AUB's Office of International Programs what else exists. The full list is under Prep."
+  },
+  {
+   "id": "w1-email-adib",
+   "phase": "Week 1 · 2-8 Nov",
+   "cat": "Professors",
+   "due": "2026-11-13",
+   "title": "Optional: send Prof. Fadel Adib a short technical email",
+   "only": [
+    "mit-mas"
+   ],
+   "how": "Read one of his recent papers first. Mention AUB, your inverse-problem work and one real question. Say you're applying and will name him as a preferred reader. Don't ask him about admission, funding or supervision."
   },
   {
    "id": "w1-pick-referees",
@@ -627,6 +646,17 @@
     "ucla-ms"
    ],
    "how": "Three letters, two 500-word statements, and IELTS 7.0 or TOEFL 87. Confirm the deadline and GRE policy for Fall 2027 first: the page prints no year."
+  },
+  {
+   "id": "d-mas",
+   "phase": "December",
+   "cat": "Applications",
+   "due": "2026-12-12",
+   "title": "SUBMIT MIT Media Lab master's (firm 15 Dec, 11:59pm ET)",
+   "only": [
+    "mit-mas"
+   ],
+   "how": "Name Signal Kinetics and Prof. Adib. Write both statements yourself: MAS doesn't allow AI-generated content. Check the portfolio requirements, and have IELTS 7 or TOEFL 100."
   },
   {
    "id": "d-mit-phd",

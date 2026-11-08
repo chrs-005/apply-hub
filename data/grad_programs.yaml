@@ -511,8 +511,8 @@ programs:
 
   - id: mit-eecs-phd
     target: suggested
-    short: MIT PhD
-    why: "PhD only: MIT EECS has no standalone master's, but you earn one on the way. Funded through research or teaching assistantships."
+    short: MIT EECS PhD
+    why: "PhD only, fully funded, and Fadel Adib's group admits through it. Name him as a preferred reader. Due 1 Dec."
     university: MIT
     program: PhD, Electrical Engineering & Computer Science (master's earned along the way)
     country: United States
@@ -521,22 +521,52 @@ programs:
     opens: 2026-09-15
     deadlines:
       - {label: "Application deadline", date: 2026-12-01}
-    app_fee: {amount: 90, currency: USD, note: "MIT's standard fee"}
-    tuition: {amount: 0, currency: USD, per: year, note: "Most students funded by assistantships"}
+    app_fee: {amount: 90, currency: USD, note: "Waiver route via MIT's graduate office"}
+    tuition: {amount: 0, currency: USD, per: year, note: "Fully funded, assuming satisfactory progress"}
     scholarships: []
-    language: "Check the application"
-    gre: "Not stated on the pages I could read"
+    language: "IELTS 7 / TOEFL 100 / Duolingo 130"
+    gre: "Not used"
     requires:
-      letters: null
-      letters_note: "Not stated on the pages I could read"
-      gre: {status: "check", note: "Not stated on the pages I could read."}
-      english: {status: "test", note: "Check the application."}
-      statement: "Research statement: check the application"
-      extras: ["Read the Faculty Interests Guide and name professors whose work fits"]
+      letters: 3
+      letters_note: "Three letters"
+      gre: {status: "no", note: "MIT EECS doesn't use GRE scores."}
+      english: {status: "test", note: "IELTS 7, TOEFL 100 or Duolingo 130."}
+      statement: "Two essays: research activities and goals; academic and intellectual journey"
+      extras: ["Choose preferred readers, such as Prof. Adib"]
     url: https://www.eecs.mit.edu/academics/graduate-programs/admission-process/
     source: official
-    verify: [letters, gre, english]
-    notes: "Master's-level MIT options that are open: Operations Research SM (due 1 Dec) and the Master of Finance (due 5 Jan). A Master of Engineering is only for MIT's own undergraduates."
+    verify: []
+    notes: "No standalone master's. Faculty won't discuss funding or supervision with anyone not yet admitted. Bachelor's must be finished by registration."
+
+  - id: mit-mas
+    target: core
+    short: MIT Media Lab
+    why: "A fully funded MIT master's, and Fadel Adib's group admits through it."
+    university: MIT Media Lab
+    program: "SM, Media Arts and Sciences (Signal Kinetics, Prof. Fadel Adib)"
+    country: United States
+    region: US
+    fields: [cs, ml, research]
+    opens: 2026-09-15
+    deadlines:
+      - {label: "Firm deadline, 11:59pm ET", date: 2026-12-15}
+    app_fee: {amount: 90, currency: USD, note: "Waiver route via MIT's graduate office"}
+    tuition: {amount: 0, currency: USD, per: year, note: "Tuition, insurance and a stipend, renewed yearly with good progress"}
+    scholarships:
+      - {name: "MAS full funding", deadline: 2026-12-15, covers: "Tuition, medical insurance and stipend", how: "All MAS students are funded"}
+    language: "IELTS 7 / TOEFL 100 / Duolingo 135; AUB isn't on the waiver list"
+    gre: "Not used"
+    requires:
+      letters: 3
+      letters_note: "From faculty or supervisors"
+      gre: {status: "no", note: "MAS doesn't require or use GRE scores."}
+      english: {status: "test", note: "IELTS 7, TOEFL 100, Duolingo 135 or Cambridge 190."}
+      statement: "Statement of objectives (up to 2 pages) + personal statement (max 500 words). Writing them with AI is not allowed."
+      extras: ["Portfolio: check the MAS requirements page", "List up to 3 research groups at the top of your statement, with Prof. Adib as preferred reader"]
+    url: https://www.media.mit.edu/graduate-program/apply/
+    source: official
+    verify: []
+    notes: "Group accepting new students. Decisions late February. Bachelor's must be finished by enrollment. A MAS PhD is only possible by applying from within the SM."
 
   - id: mit-mfin
     target: suggested
