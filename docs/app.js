@@ -24,7 +24,7 @@ const ago = (iso) => {
 };
 const usd = (n) => n == null ? "—" : "$" + Math.round(n).toLocaleString("en-US");
 const money = (m) => !m || m.amount == null ? "—" : m.amount === 0 ? "Free" : `${m.currency} ${Number(m.amount).toLocaleString("en-US")}`;
-const FLAGS = { "United Kingdom": "🇬🇧", Switzerland: "🇨🇭", France: "🇫🇷", Germany: "🇩🇪", Netherlands: "🇳🇱", "United Arab Emirates": "🇦🇪", "Saudi Arabia": "🇸🇦", Austria: "🇦🇹", Qatar: "🇶🇦" };
+const FLAGS = { Canada: "🇨🇦", "United Kingdom": "🇬🇧", Switzerland: "🇨🇭", France: "🇫🇷", Germany: "🇩🇪", Netherlands: "🇳🇱", "United Arab Emirates": "🇦🇪", "Saudi Arabia": "🇸🇦", Austria: "🇦🇹", Qatar: "🇶🇦" };
 const REGION_LABEL = { UK: "UK & Ireland", CH: "Switzerland", EU: "EU", GULF: "Gulf" };
 const CAT_LABEL = { swe: "SWE", quant: "Quant", ml: "ML/AI", research: "Research", data: "Data" };
 const STATUSES = ["Saved", "Preparing", "Applied", "Test / OA", "Interview", "Offer", "Rejected", "Withdrawn"];
