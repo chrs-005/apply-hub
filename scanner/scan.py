@@ -351,7 +351,8 @@ def d(x):
 GRE_LABEL = {"optional": "GRE (optional: send it if it helps)", "recommended": "GRE (strongly recommended)",
              "check": "Check whether the GRE is required"}
 ENGLISH_LABEL = {"by-deadline": "English proof, in by the deadline", "test": "English test (TOEFL / IELTS)",
-                 "after-offer": "English test (usually after an offer)", "letter-or-test": "English: AUB letter or test"}
+                 "after-offer": "English test (usually after an offer)", "letter-or-test": "English: AUB letter or test",
+                 "check": "Check the English requirement"}
 
 
 def derive_checklist(p):

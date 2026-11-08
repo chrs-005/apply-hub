@@ -5,7 +5,7 @@
 
 const M_TABS = [["plan", "Plan"], ["apps", "Schools"], ["compare", "Compare"], ["prep", "Prep"]];
 const M_GRE = { no: ["Not needed", "good"], optional: ["Optional", ""], recommended: ["Strongly rec.", "warn"], check: ["Check!", "bad"] };
-const M_ENG = { none: ["Not required", "good"], "after-offer": ["After offer", ""], "letter-or-test": ["Letter or test", ""], test: ["Test", "warn"], "by-deadline": ["By deadline!", "bad"] };
+const M_ENG = { none: ["Not required", "good"], "after-offer": ["After offer", ""], "letter-or-test": ["Letter or test", ""], test: ["Test", "warn"], "by-deadline": ["By deadline!", "bad"], check: ["Check!", "bad"] };
 const M_REC_STATUS = ["Not asked", "Asked", "Agreed", "Packet sent", "Declined"];
 const M_ACTIVE = new Set(["Saved", "Preparing"]);
 const openDetails = new Set();

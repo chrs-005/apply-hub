@@ -213,6 +213,109 @@
   "status": "open"
  },
  {
+  "id": "cmu-mlt",
+  "target": "suggested",
+  "short": "CMU MLT",
+  "why": "CMU's research master's in language technologies: the closest match to LLM work. Early deadline 18 Nov.",
+  "university": "Carnegie Mellon University (LTI)",
+  "program": "Master of Language Technologies (MLT)",
+  "country": "United States",
+  "region": "US",
+  "fields": [
+   "cs",
+   "ml",
+   "research"
+  ],
+  "opens": "2026-09-01",
+  "deadlines": [
+   {
+    "label": "Early deadline",
+    "date": "2026-11-18"
+   },
+   {
+    "label": "Final deadline",
+    "date": "2026-12-09"
+   }
+  ],
+  "app_fee": {
+   "amount": 100,
+   "currency": "USD",
+   "note": "$80 by the early deadline. Waivers in the application."
+  },
+  "scholarships": [
+   {
+    "name": "Research assistantships",
+    "deadline": null,
+    "covers": "Not guaranteed",
+    "how": "Occasionally offered by advisors to current MLT students"
+   }
+  ],
+  "language": "English test required, no exceptions. TOEFL preferred, IELTS accepted.",
+  "gre": "Optional",
+  "requires": {
+   "letters": 3,
+   "letters_note": "Three letters",
+   "gre": {
+    "status": "optional",
+    "note": "GREs are now optional."
+   },
+   "english": {
+    "status": "test",
+    "note": "Required if English isn't your native language, no exceptions."
+   },
+   "extras": []
+  },
+  "url": "https://lti.cmu.edu/academics/masters-programs/mlt.html",
+  "source": "official",
+  "verify": [
+   "opens",
+   "tuition"
+  ],
+  "notes": "Two years with two summers of research, built as PhD preparation. Check if it can be combined with your MSCS application.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "3 recommendation letters",
+    "detail": "Three letters"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "english",
+    "label": "English test (TOEFL / IELTS)",
+    "detail": "Required if English isn't your native language, no exceptions."
+   },
+   {
+    "id": "gre",
+    "label": "GRE (optional: send it if it helps)",
+    "detail": "GREs are now optional."
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee (USD 100)",
+    "detail": "$80 by the early deadline. Waivers in the application."
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": 100,
+  "tuition_year_usd": null,
+  "next_deadline": "2026-11-18",
+  "status": "open"
+ },
+ {
   "id": "eth-cs",
   "target": "core",
   "university": "ETH Zurich",
@@ -876,6 +979,457 @@
   "status": "open"
  },
  {
+  "id": "toronto-msc",
+  "target": "suggested",
+  "short": "Toronto MSc",
+  "why": "Funded research master's in a top ML department. Due 1 Dec.",
+  "university": "University of Toronto",
+  "program": "MSc Computer Science (research stream)",
+  "country": "Canada",
+  "region": "CA",
+  "fields": [
+   "cs",
+   "ml",
+   "research"
+  ],
+  "opens": "2026-09-15",
+  "deadlines": [
+   {
+    "label": "Application deadline",
+    "date": "2026-12-01"
+   }
+  ],
+  "app_fee": {
+   "amount": 135,
+   "currency": "CAD",
+   "note": "Non-refundable"
+  },
+  "tuition": {
+   "amount": 0,
+   "currency": "CAD",
+   "per": "year",
+   "note": "Funding package for every full-time research-stream student, guaranteed 16 months. International tuition is about CAD 36,700."
+  },
+  "scholarships": [
+   {
+    "name": "Toronto research funding package",
+    "deadline": "2026-12-01",
+    "covers": "Enhanced package in 2026-27: CAD 39,500 take-home after tuition",
+    "how": "Comes with admission. Fall 2027 figures aren't out."
+   },
+   {
+    "name": "Vector Scholarship in AI",
+    "deadline": null,
+    "covers": "CAD 21,000",
+    "how": "Department nominates you, by late Feb 2027"
+   }
+  ],
+  "language": "Test, unless your degree was uniformly taught in English",
+  "gre": "Page doesn't require it",
+  "requires": {
+   "letters": 3,
+   "letters_note": "Three reference letters",
+   "gre": {
+    "status": "check",
+    "note": "The page doesn't list it as required."
+   },
+   "english": {
+    "status": "letter-or-test",
+    "note": "Toronto may ask for a letter confirming your degree was taught in English."
+   },
+   "extras": [
+    "No need to wait for a professor's reply before applying"
+   ]
+  },
+  "url": "https://web.cs.toronto.edu/graduate/how-to-apply",
+  "source": "official",
+  "verify": [
+   "opens"
+  ],
+  "notes": "Funding figures are for 2026-27. OGS-VISA, for international students, goes through the department by 15 Mar 2027.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "3 recommendation letters",
+    "detail": "Three reference letters"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "english",
+    "label": "English: AUB letter or test",
+    "detail": "Toronto may ask for a letter confirming your degree was taught in English."
+   },
+   {
+    "id": "gre",
+    "label": "Check whether the GRE is required",
+    "detail": "The page doesn't list it as required."
+   },
+   {
+    "id": "extra0",
+    "label": "No need to wait for a professor's reply before applying",
+    "detail": ""
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee (CAD 135)",
+    "detail": "Non-refundable"
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": 135,
+  "tuition_year_usd": 0,
+  "next_deadline": "2026-12-01",
+  "status": "open"
+ },
+ {
+  "id": "waterloo-mmath",
+  "target": "suggested",
+  "short": "Waterloo",
+  "why": "Every full-time MMath student gets a funding package. Thesis-based. Due 1 Dec.",
+  "university": "University of Waterloo",
+  "program": "MMath Computer Science (thesis)",
+  "country": "Canada",
+  "region": "CA",
+  "fields": [
+   "cs",
+   "ml",
+   "math",
+   "research"
+  ],
+  "opens": "2026-09-01",
+  "deadlines": [
+   {
+    "label": "Application deadline",
+    "date": "2026-12-01"
+   }
+  ],
+  "scholarships": [
+   {
+    "name": "Waterloo funding package",
+    "deadline": "2026-12-01",
+    "covers": "Amount varies by status",
+    "how": "Comes with admission"
+   },
+   {
+    "name": "Vector Scholarship in AI",
+    "deadline": null,
+    "covers": "CAD 21,000",
+    "how": "Your program nominates you"
+   }
+  ],
+  "language": "Test required: an AUB English letter doesn't count",
+  "gre": "Not required",
+  "requires": {
+   "letters": 3,
+   "letters_note": "Three letters of reference",
+   "gre": {
+    "status": "no",
+    "note": "Not required for any CS graduate program."
+   },
+   "english": {
+    "status": "test",
+    "note": "A university letter on English instruction doesn't count, and TOEFL MyBest isn't accepted."
+   },
+   "extras": [
+    "You need a supervisor to be accepted, though not to apply: contact faculty"
+   ]
+  },
+  "url": "https://cs.uwaterloo.ca/future-graduate-students/applying-admissions",
+  "source": "official",
+  "verify": [
+   "opens",
+   "app_fee"
+  ],
+  "notes": "Every full-time MMath student gets a funding package, but the amounts vary and aren't published. CS programs want at least 78%, so check how AUB's 4.3 scale converts.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "3 recommendation letters",
+    "detail": "Three letters of reference"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "english",
+    "label": "English test (TOEFL / IELTS)",
+    "detail": "A university letter on English instruction doesn't count, and TOEFL MyBest isn't accepted."
+   },
+   {
+    "id": "extra0",
+    "label": "You need a supervisor to be accepted, though not to apply: contact faculty",
+    "detail": ""
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee",
+    "detail": "Amount not confirmed: check the application."
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": null,
+  "tuition_year_usd": null,
+  "next_deadline": "2026-12-01",
+  "status": "open"
+ },
+ {
+  "id": "mila-msc",
+  "target": "suggested",
+  "short": "Mila",
+  "why": "Montreal's deep-learning institute, and a direct route to LLM research. Requests due 1 Dec.",
+  "university": "Mila (McGill, Université de Montréal, Polytechnique, HEC)",
+  "program": "Research MSc through a partner university (supervision request)",
+  "country": "Canada",
+  "region": "CA",
+  "fields": [
+   "cs",
+   "ml",
+   "research"
+  ],
+  "opens": "2026-09-15",
+  "deadlines": [
+   {
+    "label": "Mila supervision request",
+    "date": "2026-12-01"
+   }
+  ],
+  "scholarships": [],
+  "language": "Set by the university you enroll in",
+  "gre": "Set by the university you enroll in",
+  "requires": {
+   "letters_note": "Set by Mila's request form and the university",
+   "gre": {
+    "status": "check",
+    "note": "Depends on the university."
+   },
+   "english": {
+    "status": "check",
+    "note": "Depends on the university."
+   },
+   "statement": "Mila supervision request form",
+   "extras": [
+    "Choose professors whose work you know",
+    "Check if you must also apply directly to the partner university, and by when"
+   ]
+  },
+  "url": "https://mila.quebec/en/prospective-students/research-masters-and-phd",
+  "source": "official",
+  "verify": [
+   "opens",
+   "app_fee",
+   "tuition"
+  ],
+  "notes": "Mila doesn't grant degrees or state funding for internationals. McGill says thesis master's students are typically funded by their supervisor, and supervisor capacity in ML is limited.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "Recommendation letters: check the program page",
+    "detail": "Set by Mila's request form and the university"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "Mila supervision request form",
+    "detail": ""
+   },
+   {
+    "id": "english",
+    "label": "Check the English requirement",
+    "detail": "Depends on the university."
+   },
+   {
+    "id": "gre",
+    "label": "Check whether the GRE is required",
+    "detail": "Depends on the university."
+   },
+   {
+    "id": "extra0",
+    "label": "Choose professors whose work you know",
+    "detail": ""
+   },
+   {
+    "id": "extra1",
+    "label": "Check if you must also apply directly to the partner university, and by when",
+    "detail": ""
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee",
+    "detail": "Amount not confirmed: check the application."
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": null,
+  "tuition_year_usd": null,
+  "next_deadline": "2026-12-01",
+  "status": "open"
+ },
+ {
+  "id": "mit-orc",
+  "target": "suggested",
+  "short": "MIT ORC",
+  "why": "MIT master's in optimization, statistics and ML theory. Separate from EECS. Due 1 Dec.",
+  "university": "MIT Operations Research Center",
+  "program": "SM, Operations Research",
+  "country": "United States",
+  "region": "US",
+  "fields": [
+   "math",
+   "ml",
+   "research"
+  ],
+  "opens": "2026-09-15",
+  "deadlines": [
+   {
+    "label": "Application deadline (year not printed)",
+    "date": "2026-12-01"
+   }
+  ],
+  "app_fee": {
+   "amount": 90,
+   "currency": "USD"
+  },
+  "scholarships": [],
+  "language": "Official English test required. AUB isn't on the exempt list.",
+  "gre": "Optional",
+  "requires": {
+   "letters": 3,
+   "letters_note": "Three letters",
+   "gre": {
+    "status": "optional",
+    "note": "This test is optional."
+   },
+   "english": {
+    "status": "test",
+    "note": "All international applicants, with exemptions only for degrees from listed English-speaking countries."
+   },
+   "extras": []
+  },
+  "url": "https://orc.mit.edu/academics/admissions/",
+  "source": "official",
+  "verify": [
+   "deadlines",
+   "tuition",
+   "opens"
+  ],
+  "notes": "The admissions page doesn't state funding for internationals. Ask ORC before counting on it.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "3 recommendation letters",
+    "detail": "Three letters"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "english",
+    "label": "English test (TOEFL / IELTS)",
+    "detail": "All international applicants, with exemptions only for degrees from listed English-speaking countries."
+   },
+   {
+    "id": "gre",
+    "label": "GRE (optional: send it if it helps)",
+    "detail": "This test is optional."
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee (USD 90)",
+    "detail": "Amount not confirmed: check the application."
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": 90,
+  "tuition_year_usd": null,
+  "next_deadline": "2026-12-01",
+  "status": "open"
+ },
+ {
+  "id": "harvard-ds",
+  "university": "Harvard University",
+  "program": "SM Data Science",
+  "country": "United States",
+  "region": "US",
+  "fields": [
+   "math",
+   "ml"
+  ],
+  "opens": "2026-09-15",
+  "deadlines": [
+   {
+    "label": "Application deadline",
+    "date": "2026-12-01"
+   }
+  ],
+  "scholarships": [],
+  "language": "Test unless your bachelor's was taught in English: confirm for AUB",
+  "gre": "Optional",
+  "url": "https://seas.harvard.edu/masters-data-science/how-apply",
+  "source": "official",
+  "verify": [
+   "app_fee",
+   "tuition",
+   "opens"
+  ],
+  "notes": "Three letters. No SEAS financial aid for master's students, and only a few second-years become paid Teaching Fellows.",
+  "app_fee_usd": null,
+  "tuition_year_usd": null,
+  "next_deadline": "2026-12-01",
+  "status": "open"
+ },
+ {
   "id": "tud-cs",
   "university": "TU Delft",
   "program": "MSc Computer Science",
@@ -1174,6 +1728,48 @@
   "status": "open"
  },
  {
+  "id": "stanford-stats-phd",
+  "university": "Stanford University",
+  "program": "PhD Statistics",
+  "country": "United States",
+  "region": "US",
+  "fields": [
+   "math",
+   "ml",
+   "research"
+  ],
+  "opens": "2026-09-15",
+  "deadlines": [
+   {
+    "label": "Application, 11:59pm PST",
+    "date": "2026-12-02"
+   }
+  ],
+  "app_fee": {
+   "amount": 125,
+   "currency": "USD"
+  },
+  "tuition": {
+   "amount": 0,
+   "currency": "USD",
+   "per": "year",
+   "note": "Guaranteed 5 years of 12-month funding, for every admitted student"
+  },
+  "scholarships": [],
+  "language": "TOEFL 90 on the old scale, or IELTS 7.0",
+  "gre": "Required",
+  "url": "https://statistics.stanford.edu/admissions/statistics-phd-admissions",
+  "source": "official",
+  "verify": [
+   "opens"
+  ],
+  "notes": "Three letters. The GRE is required, so your scores must arrive in time. The Statistics MS has no funding.",
+  "app_fee_usd": 125,
+  "tuition_year_usd": 0,
+  "next_deadline": "2026-12-02",
+  "status": "open"
+ },
+ {
   "id": "cam-part3",
   "target": "suggested",
   "short": "Part III",
@@ -1416,6 +2012,12 @@
     "deadline": "2026-12-15",
     "covers": "CHF 10,000/semester, up to 4 semesters, + a reserved room",
     "how": "Tick the box in the form. Must be paid and validated by Dec 15. Notified late March."
+   },
+   {
+    "name": "IC Research Scholars",
+    "deadline": "2026-12-15",
+    "covers": "About CHF 1,450 net/month for a year, extendable",
+    "how": "Tick the box on the form and add a paragraph naming labs to your statement. Can't be held with the Excellence Fellowship."
    }
   ],
   "language": "English certificates welcome but not required",
@@ -1442,7 +2044,7 @@
   "verify": [
    "opens"
   ],
-  "notes": "Only ONE EPFL master's application per year, so choose between CS, Data Science and Financial Engineering. The form opens mid-November.",
+  "notes": "Only ONE EPFL master's application per year, so choose between CS, Data Science and Financial Engineering. The form opens mid-November. EPFL IC says you can't start an MSc if you're already scheduled to receive a five-year degree in a closely related field: check this for the AUB B.E.",
   "checklist": [
    {
     "id": "referees",
@@ -1826,6 +2428,143 @@
   "tuition_year_usd": null,
   "next_deadline": "2026-12-15",
   "status": "not_open_yet"
+ },
+ {
+  "id": "ubc-msc",
+  "target": "suggested",
+  "short": "UBC MSc",
+  "why": "Guaranteed funding for research-track MSc students, and no GRE.",
+  "university": "University of British Columbia",
+  "program": "MSc Computer Science (research track)",
+  "country": "Canada",
+  "region": "CA",
+  "fields": [
+   "cs",
+   "ml",
+   "research"
+  ],
+  "opens": "2026-09-15",
+  "deadlines": [
+   {
+    "label": "Application deadline (year not printed)",
+    "date": "2026-12-15",
+    "estimate": true
+   }
+  ],
+  "scholarships": [
+   {
+    "name": "UBC research-track funding",
+    "deadline": "2026-12-15",
+    "covers": "At least the standard minimum for two years",
+    "how": "Comes with admission"
+   },
+   {
+    "name": "UBC Affiliated Fellowships",
+    "deadline": null,
+    "covers": "Amount not stated",
+    "how": "All citizenships. Usually due 1 Dec."
+   }
+  ],
+  "language": "IELTS 7.0, at least 6.5 per part. Lebanon isn't exempt.",
+  "gre": "Not reviewed: don't send it",
+  "requires": {
+   "letters_note": "Letters carry the greatest weight, per UBC's FAQ. Confirm the number.",
+   "gre": {
+    "status": "no",
+    "note": "UBC doesn't review GRE scores."
+   },
+   "english": {
+    "status": "test",
+    "note": "IELTS 7.0 with 6.5 per part. TOEFL MyBest isn't accepted."
+   },
+   "extras": []
+  },
+  "url": "https://www.cs.ubc.ca/students/grad/prospective/",
+  "source": "official",
+  "verify": [
+   "deadlines",
+   "app_fee"
+  ],
+  "notes": "The tuition award covers year 1 only. For 2026-27, international students get about CAD 30,467 net in year 1 and 24,728 in year 2. The deadline text sits on a page dated 2024, so confirm it for Fall 2027.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "Recommendation letters: check the program page",
+    "detail": "Letters carry the greatest weight, per UBC's FAQ. Confirm the number."
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "english",
+    "label": "English test (TOEFL / IELTS)",
+    "detail": "IELTS 7.0 with 6.5 per part. TOEFL MyBest isn't accepted."
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee",
+    "detail": "Amount not confirmed: check the application."
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": null,
+  "tuition_year_usd": null,
+  "next_deadline": "2026-12-15",
+  "status": "open"
+ },
+ {
+  "id": "uw-allen-phd",
+  "university": "University of Washington",
+  "program": "PhD Computer Science (Allen School)",
+  "country": "United States",
+  "region": "US",
+  "fields": [
+   "cs",
+   "ml",
+   "research"
+  ],
+  "opens": "2026-09-15",
+  "deadlines": [
+   {
+    "label": "Application deadline",
+    "date": "2026-12-15"
+   }
+  ],
+  "app_fee": {
+   "amount": 90,
+   "currency": "USD"
+  },
+  "tuition": {
+   "amount": 0,
+   "currency": "USD",
+   "per": "year",
+   "note": "Full support from start to degree for every PhD student"
+  },
+  "scholarships": [],
+  "language": "IELTS 6.5, or a letter that all instruction is in English",
+  "gre": "Not used",
+  "url": "https://www.cs.washington.edu/academics/phd/admissions/",
+  "source": "official",
+  "verify": [
+   "opens"
+  ],
+  "notes": "Three letters. There's no stand-alone full-time master's. The TOEFL minimum is printed oddly, so check it if you use TOEFL.",
+  "app_fee_usd": 90,
+  "tuition_year_usd": 0,
+  "next_deadline": "2026-12-15",
+  "status": "open"
  },
  {
   "id": "epfl-ds",
@@ -2352,6 +3091,143 @@
   "status": "open"
  },
  {
+  "id": "berkeley-masds",
+  "target": "suggested",
+  "short": "Berkeley Stats",
+  "why": "Top statistics master's with no GRE and automatic merit-award consideration. Due 6 Jan.",
+  "university": "UC Berkeley",
+  "program": "MA Statistics and Data Science (MASDS)",
+  "country": "United States",
+  "region": "US",
+  "fields": [
+   "math",
+   "ml"
+  ],
+  "opens": "2026-09-24",
+  "deadlines": [
+   {
+    "label": "Application deadline",
+    "date": "2027-01-06"
+   }
+  ],
+  "app_fee": {
+   "amount": 155,
+   "currency": "USD"
+  },
+  "scholarships": [
+   {
+    "name": "Betty Scott Excellence / Opportunity Award",
+    "deadline": "2027-01-06",
+    "covers": "Amount not stated",
+    "how": "No application: considered automatically. Opportunity Award is need-based."
+   }
+  ],
+  "language": "Likely a test: check Berkeley's country list for Lebanon",
+  "gre": "Not accepted for Fall 2027",
+  "requires": {
+   "letters": 3,
+   "letters_note": "Three letters",
+   "gre": {
+    "status": "no",
+    "note": "GRE scores won't be accepted for Fall 2027."
+   },
+   "english": {
+    "status": "check",
+    "note": "Applies to degrees from countries where English isn't the official language, including the Middle East."
+   },
+   "extras": []
+  },
+  "url": "https://statistics.berkeley.edu/academics/ma-admissions",
+  "source": "official",
+  "verify": [
+   "tuition"
+  ],
+  "notes": "10 months, career-focused rather than PhD preparation. Limited teaching jobs. The $34,000 GOP fellowship is for US citizens and residents only.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "3 recommendation letters",
+    "detail": "Three letters"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "english",
+    "label": "Check the English requirement",
+    "detail": "Applies to degrees from countries where English isn't the official language, including the Middle East."
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee (USD 155)",
+    "detail": "Amount not confirmed: check the application."
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": 155,
+  "tuition_year_usd": null,
+  "next_deadline": "2027-01-06",
+  "status": "open"
+ },
+ {
+  "id": "statml-cdt",
+  "university": "Oxford + Imperial (StatML CDT)",
+  "program": "4-year PhD/DPhil in Statistics and Machine Learning",
+  "country": "United Kingdom",
+  "region": "UK",
+  "fields": [
+   "math",
+   "ml",
+   "research"
+  ],
+  "opens": "2026-10-01",
+  "deadlines": [
+   {
+    "label": "Application, 12:00 GMT",
+    "date": "2027-01-06"
+   }
+  ],
+  "tuition": {
+   "amount": 0,
+   "currency": "GBP",
+   "per": "year",
+   "note": "Only funded places, but most need Home status and overseas awards are limited"
+  },
+  "scholarships": [
+   {
+    "name": "StatML studentship",
+    "deadline": "2027-01-06",
+    "covers": "Fees + GBP 23,805/year stipend + GBP 12,500 research grant",
+    "how": "Limited number for overseas applicants"
+   }
+  ],
+  "language": "Check on the application page",
+  "gre": "Not listed",
+  "url": "https://statml.io/admissions/applying-to-statml/",
+  "source": "official",
+  "verify": [
+   "app_fee",
+   "opens"
+  ],
+  "notes": "A bachelor's is the minimum, but competitive applicants usually have a distinction-level master's. Two referees. Interviews in February.",
+  "app_fee_usd": null,
+  "tuition_year_usd": 0,
+  "next_deadline": "2027-01-06",
+  "status": "open"
+ },
+ {
   "id": "ox-omms",
   "university": "University of Oxford",
   "program": "MSc Mathematical Sciences (OMMS)",
@@ -2442,6 +3318,117 @@
   "app_fee_usd": 121,
   "tuition_year_usd": null,
   "next_deadline": "2027-01-07",
+  "status": "open"
+ },
+ {
+  "id": "ista-phd",
+  "target": "suggested",
+  "short": "ISTA PhD",
+  "why": "Salaried from day one, no tuition, no application fee, and you can enter with a bachelor's. Due 8 Jan.",
+  "university": "ISTA (Institute of Science and Technology Austria)",
+  "program": "PhD (math, data science, computer science tracks)",
+  "country": "Austria",
+  "region": "EU",
+  "fields": [
+   "math",
+   "ml",
+   "cs",
+   "research"
+  ],
+  "opens": "2026-10-01",
+  "deadlines": [
+   {
+    "label": "Application, 3pm CET",
+    "date": "2027-01-08"
+   },
+   {
+    "label": "Reference letters",
+    "date": "2027-01-12"
+   }
+  ],
+  "app_fee": {
+   "amount": 0,
+   "currency": "EUR"
+  },
+  "tuition": {
+   "amount": 0,
+   "currency": "EUR",
+   "per": "year",
+   "note": "No tuition. Salary EUR 3,053-3,673/month, 14 times a year (2026). Bachelor's holders start in the lower band."
+  },
+  "scholarships": [
+   {
+    "name": "ISTA PhD employment",
+    "deadline": "2027-01-08",
+    "covers": "Salary, no tuition",
+    "how": "Comes with admission"
+   }
+  ],
+  "language": "Not stated on the pages I read",
+  "gre": "Not listed",
+  "requires": {
+   "letters": 3,
+   "letters_note": "Three referees",
+   "gre": {
+    "status": "no",
+    "note": "Not listed in the application."
+   },
+   "english": {
+    "status": "check",
+    "note": "Not stated on the pages I read."
+   },
+   "statement": "Statement of purpose + 3 short answers (up to 3 preferred groups, a paper with DOI, your most meaningful research)",
+   "extras": [
+    "Transcripts in English and the original language"
+   ]
+  },
+  "url": "https://phd.pages.ista.ac.at/phd-application-admission/",
+  "source": "official",
+  "verify": [
+   "opens"
+  ],
+  "notes": "All PhD students start on 15 September. You need a real match with a research group.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "3 recommendation letters",
+    "detail": "Three referees"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "Statement of purpose + 3 short answers (up to 3 preferred groups, a paper with DOI, your most meaningful research)",
+    "detail": ""
+   },
+   {
+    "id": "english",
+    "label": "Check the English requirement",
+    "detail": "Not stated on the pages I read."
+   },
+   {
+    "id": "extra0",
+    "label": "Transcripts in English and the original language",
+    "detail": ""
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": 0,
+  "tuition_year_usd": 0,
+  "next_deadline": "2027-01-08",
   "status": "open"
  },
  {
@@ -2594,6 +3581,97 @@
   "app_fee_usd": 110,
   "tuition_year_usd": 20300,
   "next_deadline": "2027-01-11",
+  "status": "open"
+ },
+ {
+  "id": "em-ediss",
+  "university": "Erasmus Mundus (EDISS)",
+  "program": "Joint Master's: Engineering of Data-intensive Intelligent Software Systems",
+  "country": "Europe (2 countries)",
+  "region": "EU",
+  "fields": [
+   "cs",
+   "ml"
+  ],
+  "opens": "2026-11-16",
+  "deadlines": [
+   {
+    "label": "Intake 7: confirm on the site",
+    "date": "2027-01-12",
+    "estimate": true
+   }
+  ],
+  "tuition": {
+   "amount": 9000,
+   "currency": "EUR",
+   "per": "year",
+   "note": "Waived with a scholarship"
+  },
+  "scholarships": [
+   {
+    "name": "EMJM / EDISS scholarships",
+    "deadline": null,
+    "covers": "EUR 1,400/month + fee waiver (EMJM), or EUR 800/month then 310 (EDISS)",
+    "how": "Through the application. Open to any nationality."
+   }
+  ],
+  "language": "TOEFL or IELTS in person. An AUB degree doesn't replace it.",
+  "gre": "Not listed",
+  "url": "https://www.master-ediss.eu/",
+  "source": "official",
+  "verify": [
+   "deadlines",
+   "app_fee"
+  ],
+  "notes": "The site shows two windows: 23 Sep - 1 Nov 2026 and 16 Nov 2026 - 12 Jan 2027. Check the application page before relying on either.",
+  "app_fee_usd": null,
+  "tuition_year_usd": 10440,
+  "next_deadline": "2027-01-12",
+  "status": "not_open_yet"
+ },
+ {
+  "id": "ip-paris-phd-track",
+  "university": "Institut Polytechnique de Paris",
+  "program": "PhD Track (Data and AI, or Hadamard Mathematics)",
+  "country": "France",
+  "region": "EU",
+  "fields": [
+   "math",
+   "ml",
+   "research"
+  ],
+  "opens": "2026-10-28",
+  "deadlines": [
+   {
+    "label": "Session 1",
+    "date": "2027-01-14"
+   }
+  ],
+  "tuition": {
+   "amount": 243,
+   "currency": "EUR",
+   "per": "year",
+   "note": "Years 1-2 with reduced fees, then EUR 380/year"
+  },
+  "scholarships": [
+   {
+    "name": "IP Paris Full Package",
+    "deadline": "2027-01-14",
+    "covers": "EUR 10,000/year master's scholarship + about EUR 82,800 PhD funding",
+    "how": "The jury reviews you automatically. Non-EU eligibility isn't stated: ask phd-track@ip-paris.fr."
+   }
+  ],
+  "language": "English B2",
+  "gre": "Not listed",
+  "url": "https://www.ip-paris.fr/en/education/admissions",
+  "source": "official",
+  "verify": [
+   "app_fee"
+  ],
+  "notes": "You can enter with a bachelor's. Two referees. Ask first if the scholarships are open to Lebanese applicants.",
+  "app_fee_usd": null,
+  "tuition_year_usd": 282,
+  "next_deadline": "2027-01-14",
   "status": "open"
  },
  {
@@ -2821,6 +3899,52 @@
   "status": "open"
  },
  {
+  "id": "em-deai",
+  "university": "Erasmus Mundus (DEAI, led by ULB)",
+  "program": "Joint Master's: Data Engineering and Artificial Intelligence",
+  "country": "Europe",
+  "region": "EU",
+  "fields": [
+   "cs",
+   "ml"
+  ],
+  "opens": "2026-10-01",
+  "deadlines": [
+   {
+    "label": "Not on the pages I read: check the site",
+    "date": "2027-01-15",
+    "estimate": true
+   }
+  ],
+  "tuition": {
+   "amount": 9000,
+   "currency": "EUR",
+   "per": "year",
+   "note": "Partner-country students, if self-funded"
+  },
+  "scholarships": [
+   {
+    "name": "DEAI full scholarship",
+    "deadline": null,
+    "covers": "Fee + EUR 1,400/month, up to 24 months",
+    "how": "Limited places, through the application"
+   }
+  ],
+  "language": "English B2",
+  "gre": "Not listed",
+  "url": "https://deai.ulb.be/",
+  "source": "official",
+  "verify": [
+   "deadlines",
+   "app_fee"
+  ],
+  "notes": "Targets a bachelor's with a Computer Science major. The application form was offline for maintenance on 21 Oct, so check it's back.",
+  "app_fee_usd": null,
+  "tuition_year_usd": 10440,
+  "next_deadline": "2027-01-15",
+  "status": "open"
+ },
+ {
   "id": "eth-qf",
   "target": "suggested",
   "short": "ETH/UZH Quant Finance",
@@ -2959,9 +4083,8 @@
     "date": "2027-01-15"
    },
    {
-    "label": "Non-EU application deadline (typical)",
-    "date": "2027-02-01",
-    "estimate": true
+    "label": "Non-EU/EEA deadline, 23:59",
+    "date": "2027-01-31"
    }
   ],
   "app_fee": {
@@ -2984,7 +4107,7 @@
   ],
   "language": "IELTS 6.5 / TOEFL 92",
   "gre": "Not required",
-  "url": "https://www.uva.nl/en",
+  "url": "https://www.uva.nl/en/programmes/masters/artificial-intelligence/artificial-intelligence.html",
   "source": "estimate",
   "verify": [
    "deadlines",
@@ -3044,6 +4167,41 @@
   "app_fee_usd": 0,
   "tuition_year_usd": 0,
   "next_deadline": "2027-01-15",
+  "status": "open"
+ },
+ {
+  "id": "stanford-icme",
+  "university": "Stanford University",
+  "program": "MS Computational and Mathematical Engineering (ICME)",
+  "country": "United States",
+  "region": "US",
+  "fields": [
+   "math",
+   "ml"
+  ],
+  "opens": "2026-09-15",
+  "deadlines": [
+   {
+    "label": "External applicants",
+    "date": "2027-01-29"
+   }
+  ],
+  "scholarships": [],
+  "language": "Check Stanford's rule",
+  "gre": "Check",
+  "url": "https://icme.stanford.edu/academics-admission/icme-application-deadlines",
+  "source": "official",
+  "verify": [
+   "app_fee",
+   "tuition",
+   "gre",
+   "language",
+   "opens"
+  ],
+  "notes": "No guaranteed funding for MS students. Wants strong linear algebra, numerical methods, probability and stochastics.",
+  "app_fee_usd": null,
+  "tuition_year_usd": null,
+  "next_deadline": "2027-01-29",
   "status": "open"
  },
  {
@@ -3134,6 +4292,46 @@
    }
   ],
   "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": null,
+  "tuition_year_usd": null,
+  "next_deadline": "2027-02-01",
+  "status": "open"
+ },
+ {
+  "id": "cornell-meng",
+  "university": "Cornell University",
+  "program": "MEng Computer Science",
+  "country": "United States",
+  "region": "US",
+  "fields": [
+   "cs",
+   "ml"
+  ],
+  "opens": "2026-09-01",
+  "deadlines": [
+   {
+    "label": "Fall admissions deadline (year not printed)",
+    "date": "2027-02-01"
+   }
+  ],
+  "scholarships": [
+   {
+    "name": "Knight Scholarship",
+    "deadline": "2027-02-01",
+    "covers": "Up to $60,000",
+    "how": "Chosen from applicants, subject to availability"
+   }
+  ],
+  "language": "IELTS 7.0, or TOEFL with section minimums",
+  "gre": "Not required",
+  "url": "https://www.cs.cornell.edu/master-engineering-computer-science/apply",
+  "source": "official",
+  "verify": [
+   "app_fee",
+   "tuition",
+   "opens"
+  ],
+  "notes": "Two letters. Two semesters, professional. A limited number of teaching jobs.",
   "app_fee_usd": null,
   "tuition_year_usd": null,
   "next_deadline": "2027-02-01",

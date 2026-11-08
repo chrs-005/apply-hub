@@ -29,7 +29,7 @@
  "recommenders": {
   "summary": "You need 3 academic referees: EPFL insists on 3 academics, Cambridge wants 2, and ETH and Stanford prefer academics. Line up a 4th as backup.",
   "who": [
-   "Your AUB Math research supervisor (the PINN project, Jun 2024-Mar 2025). Probably your strongest letter: they've seen you do research.",
+   "Your AUB Math research supervisor (Jun 2024-Mar 2025). Probably your strongest letter: they've seen you do research. Ask them to stress your mathematical and ML ability.",
    "The AUB professor you were TA for in Design & Analysis of Algorithms. They know how you think and teach.",
    "Your Boston University professor from the reinforcement learning or statistics course (exchange, Fall 2025). A letter from outside AUB adds weight.",
    "Backup: your Eurisko or TheFactory.Ai manager. Only where non-academics are allowed: Polytechnique, CMU, and possibly Imperial and Georgia Tech."
@@ -64,7 +64,7 @@
   {
    "title": "For research experience",
    "items": [
-    "Could our PINN work become a short report or arXiv preprint before January? What would be missing?",
+    "What math, statistics, ML or LLM project could I realistically finish and show by January? Even a short report counts.",
     "Is there a project I could join this semester, even a small one, so I can list it as ongoing?",
     "Could my final-year project be turned into research with you? What would a good topic be?",
     "Could you look at my ETH thesis pre-proposal and tell me if the topic makes sense?"
@@ -82,7 +82,7 @@
   "Lead with Education: AUB, GPA as on your transcript (4.25 on AUB's 4.3 scale), MERIT scholarship, then BU exchange. Add class rank if the Registrar can state it (Polytechnique asks for it).",
   "Put Research Experience right after Education, above industry. For a master's reader, that's the section that counts.",
   "Rewrite the research bullets around question, method and result. Name what you found, not only the numbers.",
-  "Add a Publications / Reports section as soon as the PINN write-up exists, even as 'in preparation' (only if it's truly being written).",
+  "Add a Publications / Reports section once you have a math, stats, ML or LLM write-up, even as 'in preparation' (only if it's truly being written).",
   "Add Relevant Coursework (math, algorithms, ML, theory), with BU courses marked.",
   "Add Awards & Honors and Community Service: MERIT, your RL class tournament win, and Scouts. Polytechnique asks for these explicitly.",
   "You can go to 2 pages for grad schools (Polytechnique's limit is 2). Keep your 1-page version for internships.",
@@ -128,6 +128,62 @@
    "covers": "Tuition, insurance and stipend",
    "note": "Every MAS student is funded, renewed yearly.",
    "url": "https://www.media.mit.edu/graduate-program/apply/"
+  },
+  {
+   "name": "EPFL IC Research Scholars",
+   "status": "Open",
+   "when": "By 15 Dec",
+   "covers": "About CHF 1,450 net/month for a year, extendable",
+   "note": "Paid part-time lab research from September. Competitive. Tick the box on the master's form and name labs in your statement. Can't be held with the Excellence Fellowship.",
+   "url": "https://www.epfl.ch/schools/ic/education/master/research-scholars/"
+  },
+  {
+   "name": "Toronto, Waterloo and UBC research master's",
+   "status": "Open",
+   "when": "1 Dec (Toronto, Waterloo), 15 Dec (UBC)",
+   "covers": "Funding package for research-track students",
+   "note": "Toronto guarantees 16 months. UBC's tuition award covers year 1 only. Waterloo doesn't publish amounts.",
+   "url": "https://web.cs.toronto.edu/graduate/funding-tuition-awards"
+  },
+  {
+   "name": "Hong Kong PhD Fellowship",
+   "status": "Open",
+   "when": "1 Dec, 12:00 Hong Kong time",
+   "covers": "HK$344,400/year + HK$14,400 travel, up to 3 years",
+   "note": "PhD only, any nationality, about 400 awards. The page doesn't say if a bachelor's alone is enough, so ask the university first.",
+   "url": "https://cerg1.ugc.edu.hk/hkpfs/"
+  },
+  {
+   "name": "UBC Affiliated Fellowships (Master's)",
+   "status": "Check deadline",
+   "when": "Usually 1 Dec",
+   "covers": "Amount not stated",
+   "note": "Open to all citizenships.",
+   "url": "https://www.cs.ubc.ca/students/grad/prospective/awards-financial-support-prospective-students"
+  },
+  {
+   "name": "Erasmus Mundus (EDISS, DEAI)",
+   "status": "Check each",
+   "when": "Oct-Jan, varies by program",
+   "covers": "Fee + about EUR 1,400/month",
+   "note": "Limited places and open to any nationality. EDISS shows two different windows, so check its application page. DEAI's form was offline for maintenance on 21 Oct.",
+   "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+  },
+  {
+   "name": "Vector Scholarship in AI",
+   "status": "Later",
+   "when": "Nominated 4 Jan - 17 Mar",
+   "covers": "CAD 21,000",
+   "note": "AI master's at Ontario universities, such as Toronto or Waterloo. Your program nominates you, and no citizenship limit is listed.",
+   "url": "https://vectorinstitute.ai/programs-courses/scholarships/"
+  },
+  {
+   "name": "Cornell CS Knight Scholarship",
+   "status": "With application",
+   "when": "By 1 Feb",
+   "covers": "Up to $60,000",
+   "note": "For the MEng. Subject to availability, and chosen from your application.",
+   "url": "https://www.cs.cornell.edu/masters"
   },
   {
    "name": "Clarendon (Oxford)",
@@ -208,6 +264,30 @@
    "covers": "UK one-year master's",
    "note": "Also needs 2 years of work after your degree, so not yet.",
    "url": "https://www.chevening.org/scholarship/lebanon/"
+  },
+  {
+   "name": "Princeton CS master's",
+   "status": "Closed",
+   "when": "No applications for Fall 2027",
+   "covers": "No tuition + teaching stipend",
+   "note": "Funded, but the department isn't taking MSE applications this cycle. Look again for 2028.",
+   "url": "https://www.cs.princeton.edu/node/38"
+  },
+  {
+   "name": "Rhodes (Lebanon constituency)",
+   "status": "Closed",
+   "when": "Closed for 2027 entry",
+   "covers": "Oxford study",
+   "note": "Two places across Syria, Jordan, Lebanon and Palestine. Reopens in 2027 for 2028 entry.",
+   "url": "https://www.rhodeshouse.ox.ac.uk/scholarships/applications/"
+  },
+  {
+   "name": "Google DeepMind AI Master's",
+   "status": "Closed",
+   "when": "2026 closed, 2027 not announced",
+   "covers": "Varies by host",
+   "note": "The app watches this page and will tell you if a new round appears.",
+   "url": "https://deepmind.google/scholarships/"
   }
  ],
  "tasks": [
@@ -296,7 +376,7 @@
    "only": [
     "mit-mas"
    ],
-   "how": "Read one of his recent papers first. Mention AUB, your inverse-problem work and one real question. Say you're applying and will name him as a preferred reader. Don't ask him about admission, funding or supervision."
+   "how": "Read one of his recent papers first. Mention AUB, the ML or math in that paper that interested you, and one real question. Say you're applying and will name him as a preferred reader. Don't ask him about admission, funding or supervision."
   },
   {
    "id": "w1-pick-referees",
@@ -311,8 +391,8 @@
    "phase": "Week 1 · 2-8 Nov",
    "cat": "Professors",
    "due": "2026-11-05",
-   "title": "Meet your research supervisor: letter, school list, turning the PINN work into a write-up",
-   "how": "Book 20 minutes. Bring your list of schools and the question list from Prep. This meeting covers the most ground: their letter, their read on your list, and whether the research can become something you can show."
+   "title": "Meet your research supervisor: letter, school list, a math or ML project you can show",
+   "how": "Book 20 minutes. Bring your list of schools and the question list from Prep. This meeting covers the most ground: their letter, their read on your list, and what math, stats, ML or LLM work you could finish and show."
   },
   {
    "id": "w1-talk-algorithms",
@@ -481,15 +561,42 @@
    "only": [
     "eth-cs"
    ],
-   "how": "Needed only for the scholarship, but it's what makes ETH affordable. Follow ETH's guidelines PDF. Ask your supervisor to read it. ESOP asks for top 10% of your cohort; a 4.0 should qualify."
+   "how": "Needed only for the scholarship, but it's what makes ETH affordable. Follow ETH's guidelines PDF. Ask your supervisor to read it. ESOP asks for top 10% of your cohort; your 4.25/4.3 should help, but only the Registrar can state a rank."
+  },
+  {
+   "id": "w2-new-funded",
+   "phase": "Week 2 · 9-15 Nov",
+   "cat": "Money",
+   "due": "2026-11-10",
+   "title": "Decide on the funded options I just found",
+   "how": "Toronto, Waterloo, UBC, Mila, CMU's research master's (MLT) and the ISTA PhD are under 'Worth adding?' in Schools. Toronto, Waterloo and Mila are due 1 Dec, so decide now and warn your referees: most want 3 letters."
+  },
+  {
+   "id": "w2-aub-oip",
+   "phase": "Week 2 · 9-15 Nov",
+   "cat": "Money",
+   "due": "2026-11-13",
+   "title": "Open AUB's scholarship list and ask about study-abroad awards",
+   "how": "AUB's Office of International Programs keeps a list that I couldn't load. Open aub.edu.lb/oip/Pages/awards-scholarships.aspx, and ask them and the Financial Aid office what Lebanese graduates have used for a master's abroad. Add anything new here."
+  },
+  {
+   "id": "w2-epfl-five-year",
+   "phase": "Week 2 · 9-15 Nov",
+   "cat": "Applications",
+   "due": "2026-11-13",
+   "title": "Check EPFL's five-year-degree rule with admissions",
+   "only": [
+    "epfl-cs"
+   ],
+   "how": "EPFL's IC school says you can't start an MSc if you're already scheduled to receive a five-year degree in a closely related field. Email admissions with your degree's length and credits, including the French Bac credits, and ask if the AUB B.E. counts."
   },
   {
    "id": "w2-research",
    "phase": "Week 2 · 9-15 Nov",
    "cat": "Research",
    "due": "2026-11-15",
-   "title": "Start the PINN write-up, or join a project",
-   "how": "Depending on what your supervisor said. Even a clean 4-6 page technical report lets you cite real research on your CV and in statements, and lets referees point at it. Don't list anything as submitted unless it is."
+   "title": "Start a short math, stats, ML or LLM project, or join one",
+   "how": "Depending on what your professors said. Pick something your statements can lead with, ideally LLMs or statistical ML. Even a clean 4-6 page technical report lets you cite real research on your CV and in statements, and lets referees point at it. Don't list anything as submitted unless it is."
   },
   {
    "id": "w2-oxford-page",
@@ -552,7 +659,7 @@
    "only": [
     "epfl-cs"
    ],
-   "how": "Choose your ONE program: CS, Data Science or Financial Engineering. Referees get their link when you validate, so don't leave validating to the last day. Tick the Excellence Fellowship box."
+   "how": "Choose your ONE program: CS, Data Science or Financial Engineering. Referees get their link when you validate, so don't leave validating to the last day. Tick the Excellence Fellowship box and, for CS or Data Science, the IC Research Scholars box. You can't hold both, so if the form makes you choose, ask EPFL. For Research Scholars, add a paragraph naming labs and research areas to your statement."
   },
   {
    "id": "w3-eth-review",
@@ -703,6 +810,72 @@
    "how": "Must be paid and validated by 15 Dec for the Excellence Fellowship. Statement max 1000 words. At least 2 of your 3 referees must submit within a week after the deadline."
   },
   {
+   "id": "w3-cmu-mlt-early",
+   "phase": "Week 3 · 16-22 Nov",
+   "cat": "Applications",
+   "due": "2026-11-17",
+   "title": "SUBMIT CMU MLT for the early deadline (18 Nov, $80)",
+   "only": [
+    "cmu-mlt"
+   ],
+   "how": "Optional: the final deadline is 9 Dec at $100. MLT is CMU's research master's and the closest fit for LLM work. Three letters, and an English test is required with no exceptions."
+  },
+  {
+   "id": "w4-toronto",
+   "phase": "Week 4 · 23-30 Nov",
+   "cat": "Applications",
+   "due": "2026-11-28",
+   "title": "SUBMIT Toronto MSc CS (closes 1 Dec)",
+   "only": [
+    "toronto-msc"
+   ],
+   "how": "Three letters and a CAD 135 fee. Don't wait for a professor's reply before applying. If you rely on AUB being English-taught, get a letter that confirms it, because Toronto may ask."
+  },
+  {
+   "id": "w4-waterloo",
+   "phase": "Week 4 · 23-30 Nov",
+   "cat": "Applications",
+   "due": "2026-11-28",
+   "title": "SUBMIT Waterloo MMath CS (closes 1 Dec)",
+   "only": [
+    "waterloo-mmath"
+   ],
+   "how": "Three letters, no GRE, thesis option only. An AUB English-instruction letter doesn't count, so you need a test. You don't need a supervisor to apply, but you do need one to be accepted, so contact faculty."
+  },
+  {
+   "id": "w4-mila",
+   "phase": "Week 4 · 23-30 Nov",
+   "cat": "Applications",
+   "due": "2026-11-28",
+   "title": "SUBMIT the Mila supervision request (closes 1 Dec)",
+   "only": [
+    "mila-msc"
+   ],
+   "how": "Mila doesn't grant degrees: you enroll through McGill, Université de Montréal, Polytechnique or HEC. The page doesn't say if the request replaces that school's application, so check that, its deadline and its funding."
+  },
+  {
+   "id": "w4-mit-orc",
+   "phase": "Week 4 · 23-30 Nov",
+   "cat": "Applications",
+   "due": "2026-11-28",
+   "title": "SUBMIT MIT Operations Research SM (1 Dec)",
+   "only": [
+    "mit-orc"
+   ],
+   "how": "$90, three letters, GRE optional, English test required. The page doesn't state funding, so ask ORC before relying on it, and confirm the date: it prints no year."
+  },
+  {
+   "id": "d-ubc",
+   "phase": "December",
+   "cat": "Applications",
+   "due": "2026-12-12",
+   "title": "SUBMIT UBC MSc CS (15 Dec: confirm the date)",
+   "only": [
+    "ubc-msc"
+   ],
+   "how": "Research track only for guaranteed funding. No GRE. IELTS 7.0 with at least 6.5 in each part. Their FAQ says letters carry the greatest weight."
+  },
+  {
    "id": "d-mbzuai",
    "phase": "December",
    "cat": "Applications",
@@ -728,6 +901,28 @@
    "due": "2026-12-22",
    "title": "Adapt statements for Oxford, Imperial and your other January schools",
    "how": "Don't send a generic letter: change what's specific to each program. Oxford advises submitting two weeks before its deadline, which means around 23 Dec."
+  },
+  {
+   "id": "j-ista",
+   "phase": "January-February",
+   "cat": "Applications",
+   "due": "2027-01-05",
+   "title": "SUBMIT the ISTA PhD (8 Jan, 3pm Vienna time)",
+   "only": [
+    "ista-phd"
+   ],
+   "how": "Referees by 12 Jan. Name up to 3 research groups in math, statistics or ML, and answer the short questions yourself."
+  },
+  {
+   "id": "j-masds",
+   "phase": "January-February",
+   "cat": "Applications",
+   "due": "2027-01-03",
+   "title": "SUBMIT Berkeley MA Statistics (MASDS, 6 Jan, $155)",
+   "only": [
+    "berkeley-masds"
+   ],
+   "how": "GRE scores aren't accepted. You're considered for the merit scholarships automatically. It's a career-focused degree, not PhD preparation."
   },
   {
    "id": "j-kaust",

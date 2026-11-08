@@ -27,6 +27,14 @@ pages:
   - {name: "UZH/ETH – MSc Quantitative Finance", kind: grad, url: "https://www.msfinance.uzh.ch/en/admission/applicationinformation.html", keywords: [deadline, january, november, "2027"]}
   - {name: "Oxford – MSc Mathematical Sciences", kind: grad, url: "https://www.ox.ac.uk/admissions/graduate/courses/msc-mathematical-sciences", keywords: [deadline, "2027"]}
 
+  - {name: "Princeton CS - master's (closed for Fall 2027)", kind: grad, url: "https://www.cs.princeton.edu/node/38", keywords: [accept, applications, "2027", "2028"]}
+  - {name: "Google DeepMind - AI master's scholarships", kind: grad, url: "https://deepmind.google/scholarships/", keywords: [scholarship, applications, "2027", closed]}
+  - {name: "Erasmus Mundus - EDISS", kind: grad, url: "https://www.master-ediss.eu/", keywords: [deadline, application, intake, "2027"]}
+  - {name: "Erasmus Mundus - DEAI", kind: grad, url: "https://deai.ulb.be/", keywords: [deadline, application, offline, "2027"]}
+  - {name: "UBC CS - graduate applications", kind: grad, url: "https://www.cs.ubc.ca/students/grad/prospective/", keywords: [deadline, close, "2027", funding]}
+  - {name: "Vector Scholarship in AI", kind: grad, url: "https://vectorinstitute.ai/programs-courses/scholarships/", keywords: [nomination, deadline, "2027", eligib]}
+  - {name: "EPFL IC - Research Scholars", kind: grad, url: "https://www.epfl.ch/schools/ic/education/master/research-scholars/", keywords: [stipend, deadline, December, March, CHF]}
+
   # ---- Research summer programs ----
   - {name: "ETH CS – Summer Research Fellowship", kind: research, url: "https://inf.ethz.ch/studies/summer-research-fellowship.html", keywords: [deadline, "2027", application]}
   - {name: "ISTA – ISTernship", kind: research, url: "https://ista.ac.at/en/education/isternship/", keywords: [deadline, "2027", application, paused]}
