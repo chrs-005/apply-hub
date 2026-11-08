@@ -33,7 +33,7 @@ programs:
     app_fee: {amount: 150, currency: CHF, note: "No fee waivers"}
     tuition: {amount: 2190, currency: CHF, per: semester}
     scholarships:
-      - {name: "ESOP (Excellence & Opportunity)", deadline: 2026-11-30, covers: "CHF 13,500/semester + tuition waiver (about 60 awards)", how: "Same window. Needs a master's thesis pre-proposal on top of the normal documents, and you should be top 10% of your cohort. Possible interview in February; decisions by end of March."}
+      - {name: "ESOP (Excellence & Opportunity)", deadline: 2026-11-30, covers: "CHF 13,500/semester + tuition waiver (about 60 awards)", how: "Same window. Needs a thesis pre-proposal (max 500 words). Two PROFESSORS must submit signed letters on university letterhead, and it's your job to check they did. Top 10% of your cohort. About 60 awards; possible interview in February; decision end of March. Can't be combined with the CS Direct Doctorate."}
     language: "C1 proof by the deadline: TOEFL/IELTS/C1 Advanced, or a stamped Registrar letter that your bachelor's was COMPLETELY taught in English"
     gre: "Not asked for in anything I could read (ETH says only 'like GRE, if required')"
     requires:
@@ -225,7 +225,7 @@ programs:
     notes: "Dates are from a page last updated 2024: confirm. Columbia tells international students to look for outside funding."
 
   - id: cmu-mscs
-    target: suggested
+    target: core
     why: "Top US program, but the deadline is close (9 Dec) and it's the one that needs a test-center GRE and an English test. Decide this week."
     university: Carnegie Mellon
     short: CMU
@@ -252,7 +252,7 @@ programs:
     url: https://www.csd.cs.cmu.edu/academics/masters/admissions
     source: official
     verify: [tuition]
-    notes: "The program offers no scholarships or financial help."
+    notes: "No scholarships from the program. You can apply to several CMU master's: MS Machine Learning has the same deadlines, GRE optional, and no funding either. Its average admit had GPA 3.9/4.0, Quant 169."
 
   - id: stanford-ms
     target: suggested
@@ -448,6 +448,153 @@ programs:
     source: official
     verify: [letters, statement, gre]
     notes: "Final-year students can apply. Results on 1 April. KTH lists a 31% acceptance rate for 2026."
+
+  - id: bu-ms
+    target: core
+    university: Boston University
+    short: BU
+    program: MS Computer Science or MS Artificial Intelligence
+    country: United States
+    region: US
+    fields: [cs, ml]
+    opens: null
+    deadlines:
+      - {label: "Application deadline (page prints no year)", date: 2027-03-15}
+    app_fee: {amount: 95, currency: USD, note: "Fee waiver link on the admissions page"}
+    tuition: null
+    scholarships:
+      - {name: "BU CS merit scholarship", deadline: null, covers: "$5,000-$30,000", how: "Automatic for admitted full-time students; BU encourages applying early. Keep a 3.0 GPA."}
+    language: "Not stated on the CS page: BU Engineering asks for TOEFL 90 or IELTS 7.0"
+    gre: "Not required"
+    requires:
+      letters: 2
+      letters_note: "Two recommendation letters"
+      gre: {status: "optional", note: "BU doesn't require it. Admits who sent one averaged 80th percentile Quant, 60th Verbal."}
+      english: {status: "test", note: "Not stated on the CS admissions page. Confirm with BU."}
+      statement: "Personal statement"
+      extras: []
+    url: https://www.bu.edu/cs/masters/ms-admissions/on-campus-admissions/
+    source: official
+    verify: [deadlines, english, tuition]
+    notes: "Apply early for scholarship money, not at the deadline. Other BU options: MS Data Science (priority 1 Feb, about $74,000 total, scholarships around $10,000) and Engineering master's (priority 15 Jan)."
+
+  - id: cmu-mscf
+    target: suggested
+    short: CMU Quant Finance
+    why: "Your strongest quant option in the US: every admit is considered for a merit scholarship. Needs a GRE or GMAT."
+    university: Carnegie Mellon
+    program: MS Computational Finance (MSCF)
+    country: United States
+    region: US
+    fields: [quant, math]
+    opens: null
+    deadlines:
+      - {label: "Round 1 (decisions 26 Feb)", date: 2026-12-01}
+      - {label: "Round 2", date: 2027-03-01}
+    app_fee: {amount: 125, currency: USD}
+    tuition: null
+    scholarships:
+      - {name: "MSCF Merit Scholarship", deadline: null, covers: "Amount not stated", how: "Automatic for every admitted student"}
+    language: "Required unless your bachelor's was taught solely in English for 2+ years"
+    gre: "REQUIRED: GRE or GMAT"
+    requires:
+      letters: 3
+      letters_note: "Three letters"
+      gre: {status: "recommended", note: "An official GRE or GMAT score is required."}
+      english: {status: "letter-or-test", note: "Exempt if the sole language of instruction of your bachelor's was English for two or more years."}
+      statement: "Check the application"
+      extras: ["Interview by invitation"]
+    url: https://www.cmu.edu/mscf/admissions
+    source: official
+    verify: [tuition, statement]
+    notes: "886 applicants last class. Round 2 (1 Mar) gives you time to take the GRE."
+
+  - id: mit-eecs-phd
+    target: suggested
+    short: MIT PhD
+    why: "PhD only: MIT EECS has no standalone master's, but you earn one on the way. Funded through research or teaching assistantships."
+    university: MIT
+    program: PhD, Electrical Engineering & Computer Science (master's earned along the way)
+    country: United States
+    region: US
+    fields: [cs, ml, research]
+    opens: 2026-09-15
+    deadlines:
+      - {label: "Application deadline", date: 2026-12-01}
+    app_fee: {amount: 90, currency: USD, note: "MIT's standard fee"}
+    tuition: {amount: 0, currency: USD, per: year, note: "Most students funded by assistantships"}
+    scholarships: []
+    language: "Check the application"
+    gre: "Not stated on the pages I could read"
+    requires:
+      letters: null
+      letters_note: "Not stated on the pages I could read"
+      gre: {status: "check", note: "Not stated on the pages I could read."}
+      english: {status: "test", note: "Check the application."}
+      statement: "Research statement: check the application"
+      extras: ["Read the Faculty Interests Guide and name professors whose work fits"]
+    url: https://www.eecs.mit.edu/academics/graduate-programs/admission-process/
+    source: official
+    verify: [letters, gre, english]
+    notes: "Master's-level MIT options that are open: Operations Research SM (due 1 Dec) and the Master of Finance (due 5 Jan). A Master of Engineering is only for MIT's own undergraduates."
+
+  - id: mit-mfin
+    target: suggested
+    short: MIT Finance
+    why: "MIT's real master's route for quant. 12 or 18 months; check the tuition and aid first."
+    university: MIT Sloan
+    program: Master of Finance (Financial Engineering concentration)
+    country: United States
+    region: US
+    fields: [quant, math]
+    opens: null
+    deadlines:
+      - {label: "Application deadline, 3pm ET", date: 2027-01-05}
+    app_fee: null
+    tuition: null
+    scholarships: []
+    language: "Check the application"
+    gre: "Not stated on the pages I could read"
+    requires:
+      letters: null
+      letters_note: "Not stated on the pages I could read"
+      gre: {status: "check", note: "Not stated on the pages I could read."}
+      english: {status: "test", note: "Check the application."}
+      statement: "Check the application"
+      extras: []
+    url: https://mitsloan.mit.edu/mfin/admissions
+    source: official
+    verify: [letters, gre, english, app_fee, tuition]
+    notes: "MIT Sloan application fees run $95-$250. Decisions in March 2027."
+
+  - id: caltech-phd
+    target: suggested
+    short: Caltech PhD
+    why: "PhD only: Caltech's CS master's is normally awarded on the way to the PhD. Check its work-authorization rule first."
+    university: Caltech
+    program: PhD, Computer Science or Computing & Mathematical Sciences
+    country: United States
+    region: US
+    fields: [cs, ml, math, research]
+    opens: 2026-12-01
+    deadlines:
+      - {label: "CS and CMS deadline (from a list revised in 2024)", date: 2026-12-15}
+    app_fee: null
+    tuition: null
+    scholarships: []
+    language: "Check the application"
+    gre: "Varies by program: check Caltech's GRE list"
+    requires:
+      letters: 3
+      letters_note: "Three letters"
+      gre: {status: "check", note: "Caltech says GRE policy differs by program."}
+      english: {status: "test", note: "Check the application."}
+      statement: "Essays"
+      extras: ["CV", "Evidence of work authorization, needed by most funding sources unless other compensation can be arranged"]
+    url: https://www.cms.caltech.edu/academics/grad/grad_cms
+    source: official
+    verify: [deadlines, gre, english, app_fee, tuition]
+    notes: "You can apply to only one option per cycle. Students can pick an advisor from 30+ CMS faculty. Ask how work authorization is handled for a Lebanese student before paying."
 
 
 # ======================= OTHER PROGRAMS (catalog: add from the app if you want them) =======================

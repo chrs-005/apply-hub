@@ -260,6 +260,10 @@ function renderPrep() {
     <div class="card small">${tests.map(testCard).join("") || `<div class="muted">No test booked yet. Add it here and you'll get reminders.</div>`}
       <button class="btn sm" data-act="m-test-add" style="margin-top:8px">+ Add a test</button></div>
 
+    <h2>💰 Scholarships & funding</h2>
+    ${(plan.funding || []).map((f) => `<div class="card small"><div class="row between"><b>${esc(f.name)}</b><span class="badge ${/^(Open|Automatic)/.test(f.status) ? "good" : f.status === "Closed" ? "bad" : "warn"}">${esc(f.status)}</span></div>
+      <div class="tiny muted" style="margin-top:3px">${esc(f.when)} · ${esc(f.covers)}</div><p style="margin:6px 0">${esc(f.note)}</p><a href="${esc(f.url)}" target="_blank" rel="noopener">Open ↗</a></div>`).join("")}
+
     <h2>🗣 What to ask professors</h2>
     ${(plan.professor_questions || []).map((g, i) => `<details class="m-phase" data-key="q:${i}" ${isOpen("q:" + i, i === 0)}><summary><b>${esc(g.title)}</b></summary><div class="card small"><ul class="clean">${g.items.map((q) => `<li>${esc(q)}</li>`).join("")}</ul></div></details>`).join("")}
 

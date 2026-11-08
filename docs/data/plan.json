@@ -88,6 +88,120 @@
   "You can go to 2 pages for grad schools (Polytechnique's limit is 2). Keep your 1-page version for internships.",
   "Fix these in the current CV: 'Led the organization 13 nationwide events' (→ 'Led the organization of 13 nationwide events'), 'statistical inferences' (→ 'statistical inference'), and check whether '10e-6' should be '1e-6'."
  ],
+ "funding": [
+  {
+   "name": "ETH ESOP",
+   "status": "Open",
+   "when": "By 30 Nov",
+   "covers": "CHF 13,500/semester + tuition waiver",
+   "note": "Two professors' signed letters on letterhead, 500-word thesis pre-proposal. Can't be combined with the CS Direct Doctorate.",
+   "url": "https://ethz.ch/students/en/studies/financial/scholarships/excellencescholarship.html"
+  },
+  {
+   "name": "Gates Cambridge / Cambridge Trust",
+   "status": "Open",
+   "when": "By 2 Dec",
+   "covers": "Full cost (Gates)",
+   "note": "Tick funding in the Cambridge application. Gates needs a third referee.",
+   "url": "https://www.gatescambridge.org/"
+  },
+  {
+   "name": "EPFL Excellence Fellowship",
+   "status": "Open",
+   "when": "By 15 Dec",
+   "covers": "CHF 10,000/semester + a room",
+   "note": "Tick the box in the application.",
+   "url": "https://www.epfl.ch/education/master/master-excellence-fellowships/how-to-apply/"
+  },
+  {
+   "name": "MBZUAI / KAUST",
+   "status": "Open",
+   "when": "15 Dec / 3 Jan",
+   "covers": "Fully funded",
+   "note": "Automatic with admission, and your strongest financial backstop.",
+   "url": "https://mbzuai.ac.ae/study/admission-process"
+  },
+  {
+   "name": "Clarendon (Oxford)",
+   "status": "Open",
+   "when": "By 6 Jan",
+   "covers": "Full fees + living",
+   "note": "Automatic if you apply by the deadline.",
+   "url": "https://www.ox.ac.uk/clarendon"
+  },
+  {
+   "name": "Eiffel (France)",
+   "status": "Open",
+   "when": "6 Jan, through a French school",
+   "covers": "See the 2027 rules",
+   "note": "You can't apply yourself: a French institution such as Polytechnique must submit you. Ask them.",
+   "url": "https://www.campusfrance.org/en/france-excellence-eiffel-scholarship-program"
+  },
+  {
+   "name": "CMA CGM Excellence Fund at Imperial",
+   "status": "2027-28 not posted",
+   "when": "Last year: offer needed by 4 Mar",
+   "covers": "Full tuition + £19,500",
+   "note": "Lebanese nationals living in Lebanon, financial need, one-year master's. Excludes those 'currently studying outside Lebanon', so ask if your finished BU exchange matters. Applying in Round 2 (6 Jan) should get you a decision in time.",
+   "url": "https://www.imperial.ac.uk/study/fees-and-funding/scholarships-search/"
+  },
+  {
+   "name": "CMA CGM at Oxford, Columbia, King's, Polytechnique",
+   "status": "Ask each school",
+   "when": "Usually opens in autumn, decided in spring",
+   "covers": "Varies (King's last year: full tuition + £22,161)",
+   "note": "Each school runs its own process. CMA CGM doesn't take direct applications. Ask each scholarship office about 2027-28.",
+   "url": "https://www.cmacgm-group.com/en/talent/excellence-fund-for-education"
+  },
+  {
+   "name": "Columbia Engineering Lebanon fellowship",
+   "status": "Check yourself",
+   "when": "After you apply to Columbia",
+   "covers": "Reported as $50,000",
+   "note": "A search result describes this, but Columbia blocks my reading the page. Find its name and rules on the Graduate Funding page.",
+   "url": "https://www.engineering.columbia.edu/funding"
+  },
+  {
+   "name": "KTH Scholarship",
+   "status": "Check deadline",
+   "when": "Own deadline",
+   "covers": "Tuition",
+   "note": "Open to all fee-paying applicants.",
+   "url": "https://www.kth.se/en/studies/master/admissions/scholarships"
+  },
+  {
+   "name": "BU CS and CMU MSCF merit awards",
+   "status": "Automatic",
+   "when": "Apply early",
+   "covers": "BU $5,000-$30,000; CMU amount not stated",
+   "note": "No separate application.",
+   "url": "https://www.bu.edu/cs/masters/ms-admissions/on-campus-admissions/"
+  },
+  {
+   "name": "Said Foundation (UK master's for Lebanese students)",
+   "status": "Closed",
+   "when": "Closed 30 Oct 2026",
+   "covers": "UK one-year master's",
+   "note": "Missed for 2027/28. Opens around September, if you apply a year later.",
+   "url": "https://saidfoundation.org/our-timetable/"
+  },
+  {
+   "name": "Fulbright Lebanon",
+   "status": "Closed",
+   "when": "Closed 4 May 2026",
+   "covers": "US master's, up to 2 years",
+   "note": "The 2028 entry round would open next year.",
+   "url": "https://www.amideast.org/our-work/find-a-scholarship/graduate-study/fulbright"
+  },
+  {
+   "name": "Chevening",
+   "status": "Closed",
+   "when": "Closed",
+   "covers": "UK one-year master's",
+   "note": "Also needs 2 years of work after your degree, so not yet.",
+   "url": "https://www.chevening.org/scholarship/lebanon/"
+  }
+ ],
  "tasks": [
   {
    "id": "w1-graduation",
@@ -145,6 +259,25 @@
    "due": "2026-11-05",
    "title": "Fix your GPA and degree title everywhere to match your transcript",
    "how": "Your transcript shows a cumulative GPA of 4.25 on AUB's scale (A+ = 4.3), not 4.0/4.0, and lists your program as Computer & Communications Engineering. Ask the Registrar for the official degree title, then update your CV and the Autofill profile. ETH says mismatches between your uploads and final documents can lead to rejection."
+  },
+  {
+   "id": "w1-eth-esop-dd",
+   "phase": "Week 1 · 2-8 Nov",
+   "cat": "Money",
+   "due": "2026-11-10",
+   "title": "ETH: choose ESOP or the Direct Doctorate (you can't have both in CS)",
+   "only": [
+    "eth-cs"
+   ],
+   "how": "Ticking the CS Direct Doctorate means your application can't be considered for ESOP. If the Direct Doctorate rejects you, you can still get the master's, but without ESOP money. Unless you're sure about a PhD, choose ESOP."
+  },
+  {
+   "id": "w1-funding-emails",
+   "phase": "Week 1 · 2-8 Nov",
+   "cat": "Money",
+   "due": "2026-11-12",
+   "title": "Ask about Lebanese funding: Imperial, Oxford, Columbia, AUB",
+   "how": "Ask each scholarship office if the CMA CGM award runs for 2027-28, and if a finished exchange abroad affects eligibility. Imperial: scholarships@imperial.ac.uk. Open Columbia Engineering's Graduate Funding page for its Lebanon fellowship. Ask AUB's Office of International Programs what else exists. The full list is under Prep."
   },
   {
    "id": "w1-pick-referees",
@@ -496,6 +629,39 @@
    "how": "Three letters, two 500-word statements, and IELTS 7.0 or TOEFL 87. Confirm the deadline and GRE policy for Fall 2027 first: the page prints no year."
   },
   {
+   "id": "d-mit-phd",
+   "phase": "December",
+   "cat": "Applications",
+   "due": "2026-11-28",
+   "title": "Submit MIT EECS PhD (closes 1 Dec), if you added it",
+   "only": [
+    "mit-eecs-phd"
+   ],
+   "how": "PhD application only. Choose faculty from the Faculty Interests Guide and write about research you want to do with them."
+  },
+  {
+   "id": "d-mscf",
+   "phase": "December",
+   "cat": "Applications",
+   "due": "2026-11-29",
+   "title": "Submit CMU Computational Finance Round 1 (closes 1 Dec), if you added it",
+   "only": [
+    "cmu-mscf"
+   ],
+   "how": "Needs a GRE or GMAT. If you can't have one by then, use Round 2 (1 Mar)."
+  },
+  {
+   "id": "d-caltech",
+   "phase": "December",
+   "cat": "Applications",
+   "due": "2026-12-12",
+   "title": "Submit Caltech PhD (15 Dec), if you added it",
+   "only": [
+    "caltech-phd"
+   ],
+   "how": "Check the deadline on the current application, and ask about work authorization first."
+  },
+  {
    "id": "d-epfl-submit",
    "phase": "December",
    "cat": "Applications",
@@ -617,6 +783,28 @@
     "eth-qf"
    ],
    "how": "Applied for through the UZH program website, not eApply. Cover corporate finance and investments if you plan to apply."
+  },
+  {
+   "id": "j-mfin",
+   "phase": "January-February",
+   "cat": "Applications",
+   "due": "2027-01-03",
+   "title": "Submit MIT Master of Finance (5 Jan, 3pm ET), if you added it",
+   "only": [
+    "mit-mfin"
+   ],
+   "how": "Check tests, letters and funding on its application pages first."
+  },
+  {
+   "id": "j-bu",
+   "phase": "January-February",
+   "cat": "Applications",
+   "due": "2027-01-31",
+   "title": "Submit BU MS CS or AI early, for scholarship money",
+   "only": [
+    "bu-ms"
+   ],
+   "how": "The stated deadline is 15 March, but BU encourages early applications for merit awards of $5,000-$30,000."
   },
   {
    "id": "j-gt",
