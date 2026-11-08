@@ -20,14 +20,14 @@
    "status": "blocked"
   },
   "https://www.gresearch.com/join-us/": {
-   "hash": "30041b5e3c27da9801954785d6ce8038323d10b4b3b5b304e7f3979d8ab42543",
+   "hash": "f9c6d0d69ab3c4bc813c045744bd37eecb5528baa03ac2aee7da37bd05174760",
    "lines": [
     "Students & graduates",
     "Engineering internships",
+    "Quant Research Internship",
     "Data Science Internship",
     "Machine Learning Research Internship",
     "Natural Language Processing Internship",
-    "Quant Research Internship",
     "Machine Learning Engineer Internship",
     "Software Engineering Internship",
     "Quantitative Research Intern",
@@ -229,6 +229,81 @@
     "Apply with your CV (in English or French) and complete the online application before the deadline.",
     "Application review and interview",
     "Your application will be reviewed and you may be invited to take part in an online interview with the hiring manager(s) to discuss your application, CERN and the position, and for you both to determine if it could be a good fit."
+   ],
+   "status": "ok"
+  },
+  "https://www.cs.princeton.edu/node/38": {
+   "hash": "5ef83cda892f79407871d2d51b7fe31379cadeb01e6fa0a4a67c591c32e13dfe",
+   "lines": [
+    "In light of uncertainty regarding the resources available to support masters students, the computer science department will not accept applications to the master's degree program for Fall 2027 admission. We hope that prospective students revisit our program in the future."
+   ],
+   "status": "ok"
+  },
+  "https://deepmind.google/scholarships/": {
+   "hash": "5cc598bbd8c5a6bafa5a5749f3637eb5ea198493e99835f57bc9d5df77593cb6",
+   "lines": [
+    "Build responsible AI applications at scale",
+    "Design advanced algorithms for math and applications in computing",
+    "Build responsible AI applications at scale",
+    "Design advanced algorithms for math and applications in computing",
+    "Postgraduate scholarships",
+    "Starting in 2017, scholarship funding allowed recipient universities to provide financial support to students seeking to study graduate courses relating to AI and adjacent fields. Scholars were also offered support from a Google DeepMind mentor, and had opportunities to attend leading AI academic conferences and Google DeepMind events.",
+    "In 2026, Google DeepMind AI Masters scholarships in the UK will be delivered by Martingale Foundation. For more information, please visit the Martingale website . Applications are now closed.",
+    "For applicants and scholars selected by host universities outside of the UK, AI Masters scholarships for 2026 are administered by the Institute of International Education (IIE). For more information, visit IIEâs website .",
+    "The Pan-African âAI for Scienceâ Masters program scholarships are offered directly by AI for Science Masters (AIMS).",
+    "Our funding will help AIMS provide full scholarships, equipment and compute, with the goal of supporting 160 African students by July 2027.",
+    "Applications and more information"
+   ],
+   "status": "ok"
+  },
+  "https://www.master-ediss.eu/": {
+   "hash": "dd4bc9b83be4a67ae806f17b42c9479a60dcad9b52c5037c4923e497b54c5684",
+   "lines": [
+    "Application process",
+    "The next generation of applications will be the result of multiple worlds colliding: when application development meets artificial intelligence, the Internet of Things and big data analytics, intelligent systems are the outcome. The future of software is being driven by...",
+    "The EDISS Programme Office organises two live Q&A webinars during the upcoming application period. During...",
+    "Upcoming application rounds – EDISS Intake 7",
+    "The application rounds for our 7th INTAKE (academic years 2027-29, studies starting in August 2027)...",
+    "The EDISS consortium invites talented researchers to collaborate on competitive applications for the EU Marie...",
+    "The EDISS Programme Office is organising a Q&A live webinar on the upcoming application period...",
+    "Upcoming application rounds – EDISS Intake 7",
+    "We will arrange Q&A Webinars about the 7th application period and review process in autumn 2027. Complete this form to receive a notification when the webinar dates are set: EDISS – 7th Intake Webinars – Fall 2026 – Fill in form"
+   ],
+   "status": "ok"
+  },
+  "https://deai.ulb.be/": {
+   "hash": "75969d366ee4203f59c72535c0e0b08db9c7f722c1b0807379a69c00d1dc429d",
+   "lines": [
+    "Preparing a Successful Application",
+    "Preparing a Successful Application",
+    "Please be advised that our online application form (https://deai.ulb.ac.be/emundus/) is currently offline due to urgent security maintenance. Our technical team…",
+    "DEAI Application Manual"
+   ],
+   "status": "ok"
+  },
+  "https://www.cs.ubc.ca/students/grad/prospective/": {
+   "hash": "3892cb99112e0a0a3d08ba92c07a18f2c92919b6bf9decbf64496bc45933f307",
+   "lines": [
+    "Awards and Deadlines",
+    "Stipends & Support Details 2026-2027",
+    "The MSc and PhD program applications open on September 15 and close on December 15.",
+    "We guarantee funding support to all research-track MSc and PhD students.",
+    "Awards and Deadlines",
+    "Stipends & Support Details 2026-2027"
+   ],
+   "status": "ok"
+  },
+  "https://vectorinstitute.ai/programs-courses/scholarships/": {
+   "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "lines": [],
+   "status": "ok"
+  },
+  "https://www.epfl.ch/schools/ic/education/master/research-scholars/": {
+   "hash": "df5b3e67671043bcc54736a36e3cfd15edd0ccaff90009162e908691e36fdb74",
+   "lines": [
+    "The Research Scholars MSc Program is a highly competitive program that offers Master’s students a unique research experience: In addition to the standard Master cursus, scholars work part-time on a research project together with PhD students and faculty, and receive a stipend for their research work from the beginning of September of the year they arrive on campus.",
+    "Interested students should apply to an IC Master program (December 15 or March 31) and indicate their willingness to participate in the Research Scholars MSc Program by checking the appropriate box on the master’s application form.",
+    "Scholars receive approximately CHF 1’450.- net per month (same amount paid each month on the basis of 65 hours per month at CHF 25.- gross per hour)."
    ],
    "status": "ok"
   }
