@@ -79,7 +79,7 @@
   }
  ],
  "cv_changes": [
-  "Lead with Education: AUB, GPA as on your transcript (4.25 on AUB's 4.3 scale), MERIT scholarship, then BU exchange. Add class rank if the Registrar can state it (Polytechnique asks for it).",
+  "Lead with Education: AUB, GPA as on your transcript: 4.0/4.0, adding that AUB caps GPA at 4.0 (uncapped 4.26/4.3), MERIT scholarship, then BU exchange. Add class rank if the Registrar can state it (Polytechnique asks for it).",
   "Put Research Experience right after Education, above industry. For a master's reader, that's the section that counts.",
   "Rewrite the research bullets around question, method and result. Name what you found, not only the numbers.",
   "Add a Publications / Reports section once you have a math, stats, ML or LLM write-up, even as 'in preparation' (only if it's truly being written).",
@@ -346,7 +346,7 @@
    "cat": "CV",
    "due": "2026-11-05",
    "title": "Fix your GPA and degree title everywhere to match your transcript",
-   "how": "Your transcript shows a cumulative GPA of 4.25 on AUB's scale (A+ = 4.3), not 4.0/4.0, and lists your program as Computer & Communications Engineering. Ask the Registrar for the official degree title, then update your CV and the Autofill profile. ETH says mismatches between your uploads and final documents can lead to rejection."
+   "how": "Your transcript shows GPA 4.00, capped at 4.0 by AUB (A+ = 4.3; uncapped it's 4.26). Enter 4.0/4.0 on forms, since they must match the transcript. It also lists your program as Computer & Communications Engineering. Ask the Registrar for the official degree title, then update your CV and the Autofill profile. ETH says mismatches between your uploads and final documents can lead to rejection."
   },
   {
    "id": "w1-eth-esop-dd",
@@ -561,7 +561,7 @@
    "only": [
     "eth-cs"
    ],
-   "how": "Needed only for the scholarship, but it's what makes ETH affordable. Follow ETH's guidelines PDF. Ask your supervisor to read it. ESOP asks for top 10% of your cohort; your 4.25/4.3 should help, but only the Registrar can state a rank."
+   "how": "Needed only for the scholarship, but it's what makes ETH affordable. Follow ETH's guidelines PDF. Ask your supervisor to read it. ESOP asks for top 10% of your cohort; your 4.0 (all A/A+) should help, but only the Registrar can state a rank."
   },
   {
    "id": "w2-new-funded",
