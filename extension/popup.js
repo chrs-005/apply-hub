@@ -27,7 +27,24 @@ const $ = (s) => document.querySelector(s);
     $("#track-result").textContent = r?.synced ? "✓ Added to your tracker (synced to the app)" : r?.ok ? "✓ Saved locally (set up sync in Settings to see it in the app)" : `Error: ${r?.error || r?.status}`;
   };
 
-  const copyKeys = [["Email", profile.email], ["Phone", `${profile.phone_code || ""} ${profile.phone || ""}`.trim()], ["LinkedIn", profile.linkedin], ["GitHub", profile.github], ["GPA", profile.gpa && `${profile.gpa}/${profile.gpa_scale || "4.0"}`], ["Full name", `${profile.first_name || ""} ${profile.last_name || ""}`.trim()], ["University", profile.university]];
+  // floating button switches (content.js reads the same "fab" key)
+  const host = (() => { try { return /^https?:/.test(tab.url) ? new URL(tab.url).hostname : ""; } catch { return ""; } })();
+  const { fab = {} } = await chrome.storage.local.get("fab");
+  $("#fabHost").textContent = host || "this site";
+  $("#fabAll").checked = !fab.off;
+  $("#fabSite").checked = !(fab.hosts || []).includes(host);
+  $("#fabSite").disabled = !host;
+  const saveFab = async () => {
+    const { fab: cur = {} } = await chrome.storage.local.get("fab");
+    const hosts = new Set(cur.hosts || []);
+    if (host) $("#fabSite").checked ? hosts.delete(host) : hosts.add(host);
+    await chrome.storage.local.set({ fab: { off: !$("#fabAll").checked, hosts: [...hosts] } });
+    if ($("#fabAll").checked && $("#fabSite").checked) chrome.tabs.sendMessage(tab.id, { type: "AH_FAB_SHOW" }).catch(() => {});
+  };
+  $("#fabAll").onchange = saveFab;
+  $("#fabSite").onchange = saveFab;
+
+  const copyKeys =[["Email", profile.email], ["Phone", `${profile.phone_code || ""} ${profile.phone || ""}`.trim()], ["LinkedIn", profile.linkedin], ["GitHub", profile.github], ["GPA", profile.gpa && `${profile.gpa}/${profile.gpa_scale || "4.0"}`], ["Full name", `${profile.first_name || ""} ${profile.last_name || ""}`.trim()], ["University", profile.university]];
   for (const [label, val] of copyKeys) {
     if (!val) continue;
     const b = document.createElement("button");

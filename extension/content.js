@@ -512,19 +512,79 @@
     clearTimeout(showToast._t); showToast._t = setTimeout(() => (t.style.display = "none"), ms);
   }
 
+  // ---------------------------------------------------------------- floating ⚡ button (hideable)
+  // Hidden state lives in its own storage key ("fab") so the options page can't overwrite it.
+  // fab = { off: true } hides it everywhere; fab.hosts lists sites where it's hidden.
+  const TOP_HOST = (() => {
+    try { const a = location.ancestorOrigins; return a && a.length ? new URL(a[a.length - 1]).hostname : location.hostname; }
+    catch { return location.hostname; }
+  })();
+  let fabPageHidden = false; // "just this page": until reload
+
+  async function fabHidden() {
+    if (fabPageHidden) return true;
+    const { fab = {} } = await chrome.storage.local.get("fab");
+    return !!fab.off || (fab.hosts || []).includes(TOP_HOST);
+  }
+
+  const PILL = "border:0;border-radius:999px;cursor:pointer;font:600 14px system-ui,sans-serif;";
+
   async function maybeShowButton() {
+    if (await fabHidden()) return;
     const { settings = {} } = await chrome.storage.local.get("settings");
     const onAts = ATS_HOSTS.test(location.hostname + location.pathname);
     if (!onAts && !settings.showEverywhere) return;
     const count = [...document.querySelectorAll(FILLABLE)].filter(visible).length;
     if (count < 3 || document.getElementById("__applyhub_btn")) return;
+    const wrap = document.createElement("div");
+    wrap.id = "__applyhub_btn";
+    wrap.style.cssText = "position:fixed;z-index:2147483646;right:16px;bottom:16px;display:flex;align-items:center;gap:6px";
     const b = document.createElement("button");
-    b.id = "__applyhub_btn"; b.type = "button"; b.textContent = "⚡ Autofill";
+    b.type = "button"; b.textContent = "⚡ Autofill";
     b.title = "Apply Hub: fill this application (Alt+Shift+F)";
-    b.style.cssText = "position:fixed;z-index:2147483646;right:16px;bottom:16px;background:#3b5bdb;color:#fff;border:0;border-radius:999px;padding:12px 18px;font:600 14px system-ui,sans-serif;box-shadow:0 6px 20px rgba(59,91,219,.45);cursor:pointer";
+    b.style.cssText = PILL + "background:#3b5bdb;color:#fff;padding:12px 18px;box-shadow:0 6px 20px rgba(59,91,219,.45)";
     b.onclick = async () => { b.textContent = "Filling…"; await fill(); b.textContent = "⚡ Autofill again"; };
-    document.documentElement.appendChild(b);
+    const x = document.createElement("button");
+    x.type = "button"; x.textContent = "✕"; x.title = "Hide the Autofill button"; x.setAttribute("aria-label", "Hide the Autofill button");
+    x.style.cssText = PILL + "background:#14171c;color:#fff;width:28px;height:28px;padding:0;font-size:13px;opacity:.8;box-shadow:0 4px 12px rgba(0,0,0,.25)";
+    x.onclick = () => showHideMenu(wrap);
+    wrap.append(b, x);
+    document.documentElement.appendChild(wrap);
   }
+
+  function showHideMenu(wrap) {
+    wrap.replaceChildren();
+    wrap.style.cssText += ";flex-wrap:wrap;justify-content:flex-end;max-width:420px;background:#14171c;color:#fff;padding:8px;border-radius:14px;box-shadow:0 6px 24px rgba(0,0,0,.3);font:13px system-ui,sans-serif";
+    const label = document.createElement("span");
+    label.textContent = "Hide ⚡ Autofill:"; label.style.cssText = "margin-right:2px";
+    const back = " Turn it back on from the ⚡ Apply Hub icon in Chrome's toolbar. Alt+Shift+F still fills.";
+    const opt = (text, act, msg) => {
+      const o = document.createElement("button");
+      o.type = "button"; o.textContent = text;
+      o.style.cssText = PILL + "font-size:13px;background:#2a2f37;color:#fff;padding:6px 11px";
+      o.onclick = async () => {
+        await act();
+        document.getElementById("__applyhub_btn")?.remove();
+        if (msg) showToast(msg, 7000);
+      };
+      return o;
+    };
+    const setFab = async (fn) => { const { fab = {} } = await chrome.storage.local.get("fab"); await chrome.storage.local.set({ fab: fn({ off: !!fab.off, hosts: fab.hosts || [] }) }); };
+    const cancel = opt("Cancel", () => {}, "");
+    cancel.onclick = () => { wrap.remove(); maybeShowButton(); };
+    wrap.append(label,
+      opt("This page", () => { fabPageHidden = true; }, "Hidden until you reload. Alt+Shift+F still fills."),
+      opt("On " + TOP_HOST, () => setFab((f) => ({ ...f, hosts: [...new Set([...f.hosts, TOP_HOST])] })), "Hidden on " + TOP_HOST + "." + back),
+      opt("Everywhere", () => setFab((f) => ({ ...f, off: true })), "Hidden on every site." + back),
+      cancel);
+  }
+
+  // popup switches write "fab"; react in every open tab
+  chrome.storage.onChanged.addListener((c, area) => {
+    if (area !== "local" || !c.fab) return;
+    document.getElementById("__applyhub_btn")?.remove();
+    maybeShowButton();
+  });
 
   // remember the last focused editable field for "Save answer" (context menu)
   let lastFocused = null;
@@ -538,6 +598,7 @@
       if (!a.trim()) { showToast("Type your answer first, then right-click → Save answer."); return; }
       saveAnswer(q, a).then(() => showToast(`Saved to your answer bank ✓ ("${q.slice(0, 50)}…")`));
     }
+    if (msg.type === "AH_FAB_SHOW") { fabPageHidden = false; document.getElementById("__applyhub_btn")?.remove(); maybeShowButton(); }
     if (msg.type === "AH_CONTEXT") { currentMode = "auto"; reply({ ...pageContext(), detected: isGradSchoolPage() ? "grad" : "internship" }); }
   });
 
