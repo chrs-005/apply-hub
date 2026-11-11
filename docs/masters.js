@@ -115,6 +115,17 @@ function statusSelect(tid, status) {
   const opts = [["Saved", "Not started"], ["Preparing", "Preparing"], ["Applied", "Submitted"], ["Interview", "Interview"], ["Offer", "Admitted"], ["Rejected", "Rejected"], ["Withdrawn", "Withdrawn"]];
   return `<select class="sel status-sel" data-act="m-status" data-tid="${esc(tid)}">${opts.map(([v, l]) => `<option value="${v}" ${v === status ? "selected" : ""}>${l}</option>`).join("")}</select>`;
 }
+function totalCost(p) {
+  const c = p.total_cost;
+  if (!c) return "";
+  if (c.usd === 0) return "Funded";
+  const k = (n) => "$" + Math.round(n / 1000) + "k";
+  return "≈ " + k(c.usd) + (c.low && c.high ? ` (${k(c.low)}-${k(c.high)})` : "");
+}
+function totalBadge(p) {
+  const t = totalCost(p);
+  return t ? `<span class="badge ${p.total_cost.usd === 0 ? "good" : p.total_cost.usd >= 120000 ? "warn" : ""}">Total: ${esc(t)}</span>` : "";
+}
 function appCard(p) {
   const tid = "grad:" + p.id, status = mStatus(p), next = nextOpenDeadline(p), key = "app:" + p.id;
   const [done, total] = checklistDone(p), pct = total ? Math.round((done / total) * 100) : 0;
@@ -124,6 +135,7 @@ function appCard(p) {
     <div class="row between"><div><span class="org">${flag} ${esc(p.university)}</span><div class="title">${esc(p.program)}</div></div>${statusSelect(tid, status)}</div>
     <div class="row" style="margin-top:8px">
       ${next ? dayBadge(next.date) : `<span class="badge">No date ahead</span>`}
+      ${totalBadge(p)}
       ${lettersLine(p)}
       ${r.gre ? `<span class="badge ${M_GRE[r.gre.status]?.[1] || ""}">GRE: ${M_GRE[r.gre.status]?.[0] || "?"}</span>` : ""}
     </div>
@@ -135,6 +147,7 @@ function appCard(p) {
         <dt>Deadlines</dt><dd>${(p.deadlines || []).map((d) => `<div>${fmtDate(d.date)} · <span class="muted">${esc(d.label)}${d.time ? " · " + esc(d.time) : ""}</span></div>`).join("") || "—"}</dd>
         <dt>App fee</dt><dd>${p.app_fee ? money(p.app_fee) : `<span class="muted">Not confirmed</span>`}${p.app_fee?.note ? `<div class="tiny muted">${esc(p.app_fee.note)}</div>` : ""}</dd>
         <dt>Tuition</dt><dd>${p.tuition ? `${money(p.tuition)}/${esc(p.tuition.per)}${p.tuition.note ? `<div class="tiny muted">${esc(p.tuition.note)}</div>` : ""}` : `<span class="muted">Check the page</span>`}</dd>
+        <dt>Total cost</dt><dd>${p.total_cost ? `<b>${esc(totalCost(p))}</b> · ${esc(p.total_cost.length || "")}<div class="tiny muted">${esc(p.total_cost.basis || "")} Estimate in USD before scholarships, not an official total.</div>` : `<span class="muted">Not estimated yet</span>`}</dd>
         <dt>Funding</dt><dd>${(p.scholarships || []).map((s) => `<div><b>${esc(s.name)}</b>${s.deadline ? ` · by ${fmtDate(s.deadline)}` : ""}<div class="tiny muted">${esc(s.covers || "")}${s.how ? " · " + esc(s.how) : ""}</div></div>`).join("") || `<span class="muted">None found</span>`}</dd>
         <dt>English</dt><dd>${esc(p.language || "—")}</dd>
         <dt>GRE</dt><dd>${esc(p.gre || "—")}</dd>
@@ -182,7 +195,7 @@ function renderApps() {
     ${suggested.length ? `<h2>Worth adding? <span class="count">${suggested.length}</span></h2>
       ${suggested.map((p) => { const n = nextOpenDeadline(p); return `<div class="card"><div class="row between"><div style="flex:1;min-width:0"><span class="org">${FLAGS_M[p.country] || "🌍"} ${esc(p.university)}</span><div class="title">${esc(p.program)}</div></div>
         <button class="btn sm primary" data-act="m-add" data-id="${esc(p.id)}">Add</button></div>
-        <div class="row" style="margin-top:6px">${n ? dayBadge(n.date) : ""}<span class="badge">${p.app_fee ? money(p.app_fee) : "Fee?"}</span></div>
+        <div class="row" style="margin-top:6px">${n ? dayBadge(n.date) : ""}<span class="badge">${p.app_fee ? money(p.app_fee) : "Fee?"}</span>${totalBadge(p)}</div>
         <p class="small muted" style="margin:6px 0 0">${esc(p.why || "")}</p></div>`; }).join("")}` : ""}
     <div class="card row between">
       <div style="flex:1;min-width:0"><div class="title">📄 Another school?</div><div class="small muted">Upload its requirements PDF, and it becomes a checklist here.</div></div>

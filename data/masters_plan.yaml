@@ -505,6 +505,27 @@ tasks:
     title: "SUBMIT Cambridge MLMI (closes 8 Dec, funding earlier)"
     only: [cam-mlmi]
     how: "Separate application and documents from Advanced Computer Science. Choose your track on the form. Submit by the funding deadline if you want Cambridge funding."
+  - id: d-utaustin
+    phase: "December"
+    cat: Applications
+    due: 2026-12-13
+    title: "SUBMIT UT Austin MS CS (closes 15 Dec, letters by 20 Dec)"
+    only: [utaustin-ms]
+    how: "No fee waiver for international applicants. Decide MS vs PhD first; UT doesn't say you can apply to both."
+  - id: d-psu
+    phase: "December"
+    cat: Applications
+    due: 2026-12-18
+    title: "SUBMIT Penn State CSE PhD (closes 20 Dec)"
+    only: [psu-phd]
+    how: "Research statement naming 2-3 faculty. Penn State reviews only one degree application, so the PhD only. TOEFL 80 / IELTS 6.5."
+  - id: j-icme
+    phase: "January-February"
+    cat: Applications
+    due: 2027-01-26
+    title: "SUBMIT Stanford ICME MS (closes 29 Jan)"
+    only: [stanford-icme]
+    how: "Most math-heavy Stanford option; no guaranteed funding. Stanford allows only one degree program per year."
   - id: d-ubc
     phase: "December"
     cat: Applications

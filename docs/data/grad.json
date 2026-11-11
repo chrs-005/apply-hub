@@ -112,10 +112,10 @@
  {
   "id": "cmu-mscs",
   "target": "core",
-  "why": "Top US program, but the deadline is close (9 Dec) and it's the one that needs a test-center GRE and an English test. Decide this week.",
+  "why": "One application covers MS Machine Learning and its Advanced Study track; MLT and MS CS ranked behind it. GRE optional for all three. $80 by 18 Nov, final 9 Dec.",
   "university": "Carnegie Mellon",
   "short": "CMU",
-  "program": "MS Computer Science",
+  "program": "MS Machine Learning (+ Advanced Study), ranked with MLT and MS CS",
   "country": "United States",
   "region": "US",
   "fields": [
@@ -141,6 +141,13 @@
    "note": "$80 before 18 Nov. Hardship waiver inside the application."
   },
   "tuition": null,
+  "total_cost": {
+   "usd": 145000,
+   "low": 140000,
+   "high": 190000,
+   "length": "16 months (3 semesters + summer)",
+   "basis": "MS Machine Learning tuition USD 31,100 a semester x 3 (2026-27; about +5% a year), plus CMU's non-tuition budget of USD 37,374 a year. Advanced Study (4 semesters) is about USD 185k; MLT (2 years) about USD 200k."
+  },
   "scholarships": [],
   "language": "TOEFL/IELTS/Duolingo required: an English-medium degree does NOT exempt you",
   "gre": "Strongly recommended. At-home scores are not accepted for current test dates.",
@@ -241,6 +248,13 @@
    "amount": 100,
    "currency": "USD",
    "note": "$80 by the early deadline. Waivers in the application."
+  },
+  "total_cost": {
+   "usd": 200000,
+   "low": null,
+   "high": null,
+   "length": "2 years",
+   "basis": "SCS master's tuition USD 62,200 a year x 2, plus CMU's non-tuition budget of USD 37,374 a year x 2. Research assistantships are occasional, not guaranteed."
   },
   "scholarships": [
    {
@@ -344,6 +358,13 @@
    "amount": 2190,
    "currency": "CHF",
    "per": "semester"
+  },
+  "total_cost": {
+   "usd": 70000,
+   "low": null,
+   "high": null,
+   "length": "2 years",
+   "basis": "ETH's official budget for international students: CHF 28,100 a year (tuition CHF 4,380 + living CHF 22,100), x 2. With ESOP, tuition is waived and CHF 24,000 a year is covered, so close to $0."
   },
   "scholarships": [
    {
@@ -906,6 +927,13 @@
    "currency": "USD",
    "per": "year",
    "note": "Fully funded, assuming satisfactory progress"
+  },
+  "total_cost": {
+   "usd": 0,
+   "low": null,
+   "high": null,
+   "length": "about 5-6 years",
+   "basis": "Fully funded (tuition, stipend, insurance) with satisfactory progress."
   },
   "scholarships": [],
   "language": "IELTS 7 / TOEFL 100 / Duolingo 130",
@@ -1628,6 +1656,13 @@
    "note": "Fee waiver page exists; refundable within 14 days"
   },
   "tuition": null,
+  "total_cost": {
+   "usd": 90000,
+   "low": null,
+   "high": null,
+   "length": "about 11 months",
+   "basis": "Overseas fee not confirmed; assumed close to MLMI's GBP 48,192, plus living about GBP 19,860 for 2026-27 (reported)."
+  },
   "scholarships": [
    {
     "name": "Gates Cambridge (non-US) / Cambridge Trust",
@@ -1994,6 +2029,13 @@
     "date": "2026-12-08"
    }
   ],
+  "total_cost": {
+   "usd": 91000,
+   "low": null,
+   "high": null,
+   "length": "11 months",
+   "basis": "Overseas fee GBP 48,192 for 2026-27 (listing, confirm on the course page), plus living about GBP 19,860 (reported 2026-27 figure)."
+  },
   "scholarships": [
    {
     "name": "Cambridge funding competition",
@@ -2114,6 +2156,13 @@
    "currency": "CHF",
    "per": "semester"
   },
+  "total_cost": {
+   "usd": 71000,
+   "low": null,
+   "high": null,
+   "length": "2 years",
+   "basis": "Tuition CHF 2,190 a semester for foreign students (same ETH-Board rule as ETH; confirm on EPFL's page) x 4, plus living about CHF 2,000 a month (third-party estimate). An Excellence Fellowship or Research Scholars stipend cuts this a lot."
+  },
   "scholarships": [
    {
     "name": "EPFL Excellence Fellowship",
@@ -2228,6 +2277,13 @@
   ],
   "app_fee": null,
   "tuition": null,
+  "total_cost": {
+   "usd": 130000,
+   "low": 115000,
+   "high": 150000,
+   "length": "1.5-2 years",
+   "basis": "UCLA's 2026-27 nonresident budget: USD 76,034 a year (tuition USD 38,233 + living). An ECE PhD would normally be funded instead."
+  },
   "scholarships": [],
   "language": "TOEFL 87 or IELTS 7.0, unless your degree is from a country where English is the main daily language: Lebanon probably isn't",
   "gre": "Listed as optional, but the note only covers the 2025-26 cycle",
@@ -2340,6 +2396,13 @@
    "currency": "USD",
    "per": "year",
    "note": "Tuition, insurance and a stipend, renewed yearly with good progress"
+  },
+  "total_cost": {
+   "usd": 0,
+   "low": null,
+   "high": null,
+   "length": "2 years",
+   "basis": "Fully funded: tuition, health insurance and a stipend. Unfunded, MIT's 9-month budget would be USD 109,017."
   },
   "scholarships": [
    {
@@ -2633,6 +2696,111 @@
   "status": "open"
  },
  {
+  "id": "utaustin-ms",
+  "target": "core",
+  "university": "University of Texas at Austin",
+  "short": "UT Austin",
+  "program": "MS Computer Science",
+  "country": "United States",
+  "region": "US",
+  "fields": [
+   "cs",
+   "ml"
+  ],
+  "opens": "2026-10-15",
+  "deadlines": [
+   {
+    "label": "Application deadline",
+    "date": "2026-12-15"
+   },
+   {
+    "label": "Letters of recommendation",
+    "date": "2026-12-20"
+   }
+  ],
+  "app_fee": null,
+  "tuition": null,
+  "total_cost": {
+   "usd": 75000,
+   "low": 63000,
+   "high": 89000,
+   "length": "1.5-2 years",
+   "basis": "UT Austin's 2026-27 nonresident graduate budget: USD 41,880-44,279 a year, tuition included. Texas has frozen tuition through 2027."
+  },
+  "scholarships": [],
+  "language": "Check UT's English rule for an AUB degree",
+  "gre": "Optional",
+  "requires": {
+   "letters_note": "Check the page",
+   "gre": {
+    "status": "optional",
+    "note": "Optional: send it only if it strengthens your application."
+   },
+   "english": {
+    "status": "check",
+    "note": "Not confirmed on the pages I read."
+   },
+   "extras": [
+    "No application-fee waivers for international applicants"
+   ]
+  },
+  "url": "https://cs.utexas.edu/graduate-program/masters-program/apply-graduate",
+  "source": "official",
+  "verify": [
+   "app_fee",
+   "letters",
+   "english"
+  ],
+  "notes": "Top-10 CS department. Deadline 15 Dec, letters by 20 Dec. You could apply to the PhD instead; UT doesn't say whether you can apply to both, so ask.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "Recommendation letters: check the program page",
+    "detail": "Check the page"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "english",
+    "label": "Check the English requirement",
+    "detail": "Not confirmed on the pages I read."
+   },
+   {
+    "id": "gre",
+    "label": "GRE (optional: send it if it helps)",
+    "detail": "Optional: send it only if it strengthens your application."
+   },
+   {
+    "id": "extra0",
+    "label": "No application-fee waivers for international applicants",
+    "detail": ""
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee",
+    "detail": "Amount not confirmed: check the application."
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": null,
+  "tuition_year_usd": null,
+  "next_deadline": "2026-12-15",
+  "status": "open"
+ },
+ {
   "id": "uw-allen-phd",
   "university": "University of Washington",
   "program": "PhD Computer Science (Allen School)",
@@ -2881,6 +3049,118 @@
   "status": "open"
  },
  {
+  "id": "psu-phd",
+  "target": "core",
+  "university": "Penn State",
+  "short": "Penn State PhD",
+  "program": "PhD Computer Science and Engineering",
+  "country": "United States",
+  "region": "US",
+  "fields": [
+   "cs",
+   "ml",
+   "research"
+  ],
+  "opens": null,
+  "deadlines": [
+   {
+    "label": "Application deadline for fall",
+    "date": "2026-12-20"
+   }
+  ],
+  "app_fee": null,
+  "tuition": {
+   "amount": 0,
+   "currency": "USD",
+   "per": "year",
+   "note": "Graduate assistantships pay tuition, a monthly stipend and 80% of health insurance"
+  },
+  "total_cost": {
+   "usd": 0,
+   "low": null,
+   "high": null,
+   "length": "about 5 years",
+   "basis": "Graduate assistantships pay tuition, a monthly stipend and 80% of health insurance (Penn State EECS). Not every admit is guaranteed one: ask."
+  },
+  "scholarships": [],
+  "language": "TOEFL 80 (speaking 19) or IELTS 6.5. Lebanon isn't on the exemption list.",
+  "gre": "Optional for the PhD",
+  "requires": {
+   "letters_note": "Check the page",
+   "gre": {
+    "status": "optional",
+    "note": "Optional for PhD applicants."
+   },
+   "english": {
+    "status": "test",
+    "note": "TOEFL 80 / IELTS 6.5; no exemption for Lebanon."
+   },
+   "extras": [
+    "Penn State reviews only your most recent degree application: apply to the PhD only",
+    "Research statement naming 2-3 faculty"
+   ]
+  },
+  "url": "https://www.eecs.psu.edu/students/graduate/EECS-How-to-apply-CSE.aspx",
+  "source": "official",
+  "verify": [
+   "app_fee",
+   "letters"
+  ],
+  "notes": "A realistic funded PhD option. Funding isn't promised to every admit, so ask about assistantships. Name faculty whose ML or theory work matches yours.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "Recommendation letters: check the program page",
+    "detail": "Check the page"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "english",
+    "label": "English test (TOEFL / IELTS)",
+    "detail": "TOEFL 80 / IELTS 6.5; no exemption for Lebanon."
+   },
+   {
+    "id": "gre",
+    "label": "GRE (optional: send it if it helps)",
+    "detail": "Optional for PhD applicants."
+   },
+   {
+    "id": "extra0",
+    "label": "Penn State reviews only your most recent degree application: apply to the PhD only",
+    "detail": ""
+   },
+   {
+    "id": "extra1",
+    "label": "Research statement naming 2-3 faculty",
+    "detail": ""
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee",
+    "detail": "Amount not confirmed: check the application."
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": null,
+  "tuition_year_usd": 0,
+  "next_deadline": "2026-12-20",
+  "status": "open"
+ },
+ {
   "id": "mit-mfin",
   "target": "suggested",
   "short": "MIT Finance",
@@ -3007,6 +3287,13 @@
    "per": "total",
    "note": "approximate overseas fee: check the page"
   },
+  "total_cost": {
+   "usd": 88000,
+   "low": 81000,
+   "high": 96000,
+   "length": "12 months",
+   "basis": "Overseas fee about GBP 43,730 for 2026-27 (third-party listing; 2027-28 may be GBP 46,350), plus Oxford's official living range of GBP 1,405-2,105 a month x 12."
+  },
   "scholarships": [
    {
     "name": "Clarendon Fund",
@@ -3123,6 +3410,13 @@
    "per": "total",
    "note": "approximate"
   },
+  "total_cost": {
+   "usd": 90000,
+   "low": 86000,
+   "high": 95000,
+   "length": "12 months",
+   "basis": "Overseas fee GBP 46,000 for a 2026 start (Imperial raises fees about 3.5% a year), plus London living about GBP 1,500-2,000 a month (estimate)."
+  },
   "scholarships": [],
   "language": "Check Imperial's English page (third parties list IELTS 7 / TOEFL 100)",
   "gre": "Not mentioned on the pages I could read",
@@ -3200,7 +3494,7 @@
  },
  {
   "id": "berkeley-masds",
-  "target": "suggested",
+  "target": "core",
   "short": "Berkeley Stats",
   "why": "Top statistics master's with no GRE and automatic merit-award consideration. Due 6 Jan.",
   "university": "UC Berkeley",
@@ -3221,6 +3515,13 @@
   "app_fee": {
    "amount": 155,
    "currency": "USD"
+  },
+  "total_cost": {
+   "usd": 105000,
+   "low": null,
+   "high": null,
+   "length": "10 months",
+   "basis": "2026-27 nonresident fees USD 33,818 a semester x 2 (health insurance included), plus Berkeley's off-campus living budget of about USD 38k."
   },
   "scholarships": [
    {
@@ -3807,6 +4108,13 @@
   ],
   "app_fee": null,
   "tuition": null,
+  "total_cost": {
+   "usd": 135000,
+   "low": 125000,
+   "high": 150000,
+   "length": "about 1.5 years (30 points)",
+   "basis": "30 points x USD 2,850 (2026-27 per-point rate seen on a Columbia page; confirm for Engineering), plus New York living (estimate about USD 30k a year)."
+  },
   "scholarships": [],
   "language": "TOEFL/IELTS required unless an exception applies: recommended TOEFL 101 / IELTS 7",
   "gre": "Requirement page blocked: assume needed until you check (most admits have 750+ quant on the older scale)",
@@ -3917,6 +4225,13 @@
    "currency": "SEK",
    "per": "total",
    "note": "Most two-year programs; varies by program"
+  },
+  "total_cost": {
+   "usd": 57000,
+   "low": null,
+   "high": null,
+   "length": "2 years",
+   "basis": "Tuition SEK 342,000 for the whole programme (KTH fee page), plus the Migration Agency minimum of SEK 10,656 a month x 24. The KTH Scholarship can cover tuition."
   },
   "scholarships": [
    {
@@ -4279,6 +4594,8 @@
  },
  {
   "id": "stanford-icme",
+  "target": "core",
+  "short": "Stanford ICME",
   "university": "Stanford University",
   "program": "MS Computational and Mathematical Engineering (ICME)",
   "country": "United States",
@@ -4294,6 +4611,13 @@
     "date": "2027-01-29"
    }
   ],
+  "total_cost": {
+   "usd": 200000,
+   "low": 175000,
+   "high": 235000,
+   "length": "1.5-2 years",
+   "basis": "Engineering tuition USD 23,239 a quarter (2026-27) x about 6, plus Stanford's non-tuition budget of USD 49,116 an academic year."
+  },
   "scholarships": [],
   "language": "Check Stanford's rule",
   "gre": "Check",
@@ -4333,6 +4657,13 @@
   ],
   "app_fee": null,
   "tuition": null,
+  "total_cost": {
+   "usd": 90000,
+   "low": 85000,
+   "high": 110000,
+   "length": "3-4 semesters",
+   "basis": "Nonresident tuition USD 16,073 a semester (2026-27 bursar table) x 3-4, plus Georgia Tech's international living budget of USD 25,256 a year (off campus)."
+  },
   "scholarships": [],
   "language": "AUB letter/transcript note accepted by the Institute, or TOEFL 100 (5.0 on the new scale) / IELTS 7.5 for the department",
   "gre": "Not required; considered if you send it (confirmed with Georgia Tech)",
@@ -4523,6 +4854,13 @@
    "note": "Fee waiver link on the admissions page"
   },
   "tuition": null,
+  "total_cost": {
+   "usd": 140000,
+   "low": 96000,
+   "high": 145000,
+   "length": "MS AI about 1.5 years; MS Data Science 9 months",
+   "basis": "BU's 2026-27 budget: USD 95,998 a year (tuition USD 73,024 + fees + living). MS AI over about 1.5 years is about USD 144k; the 9-month MS Data Science is about USD 96k. Merit awards take USD 5k-30k off."
+  },
   "scholarships": [
    {
     "name": "BU CS merit scholarship",
