@@ -3259,7 +3259,8 @@
  },
  {
   "id": "ox-acs",
-  "target": "core",
+  "target": "suggested",
+  "why": "Removed from your list: about $88k with no funding you can count on (Clarendon is automatic but a long shot). Re-add if that changes.",
   "university": "University of Oxford",
   "short": "Oxford",
   "program": "MSc Advanced Computer Science",

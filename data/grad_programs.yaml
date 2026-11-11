@@ -82,7 +82,8 @@ programs:
     notes: "ON THE FORM: one program only. Recommended: 'Data Science'. Choose 'Computer Science' if you want a broader degree with more systems and software. Only ONE EPFL master's application per year, so choose between CS, Data Science and Financial Engineering. The form opens mid-November. EPFL IC says you can't start an MSc if you're already scheduled to receive a five-year degree in a closely related field: check this for the AUB B.E."
 
   - id: ox-acs
-    target: core
+    target: suggested
+    why: "Removed from your list: about $88k with no funding you can count on (Clarendon is automatic but a long shot). Re-add if that changes."
     university: University of Oxford
     short: Oxford
     program: MSc Advanced Computer Science
