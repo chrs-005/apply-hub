@@ -925,7 +925,8 @@ programs:
     notes: "Top-10 CS department. Deadline 15 Dec, letters by 20 Dec. You could apply to the PhD instead; UT doesn't say whether you can apply to both, so ask."
 
   - id: psu-phd
-    target: core
+    target: suggested
+    why: "Removed: you meant UPenn, and Penn State ranks too low for a PhD you want. Re-add if needed."
     university: Penn State
     short: Penn State PhD
     program: PhD Computer Science and Engineering
