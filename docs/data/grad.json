@@ -1627,7 +1627,7 @@
  },
  {
   "id": "cam-acs",
-  "target": "core",
+  "target": "suggested",
   "university": "University of Cambridge",
   "short": "Cambridge",
   "program": "MPhil Advanced Computer Science",
@@ -2010,7 +2010,7 @@
  },
  {
   "id": "cam-mlmi",
-  "target": "suggested",
+  "target": "core",
   "short": "Cambridge MLMI",
   "why": "Cambridge's ML master's, closer to your interests than Advanced Computer Science. Due 8 Dec.",
   "university": "University of Cambridge",
@@ -2254,6 +2254,110 @@
   "tuition_year_usd": 5476,
   "next_deadline": "2026-12-15",
   "status": "not_open_yet"
+ },
+ {
+  "id": "columbia-ms",
+  "target": "core",
+  "university": "Columbia University",
+  "short": "Columbia",
+  "program": "Electrical Engineering MS/PhD track (funded as a doctoral student if admitted)",
+  "country": "United States",
+  "region": "US",
+  "fields": [
+   "cs",
+   "ml"
+  ],
+  "opens": null,
+  "deadlines": [
+   {
+    "label": "EE MS/PhD deadline (EE department flyer; confirm in the portal)",
+    "date": "2026-12-15"
+   }
+  ],
+  "app_fee": null,
+  "tuition": null,
+  "total_cost": {
+   "usd": 0,
+   "low": null,
+   "high": null,
+   "length": "about 5-6 years",
+   "basis": "MS/PhD students are considered doctoral students and are eligible for equivalent funding (Columbia Engineering application). Funding is not promised: confirm with EE."
+  },
+  "scholarships": [],
+  "language": "TOEFL/IELTS required unless an exception applies: recommended TOEFL 101 / IELTS 7",
+  "gre": "Requirement page blocked: assume needed until you check (most admits have 750+ quant on the older scale)",
+  "requires": {
+   "letters": 3,
+   "letters_note": "Count not on the pages I could read; plan for 3. Submitted electronically.",
+   "gre": {
+    "status": "check",
+    "note": "Columbia's requirements page blocks me. CHECK THIS WEEK: it decides how much the GRE matters."
+   },
+   "english": {
+    "status": "test",
+    "note": "Recommended TOEFL 101 / IELTS 7. Exceptions per the SEAS policy; ask."
+   },
+   "statement": "Personal statement, 250-1000 words recommended",
+   "extras": []
+  },
+  "url": "https://www.ee.columbia.edu/ms-program-ee",
+  "source": "official",
+  "verify": [
+   "app_fee",
+   "gre",
+   "letters",
+   "english",
+   "tuition",
+   "deadlines"
+  ],
+  "notes": "ON THE FORM: department Electrical Engineering, then the MS/PhD track. Columbia Engineering allows only ONE programme per term: extra applications can be invalidated. Students without a master's who want a doctorate apply to the MS/PhD track (except CS). Judged as a doctoral applicant: research statement, name faculty in information theory / ML.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "3 recommendation letters",
+    "detail": "Count not on the pages I could read; plan for 3. Submitted electronically."
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "Personal statement, 250-1000 words recommended",
+    "detail": ""
+   },
+   {
+    "id": "english",
+    "label": "English test (TOEFL / IELTS)",
+    "detail": "Recommended TOEFL 101 / IELTS 7. Exceptions per the SEAS policy; ask."
+   },
+   {
+    "id": "gre",
+    "label": "Check whether the GRE is required",
+    "detail": "Columbia's requirements page blocks me. CHECK THIS WEEK: it decides how much the GRE matters."
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee",
+    "detail": "Amount not confirmed: check the application."
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": null,
+  "tuition_year_usd": null,
+  "next_deadline": "2026-12-15",
+  "status": "open"
  },
  {
   "id": "ucla-ms",
@@ -4082,114 +4186,6 @@
   "app_fee_usd": null,
   "tuition_year_usd": 282,
   "next_deadline": "2027-01-14",
-  "status": "open"
- },
- {
-  "id": "columbia-ms",
-  "target": "core",
-  "university": "Columbia University",
-  "short": "Columbia",
-  "program": "MS Computer Science",
-  "country": "United States",
-  "region": "US",
-  "fields": [
-   "cs",
-   "ml"
-  ],
-  "opens": null,
-  "deadlines": [
-   {
-    "label": "Priority: whole application including letters complete",
-    "date": "2027-01-15"
-   },
-   {
-    "label": "Final",
-    "date": "2027-02-15"
-   }
-  ],
-  "app_fee": null,
-  "tuition": null,
-  "total_cost": {
-   "usd": 135000,
-   "low": 125000,
-   "high": 150000,
-   "length": "about 1.5 years (30 points)",
-   "basis": "30 points x USD 2,850 (2026-27 per-point rate seen on a Columbia page; confirm for Engineering), plus New York living (estimate about USD 30k a year)."
-  },
-  "scholarships": [],
-  "language": "TOEFL/IELTS required unless an exception applies: recommended TOEFL 101 / IELTS 7",
-  "gre": "Requirement page blocked: assume needed until you check (most admits have 750+ quant on the older scale)",
-  "requires": {
-   "letters": 3,
-   "letters_note": "Count not on the pages I could read; plan for 3. Submitted electronically.",
-   "gre": {
-    "status": "check",
-    "note": "Columbia's requirements page blocks me. CHECK THIS WEEK: it decides how much the GRE matters."
-   },
-   "english": {
-    "status": "test",
-    "note": "Recommended TOEFL 101 / IELTS 7. Exceptions per the SEAS policy; ask."
-   },
-   "statement": "Personal statement, 250-1000 words recommended",
-   "extras": []
-  },
-  "url": "https://www.cs.columbia.edu/education/admissions/",
-  "source": "official",
-  "verify": [
-   "app_fee",
-   "gre",
-   "letters",
-   "english",
-   "tuition",
-   "deadlines"
-  ],
-  "notes": "ON THE FORM: 'Computer Science MS'. The Machine Learning or Natural Language Processing pathway appears to be chosen after admission. Dates are from a page last updated 2024: confirm. Columbia tells international students to look for outside funding.",
-  "checklist": [
-   {
-    "id": "referees",
-    "label": "3 recommendation letters",
-    "detail": "Count not on the pages I could read; plan for 3. Submitted electronically."
-   },
-   {
-    "id": "cv",
-    "label": "CV (grad-school version)",
-    "detail": ""
-   },
-   {
-    "id": "transcripts",
-    "label": "Transcripts",
-    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
-   },
-   {
-    "id": "statement",
-    "label": "Personal statement, 250-1000 words recommended",
-    "detail": ""
-   },
-   {
-    "id": "english",
-    "label": "English test (TOEFL / IELTS)",
-    "detail": "Recommended TOEFL 101 / IELTS 7. Exceptions per the SEAS policy; ask."
-   },
-   {
-    "id": "gre",
-    "label": "Check whether the GRE is required",
-    "detail": "Columbia's requirements page blocks me. CHECK THIS WEEK: it decides how much the GRE matters."
-   },
-   {
-    "id": "fee",
-    "label": "Pay the application fee",
-    "detail": "Amount not confirmed: check the application."
-   },
-   {
-    "id": "submit",
-    "label": "Submit",
-    "detail": ""
-   }
-  ],
-  "checklist_source": "Built from the requirements on the official pages",
-  "app_fee_usd": null,
-  "tuition_year_usd": null,
-  "next_deadline": "2027-01-15",
   "status": "open"
  },
  {

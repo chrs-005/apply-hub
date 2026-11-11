@@ -605,8 +605,8 @@ tasks:
   - id: j-columbia
     phase: "January-February"
     cat: Applications
-    due: 2027-01-13
-    title: "SUBMIT Columbia, complete with letters, by priority (15 Jan)"
+    due: 2026-12-13
+    title: "SUBMIT Columbia EE MS/PhD (deadline 15 Dec)"
     only: [columbia-ms]
     how: "Their FAQ says your entire application including letters should be complete by priority. Final is 15 Feb, but applying late is riskier. Confirm the dates: the page I read was last updated in 2024."
   - id: j-kth
