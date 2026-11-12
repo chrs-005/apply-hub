@@ -20,16 +20,16 @@
    "status": "blocked"
   },
   "https://www.gresearch.com/join-us/": {
-   "hash": "cad98db8ee35b80e01c5e15f57ea073c18cf768783c89f3100767fa9267bafc0",
+   "hash": "30041b5e3c27da9801954785d6ce8038323d10b4b3b5b304e7f3979d8ab42543",
    "lines": [
     "Students & graduates",
     "Engineering internships",
-    "Natural Language Processing Internship",
-    "Quant Research Internship",
     "Data Science Internship",
     "Machine Learning Research Internship",
-    "Software Engineering Internship",
+    "Natural Language Processing Internship",
+    "Quant Research Internship",
     "Machine Learning Engineer Internship",
+    "Software Engineering Internship",
     "Quantitative Research Intern",
     "Research Engineering Intern",
     "FPGA Engineering Intern",
@@ -61,11 +61,18 @@
    "status": "ok"
   },
   "https://jobs.apple.com/en-gb/search?team=internships-STDNT-INTRN&location=united-kingdom-GBR": {
-   "hash": "ffa82517f539bb149ce3fa5e0197095e9efd4fabb4ed8a4a5dc93ab195d2f700",
+   "hash": "11484ce3238ad62b13c420285299b6a5888ec3499009e68ad73ab60753196baa",
    "lines": [
     "Search Jobs - United Kingdom, Students: Internships - Jobs at Apple (UK)",
     "View all teams Students : Internships",
     "Students : Internships",
+    "Internship - Pro Apps Machine Learning Ecosystem Engineer",
+    "Share Internship - Pro Apps Machine Learning Ecosystem Engineer 200694490-2114",
+    "Internship - Framebuffer Driver Engineer",
+    "Share Internship - Framebuffer Driver Engineer 200694489-2114",
+    "The Framebuffer driver team is looking for enthusiastic embedded software engineer intern to join our team in London. You'll have the opportunity to contribute to core technologies in macOS display Software stack and work closely with the...",
+    "Camera Software (Intern)",
+    "Share Camera Software (Intern) 200694477-1251",
     "CAD Virtuoso Engineering Intern",
     "Share CAD Virtuoso Engineering Intern 200693133-5490",
     "Internship - Machine Learning Research - Speech-to-Speech Translation",
@@ -341,5 +348,5 @@
    "status": "ok"
   }
  },
- "last_digest": "2026-11-11"
+ "last_digest": "2026-11-12"
 }
