@@ -1,115 +1,5 @@
 [
  {
-  "id": "ox-mcf",
-  "target": "suggested",
-  "short": "Oxford MCF",
-  "why": "Oxford's quant program, if you want that route. Early deadline 13 Nov, final 27 Jan.",
-  "requires": {
-   "letters": 3,
-   "letters_note": "Not re-checked: confirm on the program page",
-   "gre": {
-    "status": "no",
-    "note": "Not re-checked: confirm."
-   },
-   "english": {
-    "status": "test",
-    "note": "Not re-checked: confirm."
-   },
-   "statement": "Check the program page",
-   "extras": []
-  },
-  "university": "University of Oxford",
-  "program": "MSc Mathematical and Computational Finance",
-  "country": "United Kingdom",
-  "region": "UK",
-  "fields": [
-   "quant",
-   "math"
-  ],
-  "opens": "2026-09-01",
-  "deadlines": [
-   {
-    "label": "Early deadline",
-    "date": "2026-11-13",
-    "time": "12:00 UK"
-   },
-   {
-    "label": "Final deadline",
-    "date": "2027-01-27",
-    "time": "12:00 UK"
-   }
-  ],
-  "app_fee": {
-   "amount": 75,
-   "currency": "GBP"
-  },
-  "tuition": {
-   "amount": 48640,
-   "currency": "GBP",
-   "per": "total",
-   "note": "2026-27 figure (10-month course)"
-  },
-  "scholarships": [
-   {
-    "name": "Clarendon Fund + dept scholarships",
-    "deadline": "2026-11-13",
-    "covers": "Full fees + living",
-    "how": "Automatic if you apply by the relevant deadline. Early is better"
-   }
-  ],
-  "language": "Oxford 'standard' or 'higher' level (IELTS 7.0–7.5)",
-  "gre": "Not required",
-  "url": "https://www.ox.ac.uk/admissions/graduate/courses/msc-mathematical-and-computational-finance",
-  "source": "aggregator",
-  "verify": [
-   "app_fee",
-   "language"
-  ],
-  "notes": "Submit at least 2 weeks before the deadline (Oxford's advice).",
-  "checklist": [
-   {
-    "id": "referees",
-    "label": "3 recommendation letters",
-    "detail": "Not re-checked: confirm on the program page"
-   },
-   {
-    "id": "cv",
-    "label": "CV (grad-school version)",
-    "detail": ""
-   },
-   {
-    "id": "transcripts",
-    "label": "Transcripts",
-    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
-   },
-   {
-    "id": "statement",
-    "label": "Check the program page",
-    "detail": ""
-   },
-   {
-    "id": "english",
-    "label": "English test (TOEFL / IELTS)",
-    "detail": "Not re-checked: confirm."
-   },
-   {
-    "id": "fee",
-    "label": "Pay the application fee (GBP 75)",
-    "detail": "Amount not confirmed: check the application."
-   },
-   {
-    "id": "submit",
-    "label": "Submit",
-    "detail": ""
-   }
-  ],
-  "checklist_source": "Built from third-party listings: confirm on the program page",
-  "app_fee_usd": 100,
-  "tuition_year_usd": 65178,
-  "next_deadline": "2026-11-13",
-  "status": "open"
- },
- {
   "id": "cmu-mscs",
   "target": "core",
   "why": "One application covers MS Machine Learning and its Advanced Study track; MLT and MS CS ranked behind it. GRE optional for all three. $80 by 18 Nov, final 9 Dec.",
@@ -4588,6 +4478,116 @@
   "app_fee_usd": 0,
   "tuition_year_usd": 0,
   "next_deadline": "2027-01-15",
+  "status": "open"
+ },
+ {
+  "id": "ox-mcf",
+  "target": "suggested",
+  "short": "Oxford MCF",
+  "why": "Oxford's quant program, if you want that route. Early deadline 13 Nov, final 27 Jan.",
+  "requires": {
+   "letters": 3,
+   "letters_note": "Not re-checked: confirm on the program page",
+   "gre": {
+    "status": "no",
+    "note": "Not re-checked: confirm."
+   },
+   "english": {
+    "status": "test",
+    "note": "Not re-checked: confirm."
+   },
+   "statement": "Check the program page",
+   "extras": []
+  },
+  "university": "University of Oxford",
+  "program": "MSc Mathematical and Computational Finance",
+  "country": "United Kingdom",
+  "region": "UK",
+  "fields": [
+   "quant",
+   "math"
+  ],
+  "opens": "2026-09-01",
+  "deadlines": [
+   {
+    "label": "Early deadline",
+    "date": "2026-11-13",
+    "time": "12:00 UK"
+   },
+   {
+    "label": "Final deadline",
+    "date": "2027-01-27",
+    "time": "12:00 UK"
+   }
+  ],
+  "app_fee": {
+   "amount": 75,
+   "currency": "GBP"
+  },
+  "tuition": {
+   "amount": 48640,
+   "currency": "GBP",
+   "per": "total",
+   "note": "2026-27 figure (10-month course)"
+  },
+  "scholarships": [
+   {
+    "name": "Clarendon Fund + dept scholarships",
+    "deadline": "2026-11-13",
+    "covers": "Full fees + living",
+    "how": "Automatic if you apply by the relevant deadline. Early is better"
+   }
+  ],
+  "language": "Oxford 'standard' or 'higher' level (IELTS 7.0–7.5)",
+  "gre": "Not required",
+  "url": "https://www.ox.ac.uk/admissions/graduate/courses/msc-mathematical-and-computational-finance",
+  "source": "aggregator",
+  "verify": [
+   "app_fee",
+   "language"
+  ],
+  "notes": "Submit at least 2 weeks before the deadline (Oxford's advice).",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "3 recommendation letters",
+    "detail": "Not re-checked: confirm on the program page"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "Check the program page",
+    "detail": ""
+   },
+   {
+    "id": "english",
+    "label": "English test (TOEFL / IELTS)",
+    "detail": "Not re-checked: confirm."
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee (GBP 75)",
+    "detail": "Amount not confirmed: check the application."
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from third-party listings: confirm on the program page",
+  "app_fee_usd": 100,
+  "tuition_year_usd": 65178,
+  "next_deadline": "2027-01-27",
   "status": "open"
  },
  {
