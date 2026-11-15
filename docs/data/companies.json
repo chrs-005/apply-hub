@@ -234,8 +234,8 @@
   "ats": "microsoft",
   "ok": true,
   "error": null,
-  "raw_count": 34,
-  "open_internships": 4,
+  "raw_count": 33,
+  "open_internships": 3,
   "opens": "Aug – Nov",
   "careers": "https://apply.careers.microsoft.com/careers?query=intern"
  },
@@ -414,7 +414,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 669,
+  "raw_count": 668,
   "open_internships": 0,
   "opens": "Sep – Jan (many roles are PhD-only)",
   "careers": ""
@@ -426,7 +426,7 @@
   "ats": "ashby",
   "ok": true,
   "error": null,
-  "raw_count": 839,
+  "raw_count": 837,
   "open_internships": 0,
   "opens": "Sep – Jan (many roles are PhD-only)",
   "careers": ""
@@ -460,9 +460,9 @@
   "type": "ai",
   "tier": 1,
   "ats": "workable",
-  "ok": true,
-  "error": null,
-  "raw_count": 6,
+  "ok": false,
+  "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://apply.workable.com/api/v3/accounts/huggingface/jobs",
+  "raw_count": 0,
   "open_internships": 0,
   "opens": "Sep – Jan (many roles are PhD-only)",
   "careers": ""
@@ -498,7 +498,7 @@
   "ats": "ashby",
   "ok": true,
   "error": null,
-  "raw_count": 128,
+  "raw_count": 127,
   "open_internships": 0,
   "opens": "Sep – Jan (many roles are PhD-only)",
   "careers": ""
@@ -618,7 +618,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 185,
+  "raw_count": 186,
   "open_internships": 0,
   "opens": "Oct – Mar",
   "careers": ""
