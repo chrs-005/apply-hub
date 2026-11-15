@@ -20,16 +20,16 @@
    "status": "blocked"
   },
   "https://www.gresearch.com/join-us/": {
-   "hash": "f9c6d0d69ab3c4bc813c045744bd37eecb5528baa03ac2aee7da37bd05174760",
+   "hash": "e6f3cf71fffbccd7f8f08c0cc758271da80396f923dd4385b03baccf2ab10aac",
    "lines": [
     "Students & graduates",
     "Engineering internships",
-    "Quant Research Internship",
-    "Data Science Internship",
     "Machine Learning Research Internship",
     "Natural Language Processing Internship",
-    "Machine Learning Engineer Internship",
+    "Quant Research Internship",
+    "Data Science Internship",
     "Software Engineering Internship",
+    "Machine Learning Engineer Internship",
     "Quantitative Research Intern",
     "Research Engineering Intern",
     "FPGA Engineering Intern",
@@ -102,7 +102,7 @@
    "status": "ok"
   },
   "https://www.mavensecurities.com/careers/": {
-   "status": "blocked",
+   "status": "ok",
    "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
    "lines": []
   },
