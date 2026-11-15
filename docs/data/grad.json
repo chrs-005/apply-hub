@@ -2143,7 +2143,7 @@
   "app_fee_usd": 188,
   "tuition_year_usd": 5476,
   "next_deadline": "2026-12-15",
-  "status": "not_open_yet"
+  "status": "open"
  },
  {
   "id": "columbia-ms",
@@ -4375,7 +4375,7 @@
   "app_fee_usd": 250,
   "tuition_year_usd": 2200,
   "next_deadline": "2027-01-15",
-  "status": "not_open_yet"
+  "status": "open"
  },
  {
   "id": "uva-ai",
