@@ -20,7 +20,7 @@
    "status": "blocked"
   },
   "https://www.gresearch.com/join-us/": {
-   "hash": "bea48ed43196900ba519f535174a57898f4230b41ebdd190358f505332d4c219",
+   "hash": "30041b5e3c27da9801954785d6ce8038323d10b4b3b5b304e7f3979d8ab42543",
    "lines": [
     "Students & graduates",
     "Engineering internships",
@@ -28,8 +28,8 @@
     "Machine Learning Research Internship",
     "Natural Language Processing Internship",
     "Quant Research Internship",
-    "Software Engineering Internship",
     "Machine Learning Engineer Internship",
+    "Software Engineering Internship",
     "Quantitative Research Intern",
     "Research Engineering Intern",
     "FPGA Engineering Intern",
@@ -161,7 +161,7 @@
    "status": "ok"
   },
   "https://www.cst.cam.ac.uk/admissions/acs": {
-   "hash": "7addc50cc07d399052d0a22a243d25fd01ffc09fa1391b9b34a838cc9a437ebb",
+   "hash": "6f7bd57ffcd13d0fe36d007df31a5140a8256fdde4d670213839c4c4ab7344dd",
    "lines": [
     "Fees and funding",
     "Targeted funding",
@@ -174,7 +174,7 @@
     "Applications for admission in October 2027 will open on 9 September 2026. Places are limited and applicants are encouraged to apply early. Applications will close on 25 February 2027.",
     "Applications for admission in October 2028 will open on 8 September 2027. Places are limited and applicants are encouraged to apply early. Applications will close on 25 February 2028.",
     "Applicants should refer to the Postgraduate Admissions page for links to the application portal , deadlines, guidance and information.",
-    "Applicants who require funding support from the University and Cambridge Trust must submit their applications by 23:59 (GMT) on 2 December 2026 : see University funding deadlines .",
+    "Applicants who require funding support from the University and Cambridge Trust must submit their applications by 23:59 (GMT) on 8 December 2026 : see University funding deadlines .",
     "Batch 3: All other applications, including Gates Cambridge Trusts (Rest of world) received before the 8 December 2026 deadline, will be considered in late December and early January 2027. Applicants invited to an interview by video conference or phone should make themselves available between 2-20 January 2027.",
     "Batch 5: Applications received after 8 December 2026 but before 25 February 2027 will be considered in late March and early April 2027. Applicants invited to interview should make themselves available between 22 March and 30 April 2027.",
     "Funding competitions",
@@ -312,10 +312,12 @@
    "status": "ok"
   },
   "https://deai.ulb.be/": {
-   "hash": "75969d366ee4203f59c72535c0e0b08db9c7f722c1b0807379a69c00d1dc429d",
+   "hash": "84c7d199031347353bdee38616bb0e5bc10a19fc43e4d86615dd0f27b3cda3c9",
    "lines": [
     "Preparing a Successful Application",
     "Preparing a Successful Application",
+    "Applications Now Open: New Online Application System Available",
+    "We are pleased to inform you that our new online application system for the Erasmus Mundus Master DEAI is now…",
     "Please be advised that our online application form (https://deai.ulb.ac.be/emundus/) is currently offline due to urgent security maintenance. Our technical team…",
     "DEAI Application Manual"
    ],
