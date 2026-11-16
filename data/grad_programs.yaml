@@ -842,7 +842,7 @@ programs:
     notes: "The admissions page doesn't state funding for internationals. Ask ORC before counting on it."
 
   - id: berkeley-masds
-    target: core
+    target: suggested
     short: Berkeley Stats
     why: "Top statistics master's with no GRE and automatic merit-award consideration. Due 6 Jan."
     university: UC Berkeley
@@ -898,7 +898,7 @@ programs:
     notes: "ON THE FORM: 'MPhil in Machine Learning and Machine Intelligence', then a track. Tracks listed for 2026 entry: Speech and Language Processing, Computer Vision and Robotics, Human-Computer Interaction, Machine Learning, Biological Learning. 11 months from 1 Oct 2027. Admission is extremely selective."
 
   - id: utaustin-ms
-    target: core
+    target: suggested
     university: University of Texas at Austin
     short: UT Austin
     program: MS Computer Science
@@ -952,6 +952,34 @@ programs:
     source: official
     verify: [app_fee, letters]
     notes: "A realistic funded PhD option. Funding isn't promised to every admit, so ask about assistantships. Name faculty whose ML or theory work matches yours."
+
+  - id: stanford-csphd
+    target: core
+    short: Stanford PhD
+    university: Stanford University
+    program: PhD Computer Science
+    country: United States
+    region: US
+    fields: [cs, ml, research]
+    opens: null
+    deadlines:
+      - {label: "PhD application deadline", date: 2026-12-08}
+    app_fee: {amount: 125, currency: USD}
+    tuition: {amount: 0, currency: USD, per: year, note: "PhD students are funded"}
+    total_cost: {usd: 0, low: null, high: null, length: "about 5-6 years", basis: "Funded PhD. Stanford allows only one degree program per year, and CS says MS or PhD, not both."}
+    scholarships: []
+    language: "Check Stanford's English requirement for an AUB degree"
+    gre: "Not required and not considered"
+    requires:
+      letters: 3
+      letters_note: "Three letters"
+      gre: {status: "no", note: "GRE scores are not required and not considered from PhD applicants."}
+      english: {status: "check", note: "Confirm Stanford's rule."}
+      extras: ["Statement of purpose focused on research", "One Stanford programme per year only"]
+    url: https://cs.stanford.edu/admissions/phd-admissions-frequently-asked-questions
+    source: official
+    verify: [english]
+    notes: "Long shot (top 3, no publications yet), but funded, unlike ICME. Replaces Stanford ICME on your list."
 
 # ======================= OTHER PROGRAMS (catalog: add from the app if you want them) =======================
   - id: ip-paris-phd-track
@@ -1066,7 +1094,7 @@ programs:
     notes: "Two letters. Two semesters, professional. A limited number of teaching jobs."
 
   - id: stanford-icme
-    target: core
+    target: suggested
     short: Stanford ICME
     university: Stanford University
     program: MS Computational and Mathematical Engineering (ICME)
