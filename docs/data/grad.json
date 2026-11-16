@@ -4081,7 +4081,7 @@
  },
  {
   "id": "kth-ms",
-  "target": "core",
+  "target": "suggested",
   "university": "KTH Royal Institute of Technology",
   "short": "KTH",
   "program": "MSc Machine Learning / Computer Science / Applied & Computational Mathematics",
@@ -4206,6 +4206,122 @@
   "checklist_source": "Built from the requirements on the official pages",
   "app_fee_usd": 86,
   "tuition_year_usd": 36575,
+  "next_deadline": "2027-01-15",
+  "status": "open"
+ },
+ {
+  "id": "bu-ms",
+  "target": "core",
+  "university": "Boston University",
+  "short": "BU",
+  "program": "MS Computer Science or MS Artificial Intelligence",
+  "country": "United States",
+  "region": "US",
+  "fields": [
+   "cs",
+   "ml"
+  ],
+  "opens": null,
+  "deadlines": [
+   {
+    "label": "MS AI priority deadline",
+    "date": "2027-01-15"
+   },
+   {
+    "label": "MS AI final deadline",
+    "date": "2027-03-15"
+   }
+  ],
+  "app_fee": {
+   "amount": 95,
+   "currency": "USD",
+   "note": "Fee waiver link on the admissions page"
+  },
+  "tuition": null,
+  "total_cost": {
+   "usd": 140000,
+   "low": 96000,
+   "high": 145000,
+   "length": "MS AI about 1.5 years; MS Data Science 9 months",
+   "basis": "BU's 2026-27 budget: USD 95,998 a year (tuition USD 73,024 + fees + living). MS AI over about 1.5 years is about USD 144k; the 9-month MS Data Science is about USD 96k. Merit awards take USD 5k-30k off."
+  },
+  "scholarships": [
+   {
+    "name": "BU CS merit scholarship",
+    "deadline": null,
+    "covers": "$5,000-$30,000",
+    "how": "Automatic for admitted full-time students; BU encourages applying early. Keep a 3.0 GPA."
+   }
+  ],
+  "language": "Not stated on the CS page: BU Engineering asks for TOEFL 90 or IELTS 7.0",
+  "gre": "Not required",
+  "requires": {
+   "letters": 2,
+   "letters_note": "Two recommendation letters",
+   "gre": {
+    "status": "optional",
+    "note": "BU doesn't require it. Admits who sent one averaged 80th percentile Quant, 60th Verbal."
+   },
+   "english": {
+    "status": "test",
+    "note": "Not stated on the CS admissions page. Confirm with BU."
+   },
+   "statement": "Personal statement",
+   "extras": []
+  },
+  "url": "https://www.bu.edu/cs/masters/ms-admissions/on-campus-admissions/",
+  "source": "official",
+  "verify": [
+   "deadlines",
+   "english",
+   "tuition"
+  ],
+  "notes": "ON THE FORM: recommended 'MS in Artificial Intelligence'. Ask BU if its merit awards cover AI as well as 'MS in Computer Science'. Apply early for scholarship money, not at the deadline. Other BU options: MS Data Science (priority 1 Feb, about $74,000 total, scholarships around $10,000) and Engineering master's (priority 15 Jan).",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "2 recommendation letters",
+    "detail": "Two recommendation letters"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "Personal statement",
+    "detail": ""
+   },
+   {
+    "id": "english",
+    "label": "English test (TOEFL / IELTS)",
+    "detail": "Not stated on the CS admissions page. Confirm with BU."
+   },
+   {
+    "id": "gre",
+    "label": "GRE (optional: send it if it helps)",
+    "detail": "BU doesn't require it. Admits who sent one averaged 80th percentile Quant, 60th Verbal."
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee (USD 95)",
+    "detail": "Fee waiver link on the admissions page"
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": 95,
+  "tuition_year_usd": null,
   "next_deadline": "2027-01-15",
   "status": "open"
  },
@@ -4826,118 +4942,6 @@
   "tuition_year_usd": 4500,
   "next_deadline": "2027-03-01",
   "status": "not_open_yet"
- },
- {
-  "id": "bu-ms",
-  "target": "core",
-  "university": "Boston University",
-  "short": "BU",
-  "program": "MS Computer Science or MS Artificial Intelligence",
-  "country": "United States",
-  "region": "US",
-  "fields": [
-   "cs",
-   "ml"
-  ],
-  "opens": null,
-  "deadlines": [
-   {
-    "label": "Application deadline (page prints no year)",
-    "date": "2027-03-15"
-   }
-  ],
-  "app_fee": {
-   "amount": 95,
-   "currency": "USD",
-   "note": "Fee waiver link on the admissions page"
-  },
-  "tuition": null,
-  "total_cost": {
-   "usd": 140000,
-   "low": 96000,
-   "high": 145000,
-   "length": "MS AI about 1.5 years; MS Data Science 9 months",
-   "basis": "BU's 2026-27 budget: USD 95,998 a year (tuition USD 73,024 + fees + living). MS AI over about 1.5 years is about USD 144k; the 9-month MS Data Science is about USD 96k. Merit awards take USD 5k-30k off."
-  },
-  "scholarships": [
-   {
-    "name": "BU CS merit scholarship",
-    "deadline": null,
-    "covers": "$5,000-$30,000",
-    "how": "Automatic for admitted full-time students; BU encourages applying early. Keep a 3.0 GPA."
-   }
-  ],
-  "language": "Not stated on the CS page: BU Engineering asks for TOEFL 90 or IELTS 7.0",
-  "gre": "Not required",
-  "requires": {
-   "letters": 2,
-   "letters_note": "Two recommendation letters",
-   "gre": {
-    "status": "optional",
-    "note": "BU doesn't require it. Admits who sent one averaged 80th percentile Quant, 60th Verbal."
-   },
-   "english": {
-    "status": "test",
-    "note": "Not stated on the CS admissions page. Confirm with BU."
-   },
-   "statement": "Personal statement",
-   "extras": []
-  },
-  "url": "https://www.bu.edu/cs/masters/ms-admissions/on-campus-admissions/",
-  "source": "official",
-  "verify": [
-   "deadlines",
-   "english",
-   "tuition"
-  ],
-  "notes": "ON THE FORM: recommended 'MS in Artificial Intelligence'. Ask BU if its merit awards cover AI as well as 'MS in Computer Science'. Apply early for scholarship money, not at the deadline. Other BU options: MS Data Science (priority 1 Feb, about $74,000 total, scholarships around $10,000) and Engineering master's (priority 15 Jan).",
-  "checklist": [
-   {
-    "id": "referees",
-    "label": "2 recommendation letters",
-    "detail": "Two recommendation letters"
-   },
-   {
-    "id": "cv",
-    "label": "CV (grad-school version)",
-    "detail": ""
-   },
-   {
-    "id": "transcripts",
-    "label": "Transcripts",
-    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
-   },
-   {
-    "id": "statement",
-    "label": "Personal statement",
-    "detail": ""
-   },
-   {
-    "id": "english",
-    "label": "English test (TOEFL / IELTS)",
-    "detail": "Not stated on the CS admissions page. Confirm with BU."
-   },
-   {
-    "id": "gre",
-    "label": "GRE (optional: send it if it helps)",
-    "detail": "BU doesn't require it. Admits who sent one averaged 80th percentile Quant, 60th Verbal."
-   },
-   {
-    "id": "fee",
-    "label": "Pay the application fee (USD 95)",
-    "detail": "Fee waiver link on the admissions page"
-   },
-   {
-    "id": "submit",
-    "label": "Submit",
-    "detail": ""
-   }
-  ],
-  "checklist_source": "Built from the requirements on the official pages",
-  "app_fee_usd": 95,
-  "tuition_year_usd": null,
-  "next_deadline": "2027-03-15",
-  "status": "open"
  },
  {
   "id": "ucl-ml",

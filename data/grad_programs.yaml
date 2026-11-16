@@ -430,7 +430,7 @@ programs:
     notes: "ON THE FORM: 'Computer Science MS'. Pick your ML or AI field of interest: it only assigns an advisor. You can't apply to both the MS and PhD. Fall-only intake. MS students aren't eligible for department funding. Decisions by late April."
 
   - id: kth-ms
-    target: core
+    target: suggested
     university: KTH Royal Institute of Technology
     short: KTH
     program: "MSc Machine Learning / Computer Science / Applied & Computational Mathematics"
@@ -470,7 +470,8 @@ programs:
     fields: [cs, ml]
     opens: null
     deadlines:
-      - {label: "Application deadline (page prints no year)", date: 2027-03-15}
+      - {label: "MS AI priority deadline", date: 2027-01-15}
+      - {label: "MS AI final deadline", date: 2027-03-15}
     app_fee: {amount: 95, currency: USD, note: "Fee waiver link on the admissions page"}
     tuition: null
     total_cost: {usd: 140000, low: 96000, high: 145000, length: "MS AI about 1.5 years; MS Data Science 9 months", basis: "BU's 2026-27 budget: USD 95,998 a year (tuition USD 73,024 + fees + living). MS AI over about 1.5 years is about USD 144k; the 9-month MS Data Science is about USD 96k. Merit awards take USD 5k-30k off."}
