@@ -464,17 +464,16 @@ programs:
     target: core
     university: Boston University
     short: BU
-    program: MS Computer Science or MS Artificial Intelligence
+    program: PhD Computer Science (switched from MS AI in the same application)
     country: United States
     region: US
     fields: [cs, ml]
     opens: null
     deadlines:
-      - {label: "MS AI priority deadline", date: 2027-01-15}
-      - {label: "MS AI final deadline", date: 2027-03-15}
+      - {label: "CS PhD deadline", date: 2026-12-01}
     app_fee: {amount: 95, currency: USD, note: "Fee waiver link on the admissions page"}
     tuition: null
-    total_cost: {usd: 140000, low: 96000, high: 145000, length: "MS AI about 1.5 years; MS Data Science 9 months", basis: "BU's 2026-27 budget: USD 95,998 a year (tuition USD 73,024 + fees + living). MS AI over about 1.5 years is about USD 144k; the 9-month MS Data Science is about USD 96k. Merit awards take USD 5k-30k off."}
+    total_cost: {usd: 0, low: null, high: null, length: "about 5 years", basis: "BU PhD offers guarantee five years: full tuition, fees, basic health insurance and a stipend."}
     scholarships:
       - {name: "BU CS merit scholarship", deadline: null, covers: "$5,000-$30,000", how: "Automatic for admitted full-time students; BU encourages applying early. Keep a 3.0 GPA."}
     language: "Not stated on the CS page: BU Engineering asks for TOEFL 90 or IELTS 7.0"
