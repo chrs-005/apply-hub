@@ -20,14 +20,14 @@
    "status": "blocked"
   },
   "https://www.gresearch.com/join-us/": {
-   "hash": "6c3df392972e459f07fd5b230a598f8f47f4b42e43eef7e9934f43eebceb85d6",
+   "hash": "30041b5e3c27da9801954785d6ce8038323d10b4b3b5b304e7f3979d8ab42543",
    "lines": [
     "Students & graduates",
     "Engineering internships",
+    "Data Science Internship",
     "Machine Learning Research Internship",
     "Natural Language Processing Internship",
     "Quant Research Internship",
-    "Data Science Internship",
     "Machine Learning Engineer Internship",
     "Software Engineering Internship",
     "Quantitative Research Intern",
@@ -49,8 +49,10 @@
    "status": "ok"
   },
   "https://www.qube-rt.com/careers/": {
-   "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-   "lines": [],
+   "hash": "09010f5c2b736678e9f9f6fb74bd28613a4819841847ff19086763732b8e3cf1",
+   "lines": [
+    "Any specific enquiries related to campus, internships and graduate programmes, please contact campus@qube-rt.com ."
+   ],
    "status": "ok"
   },
   "https://careers.sig.com/campus-programs": {
@@ -59,7 +61,7 @@
    "status": "ok"
   },
   "https://jobs.apple.com/en-gb/search?team=internships-STDNT-INTRN&location=united-kingdom-GBR": {
-   "hash": "11484ce3238ad62b13c420285299b6a5888ec3499009e68ad73ab60753196baa",
+   "hash": "5931c6bcbd7aa78e9fa8f9d96bc2650ca15117a071e6a3d4fc43b1ea8f32373f",
    "lines": [
     "Search Jobs - United Kingdom, Students: Internships - Jobs at Apple (UK)",
     "View all teams Students : Internships",
@@ -76,8 +78,6 @@
     "Internship - Machine Learning Research - Speech-to-Speech Translation",
     "Share Internship - Machine Learning Research - Speech-to-Speech Translation 200690125-1251",
     "The Machine Translation and Multilingual AI team is looking for research interns to explore open problems in speech-to-speech translation: how to build models that let people talk naturally with anyone, in any language, in real time.",
-    "PMU Design Verification Intern",
-    "Share PMU Design Verification Intern 200683293-5490",
     "GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture",
     "Share GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture 200682357-1251",
     "GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture",
@@ -100,7 +100,7 @@
    "status": "ok"
   },
   "https://www.mavensecurities.com/careers/": {
-   "status": "blocked",
+   "status": "ok",
    "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
    "lines": []
   },
@@ -278,7 +278,7 @@
    "status": "ok"
   },
   "https://deepmind.google/scholarships/": {
-   "hash": "5cc598bbd8c5a6bafa5a5749f3637eb5ea198493e99835f57bc9d5df77593cb6",
+   "hash": "961de3877066049cd75ace342e9e25c9f7d9a3e5a6650985b4ffd89c304f3e4a",
    "lines": [
     "Build responsible AI applications at scale",
     "Design advanced algorithms for math and applications in computing",
@@ -287,8 +287,8 @@
     "Postgraduate scholarships",
     "Starting in 2017, scholarship funding allowed recipient universities to provide financial support to students seeking to study graduate courses relating to AI and adjacent fields. Scholars were also offered support from a Google DeepMind mentor, and had opportunities to attend leading AI academic conferences and Google DeepMind events.",
     "In 2026, Google DeepMind AI Masters scholarships in the UK will be delivered by Martingale Foundation. For more information, please visit the Martingale website . Applications are now closed.",
-    "For applicants and scholars selected by host universities outside of the UK, AI Masters scholarships for 2026 are administered by the Institute of International Education (IIE). For more information, visit IIEâs website .",
-    "The Pan-African âAI for Scienceâ Masters program scholarships are offered directly by AI for Science Masters (AIMS).",
+    "For applicants and scholars selected by host universities outside of the UK, AI Masters scholarships for 2026 are administered by the Institute of International Education (IIE). For more information, visit IIE’s website .",
+    "The Pan-African ‘AI for Science’ Masters program scholarships are offered directly by AI for Science Masters (AIMS).",
     "Our funding will help AIMS provide full scholarships, equipment and compute, with the goal of supporting 160 African students by July 2027.",
     "Applications and more information"
    ],
