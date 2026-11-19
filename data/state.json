@@ -20,7 +20,7 @@
    "status": "blocked"
   },
   "https://www.gresearch.com/join-us/": {
-   "hash": "30041b5e3c27da9801954785d6ce8038323d10b4b3b5b304e7f3979d8ab42543",
+   "hash": "bea48ed43196900ba519f535174a57898f4230b41ebdd190358f505332d4c219",
    "lines": [
     "Students & graduates",
     "Engineering internships",
@@ -28,8 +28,8 @@
     "Machine Learning Research Internship",
     "Natural Language Processing Internship",
     "Quant Research Internship",
-    "Machine Learning Engineer Internship",
     "Software Engineering Internship",
+    "Machine Learning Engineer Internship",
     "Quantitative Research Intern",
     "Research Engineering Intern",
     "FPGA Engineering Intern",
@@ -278,7 +278,7 @@
    "status": "ok"
   },
   "https://deepmind.google/scholarships/": {
-   "hash": "961de3877066049cd75ace342e9e25c9f7d9a3e5a6650985b4ffd89c304f3e4a",
+   "hash": "5cc598bbd8c5a6bafa5a5749f3637eb5ea198493e99835f57bc9d5df77593cb6",
    "lines": [
     "Build responsible AI applications at scale",
     "Design advanced algorithms for math and applications in computing",
@@ -287,8 +287,8 @@
     "Postgraduate scholarships",
     "Starting in 2017, scholarship funding allowed recipient universities to provide financial support to students seeking to study graduate courses relating to AI and adjacent fields. Scholars were also offered support from a Google DeepMind mentor, and had opportunities to attend leading AI academic conferences and Google DeepMind events.",
     "In 2026, Google DeepMind AI Masters scholarships in the UK will be delivered by Martingale Foundation. For more information, please visit the Martingale website . Applications are now closed.",
-    "For applicants and scholars selected by host universities outside of the UK, AI Masters scholarships for 2026 are administered by the Institute of International Education (IIE). For more information, visit IIE’s website .",
-    "The Pan-African ‘AI for Science’ Masters program scholarships are offered directly by AI for Science Masters (AIMS).",
+    "For applicants and scholars selected by host universities outside of the UK, AI Masters scholarships for 2026 are administered by the Institute of International Education (IIE). For more information, visit IIEâs website .",
+    "The Pan-African âAI for Scienceâ Masters program scholarships are offered directly by AI for Science Masters (AIMS).",
     "Our funding will help AIMS provide full scholarships, equipment and compute, with the goal of supporting 160 African students by July 2027.",
     "Applications and more information"
    ],

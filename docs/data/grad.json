@@ -1,225 +1,5 @@
 [
  {
-  "id": "cmu-mscs",
-  "target": "core",
-  "why": "One application covers MS Machine Learning and its Advanced Study track; MLT and MS CS ranked behind it. GRE optional for all three. $80 by 18 Nov, final 9 Dec.",
-  "university": "Carnegie Mellon",
-  "short": "CMU",
-  "program": "MS Machine Learning (+ Advanced Study), ranked with MLT and MS CS",
-  "country": "United States",
-  "region": "US",
-  "fields": [
-   "cs",
-   "ml"
-  ],
-  "opens": "2026-09-09",
-  "deadlines": [
-   {
-    "label": "Early (fee $80)",
-    "date": "2026-11-18",
-    "time": "3pm EST"
-   },
-   {
-    "label": "Final (fee $100)",
-    "date": "2026-12-09",
-    "time": "3pm EST"
-   }
-  ],
-  "app_fee": {
-   "amount": 100,
-   "currency": "USD",
-   "note": "$80 before 18 Nov. Hardship waiver inside the application."
-  },
-  "tuition": null,
-  "total_cost": {
-   "usd": 145000,
-   "low": 140000,
-   "high": 190000,
-   "length": "16 months (3 semesters + summer)",
-   "basis": "MS Machine Learning tuition USD 31,100 a semester x 3 (2026-27; about +5% a year), plus CMU's non-tuition budget of USD 37,374 a year. Advanced Study (4 semesters) is about USD 185k; MLT (2 years) about USD 200k."
-  },
-  "scholarships": [],
-  "language": "TOEFL/IELTS/Duolingo required: an English-medium degree does NOT exempt you",
-  "gre": "Strongly recommended. At-home scores are not accepted for current test dates.",
-  "requires": {
-   "letters": 3,
-   "letters_note": "At least 2 from faculty or recent employers",
-   "gre": {
-    "status": "recommended",
-    "note": "Strongly recommended. CMU advises testing by Nov 25. At-home GRE is accepted only from old date ranges, so you'd need a test center."
-   },
-   "english": {
-    "status": "test",
-    "note": "No waivers, no medium-of-instruction letters. Most admits: TOEFL 105-114, IELTS 7-8, Duolingo 130-155."
-   },
-   "statement": "1-2 page statement: research interests, experience, goals",
-   "extras": []
-  },
-  "url": "https://www.csd.cs.cmu.edu/academics/masters/admissions",
-  "source": "official",
-  "verify": [
-   "tuition"
-  ],
-  "notes": "ON THE FORM: 'Master of Science in Computer Science'. No track to choose. CMU also has 'Master of Science in Machine Learning'. Each master's costs $100, or $80 by 18 Nov. No scholarships from the program. You can apply to several CMU master's: MS Machine Learning has the same deadlines, GRE optional, and no funding either. Its average admit had GPA 3.9/4.0, Quant 169.",
-  "checklist": [
-   {
-    "id": "referees",
-    "label": "3 recommendation letters",
-    "detail": "At least 2 from faculty or recent employers"
-   },
-   {
-    "id": "cv",
-    "label": "CV (grad-school version)",
-    "detail": ""
-   },
-   {
-    "id": "transcripts",
-    "label": "Transcripts",
-    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
-   },
-   {
-    "id": "statement",
-    "label": "1-2 page statement: research interests, experience, goals",
-    "detail": ""
-   },
-   {
-    "id": "english",
-    "label": "English test (TOEFL / IELTS)",
-    "detail": "No waivers, no medium-of-instruction letters. Most admits: TOEFL 105-114, IELTS 7-8, Duolingo 130-155."
-   },
-   {
-    "id": "gre",
-    "label": "GRE (strongly recommended)",
-    "detail": "Strongly recommended. CMU advises testing by Nov 25. At-home GRE is accepted only from old date ranges, so you'd need a test center."
-   },
-   {
-    "id": "fee",
-    "label": "Pay the application fee (USD 100)",
-    "detail": "$80 before 18 Nov. Hardship waiver inside the application."
-   },
-   {
-    "id": "submit",
-    "label": "Submit",
-    "detail": ""
-   }
-  ],
-  "checklist_source": "Built from the requirements on the official pages",
-  "app_fee_usd": 100,
-  "tuition_year_usd": null,
-  "next_deadline": "2026-11-18",
-  "status": "open"
- },
- {
-  "id": "cmu-mlt",
-  "target": "suggested",
-  "short": "CMU MLT",
-  "why": "CMU's research master's in language technologies: the closest match to LLM work. Early deadline 18 Nov.",
-  "university": "Carnegie Mellon University (LTI)",
-  "program": "Master of Language Technologies (MLT)",
-  "country": "United States",
-  "region": "US",
-  "fields": [
-   "cs",
-   "ml",
-   "research"
-  ],
-  "opens": "2026-09-01",
-  "deadlines": [
-   {
-    "label": "Early deadline",
-    "date": "2026-11-18"
-   },
-   {
-    "label": "Final deadline",
-    "date": "2026-12-09"
-   }
-  ],
-  "app_fee": {
-   "amount": 100,
-   "currency": "USD",
-   "note": "$80 by the early deadline. Waivers in the application."
-  },
-  "total_cost": {
-   "usd": 200000,
-   "low": null,
-   "high": null,
-   "length": "2 years",
-   "basis": "SCS master's tuition USD 62,200 a year x 2, plus CMU's non-tuition budget of USD 37,374 a year x 2. Research assistantships are occasional, not guaranteed."
-  },
-  "scholarships": [
-   {
-    "name": "Research assistantships",
-    "deadline": null,
-    "covers": "Not guaranteed",
-    "how": "Occasionally offered by advisors to current MLT students"
-   }
-  ],
-  "language": "English test required, no exceptions. TOEFL preferred, IELTS accepted.",
-  "gre": "Optional",
-  "requires": {
-   "letters": 3,
-   "letters_note": "Three letters",
-   "gre": {
-    "status": "optional",
-    "note": "GREs are now optional."
-   },
-   "english": {
-    "status": "test",
-    "note": "Required if English isn't your native language, no exceptions."
-   },
-   "extras": []
-  },
-  "url": "https://lti.cmu.edu/academics/masters-programs/mlt.html",
-  "source": "official",
-  "verify": [
-   "opens",
-   "tuition"
-  ],
-  "notes": "ON THE FORM: 'Master of Language Technologies (MLT)'. Two years with two summers of research, built as PhD preparation. Check if it can be combined with your MSCS application.",
-  "checklist": [
-   {
-    "id": "referees",
-    "label": "3 recommendation letters",
-    "detail": "Three letters"
-   },
-   {
-    "id": "cv",
-    "label": "CV (grad-school version)",
-    "detail": ""
-   },
-   {
-    "id": "transcripts",
-    "label": "Transcripts",
-    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
-   },
-   {
-    "id": "english",
-    "label": "English test (TOEFL / IELTS)",
-    "detail": "Required if English isn't your native language, no exceptions."
-   },
-   {
-    "id": "gre",
-    "label": "GRE (optional: send it if it helps)",
-    "detail": "GREs are now optional."
-   },
-   {
-    "id": "fee",
-    "label": "Pay the application fee (USD 100)",
-    "detail": "$80 by the early deadline. Waivers in the application."
-   },
-   {
-    "id": "submit",
-    "label": "Submit",
-    "detail": ""
-   }
-  ],
-  "checklist_source": "Built from the requirements on the official pages",
-  "app_fee_usd": 100,
-  "tuition_year_usd": null,
-  "next_deadline": "2026-11-18",
-  "status": "open"
- },
- {
   "id": "eth-cs",
   "target": "core",
   "university": "ETH Zurich",
@@ -2233,6 +2013,226 @@
   "app_fee_usd": 125,
   "tuition_year_usd": 0,
   "next_deadline": "2026-12-08",
+  "status": "open"
+ },
+ {
+  "id": "cmu-mscs",
+  "target": "core",
+  "why": "One application covers MS Machine Learning and its Advanced Study track; MLT and MS CS ranked behind it. GRE optional for all three. $80 by 18 Nov, final 9 Dec.",
+  "university": "Carnegie Mellon",
+  "short": "CMU",
+  "program": "MS Machine Learning (+ Advanced Study), ranked with MLT and MS CS",
+  "country": "United States",
+  "region": "US",
+  "fields": [
+   "cs",
+   "ml"
+  ],
+  "opens": "2026-09-09",
+  "deadlines": [
+   {
+    "label": "Early (fee $80)",
+    "date": "2026-11-18",
+    "time": "3pm EST"
+   },
+   {
+    "label": "Final (fee $100)",
+    "date": "2026-12-09",
+    "time": "3pm EST"
+   }
+  ],
+  "app_fee": {
+   "amount": 100,
+   "currency": "USD",
+   "note": "$80 before 18 Nov. Hardship waiver inside the application."
+  },
+  "tuition": null,
+  "total_cost": {
+   "usd": 145000,
+   "low": 140000,
+   "high": 190000,
+   "length": "16 months (3 semesters + summer)",
+   "basis": "MS Machine Learning tuition USD 31,100 a semester x 3 (2026-27; about +5% a year), plus CMU's non-tuition budget of USD 37,374 a year. Advanced Study (4 semesters) is about USD 185k; MLT (2 years) about USD 200k."
+  },
+  "scholarships": [],
+  "language": "TOEFL/IELTS/Duolingo required: an English-medium degree does NOT exempt you",
+  "gre": "Strongly recommended. At-home scores are not accepted for current test dates.",
+  "requires": {
+   "letters": 3,
+   "letters_note": "At least 2 from faculty or recent employers",
+   "gre": {
+    "status": "recommended",
+    "note": "Strongly recommended. CMU advises testing by Nov 25. At-home GRE is accepted only from old date ranges, so you'd need a test center."
+   },
+   "english": {
+    "status": "test",
+    "note": "No waivers, no medium-of-instruction letters. Most admits: TOEFL 105-114, IELTS 7-8, Duolingo 130-155."
+   },
+   "statement": "1-2 page statement: research interests, experience, goals",
+   "extras": []
+  },
+  "url": "https://www.csd.cs.cmu.edu/academics/masters/admissions",
+  "source": "official",
+  "verify": [
+   "tuition"
+  ],
+  "notes": "ON THE FORM: 'Master of Science in Computer Science'. No track to choose. CMU also has 'Master of Science in Machine Learning'. Each master's costs $100, or $80 by 18 Nov. No scholarships from the program. You can apply to several CMU master's: MS Machine Learning has the same deadlines, GRE optional, and no funding either. Its average admit had GPA 3.9/4.0, Quant 169.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "3 recommendation letters",
+    "detail": "At least 2 from faculty or recent employers"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "statement",
+    "label": "1-2 page statement: research interests, experience, goals",
+    "detail": ""
+   },
+   {
+    "id": "english",
+    "label": "English test (TOEFL / IELTS)",
+    "detail": "No waivers, no medium-of-instruction letters. Most admits: TOEFL 105-114, IELTS 7-8, Duolingo 130-155."
+   },
+   {
+    "id": "gre",
+    "label": "GRE (strongly recommended)",
+    "detail": "Strongly recommended. CMU advises testing by Nov 25. At-home GRE is accepted only from old date ranges, so you'd need a test center."
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee (USD 100)",
+    "detail": "$80 before 18 Nov. Hardship waiver inside the application."
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": 100,
+  "tuition_year_usd": null,
+  "next_deadline": "2026-12-09",
+  "status": "open"
+ },
+ {
+  "id": "cmu-mlt",
+  "target": "suggested",
+  "short": "CMU MLT",
+  "why": "CMU's research master's in language technologies: the closest match to LLM work. Early deadline 18 Nov.",
+  "university": "Carnegie Mellon University (LTI)",
+  "program": "Master of Language Technologies (MLT)",
+  "country": "United States",
+  "region": "US",
+  "fields": [
+   "cs",
+   "ml",
+   "research"
+  ],
+  "opens": "2026-09-01",
+  "deadlines": [
+   {
+    "label": "Early deadline",
+    "date": "2026-11-18"
+   },
+   {
+    "label": "Final deadline",
+    "date": "2026-12-09"
+   }
+  ],
+  "app_fee": {
+   "amount": 100,
+   "currency": "USD",
+   "note": "$80 by the early deadline. Waivers in the application."
+  },
+  "total_cost": {
+   "usd": 200000,
+   "low": null,
+   "high": null,
+   "length": "2 years",
+   "basis": "SCS master's tuition USD 62,200 a year x 2, plus CMU's non-tuition budget of USD 37,374 a year x 2. Research assistantships are occasional, not guaranteed."
+  },
+  "scholarships": [
+   {
+    "name": "Research assistantships",
+    "deadline": null,
+    "covers": "Not guaranteed",
+    "how": "Occasionally offered by advisors to current MLT students"
+   }
+  ],
+  "language": "English test required, no exceptions. TOEFL preferred, IELTS accepted.",
+  "gre": "Optional",
+  "requires": {
+   "letters": 3,
+   "letters_note": "Three letters",
+   "gre": {
+    "status": "optional",
+    "note": "GREs are now optional."
+   },
+   "english": {
+    "status": "test",
+    "note": "Required if English isn't your native language, no exceptions."
+   },
+   "extras": []
+  },
+  "url": "https://lti.cmu.edu/academics/masters-programs/mlt.html",
+  "source": "official",
+  "verify": [
+   "opens",
+   "tuition"
+  ],
+  "notes": "ON THE FORM: 'Master of Language Technologies (MLT)'. Two years with two summers of research, built as PhD preparation. Check if it can be combined with your MSCS application.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "3 recommendation letters",
+    "detail": "Three letters"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "english",
+    "label": "English test (TOEFL / IELTS)",
+    "detail": "Required if English isn't your native language, no exceptions."
+   },
+   {
+    "id": "gre",
+    "label": "GRE (optional: send it if it helps)",
+    "detail": "GREs are now optional."
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee (USD 100)",
+    "detail": "$80 by the early deadline. Waivers in the application."
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": 100,
+  "tuition_year_usd": null,
+  "next_deadline": "2026-12-09",
   "status": "open"
  },
  {
