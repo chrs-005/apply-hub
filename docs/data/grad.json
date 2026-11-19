@@ -1949,7 +1949,7 @@
    "basis": "Funded PhD. Stanford allows only one degree program per year, and CS says MS or PhD, not both."
   },
   "track": "phd",
-  "letters_status": "Requested 19 Nov: Bazzi, Issa, Mohanna (a 4th backup is optional).",
+  "letters_status": "Requested 19 Nov: Bazzi, Issa, Mohanna, plus Sabra as the 4th backup.",
   "scholarships": [],
   "language": "Check Stanford's English requirement for an AUB degree",
   "gre": "Not required and not considered",
@@ -2026,10 +2026,10 @@
  {
   "id": "cmu-mscs",
   "target": "core",
-  "why": "One application covers MS Machine Learning and its Advanced Study track; MLT and MS CS ranked behind it. GRE optional for all three. $80 by 18 Nov, final 9 Dec.",
+  "why": "Switched to the Machine Learning PhD (funded) in the same application. Ranked: ML PhD, LTI PhD, MS ML. Final deadline 9 Dec.",
   "university": "Carnegie Mellon",
   "short": "CMU",
-  "program": "MS Machine Learning (+ Advanced Study), ranked with MLT and MS CS",
+  "program": "PhD Machine Learning (switched from MS ML; LTI PhD ranked 2nd)",
   "country": "United States",
   "region": "US",
   "fields": [
@@ -2056,14 +2056,14 @@
   },
   "tuition": null,
   "total_cost": {
-   "usd": 145000,
-   "low": 140000,
-   "high": 190000,
-   "length": "16 months (3 semesters + summer)",
-   "basis": "MS Machine Learning tuition USD 31,100 a semester x 3 (2026-27; about +5% a year), plus CMU's non-tuition budget of USD 37,374 a year. Advanced Study (4 semesters) is about USD 185k; MLT (2 years) about USD 200k."
+   "usd": 0,
+   "low": null,
+   "high": null,
+   "length": "about 5 years",
+   "basis": "CMU SCS PhD students are funded: tuition, stipend and health insurance. For reference, the MS Machine Learning would have cost about USD 145k: tuition USD 31,100 a semester x 3 (2026-27; about +5% a year), plus CMU's non-tuition budget of USD 37,374 a year. Advanced Study (4 semesters) is about USD 185k; MLT (2 years) about USD 200k."
   },
-  "track": "switchable",
-  "letters_status": "Requested: Sabra, Mohanna, Bazzi. MSML now; the ML or LTI PhD can be picked in the same application, letters stay attached.",
+  "track": "phd",
+  "letters_status": "Requested: Sabra, Bazzi. Submitted: Mohanna (written for MSML, still attached after the switch).",
   "scholarships": [],
   "language": "TOEFL/IELTS/Duolingo required: an English-medium degree does NOT exempt you",
   "gre": "Strongly recommended. At-home scores are not accepted for current test dates.",
