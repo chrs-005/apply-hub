@@ -126,6 +126,28 @@ function totalBadge(p) {
   const t = totalCost(p);
   return t ? `<span class="badge ${p.total_cost.usd === 0 ? "good" : p.total_cost.usd >= 120000 ? "warn" : ""}">Total: ${esc(t)}</span>` : "";
 }
+const TRACK = { phd: ["PhD", "good"], master: ["Master's", ""], switchable: ["Switchable", "warn"] };
+function trackBadge(p) {
+  const t = TRACK[p.track];
+  return t ? `<span class="badge ${t[1]}">${t[0]}</span>` : "";
+}
+function lettersBadge(p) {
+  const l = p.letters_status || "";
+  if (!l) return `<span class="muted">—</span>`;
+  const cls = /^(Requested|Entered)/.test(l) ? "good" : /^Not yet/.test(l) ? "warn" : "";
+  return `<span class="badge ${cls}">${esc(/^Not yet/.test(l) ? "Not yet" : /^Entered/.test(l) ? "On submit" : "Sent")}</span><div class="tiny muted" style="margin-top:3px">${esc(l.replace(/^Not yet[:.]?\s*/, ""))}</div>`;
+}
+function overviewTable(board) {
+  if (!board.length) return "";
+  return `<div class="m-table-wrap" style="margin-bottom:14px"><table class="m-table">
+    <thead><tr><th>School</th><th>Track</th><th>Deadline</th><th>Total</th><th>Letters</th></tr></thead>
+    <tbody>${board.map((p) => { const n = nextOpenDeadline(p);
+      return `<tr><th>${FLAGS_M[p.country] || "🌍"} ${esc(shortName(p))}<div class="tiny muted" style="font-weight:400">${esc(p.program)}</div></th>
+        <td>${trackBadge(p) || `<span class="muted">—</span>`}</td>
+        <td style="white-space:nowrap">${n ? fmtShort(n.date) : "—"}</td>
+        <td style="white-space:nowrap">${esc(totalCost(p) || "—")}</td>
+        <td>${lettersBadge(p)}</td></tr>`; }).join("")}</tbody></table></div>`;
+}
 function appCard(p) {
   const tid = "grad:" + p.id, status = mStatus(p), next = nextOpenDeadline(p), key = "app:" + p.id;
   const [done, total] = checklistDone(p), pct = total ? Math.round((done / total) * 100) : 0;
@@ -135,6 +157,7 @@ function appCard(p) {
     <div class="row between"><div><span class="org">${flag} ${esc(p.university)}</span><div class="title">${esc(p.program)}</div></div>${statusSelect(tid, status)}</div>
     <div class="row" style="margin-top:8px">
       ${next ? dayBadge(next.date) : `<span class="badge">No date ahead</span>`}
+      ${trackBadge(p)}
       ${totalBadge(p)}
       ${lettersLine(p)}
       ${r.gre ? `<span class="badge ${M_GRE[r.gre.status]?.[1] || ""}">GRE: ${M_GRE[r.gre.status]?.[0] || "?"}</span>` : ""}
@@ -190,6 +213,8 @@ function renderApps() {
         <div style="font-size:24px;font-weight:750">${usd(fees)}</div></div>
       <div class="tiny muted" style="margin-top:6px">Application fees only, not including the GRE or English test. Fee waivers exist at several schools: see this week's plan.</div>
     </div>
+    <h2>Your list at a glance</h2>
+    ${overviewTable(board)}
     <h2>Your applications <span class="count">${board.length + customs.length}</span></h2>
     ${board.map(appCard).join("")}${customs.map(customCard).join("")}
     ${suggested.length ? `<h2>Worth adding? <span class="count">${suggested.length}</span></h2>

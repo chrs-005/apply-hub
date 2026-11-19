@@ -33,6 +33,8 @@ programs:
     app_fee: {amount: 150, currency: CHF, note: "No fee waivers"}
     tuition: {amount: 2190, currency: CHF, per: semester}
     total_cost: {usd: 70000, low: null, high: null, length: "2 years", basis: "ETH's official budget for international students: CHF 28,100 a year (tuition CHF 4,380 + living CHF 22,100), x 2. With ESOP, tuition is waived and CHF 24,000 a year is covered, so close to $0."}
+    track: master
+    letters_status: "Entered: Sabra, Bazzi. Emailed when you submit."
     scholarships:
       - {name: "ESOP (Excellence & Opportunity)", deadline: 2026-11-30, covers: "CHF 13,500/semester + tuition waiver (about 60 awards)", how: "Same window. Needs a thesis pre-proposal (max 500 words). Two PROFESSORS must submit signed letters on university letterhead, and it's your job to check they did. Top 10% of your cohort. About 60 awards; possible interview in February; decision end of March. Can't be combined with the CS Direct Doctorate."}
     language: "C1 proof by the deadline: TOEFL/IELTS/C1 Advanced, or a stamped Registrar letter that your bachelor's was COMPLETELY taught in English"
@@ -64,6 +66,8 @@ programs:
     app_fee: {amount: 150, currency: CHF, note: "Non-refundable"}
     tuition: {amount: 2190, currency: CHF, per: semester}
     total_cost: {usd: 71000, low: null, high: null, length: "2 years", basis: "Tuition CHF 2,190 a semester for foreign students (same ETH-Board rule as ETH; confirm on EPFL's page) x 4, plus living about CHF 2,000 a month (third-party estimate). An Excellence Fellowship or Research Scholars stipend cuts this a lot."}
+    track: master
+    letters_status: "Not yet: Bazzi, Issa, Sabra. Emailed when you submit (form opens mid-November)."
     scholarships:
       - {name: "EPFL Excellence Fellowship", deadline: 2026-12-15, covers: "CHF 10,000/semester, up to 4 semesters, + a reserved room", how: "Tick the box in the form. Must be paid and validated by Dec 15. Notified late March."}
       - {name: "IC Research Scholars", deadline: 2026-12-15, covers: "About CHF 1,450 net/month for a year, extendable", how: "Tick the box on the form and add a paragraph naming labs to your statement. Can't be held with the Excellence Fellowship."}
@@ -159,6 +163,8 @@ programs:
     app_fee: {amount: 90, currency: GBP, note: "Waiver for financial difficulty; refundable within 14 days"}
     tuition: {amount: 46000, currency: GBP, per: total, note: "approximate"}
     total_cost: {usd: 90000, low: 86000, high: 95000, length: "12 months", basis: "Overseas fee GBP 46,000 for a 2026 start (Imperial raises fees about 3.5% a year), plus London living about GBP 1,500-2,000 a month (estimate)."}
+    track: master
+    letters_status: "Not yet: Bazzi, Issa planned."
     scholarships: []
     language: "Check Imperial's English page (third parties list IELTS 7 / TOEFL 100)"
     gre: "Not mentioned on the pages I could read"
@@ -188,6 +194,8 @@ programs:
     app_fee: null
     tuition: null
     total_cost: {usd: 90000, low: 85000, high: 110000, length: "3-4 semesters", basis: "Nonresident tuition USD 16,073 a semester (2026-27 bursar table) x 3-4, plus Georgia Tech's international living budget of USD 25,256 a year (off campus)."}
+    track: master
+    letters_status: "Requested: Bazzi, Issa, Mohanna (GT takes exactly 3)."
     scholarships: []
     language: "AUB letter/transcript note accepted by the Institute, or TOEFL 100 (5.0 on the new scale) / IELTS 7.5 for the department"
     gre: "Not required; considered if you send it (confirmed with Georgia Tech)"
@@ -217,6 +225,8 @@ programs:
     app_fee: null
     tuition: null
     total_cost: {usd: 0, low: null, high: null, length: "about 5-6 years", basis: "MS/PhD students are considered doctoral students and are eligible for equivalent funding (Columbia Engineering application). Funding is not promised: confirm with EE."}
+    track: phd
+    letters_status: "Requested: Bazzi, Issa, Mohanna."
     scholarships: []
     language: "TOEFL/IELTS required unless an exception applies: recommended TOEFL 101 / IELTS 7"
     gre: "Requirement page blocked: assume needed until you check (most admits have 750+ quant on the older scale)"
@@ -248,6 +258,8 @@ programs:
     app_fee: {amount: 100, currency: USD, note: "$80 before 18 Nov. Hardship waiver inside the application."}
     tuition: null
     total_cost: {usd: 145000, low: 140000, high: 190000, length: "16 months (3 semesters + summer)", basis: "MS Machine Learning tuition USD 31,100 a semester x 3 (2026-27; about +5% a year), plus CMU's non-tuition budget of USD 37,374 a year. Advanced Study (4 semesters) is about USD 185k; MLT (2 years) about USD 200k."}
+    track: switchable
+    letters_status: "Requested: Sabra, Mohanna, Bazzi. MSML now; the ML or LTI PhD can be picked in the same application, letters stay attached."
     scholarships: []
     language: "TOEFL/IELTS/Duolingo required: an English-medium degree does NOT exempt you"
     gre: "Strongly recommended. At-home scores are not accepted for current test dates."
@@ -404,7 +416,7 @@ programs:
     target: core
     university: UCLA
     short: UCLA
-    program: MS Computer Science
+    program: ECE PhD (if Diggavi replies), otherwise CS MS
     country: United States
     region: US
     fields: [cs, ml]
@@ -413,7 +425,9 @@ programs:
       - {label: "Fall admission deadline (page prints no year)", date: 2026-12-15, time: "23:59 Pacific"}
     app_fee: null
     tuition: null
-    total_cost: {usd: 130000, low: 115000, high: 150000, length: "1.5-2 years", basis: "UCLA's 2026-27 nonresident budget: USD 76,034 a year (tuition USD 38,233 + living). An ECE PhD would normally be funded instead."}
+    total_cost: {usd: 0, low: null, high: null, length: "about 5 years", basis: "A UCLA ECE PhD is normally funded. If you fall back to the CS MS instead, budget about USD 130k (nonresident budget USD 76,034 a year)."}
+    track: phd
+    letters_status: "Not yet: waiting for Diggavi's reply."
     scholarships: []
     language: "TOEFL 87 or IELTS 7.0, unless your degree is from a country where English is the main daily language: Lebanon probably isn't"
     gre: "Listed as optional, but the note only covers the 2025-26 cycle"
@@ -474,6 +488,8 @@ programs:
     app_fee: {amount: 95, currency: USD, note: "Fee waiver link on the admissions page"}
     tuition: null
     total_cost: {usd: 0, low: null, high: null, length: "about 5 years", basis: "BU PhD offers guarantee five years: full tuition, fees, basic health insurance and a stipend."}
+    track: phd
+    letters_status: "Requested: Bazzi, Issa. Submitted: Mohanna (written for MS AI, carries over)."
     scholarships:
       - {name: "BU CS merit scholarship", deadline: null, covers: "$5,000-$30,000", how: "Automatic for admitted full-time students; BU encourages applying early. Keep a 3.0 GPA."}
     language: "Not stated on the CS page: BU Engineering asks for TOEFL 90 or IELTS 7.0"
@@ -566,6 +582,8 @@ programs:
     app_fee: {amount: 90, currency: USD, note: "Waiver route via MIT's graduate office"}
     tuition: {amount: 0, currency: USD, per: year, note: "Tuition, insurance and a stipend, renewed yearly with good progress"}
     total_cost: {usd: 0, low: null, high: null, length: "2 years", basis: "Fully funded: tuition, health insurance and a stipend. Unfunded, MIT's 9-month budget would be USD 109,017."}
+    track: master
+    letters_status: "Not yet: Bazzi, Issa, Mohanna planned. Adib will flag your file."
     scholarships:
       - {name: "MAS full funding", deadline: 2026-12-15, covers: "Tuition, medical insurance and stipend", how: "All MAS students are funded"}
     language: "IELTS 7 / TOEFL 100 / Duolingo 135; AUB isn't on the waiver list"
@@ -882,6 +900,8 @@ programs:
     deadlines:
       - {label: "Application deadline", date: 2026-12-08}
     total_cost: {usd: 91000, low: null, high: null, length: "11 months", basis: "Overseas fee GBP 48,192 for 2026-27 (listing, confirm on the course page), plus living about GBP 19,860 (reported 2026-27 figure)."}
+    track: master
+    letters_status: "Not yet. Gates Cambridge is applied for in the same application."
     scholarships:
       - {name: "Cambridge funding competition", deadline: 2026-12-02, covers: "Varies", how: "Your application must meet the earlier of the course and funding deadlines. Confirm the date on the course page."}
     language: "Check the course page"
@@ -966,6 +986,8 @@ programs:
     app_fee: {amount: 125, currency: USD}
     tuition: {amount: 0, currency: USD, per: year, note: "PhD students are funded"}
     total_cost: {usd: 0, low: null, high: null, length: "about 5-6 years", basis: "Funded PhD. Stanford allows only one degree program per year, and CS says MS or PhD, not both."}
+    track: phd
+    letters_status: "Not yet: Bazzi, Issa, Mohanna planned (+ optional 4th backup)."
     scholarships: []
     language: "Check Stanford's English requirement for an AUB degree"
     gre: "Not required and not considered"

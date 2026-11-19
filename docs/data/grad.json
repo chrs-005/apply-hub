@@ -36,6 +36,8 @@
    "length": "2 years",
    "basis": "ETH's official budget for international students: CHF 28,100 a year (tuition CHF 4,380 + living CHF 22,100), x 2. With ESOP, tuition is waived and CHF 24,000 a year is covered, so close to $0."
   },
+  "track": "master",
+  "letters_status": "Entered: Sabra, Bazzi. Emailed when you submit.",
   "scholarships": [
    {
     "name": "ESOP (Excellence & Opportunity)",
@@ -483,6 +485,8 @@
    "length": "about 5 years",
    "basis": "BU PhD offers guarantee five years: full tuition, fees, basic health insurance and a stipend."
   },
+  "track": "phd",
+  "letters_status": "Requested: Bazzi, Issa. Submitted: Mohanna (written for MS AI, carries over).",
   "scholarships": [
    {
     "name": "BU CS merit scholarship",
@@ -1818,6 +1822,8 @@
    "length": "11 months",
    "basis": "Overseas fee GBP 48,192 for 2026-27 (listing, confirm on the course page), plus living about GBP 19,860 (reported 2026-27 figure)."
   },
+  "track": "master",
+  "letters_status": "Not yet. Gates Cambridge is applied for in the same application.",
   "scholarships": [
    {
     "name": "Cambridge funding competition",
@@ -1942,6 +1948,8 @@
    "length": "about 5-6 years",
    "basis": "Funded PhD. Stanford allows only one degree program per year, and CS says MS or PhD, not both."
   },
+  "track": "phd",
+  "letters_status": "Not yet: Bazzi, Issa, Mohanna planned (+ optional 4th backup).",
   "scholarships": [],
   "language": "Check Stanford's English requirement for an AUB degree",
   "gre": "Not required and not considered",
@@ -2054,6 +2062,8 @@
    "length": "16 months (3 semesters + summer)",
    "basis": "MS Machine Learning tuition USD 31,100 a semester x 3 (2026-27; about +5% a year), plus CMU's non-tuition budget of USD 37,374 a year. Advanced Study (4 semesters) is about USD 185k; MLT (2 years) about USD 200k."
   },
+  "track": "switchable",
+  "letters_status": "Requested: Sabra, Mohanna, Bazzi. MSML now; the ML or LTI PhD can be picked in the same application, letters stay attached.",
   "scholarships": [],
   "language": "TOEFL/IELTS/Duolingo required: an English-medium degree does NOT exempt you",
   "gre": "Strongly recommended. At-home scores are not accepted for current test dates.",
@@ -2275,6 +2285,8 @@
    "length": "2 years",
    "basis": "Tuition CHF 2,190 a semester for foreign students (same ETH-Board rule as ETH; confirm on EPFL's page) x 4, plus living about CHF 2,000 a month (third-party estimate). An Excellence Fellowship or Research Scholars stipend cuts this a lot."
   },
+  "track": "master",
+  "letters_status": "Not yet: Bazzi, Issa, Sabra. Emailed when you submit (form opens mid-November).",
   "scholarships": [
    {
     "name": "EPFL Excellence Fellowship",
@@ -2395,6 +2407,8 @@
    "length": "about 5-6 years",
    "basis": "MS/PhD students are considered doctoral students and are eligible for equivalent funding (Columbia Engineering application). Funding is not promised: confirm with EE."
   },
+  "track": "phd",
+  "letters_status": "Requested: Bazzi, Issa, Mohanna.",
   "scholarships": [],
   "language": "TOEFL/IELTS required unless an exception applies: recommended TOEFL 101 / IELTS 7",
   "gre": "Requirement page blocked: assume needed until you check (most admits have 750+ quant on the older scale)",
@@ -2476,7 +2490,7 @@
   "target": "core",
   "university": "UCLA",
   "short": "UCLA",
-  "program": "MS Computer Science",
+  "program": "ECE PhD (if Diggavi replies), otherwise CS MS",
   "country": "United States",
   "region": "US",
   "fields": [
@@ -2494,12 +2508,14 @@
   "app_fee": null,
   "tuition": null,
   "total_cost": {
-   "usd": 130000,
-   "low": 115000,
-   "high": 150000,
-   "length": "1.5-2 years",
-   "basis": "UCLA's 2026-27 nonresident budget: USD 76,034 a year (tuition USD 38,233 + living). An ECE PhD would normally be funded instead."
+   "usd": 0,
+   "low": null,
+   "high": null,
+   "length": "about 5 years",
+   "basis": "A UCLA ECE PhD is normally funded. If you fall back to the CS MS instead, budget about USD 130k (nonresident budget USD 76,034 a year)."
   },
+  "track": "phd",
+  "letters_status": "Not yet: waiting for Diggavi's reply.",
   "scholarships": [],
   "language": "TOEFL 87 or IELTS 7.0, unless your degree is from a country where English is the main daily language: Lebanon probably isn't",
   "gre": "Listed as optional, but the note only covers the 2025-26 cycle",
@@ -2620,6 +2636,8 @@
    "length": "2 years",
    "basis": "Fully funded: tuition, health insurance and a stipend. Unfunded, MIT's 9-month budget would be USD 109,017."
   },
+  "track": "master",
+  "letters_status": "Not yet: Bazzi, Issa, Mohanna planned. Adib will flag your file.",
   "scholarships": [
    {
     "name": "MAS full funding",
@@ -3635,6 +3653,8 @@
    "length": "12 months",
    "basis": "Overseas fee GBP 46,000 for a 2026 start (Imperial raises fees about 3.5% a year), plus London living about GBP 1,500-2,000 a month (estimate)."
   },
+  "track": "master",
+  "letters_status": "Not yet: Bazzi, Issa planned.",
   "scholarships": [],
   "language": "Check Imperial's English page (third parties list IELTS 7 / TOEFL 100)",
   "gre": "Not mentioned on the pages I could read",
@@ -4884,6 +4904,8 @@
    "length": "3-4 semesters",
    "basis": "Nonresident tuition USD 16,073 a semester (2026-27 bursar table) x 3-4, plus Georgia Tech's international living budget of USD 25,256 a year (off campus)."
   },
+  "track": "master",
+  "letters_status": "Requested: Bazzi, Issa, Mohanna (GT takes exactly 3).",
   "scholarships": [],
   "language": "AUB letter/transcript note accepted by the Institute, or TOEFL 100 (5.0 on the new scale) / IELTS 7.5 for the department",
   "gre": "Not required; considered if you send it (confirmed with Georgia Tech)",
