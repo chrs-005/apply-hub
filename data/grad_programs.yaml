@@ -901,7 +901,7 @@ programs:
       - {label: "Application deadline", date: 2026-12-08}
     total_cost: {usd: 91000, low: null, high: null, length: "11 months", basis: "Overseas fee GBP 48,192 for 2026-27 (listing, confirm on the course page), plus living about GBP 19,860 (reported 2026-27 figure)."}
     track: master
-    letters_status: "Not yet. Gates Cambridge is applied for in the same application."
+    letters_status: "Requested 19 Nov: Bazzi, Issa (must be in by 8 Dec, also the Gates deadline)."
     scholarships:
       - {name: "Cambridge funding competition", deadline: 2026-12-02, covers: "Varies", how: "Your application must meet the earlier of the course and funding deadlines. Confirm the date on the course page."}
     language: "Check the course page"
