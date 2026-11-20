@@ -30,7 +30,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 148,
+  "raw_count": 149,
   "open_internships": 4,
   "opens": "Jul – Oct (rolling: apply in the first 2–3 weeks)",
   "careers": ""
@@ -54,7 +54,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 86,
+  "raw_count": 85,
   "open_internships": 7,
   "opens": "Jul – Oct (rolling: apply in the first 2–3 weeks)",
   "careers": ""
@@ -90,7 +90,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 153,
+  "raw_count": 150,
   "open_internships": 4,
   "opens": "Jul – Oct (rolling: apply in the first 2–3 weeks)",
   "careers": ""
@@ -126,7 +126,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 41,
+  "raw_count": 42,
   "open_internships": 1,
   "opens": "Jul – Oct (rolling: apply in the first 2–3 weeks)",
   "careers": ""
@@ -162,7 +162,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 203,
+  "raw_count": 202,
   "open_internships": 1,
   "opens": "Jul – Oct (rolling: apply in the first 2–3 weeks)",
   "careers": ""
@@ -174,7 +174,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 80,
+  "raw_count": 81,
   "open_internships": 0,
   "opens": "Jul – Oct (rolling: apply in the first 2–3 weeks)",
   "careers": ""
@@ -232,10 +232,10 @@
   "type": "bigtech",
   "tier": 1,
   "ats": "microsoft",
-  "ok": true,
-  "error": null,
-  "raw_count": 35,
-  "open_internships": 6,
+  "ok": false,
+  "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com&query=intern&location=Netherlands&start=0",
+  "raw_count": 0,
+  "open_internships": 0,
   "opens": "Aug – Nov",
   "careers": "https://apply.careers.microsoft.com/careers?query=intern"
  },
@@ -246,7 +246,7 @@
   "ats": "amazon",
   "ok": true,
   "error": null,
-  "raw_count": 267,
+  "raw_count": 266,
   "open_internships": 21,
   "opens": "Aug – Nov",
   "careers": "https://www.amazon.jobs/en/teams/internships-for-students"
@@ -268,10 +268,10 @@
   "type": "bigtech",
   "tier": 1,
   "ats": "lever",
-  "ok": false,
-  "error": "HTTPError: 500 Server Error: Internal Server Error for url: https://api.lever.co/v0/postings/palantir?mode=json",
-  "raw_count": 0,
-  "open_internships": 0,
+  "ok": true,
+  "error": null,
+  "raw_count": 308,
+  "open_internships": 7,
   "opens": "Aug – Nov",
   "careers": ""
  },
@@ -282,7 +282,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 773,
+  "raw_count": 780,
   "open_internships": 3,
   "opens": "Aug – Nov",
   "careers": ""
@@ -294,7 +294,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 898,
+  "raw_count": 897,
   "open_internships": 4,
   "opens": "Aug – Nov",
   "careers": ""
@@ -306,7 +306,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 496,
+  "raw_count": 497,
   "open_internships": 0,
   "opens": "Aug – Nov",
   "careers": ""
@@ -330,7 +330,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 413,
+  "raw_count": 417,
   "open_internships": 2,
   "opens": "Aug – Nov",
   "careers": ""
@@ -342,7 +342,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 371,
+  "raw_count": 380,
   "open_internships": 0,
   "opens": "Oct – Mar",
   "careers": ""
@@ -366,7 +366,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 202,
+  "raw_count": 203,
   "open_internships": 0,
   "opens": "Aug – Nov",
   "careers": ""
@@ -378,7 +378,7 @@
   "ats": "lever",
   "ok": true,
   "error": null,
-  "raw_count": 94,
+  "raw_count": 89,
   "open_internships": 0,
   "opens": "Aug – Nov",
   "careers": ""
@@ -390,7 +390,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 253,
+  "raw_count": 254,
   "open_internships": 0,
   "opens": "Oct – Mar",
   "careers": ""
@@ -402,7 +402,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 167,
+  "raw_count": 168,
   "open_internships": 2,
   "opens": "Sep – Jan (many roles are PhD-only)",
   "careers": ""
@@ -414,7 +414,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 637,
+  "raw_count": 638,
   "open_internships": 0,
   "opens": "Sep – Jan (many roles are PhD-only)",
   "careers": ""
@@ -426,7 +426,7 @@
   "ats": "ashby",
   "ok": true,
   "error": null,
-  "raw_count": 854,
+  "raw_count": 852,
   "open_internships": 0,
   "opens": "Sep – Jan (many roles are PhD-only)",
   "careers": ""
@@ -450,7 +450,7 @@
   "ats": "ashby",
   "ok": true,
   "error": null,
-  "raw_count": 148,
+  "raw_count": 150,
   "open_internships": 1,
   "opens": "Sep – Jan (many roles are PhD-only)",
   "careers": ""
@@ -486,7 +486,7 @@
   "ats": "ashby",
   "ok": true,
   "error": null,
-  "raw_count": 150,
+  "raw_count": 151,
   "open_internships": 0,
   "opens": "Sep – Jan (many roles are PhD-only)",
   "careers": ""
@@ -498,7 +498,7 @@
   "ats": "ashby",
   "ok": true,
   "error": null,
-  "raw_count": 125,
+  "raw_count": 123,
   "open_internships": 0,
   "opens": "Sep – Jan (many roles are PhD-only)",
   "careers": ""
@@ -546,7 +546,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 245,
+  "raw_count": 241,
   "open_internships": 0,
   "opens": "Oct – Mar",
   "careers": ""
@@ -558,7 +558,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 265,
+  "raw_count": 262,
   "open_internships": 0,
   "opens": "Oct – Mar",
   "careers": ""
@@ -582,7 +582,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 19,
+  "raw_count": 21,
   "open_internships": 0,
   "opens": "Oct – Mar",
   "careers": ""
@@ -594,7 +594,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 25,
+  "raw_count": 24,
   "open_internships": 0,
   "opens": "Oct – Mar",
   "careers": ""
@@ -606,7 +606,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 59,
+  "raw_count": 60,
   "open_internships": 0,
   "opens": "Oct – Mar",
   "careers": ""
@@ -618,7 +618,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 190,
+  "raw_count": 189,
   "open_internships": 1,
   "opens": "Oct – Mar",
   "careers": ""
@@ -630,7 +630,7 @@
   "ats": "greenhouse",
   "ok": true,
   "error": null,
-  "raw_count": 44,
+  "raw_count": 42,
   "open_internships": 2,
   "opens": "Oct – Mar",
   "careers": ""
@@ -702,7 +702,7 @@
   "ats": "lever",
   "ok": true,
   "error": null,
-  "raw_count": 89,
+  "raw_count": 88,
   "open_internships": 0,
   "opens": "Oct – Mar",
   "careers": ""

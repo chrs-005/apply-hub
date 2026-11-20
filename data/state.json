@@ -20,16 +20,16 @@
    "status": "blocked"
   },
   "https://www.gresearch.com/join-us/": {
-   "hash": "cad98db8ee35b80e01c5e15f57ea073c18cf768783c89f3100767fa9267bafc0",
+   "hash": "30041b5e3c27da9801954785d6ce8038323d10b4b3b5b304e7f3979d8ab42543",
    "lines": [
     "Students & graduates",
     "Engineering internships",
-    "Natural Language Processing Internship",
-    "Quant Research Internship",
     "Data Science Internship",
     "Machine Learning Research Internship",
-    "Software Engineering Internship",
+    "Natural Language Processing Internship",
+    "Quant Research Internship",
     "Machine Learning Engineer Internship",
+    "Software Engineering Internship",
     "Quantitative Research Intern",
     "Research Engineering Intern",
     "FPGA Engineering Intern",
@@ -61,11 +61,14 @@
    "status": "ok"
   },
   "https://jobs.apple.com/en-gb/search?team=internships-STDNT-INTRN&location=united-kingdom-GBR": {
-   "hash": "5931c6bcbd7aa78e9fa8f9d96bc2650ca15117a071e6a3d4fc43b1ea8f32373f",
+   "hash": "37f2c531fa46c6a203ec2be7cdeb621cab89f4f4b0d60b0f969102c820275c36",
    "lines": [
     "Search Jobs - United Kingdom, Students: Internships - Jobs at Apple (UK)",
     "View all teams Students : Internships",
     "Students : Internships",
+    "Software Engineering Intern, App Intelligence Experience",
+    "Share Software Engineering Intern, App Intelligence Experience 200696199-1251",
+    "As an intern, you will take one of those problems and, with a mentor on the team, build a working prototype of how we could solve it. We prototype in real builds of the OS rather than mockups, so what you make runs on a devic...",
     "Internship - Pro Apps Machine Learning Ecosystem Engineer",
     "Share Internship - Pro Apps Machine Learning Ecosystem Engineer 200694490-2114",
     "Internship - Framebuffer Driver Engineer",
