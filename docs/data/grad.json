@@ -2490,7 +2490,7 @@
   "target": "core",
   "university": "UCLA",
   "short": "UCLA",
-  "program": "ECE PhD (if Diggavi replies), otherwise CS MS",
+  "program": "ECE PhD (applying now; Diggavi hasn't replied yet)",
   "country": "United States",
   "region": "US",
   "fields": [
@@ -2515,7 +2515,7 @@
    "basis": "A UCLA ECE PhD is normally funded. If you fall back to the CS MS instead, budget about USD 130k (nonresident budget USD 76,034 a year)."
   },
   "track": "phd",
-  "letters_status": "Not yet: waiting for Diggavi's reply.",
+  "letters_status": "Not yet: Bazzi, Issa, Mohanna (sent when the application is filled).",
   "scholarships": [],
   "language": "TOEFL 87 or IELTS 7.0, unless your degree is from a country where English is the main daily language: Lebanon probably isn't",
   "gre": "Listed as optional, but the note only covers the 2025-26 cycle",
@@ -3182,7 +3182,7 @@
  },
  {
   "id": "mbzuai-msc",
-  "target": "core",
+  "target": "suggested",
   "short": "MBZUAI",
   "why": "Fully funded in Abu Dhabi, deadline 15 Dec. A strong financial backstop.",
   "requires": {
