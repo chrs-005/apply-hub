@@ -884,7 +884,7 @@
    "only": [
     "utaustin-ms"
    ],
-   "how": "No fee waiver for international applicants. Decide MS vs PhD first; UT doesn't say you can apply to both."
+   "how": "Applying to the MS. No fee waiver for international applicants. Letters (Bazzi, Issa, Mohanna) due 20 Dec."
   },
   {
    "id": "d-psu",
@@ -924,11 +924,22 @@
    "phase": "December",
    "cat": "Applications",
    "due": "2026-12-15",
-   "title": "Submit MBZUAI, if you added it",
+   "title": "SUBMIT MBZUAI MSc Machine Learning (closes 15 Dec, 5pm Gulf time)",
    "only": [
     "mbzuai-msc"
    ],
    "how": "Fully funded, AED 200 fee. Decisions by 31 Mar."
+  },
+  {
+   "id": "d-rutgers",
+   "phase": "December",
+   "cat": "Applications",
+   "due": "2026-12-28",
+   "title": "SUBMIT Rutgers ECE PhD (31 Dec for full funding; confirm date)",
+   "only": [
+    "rutgers-phd"
+   ],
+   "how": "Email Prof. Salim El Rouayheb first. Name him in the statement. Ask whether PhD applicants can be considered for the MS."
   },
   {
    "id": "d-gre2",

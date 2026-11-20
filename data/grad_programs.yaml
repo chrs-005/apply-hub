@@ -917,7 +917,7 @@ programs:
     notes: "ON THE FORM: 'MPhil in Machine Learning and Machine Intelligence', then a track. Tracks listed for 2026 entry: Speech and Language Processing, Computer Vision and Robotics, Human-Computer Interaction, Machine Learning, Biological Learning. 11 months from 1 Oct 2027. Admission is extremely selective."
 
   - id: utaustin-ms
-    target: suggested
+    target: core
     university: University of Texas at Austin
     short: UT Austin
     program: MS Computer Science
@@ -931,6 +931,8 @@ programs:
     app_fee: null
     tuition: null
     total_cost: {usd: 75000, low: 63000, high: 89000, length: "1.5-2 years", basis: "UT Austin's 2026-27 nonresident graduate budget: USD 41,880-44,279 a year, tuition included. Texas has frozen tuition through 2027."}
+    track: master
+    letters_status: "Not yet: Bazzi, Issa, Mohanna planned (letters due 20 Dec)."
     scholarships: []
     language: "Check UT's English rule for an AUB degree"
     gre: "Optional"
@@ -942,7 +944,7 @@ programs:
     url: https://cs.utexas.edu/graduate-program/masters-program/apply-graduate
     source: official
     verify: [app_fee, letters, english]
-    notes: "Top-10 CS department. Deadline 15 Dec, letters by 20 Dec. You could apply to the PhD instead; UT doesn't say whether you can apply to both, so ask."
+    notes: "Top-10 CS department, about USD 75k total. Applying to the MS (the PhD has no stated fallback to the MS). Deadline 15 Dec, letters by 20 Dec."
 
   - id: psu-phd
     target: suggested
@@ -1001,6 +1003,35 @@ programs:
     source: official
     verify: [english]
     notes: "Long shot (top 3, no publications yet), but funded, unlike ICME. Replaces Stanford ICME on your list."
+
+  - id: rutgers-phd
+    target: core
+    university: Rutgers University
+    short: Rutgers PhD
+    program: PhD Electrical and Computer Engineering (Prof. Salim El Rouayheb)
+    country: United States
+    region: US
+    fields: [ml, research]
+    opens: null
+    deadlines:
+      - {label: "Fall, full funding consideration (2022 handbook date; confirm)", date: 2026-12-31}
+      - {label: "Fall, limited funding", date: 2027-03-01}
+    app_fee: null
+    tuition: {amount: 0, currency: USD, per: year, note: "PhD applicants are automatically considered for funding (GA/TA/fellowships)"}
+    total_cost: {usd: 0, low: null, high: null, length: "about 5 years", basis: "PhD applicants are automatically considered for graduate assistantships and fellowships. Funding isn't promised to every admit, so ask Prof. El Rouayheb."}
+    track: phd
+    letters_status: "Not yet: Bazzi, Issa, Mohanna planned."
+    scholarships: []
+    language: "Check Rutgers' English rule for an AUB degree"
+    gre: "Check the page"
+    requires:
+      letters_note: "Check the page"
+      english: {status: "check", note: "Not confirmed."}
+      extras: ["Reach out to Prof. Salim El Rouayheb first (personal connection)", "Ask whether PhD applicants can be considered for the MS"]
+    url: https://ece.rutgers.edu/graduate-application-deadlines
+    source: official
+    verify: [deadline, app_fee, letters, english]
+    notes: "Funded PhD with a professor you have a connection to: your best PhD safety. Deadline from the 2022 ECE handbook (31 Dec for full funding); confirm on the deadlines page or with ECEGradProgram@soe.rutgers.edu."
 
 # ======================= OTHER PROGRAMS (catalog: add from the app if you want them) =======================
   - id: ip-paris-phd-track
@@ -1557,7 +1588,7 @@ programs:
     verify: [deadlines, tuition, app_fee]
 
   - id: mbzuai-msc
-    target: suggested
+    target: core
     short: MBZUAI
     why: "Fully funded in Abu Dhabi, deadline 15 Dec. A strong financial backstop."
     requires:
@@ -1568,7 +1599,7 @@ programs:
       statement: "Check the program page"
       extras: []
     university: MBZUAI (Abu Dhabi)
-    program: MSc Machine Learning / Computer Vision / NLP
+    program: MSc Machine Learning
     country: United Arab Emirates
     region: GULF
     fields: [ml, cs, research]
@@ -1577,6 +1608,9 @@ programs:
       - {label: "Final deadline", date: 2026-12-15}
     app_fee: {amount: 200, currency: AED}
     tuition: {amount: 0, currency: AED, per: year, note: "Fully funded for admitted students"}
+    total_cost: {usd: 0, low: null, high: null, length: "2 years", basis: "Fully funded for admitted students: tuition, a monthly stipend, housing, flights and insurance."}
+    track: master
+    letters_status: "Not yet: 2 referees (one academic, one ideally a work supervisor). Planned: Bazzi + Mohanna."
     scholarships:
       - {name: "MBZUAI full scholarship", deadline: 2026-12-15, covers: "Tuition + AED 15,500/month + flights + insurance + UAE visa", how: "Automatic with admission"}
     language: "IELTS / TOEFL (check minimum)"

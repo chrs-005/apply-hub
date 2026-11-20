@@ -2931,7 +2931,7 @@
  },
  {
   "id": "utaustin-ms",
-  "target": "suggested",
+  "target": "core",
   "university": "University of Texas at Austin",
   "short": "UT Austin",
   "program": "MS Computer Science",
@@ -2961,6 +2961,8 @@
    "length": "1.5-2 years",
    "basis": "UT Austin's 2026-27 nonresident graduate budget: USD 41,880-44,279 a year, tuition included. Texas has frozen tuition through 2027."
   },
+  "track": "master",
+  "letters_status": "Not yet: Bazzi, Issa, Mohanna planned (letters due 20 Dec).",
   "scholarships": [],
   "language": "Check UT's English rule for an AUB degree",
   "gre": "Optional",
@@ -2985,7 +2987,7 @@
    "letters",
    "english"
   ],
-  "notes": "Top-10 CS department. Deadline 15 Dec, letters by 20 Dec. You could apply to the PhD instead; UT doesn't say whether you can apply to both, so ask.",
+  "notes": "Top-10 CS department, about USD 75k total. Applying to the MS (the PhD has no stated fallback to the MS). Deadline 15 Dec, letters by 20 Dec.",
   "checklist": [
    {
     "id": "referees",
@@ -3180,7 +3182,7 @@
  },
  {
   "id": "mbzuai-msc",
-  "target": "suggested",
+  "target": "core",
   "short": "MBZUAI",
   "why": "Fully funded in Abu Dhabi, deadline 15 Dec. A strong financial backstop.",
   "requires": {
@@ -3198,7 +3200,7 @@
    "extras": []
   },
   "university": "MBZUAI (Abu Dhabi)",
-  "program": "MSc Machine Learning / Computer Vision / NLP",
+  "program": "MSc Machine Learning",
   "country": "United Arab Emirates",
   "region": "GULF",
   "fields": [
@@ -3223,6 +3225,15 @@
    "per": "year",
    "note": "Fully funded for admitted students"
   },
+  "total_cost": {
+   "usd": 0,
+   "low": null,
+   "high": null,
+   "length": "2 years",
+   "basis": "Fully funded for admitted students: tuition, a monthly stipend, housing, flights and insurance."
+  },
+  "track": "master",
+  "letters_status": "Not yet: 2 referees (one academic, one ideally a work supervisor). Planned: Bazzi + Mohanna.",
   "scholarships": [
    {
     "name": "MBZUAI full scholarship",
@@ -3393,6 +3404,116 @@
   "app_fee_usd": null,
   "tuition_year_usd": 0,
   "next_deadline": "2026-12-20",
+  "status": "open"
+ },
+ {
+  "id": "rutgers-phd",
+  "target": "core",
+  "university": "Rutgers University",
+  "short": "Rutgers PhD",
+  "program": "PhD Electrical and Computer Engineering (Prof. Salim El Rouayheb)",
+  "country": "United States",
+  "region": "US",
+  "fields": [
+   "ml",
+   "research"
+  ],
+  "opens": null,
+  "deadlines": [
+   {
+    "label": "Fall, full funding consideration (2022 handbook date; confirm)",
+    "date": "2026-12-31"
+   },
+   {
+    "label": "Fall, limited funding",
+    "date": "2027-03-01"
+   }
+  ],
+  "app_fee": null,
+  "tuition": {
+   "amount": 0,
+   "currency": "USD",
+   "per": "year",
+   "note": "PhD applicants are automatically considered for funding (GA/TA/fellowships)"
+  },
+  "total_cost": {
+   "usd": 0,
+   "low": null,
+   "high": null,
+   "length": "about 5 years",
+   "basis": "PhD applicants are automatically considered for graduate assistantships and fellowships. Funding isn't promised to every admit, so ask Prof. El Rouayheb."
+  },
+  "track": "phd",
+  "letters_status": "Not yet: Bazzi, Issa, Mohanna planned.",
+  "scholarships": [],
+  "language": "Check Rutgers' English rule for an AUB degree",
+  "gre": "Check the page",
+  "requires": {
+   "letters_note": "Check the page",
+   "english": {
+    "status": "check",
+    "note": "Not confirmed."
+   },
+   "extras": [
+    "Reach out to Prof. Salim El Rouayheb first (personal connection)",
+    "Ask whether PhD applicants can be considered for the MS"
+   ]
+  },
+  "url": "https://ece.rutgers.edu/graduate-application-deadlines",
+  "source": "official",
+  "verify": [
+   "deadline",
+   "app_fee",
+   "letters",
+   "english"
+  ],
+  "notes": "Funded PhD with a professor you have a connection to: your best PhD safety. Deadline from the 2022 ECE handbook (31 Dec for full funding); confirm on the deadlines page or with ECEGradProgram@soe.rutgers.edu.",
+  "checklist": [
+   {
+    "id": "referees",
+    "label": "Recommendation letters: check the program page",
+    "detail": "Check the page"
+   },
+   {
+    "id": "cv",
+    "label": "CV (grad-school version)",
+    "detail": ""
+   },
+   {
+    "id": "transcripts",
+    "label": "Transcripts",
+    "detail": "AUB, plus your Boston University exchange if the school wants every university attended."
+   },
+   {
+    "id": "english",
+    "label": "Check the English requirement",
+    "detail": "Not confirmed."
+   },
+   {
+    "id": "extra0",
+    "label": "Reach out to Prof. Salim El Rouayheb first (personal connection)",
+    "detail": ""
+   },
+   {
+    "id": "extra1",
+    "label": "Ask whether PhD applicants can be considered for the MS",
+    "detail": ""
+   },
+   {
+    "id": "fee",
+    "label": "Pay the application fee",
+    "detail": "Amount not confirmed: check the application."
+   },
+   {
+    "id": "submit",
+    "label": "Submit",
+    "detail": ""
+   }
+  ],
+  "checklist_source": "Built from the requirements on the official pages",
+  "app_fee_usd": null,
+  "tuition_year_usd": 0,
+  "next_deadline": "2026-12-31",
   "status": "open"
  },
  {
