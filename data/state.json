@@ -20,16 +20,16 @@
    "status": "blocked"
   },
   "https://www.gresearch.com/join-us/": {
-   "hash": "b9bf9fb64dc8f28bd7f0ad44e7b488d940bb60e1ea5393a2710817d54ca91bfe",
+   "hash": "77e9276329a88eac7aa89e842aeec4356331e112ffbb669f4ed25fee65349ac7",
    "lines": [
     "Students & graduates",
     "Engineering internships",
     "Infrastructure Software Engineering Internship",
     "Infrastructure Software Engineering Internship",
-    "Data Science Internship",
-    "Machine Learning Research Internship",
     "Natural Language Processing Internship",
     "Quant Research Internship",
+    "Data Science Internship",
+    "Machine Learning Research Internship",
     "Machine Learning Engineer Internship",
     "Software Engineering Internship",
     "Quantitative Research Intern",
@@ -63,7 +63,7 @@
    "status": "ok"
   },
   "https://jobs.apple.com/en-gb/search?team=internships-STDNT-INTRN&location=united-kingdom-GBR": {
-   "hash": "37f2c531fa46c6a203ec2be7cdeb621cab89f4f4b0d60b0f969102c820275c36",
+   "hash": "58dfeb4c57cf9255942076de4be58182702d9bef24f76453463d56518fe97cc6",
    "lines": [
     "Search Jobs - United Kingdom, Students: Internships - Jobs at Apple (UK)",
     "View all teams Students : Internships",
@@ -83,24 +83,12 @@
     "Internship - Machine Learning Research - Speech-to-Speech Translation",
     "Share Internship - Machine Learning Research - Speech-to-Speech Translation 200690125-1251",
     "The Machine Translation and Multilingual AI team is looking for research interns to explore open problems in speech-to-speech translation: how to build models that let people talk naturally with anyone, in any language, in real time.",
-    "GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture",
-    "Share GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture 200682357-1251",
-    "GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture",
-    "Share GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture 200682357-2114",
-    "GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture",
-    "Share GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture 200682357-3521",
     "GPU Design Verification Internship",
     "Share GPU Design Verification Internship 200679652-1251",
     "GPU Design Verification Internship",
     "Share GPU Design Verification Internship 200679652-2114",
     "GPU Design Verification Internship",
-    "Share GPU Design Verification Internship 200679652-3521",
-    "GPU Internships - RTL Design, RTL Power Optimisation & Physical Design",
-    "Share GPU Internships - RTL Design, RTL Power Optimisation & Physical Design 200679650-1251",
-    "GPU Internships - RTL Design, RTL Power Optimisation & Physical Design",
-    "Share GPU Internships - RTL Design, RTL Power Optimisation & Physical Design 200679650-2114",
-    "GPU Internships - RTL Design, RTL Power Optimisation & Physical Design",
-    "Share GPU Internships - RTL Design, RTL Power Optimisation & Physical Design 200679650-3521"
+    "Share GPU Design Verification Internship 200679652-3521"
    ],
    "status": "ok"
   },
