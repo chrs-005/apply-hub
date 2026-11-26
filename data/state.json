@@ -20,16 +20,16 @@
    "status": "blocked"
   },
   "https://www.gresearch.com/join-us/": {
-   "hash": "b829af4241ee6279e7df973fe6eae5d852257a3765e519b21ad673f23570570c",
+   "hash": "b9bf9fb64dc8f28bd7f0ad44e7b488d940bb60e1ea5393a2710817d54ca91bfe",
    "lines": [
     "Students & graduates",
     "Engineering internships",
     "Infrastructure Software Engineering Internship",
     "Infrastructure Software Engineering Internship",
-    "Quant Research Internship",
     "Data Science Internship",
     "Machine Learning Research Internship",
     "Natural Language Processing Internship",
+    "Quant Research Internship",
     "Machine Learning Engineer Internship",
     "Software Engineering Internship",
     "Quantitative Research Intern",
@@ -63,7 +63,7 @@
    "status": "ok"
   },
   "https://jobs.apple.com/en-gb/search?team=internships-STDNT-INTRN&location=united-kingdom-GBR": {
-   "hash": "58dfeb4c57cf9255942076de4be58182702d9bef24f76453463d56518fe97cc6",
+   "hash": "a9ce3a358022f465cc7e115f031aa64f9f951cccb19670d56fa822e2b3b267ca",
    "lines": [
     "Search Jobs - United Kingdom, Students: Internships - Jobs at Apple (UK)",
     "View all teams Students : Internships",
@@ -71,8 +71,6 @@
     "Software Engineering Intern, App Intelligence Experience",
     "Share Software Engineering Intern, App Intelligence Experience 200696199-1251",
     "As an intern, you will take one of those problems and, with a mentor on the team, build a working prototype of how we could solve it. We prototype in real builds of the OS rather than mockups, so what you make runs on a devic...",
-    "Internship - Pro Apps Machine Learning Ecosystem Engineer",
-    "Share Internship - Pro Apps Machine Learning Ecosystem Engineer 200694490-2114",
     "Internship - Framebuffer Driver Engineer",
     "Share Internship - Framebuffer Driver Engineer 200694489-2114",
     "The Framebuffer driver team is looking for enthusiastic embedded software engineer intern to join our team in London. You'll have the opportunity to contribute to core technologies in macOS display Software stack and work closely with the...",
@@ -132,7 +130,7 @@
    "status": "ok"
   },
   "https://programmes.polytechnique.edu/en/master/admissions-msct/application-deadlines-procedure": {
-   "hash": "b8b98e001200533095cf63d8d40b3bd4d2ea9fda293cab9d8d075589683e1291",
+   "hash": "7ae878eb9c4b48b336340fa380cb0ccc6e33c49f02fa632bee0ce20f6a631e36",
    "lines": [
     "Admissions MSc&T Application Deadlines & Procedure",
     "Application Deadlines & Procedure",
@@ -144,7 +142,7 @@
     "ROUND 1 September 16th to October 12, 2026 at noon (CEST) Early November, 2026 Mid-to-late November, 2026 Early December, 2026",
     "ROUND 2 October 12, 2026 to January 11, 2027 at noon (CET) Early February, 2027 Mid-to-late February, 2027 Early March, 2027",
     "ROUND 3 January 11 to March 8, 2027 at noon (CET) Late March, 2027 Mid-April 2027 Early May, 2027",
-    "ROUND 4 March 8 to April 13, 2027 at noon(CET) Early May, 2027 Late May 2027 Early June, 2027",
+    "ROUND 4 March 8 to April 13, 2027 at noon (CET) Early May, 2027 Late May 2027 Early June, 2027",
     "For the MSc&T Data Science and AI for Business and MSc&T Double Degree Data & Finance (in partnership with HEC Paris), applications are handled exclusively by HEC Paris. Please submit your application via the HEC Paris website, where you will also find the application timeline and deadlines.",
     "When the applications website is open, you can initiate your application at any time. However, you will only be able to finalize it within the above deadlines. Please note that only students who apply in the first and second rounds of admissions can apply for a scholarship.",
     "If you wish to pay the application fee via a bank transfer, it has to be processed by the bank several days before the admission deadline . If the bank transfer is made by a third party (family member, company, etc.) please make sure to inform the Admissions team by sending an email to the Admissions officer."
@@ -341,5 +339,5 @@
    "status": "ok"
   }
  },
- "last_digest": "2026-11-25"
+ "last_digest": "2026-11-26"
 }
