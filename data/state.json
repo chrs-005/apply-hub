@@ -63,7 +63,7 @@
    "status": "ok"
   },
   "https://jobs.apple.com/en-gb/search?team=internships-STDNT-INTRN&location=united-kingdom-GBR": {
-   "hash": "a9ce3a358022f465cc7e115f031aa64f9f951cccb19670d56fa822e2b3b267ca",
+   "hash": "928eb1cc5f6a3b2adc556ea8e0161bccd7317545ca8f6ee587f98cb41fa6b846",
    "lines": [
     "Search Jobs - United Kingdom, Students: Internships - Jobs at Apple (UK)",
     "View all teams Students : Internships",
@@ -71,8 +71,8 @@
     "Software Engineering Intern, App Intelligence Experience",
     "Share Software Engineering Intern, App Intelligence Experience 200696199-1251",
     "As an intern, you will take one of those problems and, with a mentor on the team, build a working prototype of how we could solve it. We prototype in real builds of the OS rather than mockups, so what you make runs on a devic...",
-    "Internship - Framebuffer Driver Engineer",
-    "Share Internship - Framebuffer Driver Engineer 200694489-2114",
+    "Internship - Display Driver Engineer",
+    "Share Internship - Display Driver Engineer 200694489-2114",
     "The Framebuffer driver team is looking for enthusiastic embedded software engineer intern to join our team in London. You'll have the opportunity to contribute to core technologies in macOS display Software stack and work closely with the...",
     "Camera Software (Intern)",
     "Share Camera Software (Intern) 200694477-1251",
@@ -91,7 +91,7 @@
    "status": "ok"
   },
   "https://www.mavensecurities.com/careers/": {
-   "status": "ok",
+   "status": "blocked",
    "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
    "lines": []
   },
@@ -327,7 +327,7 @@
   "https://vectorinstitute.ai/programs-courses/scholarships/": {
    "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
    "lines": [],
-   "status": "ok"
+   "status": "blocked"
   },
   "https://www.epfl.ch/schools/ic/education/master/research-scholars/": {
    "hash": "df5b3e67671043bcc54736a36e3cfd15edd0ccaff90009162e908691e36fdb74",

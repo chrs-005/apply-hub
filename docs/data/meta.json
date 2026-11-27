@@ -1,8 +1,8 @@
 {
- "last_scan": "2026-11-26T16:50+00:00",
- "duration_s": 91,
+ "last_scan": "2026-11-27T01:43+00:00",
+ "duration_s": 82,
  "open_internships": 123,
- "new_this_scan": 2,
+ "new_this_scan": 1,
  "companies_ok": 55,
  "companies_failed": [
   "Old Mission",
@@ -10,7 +10,7 @@
   "Helsing",
   "Doctolib"
  ],
- "notifications_sent": 18,
+ "notifications_sent": 6,
  "fx_to_usd": {
   "USD": 1.0,
   "EUR": 1.16,
