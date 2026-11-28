@@ -233,7 +233,7 @@
   "tier": 1,
   "ats": "microsoft",
   "ok": false,
-  "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com&query=intern&location=United+Kingdom&start",
+  "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com&query=intern&location=United+Arab+Emirates",
   "raw_count": 0,
   "open_internships": 0,
   "opens": "Aug – Nov",
@@ -498,7 +498,7 @@
   "ats": "ashby",
   "ok": true,
   "error": null,
-  "raw_count": 109,
+  "raw_count": 108,
   "open_internships": 0,
   "opens": "Sep – Jan (many roles are PhD-only)",
   "careers": ""
